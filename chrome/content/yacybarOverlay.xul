@@ -1,14 +1,44 @@
 <?xml version="1.0"?>
-
+<?xml-stylesheet href="chrome://yacybar/skin/overlay.css" type="text/css"?>
 <overlay id="yacybarOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
 
 	<toolbox id="navigator-toolbox">
     	<toolbar id="yacy_toolbar">
-		    <button label="Blacklist Page" oncommand="blacklistpage()"/>
+		    <toolbarbutton id="BlacklistBtn" 
+		    			   label="Blacklist Page" 
+		    			   tooltiptext="Blacklist current Page"
+		    			   oncommand="blacklistpage()"/>
 		    <textbox id="search" flex="1"/>
-		    <button label="Search" oncommand="search()"/>
+		    <toolbarbutton id="SearchBtn" 
+		    			   label="Search" 
+		    			   tooltiptext="Search with YaCy"
+		    			   oncommand="search()"/>
+		    
+		    <toolbarseparator />
+		    <toolbaritem flex="0">
+			    <toolbarbutton id="AboutMenu" type="menu" tooltiptext="">
+					<menupopup>
+						<menuitem label="YaCy Homepage" accesskey="H"
+								  tooltiptext="Browse to the YaCy home page"
+								  oncommand="loadURL('http://www.yacy.net/yacy')" />					
+						<menuitem label="YaCy Forum" accesskey="F"
+								  tooltiptext="Browse to the YaCy-Forum Homepage"
+								  oncommand="loadURL('http://www.yacy-forum.de')" />					
+						<menuitem label="YaCy Wiki" accesskey="W"
+								  tooltiptext="Browse to the YaCy-Wiki Homepage"
+								  oncommand="loadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite')" />												  
+						<menuitem label="YaCy SVN Log" accesskey="S"
+								  tooltiptext="Browse to the YaCy-SVN Repository Log"
+								  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')" />								  
+						<menuseparator />					
+						<menuitem label="About YaCyBar" accesskey="A"
+								  tooltiptext="About the YaCyBar"
+								  oncommand="showAbout()" />
+					</menupopup>
+				</toolbarbutton>
+		    </toolbaritem>
 		</toolbar>
 	</toolbox>
 </overlay>

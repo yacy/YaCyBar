@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<dialog buttons="accept"
+        id="aboutSwitchProxy"
+        ondialogaccept="return true"
+        title="About"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<groupbox align="center" orient="horizontal">
+		<vbox>
+		  <text value="YaCy-Bar" style="font-weight: bold; font-size: x-large;"/>
+  		  <text value="Version 0.1"/>
+	      <separator class="thin"/>
+	      
+		  <text value="Created By:" style="font-weight: bold;"/>
+		  <text value="Andy Mutton"/>
+		  <separator class="thin"/>
+		  
+		  <text value="Contributors:" style="font-weight: bold;"/>
+		  <text value="Martin Thelian"/>
+		  <separator class="thin"/>
+
+		  <text value="Homepage" style="font-weight: bold;"/>
+	      <text value="http://www.yacy-websuche.de/" class="url" onclick="window.open('http://www.yacy-websuche.de/'); self.close();"/>
+		  <separator class="thin"/>
+		</vbox>
+		<spring flex="1"/>
+	</groupbox>
+</dialog>

@@ -10,15 +10,16 @@
  	<em:creator>Alexander Schier</em:creator>
  	<em:contributor>Martin Thelian</em:contributor>
  	
- 	<em:homepageURL>http://www.yacy-suche.de.vu/</em:homepageURL>
+ 	<em:homepageURL>http://www.yacy-websuche.de/</em:homepageURL>
+ 	<em:iconURL>chrome://yacybar/skin/yacy.png</em:iconURL>
  	<!--<em:optionsURL>chrome://prefbar/content/prefbar-bird-pref.xul</em:optionsURL>-->
  	<!--<em:aboutURL>chrome://prefbar/content/infoWindow.xul</em:aboutURL>-->
   
  	<em:file>
  		<Description about="urn:mozilla:extension:file:yacybar.jar">
  			<em:package>content/</em:package>
- 			<!--<em:locale>locale/en-US/yacybar/</em:locale>
- 			<em:skin>skin/yacybar/</em:skin>-->
+ 			<!--<em:locale>locale/en-US/yacybar/</em:locale>-->
+ 			<em:skin>skin/</em:skin>
  		</Description>
  	</em:file>
 

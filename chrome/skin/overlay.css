@@ -1,0 +1,11 @@
+#AboutMenu {
+    list-style-image: url("chrome://yacybar/skin/yacy.png");
+}
+
+#BlacklistBtn {
+    list-style-image: url("chrome://yacybar/skin/blacklist.gif");
+}
+
+#SearchBtn {
+    list-style-image: url("chrome://yacybar/skin/search.gif");
+}

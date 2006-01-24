@@ -16,6 +16,7 @@
 <RDF:Seq about="urn:mozilla:overlays">
   <RDF:li resource="chrome://browser/content/browser.xul"/>
 </RDF:Seq>
+
 <RDF:Seq about="chrome://browser/content/browser.xul">
   <RDF:li>chrome://yacybar/content/yacybarOverlay.xul</RDF:li>
 </RDF:Seq>

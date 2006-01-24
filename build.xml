@@ -1,0 +1,20 @@
+<project name="YaCyBar" default="all" basedir=".">
+	<description>A YaCy Toolbar</description>
+ 
+	<delete file="chrome/yacybar.jar" />
+	<delete file="yacybar.xpi" />	
+	
+	<target name="buildJar">
+		<zip destfile="chrome/yacybar.jar" basedir="chrome" includes="**" /> 
+	</target>
+	
+    <target name="buildXpi" depends="buildJar">
+		<zip destfile="yacybar.xpi">
+			<zipfileset dir="chrome/" includes="yacybar.jar" prefix="chrome" />
+		    <zipfileset dir="." includes="install.rdf" />
+		</zip>
+    </target>	
+
+	<target name="all" depends="buildXpi">
+	</target>
+</project> 

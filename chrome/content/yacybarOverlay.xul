@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<overlay id="yacybarOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="yacybarOverlay.js"/>
+
+	<toolbox id="navigator-toolbox">
+    	<toolbar id="yacy_toolbar">
+		    <button label="Blacklist Page" oncommand="blacklistpage()"/>
+		    <textbox id="search" flex="1"/>
+		    <button label="Search" oncommand="search()"/>
+		</toolbar>
+	</toolbox>
+</overlay>

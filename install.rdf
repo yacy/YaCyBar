@@ -3,30 +3,32 @@
 
  <Description about="urn:mozilla:install-manifest">
  
- <em:id>{3a40954b-6e2a-4236-b56f-1f782e2cedd0}</em:id>
- <em:name>YaCyBar</em:name>
- <em:version>0.01</em:version>
- <em:description>A YaCy Toolbar</em:description>
- <em:creator>Alexander Schier</em:creator>
- <em:homepageURL>http://www.yacy-suche.de.vu/</em:homepageURL>
- <!--<em:optionsURL>chrome://prefbar/content/prefbar-bird-pref.xul</em:optionsURL>
- <em:aboutURL>chrome://prefbar/content/infoWindow.xul</em:aboutURL>-->
+ 	<em:id>{3a40954b-6e2a-4236-b56f-1f782e2cedd0}</em:id>
+ 	<em:name>YaCyBar</em:name>
+ 	<em:version>0.01</em:version>
+ 	<em:description>A YaCy Toolbar</em:description>
+ 	<em:creator>Alexander Schier</em:creator>
+ 	<em:contributor>Martin Thelian</em:contributor>
+ 	
+ 	<em:homepageURL>http://www.yacy-suche.de.vu/</em:homepageURL>
+ 	<!--<em:optionsURL>chrome://prefbar/content/prefbar-bird-pref.xul</em:optionsURL>-->
+ 	<!--<em:aboutURL>chrome://prefbar/content/infoWindow.xul</em:aboutURL>-->
   
- <em:file>
- <Description about="urn:mozilla:extension:file:yacybar.jar">
- <em:package>content/yacybar/</em:package>
- <!--<em:locale>locale/en-US/yacybar/</em:locale>
- <em:skin>skin/yacybar/</em:skin>-->
- </Description>
- </em:file>
+ 	<em:file>
+ 		<Description about="urn:mozilla:extension:file:yacybar.jar">
+ 			<em:package>content/</em:package>
+ 			<!--<em:locale>locale/en-US/yacybar/</em:locale>
+ 			<em:skin>skin/yacybar/</em:skin>-->
+ 		</Description>
+ 	</em:file>
 
- <em:targetApplication>
- <Description>
- <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
- <em:minVersion>0.9</em:minVersion>
- <em:maxVersion>1.0+</em:maxVersion>
- </Description>
- </em:targetApplication>
+ 	<em:targetApplication>
+ 		<Description>
+ 			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+ 			<em:minVersion>0.9</em:minVersion>
+ 			<em:maxVersion>1.5+</em:maxVersion>
+ 		</Description>
+ 	</em:targetApplication>
  
  </Description>
 

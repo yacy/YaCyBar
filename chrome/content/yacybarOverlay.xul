@@ -6,7 +6,12 @@
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
 
 	<toolbox id="navigator-toolbox">
-    	<toolbar id="yacy_toolbar">
+    	<toolbar id="yacy_toolbar"
+    			 class="chromeclass-toolbar"
+				 context="toolbar-context-menu" 
+				 toolbarname="YaCy-Bar"    	
+		     	 hidden="false" 
+		     	 persist="hidden">
 		    <toolbaritem flex="0">
 			    <toolbarbutton id="AboutMenu" type="menu" tooltiptext="">
 					<menupopup>

@@ -10,7 +10,8 @@
   <RDF:Description about="urn:mozilla:package:yacybar"
         chrome:displayName="YaCy Toolbar"
         chrome:author="Alexander Schier"
-        chrome:name="yacybar">
+        chrome:name="yacybar"
+        chrome:extension="true">
   </RDF:Description>
   
 <RDF:Seq about="urn:mozilla:overlays">

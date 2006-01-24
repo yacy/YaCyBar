@@ -9,3 +9,7 @@
 #SearchBtn {
     list-style-image: url("chrome://yacybar/skin/search.gif");
 }
+
+#CrawlBtn {
+    list-style-image: url("chrome://yacybar/skin/crawl.gif");
+}

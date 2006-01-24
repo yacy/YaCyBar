@@ -6,17 +6,6 @@
 
 	<toolbox id="navigator-toolbox">
     	<toolbar id="yacy_toolbar">
-		    <toolbarbutton id="BlacklistBtn" 
-		    			   label="Blacklist Page" 
-		    			   tooltiptext="Blacklist current Page"
-		    			   oncommand="blacklistpage()"/>
-		    <textbox id="search" flex="1"/>
-		    <toolbarbutton id="SearchBtn" 
-		    			   label="Search" 
-		    			   tooltiptext="Search with YaCy"
-		    			   oncommand="search()"/>
-		    
-		    <toolbarseparator />
 		    <toolbaritem flex="0">
 			    <toolbarbutton id="AboutMenu" type="menu" tooltiptext="">
 					<menupopup>
@@ -38,7 +27,28 @@
 								  oncommand="showAbout()" />
 					</menupopup>
 				</toolbarbutton>
-		    </toolbaritem>
+		    </toolbaritem>    	
+    	
+	    	<toolbarseparator />
+    	
+		    <textbox id="search" flex="1"/>
+		    <toolbarbutton id="SearchBtn" 
+		    			   label="Search" 
+		    			   tooltiptext="Search with YaCy"
+		    			   oncommand="search()"/>
+		    
+		    <toolbarseparator />
+		    
+		    <toolbarbutton id="BlacklistBtn" 
+			   label="Blacklist Page" 
+			   tooltiptext="Blacklist current Page"
+			   oncommand="blacklistpage()"/>
+			   
+		    <toolbarbutton id="CrawlBtn" 
+			   label="Crawl Page" 
+			   tooltiptext="Crawl current Page"
+			   oncommand="crawlpage()"/>			   
+
 		</toolbar>
 	</toolbox>
 </overlay>

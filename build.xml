@@ -4,13 +4,14 @@
 	<delete file="chrome/yacybar.jar" />
 	<delete file="yacybar.xpi" />	
 	
-	<target name="buildJar">
+	<!--<target name="buildJar">
 		<zip destfile="chrome/yacybar.jar" basedir="chrome" includes="**" /> 
-	</target>
+	</target>-->
 	
-    <target name="buildXpi" depends="buildJar">
+    <!--<target name="buildXpi" depends="buildJar">-->
+    <target name="buildXpi">
 		<zip destfile="yacybar.xpi">
-			<zipfileset dir="chrome/" includes="yacybar.jar" prefix="chrome" />
+			<zipfileset dir="chrome/" includes="**" prefix="chrome" />
 		    <zipfileset dir="." includes="install.rdf" />
 		</zip>
     </target>	

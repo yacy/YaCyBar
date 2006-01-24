@@ -16,7 +16,7 @@
  	<!--<em:aboutURL>chrome://prefbar/content/infoWindow.xul</em:aboutURL>-->
   
  	<em:file>
- 		<Description about="urn:mozilla:extension:file:yacybar.jar">
+ 		<Description about="urn:mozilla:extension:file:yacybar">
  			<em:package>content/</em:package>
  			<!--<em:locale>locale/en-US/yacybar/</em:locale>-->
  			<em:skin>skin/</em:skin>

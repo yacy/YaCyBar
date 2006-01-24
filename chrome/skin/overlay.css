@@ -13,3 +13,7 @@
 #CrawlBtn {
     list-style-image: url("chrome://yacybar/skin/crawl.gif");
 }
+
+#CrawlBtn > .toolbarbutton-menubutton-button {
+	-moz-box-orient: horizontal;
+}

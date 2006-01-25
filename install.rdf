@@ -11,9 +11,9 @@
  	<em:contributor>Martin Thelian</em:contributor>
  	
  	<em:homepageURL>http://www.yacy-websuche.de/</em:homepageURL>
- 	<em:iconURL>chrome://yacybar/skin/yacy.png</em:iconURL>
- 	<!--<em:optionsURL>chrome://prefbar/content/prefbar-bird-pref.xul</em:optionsURL>-->
- 	<!--<em:aboutURL>chrome://prefbar/content/infoWindow.xul</em:aboutURL>-->
+ 	<em:iconURL>chrome://yacybar/skin/yacy_logo.gif</em:iconURL>
+ 	<!--<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>-->
+ 	<em:aboutURL>chrome://yacybar/content/about.xul</em:aboutURL>
   
  	<em:file>
  		<Description about="urn:mozilla:extension:file:yacybar">

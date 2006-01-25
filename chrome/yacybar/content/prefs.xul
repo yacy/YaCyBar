@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<overlay id="YaCyBarPrefsOverlay"
+       xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<prefwindow id="BrowserPreferences">
+	 
+	  <prefpane id="YaCyBarPrefsPane"
+		  	    image="chrome://yacybar/skin/yacy_logo.gif"
+		  	    label="YaCy-Bar">
+	
+	    <preferences>
+	      <preference id="peerAddress"
+	        name="extensions.yacybar.peerAddress"
+	        type="string"/>
+	      <preference id="peerPort"
+	        name="extensions.yacybar.peerPort"
+	        type="int"/>
+	    </preferences>
+	    
+		<groupbox id="defaultGroupBox">
+	    <vbox>
+	    	<label value="Peer Address" control="peerAddressField" accesskey="A"/>
+			<textbox preference="peerAddress" id="peerAddressField" />
+			<separator class="thin"/>
+			
+			<label value="Peer Port" control="peerPortField" accesskey="P"/>
+			<textbox preference="peerPort" id="peerPortField" />
+	    </vbox>
+	    </groupbox>
+	
+	  </prefpane>
+	
+	</prefwindow>
+</overlay> 

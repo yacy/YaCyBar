@@ -2,15 +2,21 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 
 <dialog buttons="accept"
-        id="aboutSwitchProxy"
+        id="YaCyBarAbout"
         ondialogaccept="return true"
-        title="About"
+        title="YaCyBar - About"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<groupbox align="center" orient="horizontal">
-		<vbox>
-		  <text value="YaCy-Bar" style="font-weight: bold; font-size: x-large;"/>
-  		  <text value="Version 0.1"/>
+		<vbox>		  
+		  <hbox>  		  	
+		    <vbox>
+		  		<text value="YaCy-Bar" style="font-weight: bold; font-size: x-large;"/>
+		  		<text value="Version 0.1"/>
+		  	</vbox>
+		  	<image src="chrome://yacybar/skin/yacy_logo2.gif"/>
+		  </hbox>
+  		  
 	      <separator class="thin"/>
 	      
 		  <text value="Created By:" style="font-weight: bold;"/>

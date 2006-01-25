@@ -28,7 +28,7 @@
 						<menuitem label="YaCy SVN Log" accesskey="S"
 								  tooltiptext="Browse to the YaCy-SVN Repository Log"
 								  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')" />								  
-						<menuseparator />					
+						<menuseparator />				
 						<menuitem label="About YaCyBar" accesskey="A"
 								  tooltiptext="About the YaCyBar"
 								  oncommand="showAbout()" />

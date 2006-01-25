@@ -13,9 +13,23 @@ function getBaseURL() {
 
 function search(){
 	var searchwords=document.getElementById("search").value;
-	// alert(searchwords);
-	loadOneOrMoreURIs(getBaseURL() + "/index.html?search="+searchwords);
+	searchKeyword(searchwords);
 }
+
+function searchSelected() {
+	var selText = gContextMenu.searchSelected();
+	if (selText != null && selText != "") {
+		var searchTextBox=document.getElementById("search");
+		searchTextBox.value = selText;
+		searchKeyword(selText);
+	}
+}
+
+function searchKeyword(keyword) {
+	// alert(searchwords);
+	loadOneOrMoreURIs(getBaseURL() + "/index.html?search="+keyword);	
+}
+
 
 function blacklistpage(){
 	var url=window.content.prompt("Blacklist URL:", window._content.location);
@@ -29,11 +43,23 @@ function changeCrawlingDepth(newCrawlingDepth) {
 }
 
 function crawlpage() {
-    var url = window.content.prompt("Index URL with depth '" + crawlingDepth + "':", window._content.location);
-	if(url != null && url != ""){
-		window.open(getBaseURL() + '/QuickCrawlLink_p.html?localIndexing=on&crawlingQ=on&crawlingDepth=' + crawlingDepth + '&xdstopw=on&title='+escape(document.title)+'&url='+url,'_blank','height=150,width=500,resizable=yes,scrollbar=no,directory=no,menubar=no,location=no');
-	}
+    var url = window._content.location;
+    var title = document.title;
+	crawlURL(url,title);
 }
+
+function crawllink() {
+	var url = gContextMenu.link;
+	var title = gContextMenu.linkText();
+	crawlURL(url,title); 
+}
+	
+function crawlURL(url, title) {
+	url = window.content.prompt("Index URL with depth '" + crawlingDepth + "':", url)
+	if(url != null && url != ""){
+		window.open(getBaseURL() + '/QuickCrawlLink_p.html?localIndexing=on&crawlingQ=on&crawlingDepth=' + crawlingDepth + '&xdstopw=on&title='+escape(title)+'&url='+ escape(url),'_blank','height=150,width=500,resizable=yes,scrollbar=no,directory=no,menubar=no,location=no');
+	}
+}	
 	
 function showAbout() {
 	window.openDialog("chrome://yacybar/content/about.xul","yacybarAbout","centerscreen, chrome, modal");

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<overlay id="YaCyBarContentAreaOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="yacybarOverlay.js"/>
+	<script type="application/x-javascript" src="contentArea.js"/>
+	
+	<!-- Context menu additions -->
+	<popup id="contentAreaContextMenu">
+	    <menuseparator />
+	    <menu label="YaCyBar">
+	        <menupopup id="YaCyBar-context-items">
+	            <menuitem id="crawlLink" label="Crawl this link" 
+	                oncommand="crawllink();"
+	                tooltiptext="Crawl this link"/>
+	            <menuitem id="crawlPage" label="Crawl current page" 
+	                oncommand="crawlpage();"
+	                tooltiptext="Crawl current Page"/>
+	            <menuitem id="searchSelected" label="Search this keyword" 
+	                oncommand="searchSelected();"
+	                tooltiptext="Search for selectd keyword"/>	                
+                <menuseparator />                
+                <menuitem label="About YaCyBar" accesskey="A"
+						  tooltiptext="About the YaCyBar"
+						  oncommand="showAbout()" />
+	        </menupopup>
+	    </menu>
+	</popup>
+</overlay> 

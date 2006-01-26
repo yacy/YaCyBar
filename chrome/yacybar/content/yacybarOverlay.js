@@ -6,7 +6,14 @@ var gBrowser = document.getElementById("content");
 
 
 var crawlingDepth = 0;
+setTimeout("init()", 3000); /*this is a dirty Hack. Replace as soon as possible */
 
+function init(){
+    var proxyBtn = document.getElementById("ProxyBtn");
+	if(prefManager.getIntPref("network.proxy.type")==2 && prefManager.getCharPref("network.proxy.autoconfig_url")==(getBaseURL()+"/autoconfig.pac")){
+		proxyBtn.setAttribute("checked",true);
+	}
+}
 function getBaseURL() {
 	var host=Branch.getCharPref("peerAddress");
 	if(host==""){
@@ -92,7 +99,20 @@ function toggleIndexingControl() {
 	} else {
 		btn.setAttribute("tooltiptext", "Indexing is ON");
 	}
-	prefManager.setBoolPref("extensions.yacybar.indexControl",!btn.checked);
+	Branch.setBoolPref("indexControl",!btn.checked);
+}
+
+function toggleProxy() {
+    var btn = document.getElementById("ProxyBtn");
+	btn.checked = !btn.checked;
+	if (btn.checked) {
+		prefManager.setIntPref("network.proxy.type",2);
+		prefManager.setCharPref("network.proxy.autoconfig_url",getBaseURL()+"/autoconfig.pac");
+		btn.setAttribute("tooltiptext", "Proxy is OFF");
+	} else {
+		prefManager.setIntPref("network.proxy.type",0);
+		btn.setAttribute("tooltiptext", "Proxy is ON");
+	}
 }
 /*function showSettings() {
 	window.openDialog("chrome://yacybar/content/prefs.xul","yacySettings","centerscreen, chrome, modal");

@@ -90,6 +90,9 @@
 			</toolbarbutton>
 			
 			<toolbarseparator />	
+			<toolbarbutton id="ProxyBtn" 
+						   tooltiptext="Proxy is ON"
+						   oncommand="toggleProxy()"/>
 			<toolbarbutton id="IndexingControlBtn" 
 						   tooltiptext="Indexing is ON"
 						   oncommand="toggleIndexingControl()"/>

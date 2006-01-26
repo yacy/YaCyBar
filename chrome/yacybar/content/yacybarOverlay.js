@@ -1,12 +1,12 @@
 var gBrowser = document.getElementById("content");
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("yacybar.");
+var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
 
-var host=Branch.getCharPref("host");
+var host=Branch.getCharPref("peerAddress");
 if(host==""){
     host="localhost";
 }
-var port=Branch.getIntPref("port");
+var port=Branch.getIntPref("peerPort");
 if(port==0){
     port=8080;
 }
@@ -17,9 +17,7 @@ var gBrowser = document.getElementById("content");
 var crawlingDepth = 0;
 
 function getBaseURL() {
-	var peerAddress = prefManager.getCharPref("extensions.yacybar.peerAddress");	
-	var peerPort = prefManager.getIntPref("extensions.yacybar.peerPort");	
-	var baseURL  = "http://" + peerAddress + ":" + peerPort;
+	var baseURL  = "http://" + host + ":" + port;
 	
 	return baseURL;
 }
@@ -97,6 +95,6 @@ function toggleIndexingControl() {
 	}
 	prefManager.setBoolPref("extensions.yacybar.indexControl",!btn.checked);
 }
-function showSettings() {
-	window.openDialog("chrome://yacybar/content/settings.xul","yacySettings","centerscreen, chrome, modal");
-}
+/*function showSettings() {
+	window.openDialog("chrome://yacybar/content/prefs.xul","yacySettings","centerscreen, chrome, modal");
+}*/

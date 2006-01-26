@@ -16,6 +16,14 @@
 		    <toolbaritem flex="0">
 			    <toolbarbutton id="AboutMenu" type="menu" tooltiptext="">
 					<menupopup>
+						<menuitem label="YaCy Search" accesskey="H"
+								  tooltiptext="Your Searchsite"
+								  selected="true"
+								  oncommand="loadYACY()" />					
+						<menuitem label="Settings" accesskey="S"
+								  tooltiptext="Settings for the Yacybar and Yacy"
+								  oncommand="showSettings()" />
+						<menuseparator />					
 						<menuitem label="YaCy Homepage" accesskey="H"
 								  tooltiptext="Browse to the YaCy home page"
 								  selected="true"

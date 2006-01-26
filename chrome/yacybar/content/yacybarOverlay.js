@@ -2,21 +2,20 @@ var gBrowser = document.getElementById("content");
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
 
-var host=Branch.getCharPref("peerAddress");
-if(host==""){
-    host="localhost";
-}
-var port=Branch.getIntPref("peerPort");
-if(port==0){
-    port=8080;
-}
-var baseURL  = "http://"+host+":"+port;
 var gBrowser = document.getElementById("content");
 
 
 var crawlingDepth = 0;
 
 function getBaseURL() {
+	var host=Branch.getCharPref("peerAddress");
+	if(host==""){
+		host="localhost";
+	}
+	var port=Branch.getIntPref("peerPort");
+	if(port==0){
+		port=8080;
+	}
 	var baseURL  = "http://" + host + ":" + port;
 	
 	return baseURL;

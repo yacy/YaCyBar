@@ -6,12 +6,16 @@ var gBrowser = document.getElementById("content");
 
 
 var crawlingDepth = 0;
-setTimeout("init()", 3000); /*this is a dirty Hack. Replace as soon as possible */
+window.addEventListener("load", init, false);
 
 function init(){
     var proxyBtn = document.getElementById("ProxyBtn");
+    var indexingControllBtn = document.getElementById("IndexingControlBtn");
 	if(prefManager.getIntPref("network.proxy.type")==2 && prefManager.getCharPref("network.proxy.autoconfig_url")==(getBaseURL()+"/autoconfig.pac")){
 		proxyBtn.setAttribute("checked",true);
+	}
+	if(!Branch.getBoolPref("indexControl")){
+		indexingControllBtn.setAttribute("checked", true);
 	}
 }
 function getBaseURL() {

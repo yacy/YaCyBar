@@ -17,3 +17,11 @@
 #CrawlBtn > .toolbarbutton-menubutton-button {
 	-moz-box-orient: horizontal;
 }
+
+#IndexingControlBtn {
+    list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
+}
+
+#IndexingControlBtn[checked="true"] {
+    list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
+}

@@ -73,3 +73,14 @@ function loadURL(newURL) {
 	window._content.document.location = newURL;
 	window.content.focus();
 }
+
+function toggleIndexingControl() {
+    var btn = document.getElementById("IndexingControlBtn");
+	btn.checked = !btn.checked;
+	if (btn.checked) {
+		btn.setAttribute("tooltiptext", "Indexing is OFF");
+	} else {
+		btn.setAttribute("tooltiptext", "Indexing is ON");
+	}
+	prefManager.setBoolPref("extensions.yacybar.indexControl",!btn.checked);
+}

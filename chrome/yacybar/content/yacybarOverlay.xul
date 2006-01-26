@@ -4,6 +4,7 @@
 		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
+	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
 	<toolbox id="navigator-toolbox">
     	<toolbar id="yacy_toolbar"
@@ -82,8 +83,11 @@
 							  oncommand="changeCrawlingDepth(3)" />							  
 				</menupopup>
 			</toolbarbutton>
-				
-
+			
+			<toolbarseparator />	
+			<toolbarbutton id="IndexingControlBtn" 
+						   tooltiptext="Indexing is ON"
+						   oncommand="toggleIndexingControl()"/>
 		</toolbar>
 	</toolbox>
 </overlay>

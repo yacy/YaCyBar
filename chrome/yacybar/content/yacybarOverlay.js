@@ -3,8 +3,9 @@ var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getSe
 var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
 
 var gBrowser = document.getElementById("content");
+var crawling = Array();
 
-
+var req;
 var crawlingDepth = 0;
 window.addEventListener("load", init, false);
 
@@ -72,6 +73,29 @@ function crawlpage() {
 	crawlURL(url,title);
 }
 
+function crawlReceipt() {
+
+	if (req.readyState == 4) {
+        if (req.status == 200) {
+			// parsing xml here
+			var response = req.responseXML;
+			
+			var newJob = Array();
+			newJob["date"] = (new Date()).toLocaleString();
+			newJob["title"] = response.getElementsByTagName("title")[0].firstChild.data;
+			newJob["url"] = response.getElementsByTagName("url")[0].firstChild.data;
+			newJob["status"] = response.getElementsByTagName("status")[0].firstChild.data;
+			newJob["statusCode"] = response.getElementsByTagName("status")[0].getAttribute("code");
+			crawling.push(newJob); 
+
+			window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs", "chrome,centerscreen,resizable",crawling);         
+        } else {
+        	alert("ERROR");
+            alert("There was a problem retrieving the XML data:\n" + req.status + "\n" + req.statusText);
+        }        
+	} 
+}
+
 function crawllink() {
 	var url = gContextMenu.link;
 	var title = gContextMenu.linkText();
@@ -81,7 +105,32 @@ function crawllink() {
 function crawlURL(url, title) {
 	url = window.content.prompt("Index URL with depth '" + crawlingDepth + "':", url)
 	if(url != null && url != ""){
-		window.open(getBaseURL() + '/QuickCrawlLink_p.html?localIndexing=on&crawlingQ=on&crawlingDepth=' + crawlingDepth + '&xdstopw=on&title='+escape(title)+'&url='+ escape(url),'_blank','height=150,width=500,resizable=yes,scrollbar=no,directory=no,menubar=no,location=no');
+    
+		req = false;
+	    // branch for native XMLHttpRequest object
+	    if(window.XMLHttpRequest) {
+	    	try {
+				req = new XMLHttpRequest();
+	        } catch(e) {
+				req = false;
+	        }
+	    }
+	
+		if(req) {
+			// loading username + pwd
+			var userPwd = loadUserPwd();
+		
+			req.onreadystatechange = crawlReceipt;
+			req.open("GET", getBaseURL() + 
+						 '/QuickCrawlLink_p.xml?localIndexing=on&crawlingQ=on&crawlingDepth=' + crawlingDepth + '&xdstopw=on&title='+escape(title)+'&url='+ escape(url),
+						 true,					 
+						 userPwd["user"],
+						 userPwd["pwd"]);
+			req.send("");
+		}    	
+	
+	
+//		window.open(getBaseURL() + '/QuickCrawlLink_p.html?localIndexing=on&crawlingQ=on&crawlingDepth=' + crawlingDepth + '&xdstopw=on&title='+escape(title)+'&url='+ escape(url),'_blank','height=150,width=500,resizable=yes,scrollbar=no,directory=no,menubar=no,location=no');
 	}
 }	
 	
@@ -91,6 +140,10 @@ function showAbout() {
 
 function showPrefs() {
 	window.openDialog("chrome://yacybar/content/prefs.xul","yacybarPrefs","centerscreen, chrome, modal");
+}	
+
+function showCrawlJobs() {
+	window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs","centerscreen, chrome, resizable", crawling);
 }	
 
 function loadURL(newURL) {

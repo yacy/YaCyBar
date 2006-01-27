@@ -4,29 +4,41 @@
 <overlay id="YaCyBarPrefsOverlay"
        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<prefwindow id="BrowserPreferences">
+	<prefwindow id="BrowserPreferences"
+				onload="onLoad();"
+				ondialogaccept="onAcceptSettings();"
+	>
+	
+	  <script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
 	 
 	  <prefpane id="YaCyBarPrefsPane"
 		  	    image="chrome://yacybar/skin/yacy_logo.gif"
 		  	    label="YaCy-Bar">
 	
 	    <preferences>
-	      <preference id="peerAddress"
+	      <preference id="yacybar_peerAddress"
 	        name="extensions.yacybar.peerAddress"
 	        type="string"/>
-	      <preference id="peerPort"
+	      <preference id="yacybar_peerPort"
 	        name="extensions.yacybar.peerPort"
 	        type="int"/>
 	    </preferences>
 	    
-		<groupbox id="defaultGroupBox">
+		<groupbox id="yacyBar_GroupBox">
 	    <vbox>
 	    	<label value="Peer Address" control="peerAddressField" accesskey="A"/>
-			<textbox preference="peerAddress" id="peerAddressField" />
+			<textbox preference="yacybar_peerAddress" id="yacybar_peerAddressField" />
 			<separator class="thin"/>
 			
 			<label value="Peer Port" control="peerPortField" accesskey="P"/>
-			<textbox preference="peerPort" id="peerPortField" />
+			<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" />
+			
+			<label value="User Name" control="peerUser" accesskey="U"/>
+			<textbox id="yacybar_peerUserField" />
+			
+			<label value="User Password" control="peerPwd" accesskey="W"/>
+			<textbox id="yacybar_peerPwdField" type="password"/>
+			
 	    </vbox>
 	    </groupbox>
 	

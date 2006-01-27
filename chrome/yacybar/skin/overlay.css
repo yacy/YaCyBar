@@ -32,3 +32,9 @@
 #ProxyBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/proxy_off.gif");
 }
+
+treechildren::-moz-tree-cell-text(error){
+     font-weight: bold;
+     color: red;
+}
+

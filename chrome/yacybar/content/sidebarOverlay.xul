@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://yacybar/skin/overlay.css" type="text/css"?>
+<dialog buttons="accept"
+        id="test"
+        ondialogaccept="return true"
+        title="YaCyBar - Crawl Jobs"
+        onload="setCrawlJobTreeView();"
+        persist="screenX screenY width height"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    
+    <script src="sidebarOverlay.js" />    
+    
+	<tree id="crawlJobTree" flex="1">
+	   <treecols>	
+	   <treecol id="date" label="Date" flex="1" />		   
+	   	<treecol id="title" label="Title" primary="true" flex="1" />
+	   	<treecol id="url" label="URL" primary="true" flex="1"/>
+	   	<treecol id="status" label="Status" flex="1"/>
+	   </treecols>
+	   <treechildren/>
+	</tree>
+
+</dialog>

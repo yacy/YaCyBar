@@ -12,8 +12,10 @@ function onAcceptSettings() {
 function onLoad() {
 
 	var userPwd = loadUserPwd();
-	document.getElementById('yacybar_peerUserField').value = userPwd["user"];
-	document.getElementById('yacybar_peerPwdField').value = userPwd["pwd"];
+	if (userPwd != null && userPwd["user"] != null && userPwd["user"] != "") {
+		document.getElementById('yacybar_peerUserField').value = userPwd["user"];
+		document.getElementById('yacybar_peerPwdField').value = userPwd["pwd"];
+	}
 	
 }
 

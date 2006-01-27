@@ -11,9 +11,11 @@ window.addEventListener("load", init, false);
 
 function init(){
     var proxyBtn = document.getElementById("ProxyBtn");
+    var proxyToolbarBtn = document.getElementById("ProxyToolbarBtn");
     var indexingControllBtn = document.getElementById("IndexingControlBtn");
 	if(prefManager.getIntPref("network.proxy.type")==2 && prefManager.getCharPref("network.proxy.autoconfig_url")==(getBaseURL()+"/autoconfig.pac")){
 		proxyBtn.setAttribute("checked",true);
+		proxyToolbarBtn.setAttribute("checked",true);
 	}
 	if(!Branch.getBoolPref("indexControl")){
 		indexingControllBtn.setAttribute("checked", true);
@@ -164,14 +166,18 @@ function toggleIndexingControl() {
 
 function toggleProxy() {
     var btn = document.getElementById("ProxyBtn");
-	btn.checked = !btn.checked;
+	var checked = !btn.checked;
+	btn.checked = checked;
+	/*toolbarbutton, too*/
+    btn = document.getElementById("ProxyToolbarBtn");
+	btn.checked = checked;
 	if (btn.checked) {
 		prefManager.setIntPref("network.proxy.type",2);
 		prefManager.setCharPref("network.proxy.autoconfig_url",getBaseURL()+"/autoconfig.pac");
-		btn.setAttribute("tooltiptext", "Proxy is OFF");
+		btn.setAttribute("tooltiptext", "Proxy is ON");
 	} else {
 		prefManager.setIntPref("network.proxy.type",0);
-		btn.setAttribute("tooltiptext", "Proxy is ON");
+		btn.setAttribute("tooltiptext", "Proxy is OFF");
 	}
 }
 /*function showSettings() {

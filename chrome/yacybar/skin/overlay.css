@@ -25,12 +25,18 @@
     list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
 }
 
-#ProxyBtn {
+#ProxyToolbarBtn {
+    list-style-image: url("chrome://yacybar/skin/proxy_off.gif");
+}
+#ProxyToolbarBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/proxy_on.gif");
 }
 
-#ProxyBtn[checked="true"] {
+#ProxyBtn {
     list-style-image: url("chrome://yacybar/skin/proxy_off.gif");
+}
+#ProxyBtn[checked="true"] {
+    list-style-image: url("chrome://yacybar/skin/proxy_on.gif");
 }
 
 treechildren::-moz-tree-cell-text(error){

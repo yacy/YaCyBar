@@ -6,6 +6,10 @@
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" oncommand="toggleProxy()" label="Use YaCY-Proxy" tooltiptext="Use the YaCyProxy" />
+	</toolbarpalette>
+
 	<toolbox id="navigator-toolbox">
     	<toolbar id="yacy_toolbar"
     			 class="chromeclass-toolbar"

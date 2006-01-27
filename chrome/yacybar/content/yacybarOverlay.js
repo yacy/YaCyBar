@@ -52,6 +52,9 @@ function searchKeyword(keyword) {
 }
 
 
+function loadYACY(){
+	gBrowser.addTab(getBaseURL()+"/");
+}	
 function blacklistpage(){
 	var url=window.content.prompt("Blacklist URL:", window._content.location);
 	if(url != null && url != ""){

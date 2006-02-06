@@ -68,10 +68,10 @@
 			
 			<toolbarseparator />	
 			<toolbarbutton id="ProxyBtn" 
-						   tooltiptext="Proxy is ON"
+						   tooltiptext="Proxy is OFF"
 						   oncommand="toggleProxy(this.checked)"/>
 			<toolbarbutton id="IndexingControlBtn" 
-						   tooltiptext="Indexing is ON"
+						   tooltiptext="Indexing is OFF"
 						   oncommand="toggleIndexingControl()"/>
 		</toolbar>
 	</toolbox>

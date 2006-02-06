@@ -63,35 +63,8 @@
 			   
 		    <toolbarbutton id="CrawlBtn" 
 			   label="Crawl Page" 
-			   type="menu-button"
 			   tooltiptext="Crawl current Page"
-			   oncommand="crawlpage()">			   
-			   <menupopup>
-					<menuitem id="crawlDepth0"
-							  type="radio"
-							  label="Crawl with depth 0" 
-							  class="menuitem-iconic" tooltiptext="Crawl current Page with crawling depth 0"
-							  oncommand="changeCrawlingDepth(0)" />
-							  			   
-					<menuitem id="crawlDepth1"
-							  type="radio"
-							  label="Crawl with depth 1"
-							  class="menuitem-iconic" tooltiptext="Crawl current Page with crawling depth 1"
-							  oncommand="changeCrawlingDepth(1)" />
-							  
-					<menuitem id="crawlDepth2"
-							  type="radio"
-							  label="Crawl with depth 2"
-							  class="menuitem-iconic" tooltiptext="Crawl current Page with crawling depth 2"
-							  oncommand="changeCrawlingDepth(2)" />
-							  
-					<menuitem id="crawlDepth3"
-							  type="radio"
-							  label="Crawl with depth 3"
-							  class="menuitem-iconic" tooltiptext="Crawl current Page with crawling depth 3"
-							  oncommand="changeCrawlingDepth(3)" />							  
-				</menupopup>
-			</toolbarbutton>
+			   oncommand="crawlpage()"/>			   
 			
 			<toolbarseparator />	
 			<toolbarbutton id="ProxyBtn" 

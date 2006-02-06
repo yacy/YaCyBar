@@ -1,0 +1,19 @@
+#crawlLink {
+    list-style-image: url("chrome://yacybar/skin/crawl.gif");
+}
+
+#crawlPage {
+    list-style-image: url("chrome://yacybar/skin/crawl.gif");
+}
+
+#searchSelected {
+    list-style-image: url("chrome://yacybar/skin/search.gif");
+}
+
+#about {
+    list-style-image: url("chrome://yacybar/skin/yacy.png");
+}
+
+#YaCyBar-context {
+    list-style-image: url("chrome://yacybar/skin/yacy.png");
+}

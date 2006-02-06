@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<dialog buttons="accept,cancel"
+        id="YaCyBarQuickCrawlDialog"
+        onload="initQuickCrawl()"
+        ondialogaccept="return startQuickCrawl();"
+        ondialogcancel="return cancelQuickCrawl();"
+        title="YaCyBar - QuickCrawl"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+		<script type="application/x-javascript" src="QuickCrawl.js"/>
+
+		<groupbox align="center" orient="horizontal">
+			<grid>
+				<rows>				
+					<row>
+				  		<label value="Title"/>	
+				  		<label id="crawlingTitle" value="" style="font-weight: bold;"/>							
+					</row>	
+					<row>
+						<label value="Starting Point" control="crawlingStart" accesskey="S" />
+						<textbox id="crawlingStart" value="http://localhost.wg" onchange="crawlingStartChanged();" width="300"/>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>
+
+		<hbox>
+			<groupbox align="center" orient="horizontal">
+			<caption label="Restrictions"/>
+			<grid>
+				<rows>				
+					<row>
+						<label value="Crawling Filter" control="crawlingFilter" accesskey="F"/>
+						<textbox id="crawlingFilter" value=".*"/>
+					</row>
+					<row>
+						<label value="Crawling Depth" control="crawlingDepth" accesskey="D"/>
+						<menulist id="crawlingDepth" editable="true">
+		 					<menupopup>
+			 					<menuitem label="0"/>
+			 					<menuitem label="1"/>				 					
+			 					<menuitem label="2"/>
+								<menuitem label="3"/>
+		 					</menupopup>
+						</menulist>
+					</row>												
+				</rows>
+			</grid>	
+			</groupbox>
+	
+			<groupbox align="left" orient="vertical">
+				<caption label="Options"/>
+				<checkbox id="crawlingQ" label="Accept dynamic URLs" checked="true"/>
+				<checkbox id="storeHTCache" label="Store to Proxy Cache" checked="true"/>
+				<checkbox id="crawlOrder" label="Remote Indexing" checked="false"/>		
+				<checkbox id="xdstopw" label="Exclude static Stop-Words" checked="true"/>		
+			</groupbox>
+		</hbox>
+		
+		<checkbox id="showQuickCrawlDialog" label="Use this as the default and do not ask again" checked="false" disabled="true"/>
+		
+</dialog>

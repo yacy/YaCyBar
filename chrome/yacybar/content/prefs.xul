@@ -4,16 +4,14 @@
 <overlay id="YaCyBarPrefsOverlay"
        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<prefwindow id="BrowserPreferences"
-				onload="onLoad();"
-				ondialogaccept="onAcceptSettings();"
-	>
+	<prefwindow id="BrowserPreferences">
 	
 	  <script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
 	 
 	  <prefpane id="YaCyBarPrefsPane"
 		  	    image="chrome://yacybar/skin/yacy_logo.gif"
-		  	    label="YaCy-Bar">
+		  	    label="YaCy-Bar"
+		  	    onpaneload="onLoad();">
 	
 	    <preferences>
 	      <preference id="yacybar_peerAddress"
@@ -34,10 +32,10 @@
 			<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" />
 			
 			<label value="User Name" control="peerUser" accesskey="U"/>
-			<textbox id="yacybar_peerUserField" />
+			<textbox id="yacybar_peerUserField" onchange="setUserPwd();"/>
 			
 			<label value="User Password" control="peerPwd" accesskey="W"/>
-			<textbox id="yacybar_peerPwdField" type="password"/>
+			<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>
 			
 	    </vbox>
 	    </groupbox>

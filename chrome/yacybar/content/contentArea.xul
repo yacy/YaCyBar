@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-
+<?xml-stylesheet href="chrome://yacybar/skin/contentArea.css" type="text/css"?>
 <overlay id="YaCyBarContentAreaOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
@@ -9,21 +9,25 @@
 	<!-- Context menu additions -->
 	<popup id="contentAreaContextMenu">
 	    <menuseparator />
-	    <menu label="YaCyBar">
+	    <menu id ="YaCyBar-context" label="YaCyBar" class="menu-iconic">
 	        <menupopup id="YaCyBar-context-items">
 	            <menuitem id="crawlLink" label="Crawl this link" 
 	                oncommand="crawllink();"
-	                tooltiptext="Crawl this link"/>
+	                tooltiptext="Crawl this link"
+	                class="menuitem-iconic" />
 	            <menuitem id="crawlPage" label="Crawl current page" 
 	                oncommand="crawlpage();"
-	                tooltiptext="Crawl current Page"/>
+	                tooltiptext="Crawl current Page"
+	                class="menuitem-iconic" />
 	            <menuitem id="searchSelected" label="Search this keyword" 
 	                oncommand="searchSelected();"
-	                tooltiptext="Search for selectd keyword"/>	                
+	                tooltiptext="Search for selectd keyword"
+	                class="menuitem-iconic" />	                
                 <menuseparator />                
-                <menuitem label="About YaCyBar" accesskey="A"
+                <menuitem id="about" label="About YaCyBar" accesskey="A"
 						  tooltiptext="About the YaCyBar"
-						  oncommand="showAbout()" />
+						  oncommand="showAbout()" 
+						  class="menuitem-iconic"/>
 	        </menupopup>
 	    </menu>
 	</popup>

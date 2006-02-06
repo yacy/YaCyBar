@@ -1,15 +1,17 @@
-function onAcceptSettings() {
+function setUserPwd() {
 	var username=document.getElementById('yacybar_peerUserField').value;
 	var password=document.getElementById('yacybar_peerPwdField').value;	
 	
+
 	var oldUserPwd = loadUserPwd();
 	if (oldUserPwd != null && oldUserPwd["user"] != null && oldUserPwd["user"] != "") {
 		removeUser(oldUserPwd["user"]);
 	}
-	 addUser(username, password);
+	addUser(username, password);
 }
 
 function onLoad() {
+	window.sizeToContent();
 
 	var userPwd = loadUserPwd();
 	if (userPwd != null && userPwd["user"] != null && userPwd["user"] != "") {
@@ -54,6 +56,7 @@ function loadUserPwd() {
 	try {
 		passwordManager.findPasswordEntry("chrome://yacybar/", null, null, host, user, password);
 	} catch(e){ 
+		alert(e);
 		return null;
 	}
 	

@@ -7,6 +7,8 @@
         title="YaCyBar - Crawl Jobs"
         onload="setCrawlJobTreeView();"
         persist="screenX screenY width height"
+        width="400"
+	    height="450"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     
     <script src="sidebarOverlay.js" />    

@@ -59,6 +59,6 @@
 			</groupbox>
 		</hbox>
 		
-		<checkbox id="showQuickCrawlDialog" label="Use this as the default and do not ask again" checked="false" disabled="true"/>
+		<checkbox id="showQuickCrawlDialog" label="Use this as the default and do not ask again" checked="false"/>
 		
 </dialog>

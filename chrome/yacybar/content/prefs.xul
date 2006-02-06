@@ -20,26 +20,50 @@
 	      <preference id="yacybar_peerPort"
 	        name="extensions.yacybar.peerPort"
 	        type="int"/>
+	        
+	      <preference id="yacybar_showQuickCrawlDialog"
+	        name="extensions.yacybar.QuickCrawl.showQuickCrawlDialog"
+	        type="bool"/>	        
 	    </preferences>
 	    
-		<groupbox id="yacyBar_GroupBox">
-	    <vbox>
-	    	<label value="Peer Address" control="peerAddressField" accesskey="A"/>
-			<textbox preference="yacybar_peerAddress" id="yacybar_peerAddressField" />
-			<separator class="thin"/>
-			
-			<label value="Peer Port" control="peerPortField" accesskey="P"/>
-			<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" />
-			
-			<label value="User Name" control="peerUser" accesskey="U"/>
-			<textbox id="yacybar_peerUserField" onchange="setUserPwd();"/>
-			
-			<label value="User Password" control="peerPwd" accesskey="W"/>
-			<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>
-			
-	    </vbox>
-	    </groupbox>
-	
+		<tabbox id="yacyBar_PrefsTablist" flex="1" hidden="false">
+			<tabs>
+				<tab label="Peer" selected="true"/>
+				<tab label="QuickCrawl"/>
+				<tab label="Search" disabled="true"/>
+			</tabs>
+			<tabpanels flex="1">
+				<tabpanel id="yacyBar_PrefsPeerTab" orient="vertical">
+				    <description>Settings needed to connect to your YaCy Peer</description>
+				    
+			    	<label value="Peer Address" control="peerAddressField" accesskey="A"/>
+					<textbox preference="yacybar_peerAddress" id="yacybar_peerAddressField" onchange="changeProxySettings();"/>
+					
+					<label value="Peer Port" control="peerPortField" accesskey="P"/>
+					<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" onchange="changeProxySettings();"/>
+					<separator class="thin"/>
+					
+					<label value="User Name" control="peerUser" accesskey="U"/>
+					<textbox id="yacybar_peerUserField" onchange="setUserPwd();"/>
+					
+					<label value="User Password" control="peerPwd" accesskey="W"/>
+					<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>						
+			    </tabpanel>
+			    
+			    <tabpanel id="yacyBar_PrefsQuickCrawlTab" orient="vertical">
+					<description>Settings that should be used for crawling.</description>	
+					
+					<checkbox preference="yacybar_showQuickCrawlDialog" 
+							  id="yacybar_showQuickCrawlDialogField"
+							  label="Prompt for crawler settings" 
+							  checked="true"/>		    				    
+			    </tabpanel>
+			    
+			    <tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">
+					<description>Settings that should be used for searching.</description>				    
+			    </tabpanel>
+			</tabpanels>
+		</tabbox>
 	  </prefpane>
 	
 	</prefwindow>

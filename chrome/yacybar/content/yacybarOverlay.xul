@@ -7,7 +7,7 @@
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
 	<toolbarpalette id="BrowserToolbarPalette">
-		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" oncommand="toggleProxy()" label="Use YaCY-Proxy" tooltiptext="Use the YaCyProxy" />
+		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" oncommand="toggleProxy(this.checked)" label="Use YaCY-Proxy" tooltiptext="Use the YaCyProxy" />
 	</toolbarpalette>
 
 	<toolbox id="navigator-toolbox">
@@ -69,7 +69,7 @@
 			<toolbarseparator />	
 			<toolbarbutton id="ProxyBtn" 
 						   tooltiptext="Proxy is ON"
-						   oncommand="toggleProxy()"/>
+						   oncommand="toggleProxy(this.checked)"/>
 			<toolbarbutton id="IndexingControlBtn" 
 						   tooltiptext="Indexing is ON"
 						   oncommand="toggleIndexingControl()"/>

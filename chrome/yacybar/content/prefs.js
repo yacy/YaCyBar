@@ -18,7 +18,6 @@ function onLoad() {
 		document.getElementById('yacybar_peerUserField').value = userPwd["user"];
 		document.getElementById('yacybar_peerPwdField').value = userPwd["pwd"];
 	}
-	
 }
 
 function addUser(username, password) {
@@ -65,4 +64,14 @@ function loadUserPwd() {
 	returnVal["pwd"] = password.value;
 	
 	return returnVal;
+}
+
+function changeProxySettings() {
+	var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
+	
+	if(Branch.getBoolPref("proxyControl")){
+		var host = document.getElementById('yacybar_peerAddressField').value;
+		var port = document.getElementById('yacybar_peerPortField').value;
+		prefManager.setCharPref("network.proxy.autoconfig_url","http://" + host + ":" + port + "/autoconfig.pac");
+	}	
 }

@@ -19,10 +19,10 @@
 }
 
 #IndexingControlBtn {
-    list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
+    list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
 }
 #IndexingControlBtn[checked="true"] {
-    list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
+    list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
 }
 
 #ProxyToolbarBtn {

@@ -23,7 +23,31 @@
 	        
 	      <preference id="yacybar_showQuickCrawlDialog"
 	        name="extensions.yacybar.QuickCrawl.showQuickCrawlDialog"
-	        type="bool"/>	        
+	        type="bool"/>	
+	        
+	      <preference id="yacybar_quickCrawlFilter"
+	        name="extensions.yacybar.QuickCrawl.last.filter"
+	        type="string"/>	
+	        
+	      <preference id="yacybar_quickCrawlDepth"
+	        name="extensions.yacybar.QuickCrawl.last.depth"
+	        type="int"/>		    
+	        
+	      <preference id="yacybar_quickCrawlCrawlingQ"
+	        name="extensions.yacybar.QuickCrawl.last.crawlingQ"
+	        type="bool"/>		        
+	       
+	      <preference id="yacybar_quickCrawlStoreHTCache"
+	        name="extensions.yacybar.QuickCrawl.last.storeHTCache"
+	        type="bool"/>		
+	        
+	      <preference id="yacybar_quickCrawlCrawlOrder"
+	        name="extensions.yacybar.QuickCrawl.last.crawlOrder"
+	        type="bool"/>		               
+	        
+	      <preference id="yacybar_quickCrawlXdstopw"
+	        name="extensions.yacybar.QuickCrawl.last.xdstopw"
+	        type="bool"/>		        
 	    </preferences>
 	    
 		<tabbox id="yacyBar_PrefsTablist" flex="1" hidden="false">
@@ -36,17 +60,17 @@
 				<tabpanel id="yacyBar_PrefsPeerTab" orient="vertical">
 				    <description>Settings needed to connect to your YaCy Peer</description>
 				    
-			    	<label value="Peer Address" control="peerAddressField" accesskey="A"/>
+			    	<label value="Peer Address" control="yacybar_peerAddressField" accesskey="A"/>
 					<textbox preference="yacybar_peerAddress" id="yacybar_peerAddressField" onchange="changeProxySettings();"/>
 					
-					<label value="Peer Port" control="peerPortField" accesskey="P"/>
+					<label value="Peer Port" control="yacybar_peerPortField" accesskey="P"/>
 					<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" onchange="changeProxySettings();"/>
 					<separator class="thin"/>
 					
-					<label value="User Name" control="peerUser" accesskey="U"/>
+					<label value="User Name" control="yacybar_peerUserField" accesskey="U"/>
 					<textbox id="yacybar_peerUserField" onchange="setUserPwd();"/>
 					
-					<label value="User Password" control="peerPwd" accesskey="W"/>
+					<label value="User Password" control="yacybar_peerPwdField" accesskey="W"/>
 					<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>						
 			    </tabpanel>
 			    
@@ -56,7 +80,42 @@
 					<checkbox preference="yacybar_showQuickCrawlDialog" 
 							  id="yacybar_showQuickCrawlDialogField"
 							  label="Prompt for crawler settings" 
-							  checked="true"/>		    				    
+							  checked="true"/>	
+							  
+
+					<hbox>
+						<groupbox align="center" orient="horizontal">
+						<caption label="Restrictions"/>
+						<grid>
+							<rows>				
+								<row>
+									<label value="Crawling Filter" />
+									<textbox preference="yacybar_quickCrawlFilter" id="crawlingFilter" value=""/>
+								</row>		
+								<row>
+									<label value="Crawling Depth"/>
+									<menulist preference="yacybar_quickCrawlDepth" id="crawlingDepth" editable="true">
+					 					<menupopup>
+						 					<menuitem label="0"/>
+						 					<menuitem label="1"/>				 					
+						 					<menuitem label="2"/>
+											<menuitem label="3"/>
+					 					</menupopup>
+									</menulist>
+								</row>																			
+							</rows>
+						</grid>	
+						</groupbox>
+						
+						<groupbox align="left" orient="vertical">
+							<caption label="Options"/>
+							<checkbox id="crawlingQ" preference="yacybar_quickCrawlCrawlingQ" label="Accept dynamic URLs"/>
+							<checkbox id="storeHTCache" preference="yacybar_quickCrawlStoreHTCache" label="Store to Proxy Cache"/>
+							<checkbox id="crawlOrder" preference="yacybar_quickCrawlCrawlOrder" label="Remote Indexing"/>		
+							<checkbox id="xdstopw" preference="yacybar_quickCrawlXdstopw" label="Exclude static Stop-Words"/>		
+						</groupbox>						
+					</hbox>						  
+							  	    				    
 			    </tabpanel>
 			    
 			    <tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">

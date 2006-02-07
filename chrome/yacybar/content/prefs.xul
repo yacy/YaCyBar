@@ -90,7 +90,7 @@
 							<rows>				
 								<row>
 									<label value="Crawling Filter" />
-									<textbox preference="yacybar_quickCrawlFilter" id="crawlingFilter" value=""/>
+									<textbox preference="yacybar_quickCrawlFilter" id="crawlingFilter"/>
 								</row>		
 								<row>
 									<label value="Crawling Depth"/>

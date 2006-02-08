@@ -55,7 +55,7 @@ function loadUserPwd() {
 	try {
 		passwordManager.findPasswordEntry("chrome://yacybar/", null, null, host, user, password);
 	} catch(e){ 
-		alert(e);
+		//alert(e);
 		return null;
 	}
 	

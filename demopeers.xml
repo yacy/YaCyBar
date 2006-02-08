@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<peers>
+  <peer name="suma-lab">
+	 <hash value="pZMbHGxp0ZT1" />
+     <address value="http://www.suma-lab.de" />
+	 <port value="8080" />
+     <always_on value="1" />
+  </peer>
+  <peer name="YaCyDemo">
+	 <hash value="IiPv2GaWQfsC" />
+     <address value="http://yacy.dyndns.org" />
+	 <port value="8000" />
+     <always_on value="0" />
+  </peer>
+  <peer name="HuppisYaCyBox">
+	 <hash value="La5ZLWG4e1PF" />
+     <address value="http://huppi.dyndns.org" />
+	 <port value="8081" />
+     <always_on value="1" />
+  </peer>
+  <peer name="4o4">
+	 <hash value="p_0i8mcuV4bb" />
+     <address value="http://4o4.dyndns.org" />
+	 <port value="8080" />
+     <always_on value="1" />
+  </peer>
+  <peer name="KarlchenOfHell">
+	 <hash value="yV3YiSEEQknD" />
+     <address value="http://kane.kicks-ass.org" />
+	 <port value="8081" />
+     <always_on value="1" />
+  </peer>
+  <peer name="DHT-Box">
+	 <hash value="SOk4bEU8kEoc" />
+     <address value="http://ramthun.homelinux.org" />
+	 <port value="48002" />
+     <always_on value="0" />
+  </peer>
+  <peer name="hendi-1">
+	 <hash value="_blfaze7lNfk" />
+     <address value="http://azathoth.naggel.com" />
+	 <port value="8080" />
+     <always_on value="1" />
+  </peer>
+  <peer name="hendi-2">
+	 <hash value="9ZCXZze7lNfk" />
+     <address value="http://yog-sothoth.naggel.com" />
+	 <port value="8080" />
+     <always_on value="1" />
+  </peer>
+</peers>
+</xml> 

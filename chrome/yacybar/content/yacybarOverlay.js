@@ -44,23 +44,20 @@ function init(){
 		Button initialization 
 	   ================================================================ */
 	// initialize proxy btn
-    var proxyBtn = document.getElementById("ProxyBtn");
-    var proxyToolbarBtn = document.getElementById("ProxyToolbarBtn");
-	if(Branch.getBoolPref("proxyControl")){
-		if (proxyBtn != null) proxyBtn.checked = true;
-		if (proxyToolbarBtn != null) proxyToolbarBtn.checked = true;
-	} else {
-		if (proxyBtn != null) proxyBtn.checked = false;
-		if (proxyToolbarBtn != null) proxyToolbarBtn.checked = false;	
-	}
+	var proxyControl = Branch.getBoolPref("proxyControl");
+	var proxyControlTooltipText;
+	if (proxyControl) proxyControlTooltipText = "Proxy is ON";
+	else proxyControlTooltipText = "Proxy is OFF";
+	document.getElementById('cmd_toggleProxy').setAttribute('checked',proxyControl);
+	document.getElementById('cmd_toggleProxy').setAttribute("tooltiptext", proxyControlTooltipText);
 	
 	// initialize indexing btn
-    var indexingControllBtn = document.getElementById("IndexingControlBtn");
-	if(Branch.getBoolPref("indexControl")){
-		if (indexingControllBtn != null) indexingControllBtn.checked = true;
-	} else {
-		if (indexingControllBtn != null) indexingControllBtn.checked = false;
-	}
+	var indexControl = Branch.getBoolPref("indexControl");
+	var indexControlTooltipText;
+	if (indexControl) indexControlTooltipText = "Indexing is ON";
+	else indexControlTooltipText = "Indexing is OFF";	
+	document.getElementById('cmd_toggleIndexing').setAttribute('checked',indexControl);
+	document.getElementById('cmd_toggleIndexing').setAttribute("tooltiptext", indexControlTooltipText);
 	
 
 }
@@ -127,37 +124,40 @@ function loadURL(newURL) {
 	//window.content.focus();
 }
 
-function toggleIndexingControl() {
-    var btn = document.getElementById("IndexingControlBtn");
-	btn.checked = !btn.checked;
-	if (btn.checked) {
-		btn.setAttribute("tooltiptext", "Indexing is ON");
-	} else {
-		btn.setAttribute("tooltiptext", "Indexing is OFF");
-	}
-	Branch.setBoolPref("indexControl",btn.checked);
+function toggleIndexing() {
+	// getting the current proxy control state	
+	var checked = Branch.getBoolPref("indexControl");
+
+	// toggle it
+	checked = !checked;
+	
+	// setting the gui elements accordingly
+	var tooltipText;
+	if (checked) tooltipText = "Indexing is ON";
+	else tooltipText = "Indexing is OFF";
+	document.getElementById('cmd_toggleIndexing').setAttribute('checked',checked);
+	document.getElementById('cmd_toggleIndexing').setAttribute("tooltiptext", tooltipText);
+	
+	// store the settings
+	Branch.setBoolPref("indexControl",checked);
 }
 
-function toggleProxy(checked) {
-	checked = !checked;
-	Branch.setBoolPref("proxyControl",checked);	  
+function toggleProxy() {
+	// getting the current proxy control state	
+	var checked = Branch.getBoolPref("proxyControl");
 	
-    var proxyBtn = document.getElementById("ProxyBtn");
-    if (proxyBtn != null) {
-    	proxyBtn.checked = checked;
-    	if (checked) {
-    		proxyBtn.setAttribute("tooltiptext", "Proxy is ON");
-    	} else {
-    		proxyBtn.setAttribute("tooltiptext", "Proxy is OFF");
-    	}
-    }
-    
-    
-    var toolBarProxyBtn = document.getElementById("ProxyToolbarBtn");
-	if (toolBarProxyBtn != null) {
-		toolBarProxyBtn.checked = checked;
-	} 
-    
+	// toggle it
+	checked = !checked;
+
+	// setting the gui elements accordingly
+	var tooltipText;
+	if (checked) tooltipText = "Proxy is ON";
+	else tooltipText = "Proxy is OFF";
+	document.getElementById('cmd_toggleProxy').setAttribute('checked',checked);
+	document.getElementById('cmd_toggleProxy').setAttribute("tooltiptext", tooltipText);
+
+	// store the settings
+	Branch.setBoolPref("proxyControl",checked);	
 	if (checked) {
 		prefManager.setIntPref("network.proxy.type",2);
 		prefManager.setCharPref("network.proxy.autoconfig_url",getBaseURL()+"/autoconfig.pac");

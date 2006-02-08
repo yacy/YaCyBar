@@ -6,76 +6,85 @@
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
-	<toolbarpalette id="BrowserToolbarPalette">
-		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" oncommand="toggleProxy(this.checked)" label="Use YaCY-Proxy" tooltiptext="Use the YaCyProxy" />
-	</toolbarpalette>
+	<commandset id="mainCommandSet">
+		<command id="cmd_toggleProxy" oncommand="toggleProxy();" tooltiptext="Proxy is OFF"/>
+		<command id="cmd_toggleIndexing" oncommand="toggleIndexing();" tooltiptext="Indexing is OFF"/>
+	</commandset>
 
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" command="cmd_toggleProxy" label="Use YaCY-Proxy" tooltiptext="Use the YaCyProxy" />
+		<toolbarbutton id="IndexingToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" command="cmd_toggleIndexing" label="Control YaCY-Indexing" tooltiptext="Use the control yacy indexing" />
+
+		<toolbaritem id="YaCy_toolbar_item1" flex="1">
+		    <toolbarbutton id="AboutMenu" type="menu">
+				<menupopup>
+					<menuitem label="YaCy Search" accesskey="H"
+							  tooltiptext="Your Searchsite"
+							  selected="true"
+							  oncommand="loadYACY()" />					
+					<menuseparator />					
+					<menuitem label="YaCy Homepage" accesskey="H"
+							  tooltiptext="Browse to the YaCy home page"
+							  selected="true"
+							  oncommand="loadURL('http://www.yacy.net/yacy')" />					
+					<menuitem label="YaCy Forum" accesskey="F"
+							  tooltiptext="Browse to the YaCy-Forum Homepage"
+							  oncommand="loadURL('http://www.yacy-forum.de')" />					
+					<menuitem label="YaCy Wiki" accesskey="W"
+							  tooltiptext="Browse to the YaCy-Wiki Homepage"
+							  oncommand="loadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite')" />												  
+					<menuitem label="YaCy SVN Log" accesskey="S"
+							  tooltiptext="Browse to the YaCy-SVN Repository Log"
+							  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')" />								  
+					<menuseparator />	
+					<menuitem label="YaCyBar Preferences" accesskey="P"
+							  tooltiptext="YaCyBar Preferences"
+							  oncommand="openPreferences('YaCyBarPrefsPane');" />									
+					<menuitem label="About YaCyBar" accesskey="A"
+							  tooltiptext="About the YaCyBar"
+							  oncommand="showAbout()" />
+				</menupopup>
+			</toolbarbutton>
+	    	<toolbarseparator/>
+	    	    	
+		    <textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(); }" />
+		    <toolbarbutton id="SearchBtn" 
+		    			   label="Search" 
+		    			   tooltiptext="Search with YaCy"
+		    			   oncommand="search()"/>			    
+		</toolbaritem>
+		
+		<toolbaritem id="YaCy_toolbar_item2" flex="0">	
+			<toolbarseparator/>		    		    
+		    <toolbarbutton id="BlacklistBtn" 
+			   label="Blacklist Page" 
+			   tooltiptext="Blacklist current Page"
+			   oncommand="blacklistpage()"/>				   
+		    <toolbarbutton id="CrawlBtn" 
+			   label="Crawl Page" 
+			   tooltiptext="Crawl current Page"
+			   oncommand="crawlpage()"/>	
+		</toolbaritem>
+		
+		<toolbaritem id="YaCy_toolbar_item3" flex="0">			   		   				
+			<toolbarseparator/>	
+			<toolbarbutton id="ProxyBtn"					   
+						   command="cmd_toggleProxy"/>
+			<toolbarbutton id="IndexingControlBtn" 
+						   command="cmd_toggleIndexing"/>
+   		</toolbaritem> 
+	</toolbarpalette>
+	
 	<toolbox id="navigator-toolbox">
     	<toolbar id="yacy_toolbar"
     			 class="chromeclass-toolbar"
 				 context="toolbar-context-menu" 
 				 toolbarname="YaCy-Bar"    	
 		     	 hidden="false" 
-		     	 persist="hidden">
-		    <toolbaritem flex="0">
-			    <toolbarbutton id="AboutMenu" type="menu" tooltiptext="">
-					<menupopup>
-						<menuitem label="YaCy Search" accesskey="H"
-								  tooltiptext="Your Searchsite"
-								  selected="true"
-								  oncommand="loadYACY()" />					
-						<menuseparator />					
-						<menuitem label="YaCy Homepage" accesskey="H"
-								  tooltiptext="Browse to the YaCy home page"
-								  selected="true"
-								  oncommand="loadURL('http://www.yacy.net/yacy')" />					
-						<menuitem label="YaCy Forum" accesskey="F"
-								  tooltiptext="Browse to the YaCy-Forum Homepage"
-								  oncommand="loadURL('http://www.yacy-forum.de')" />					
-						<menuitem label="YaCy Wiki" accesskey="W"
-								  tooltiptext="Browse to the YaCy-Wiki Homepage"
-								  oncommand="loadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite')" />												  
-						<menuitem label="YaCy SVN Log" accesskey="S"
-								  tooltiptext="Browse to the YaCy-SVN Repository Log"
-								  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')" />								  
-						<menuseparator />	
-						<menuitem label="YaCyBar Preferences" accesskey="P"
-								  tooltiptext="YaCyBar Preferences"
-								  oncommand="openPreferences('YaCyBarPrefsPane');" />									
-						<menuitem label="About YaCyBar" accesskey="A"
-								  tooltiptext="About the YaCyBar"
-								  oncommand="showAbout()" />
-					</menupopup>
-				</toolbarbutton>
-		    </toolbaritem>    	
-    	
-	    	<toolbarseparator />
-    	
-		    <textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(); }"/>
-		    <toolbarbutton id="SearchBtn" 
-		    			   label="Search" 
-		    			   tooltiptext="Search with YaCy"
-		    			   oncommand="search()"/>
-		    
-		    <toolbarseparator />
-		    
-		    <toolbarbutton id="BlacklistBtn" 
-			   label="Blacklist Page" 
-			   tooltiptext="Blacklist current Page"
-			   oncommand="blacklistpage()"/>
-			   
-		    <toolbarbutton id="CrawlBtn" 
-			   label="Crawl Page" 
-			   tooltiptext="Crawl current Page"
-			   oncommand="crawlpage()"/>			   
-			
-			<toolbarseparator />	
-			<toolbarbutton id="ProxyBtn" 
-						   tooltiptext="Proxy is OFF"
-						   oncommand="toggleProxy(this.checked)"/>
-			<toolbarbutton id="IndexingControlBtn" 
-						   tooltiptext="Indexing is OFF"
-						   oncommand="toggleIndexingControl()"/>
-		</toolbar>
+		     	 persist="collapsed,hidden"
+		     	 customizable="true"
+		     	 defaultset="YaCy_toolbar_item1,YaCy_toolbar_item2,YaCy_toolbar_item3"	
+		     	 inherits="collapsed,hidden"    	 
+		 />
 	</toolbox>
 </overlay>

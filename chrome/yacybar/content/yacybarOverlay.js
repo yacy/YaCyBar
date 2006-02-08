@@ -5,6 +5,7 @@ var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService
 var req;
 var crawling = Array();
 window.addEventListener("load", init, false);
+window.addEventListener("focus",focusChanged,true);
 
 function init(){
 	
@@ -44,22 +45,10 @@ function init(){
 		Button initialization 
 	   ================================================================ */
 	// initialize proxy btn
-	var proxyControl = Branch.getBoolPref("proxyControl");
-	var proxyControlTooltipText;
-	if (proxyControl) proxyControlTooltipText = "Proxy is ON";
-	else proxyControlTooltipText = "Proxy is OFF";
-	document.getElementById('cmd_toggleProxy').setAttribute('checked',proxyControl);
-	document.getElementById('cmd_toggleProxy').setAttribute("tooltiptext", proxyControlTooltipText);
+	setProxyControlBtn(Branch.getBoolPref("proxyControl"));
 	
 	// initialize indexing btn
-	var indexControl = Branch.getBoolPref("indexControl");
-	var indexControlTooltipText;
-	if (indexControl) indexControlTooltipText = "Indexing is ON";
-	else indexControlTooltipText = "Indexing is OFF";	
-	document.getElementById('cmd_toggleIndexing').setAttribute('checked',indexControl);
-	document.getElementById('cmd_toggleIndexing').setAttribute("tooltiptext", indexControlTooltipText);
-	
-
+	setIndexControlBtn(Branch.getBoolPref("indexControl"));
 }
 function getBaseURL() {
 	var host=Branch.getCharPref("peerAddress");
@@ -124,6 +113,15 @@ function loadURL(newURL) {
 	//window.content.focus();
 }
 
+function setIndexControlBtn(checked) {
+	// setting the gui elements accordingly
+	var tooltipText;
+	if (checked) tooltipText = "Indexing is ON";
+	else tooltipText = "Indexing is OFF";
+	document.getElementById('cmd_toggleIndexing').setAttribute('checked',checked);
+	document.getElementById('cmd_toggleIndexing').setAttribute("tooltiptext", tooltipText);
+}
+
 function toggleIndexing() {
 	// getting the current proxy control state	
 	var checked = Branch.getBoolPref("indexControl");
@@ -132,14 +130,19 @@ function toggleIndexing() {
 	checked = !checked;
 	
 	// setting the gui elements accordingly
-	var tooltipText;
-	if (checked) tooltipText = "Indexing is ON";
-	else tooltipText = "Indexing is OFF";
-	document.getElementById('cmd_toggleIndexing').setAttribute('checked',checked);
-	document.getElementById('cmd_toggleIndexing').setAttribute("tooltiptext", tooltipText);
+	setIndexControlBtn(checked);	
 	
 	// store the settings
 	Branch.setBoolPref("indexControl",checked);
+}
+
+function setProxyControlBtn(checked) {
+	// setting the gui elements accordingly
+	var tooltipText;
+	if (checked) tooltipText = "Proxy is ON";
+	else tooltipText = "Proxy is OFF";
+	document.getElementById('cmd_toggleProxy').setAttribute('checked',checked);
+	document.getElementById('cmd_toggleProxy').setAttribute("tooltiptext", tooltipText);
 }
 
 function toggleProxy() {
@@ -150,11 +153,7 @@ function toggleProxy() {
 	checked = !checked;
 
 	// setting the gui elements accordingly
-	var tooltipText;
-	if (checked) tooltipText = "Proxy is ON";
-	else tooltipText = "Proxy is OFF";
-	document.getElementById('cmd_toggleProxy').setAttribute('checked',checked);
-	document.getElementById('cmd_toggleProxy').setAttribute("tooltiptext", tooltipText);
+	setProxyControlBtn(checked);
 
 	// store the settings
 	Branch.setBoolPref("proxyControl",checked);	
@@ -165,6 +164,11 @@ function toggleProxy() {
 		prefManager.setIntPref("network.proxy.type",0);
 	}
 	
+}
+
+function focusChanged() {
+	setProxyControlBtn(Branch.getBoolPref("proxyControl"));
+	setIndexControlBtn(Branch.getBoolPref("indexControl"));
 }
 
 function initQuickCrawlPrefs(crawlJobData) {

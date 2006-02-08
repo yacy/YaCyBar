@@ -25,6 +25,13 @@
     list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
 }
 
+#IndexingToolbarBtn {
+    list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
+}
+#IndexingToolbarBtn[checked="true"] {
+    list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
+}
+
 #ProxyToolbarBtn {
     list-style-image: url("chrome://yacybar/skin/proxy_off.gif");
 }

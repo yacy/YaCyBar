@@ -41,6 +41,13 @@ function init(){
 		}
 	}	
 	
+	// init search settings
+	if (!Branch.prefHasUserValue("search.maxResults"))    Branch.setIntPref("search.maxResults",10);
+	if (!Branch.prefHasUserValue("search.orderBy"))       Branch.setCharPref("search.orderBy","YBR-Date-Quality");
+	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
+	if (!Branch.prefHasUserValue("search.maxSearchTime")) Branch.setIntPref("search.maxSearchTime",6);
+	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
+	
 	/* ================================================================
 		Button initialization 
 	   ================================================================ */
@@ -73,7 +80,23 @@ function searchSelected() {
 
 function searchKeyword(keyword) {
 	// alert(searchwords);
-	loadOneOrMoreURIs(getBaseURL() + "/index.html?search="+keyword);	
+	
+	var maxResults = Branch.getIntPref("search.maxResults");
+	var orderBy = Branch.getCharPref("search.orderBy");
+	var resource = Branch.getCharPref("search.resource");
+	var maxSearchTime = Branch.getIntPref("search.maxSearchTime");
+	var urlMask = Branch.getCharPref("search.urlMaskFilter");
+	if (urlMask == "") urlMask = ".*";
+	
+	loadOneOrMoreURIs(getBaseURL() + 
+					  "/index.html" + 
+					  "?search=" + keyword + 
+					  "&count=" + maxResults + 
+					  "&order=" + orderBy + 
+					  "&resource=" + resource + 
+					  "&time=" + maxSearchTime + 
+					  "&urlmaskfilter=" + urlMask
+	);	
 }
 
 

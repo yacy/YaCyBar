@@ -14,13 +14,15 @@
 		  	    onpaneload="onLoad();">
 	
 	    <preferences>
+	      <!-- peer address and port preferences -->
 	      <preference id="yacybar_peerAddress"
 	        name="extensions.yacybar.peerAddress"
 	        type="string"/>
 	      <preference id="yacybar_peerPort"
 	        name="extensions.yacybar.peerPort"
 	        type="int"/>
-	        
+	      
+	      <!-- quick crawling preferences -->  
 	      <preference id="yacybar_showQuickCrawlDialog"
 	        name="extensions.yacybar.QuickCrawl.showQuickCrawlDialog"
 	        type="bool"/>	
@@ -47,16 +49,34 @@
 	        
 	      <preference id="yacybar_quickCrawlXdstopw"
 	        name="extensions.yacybar.QuickCrawl.last.xdstopw"
-	        type="bool"/>		        
+	        type="bool"/>	
+	        
+	      <!-- searching preferences -->  
+	      <preference id="yacybar_searchMaxResults"
+	        name="extensions.yacybar.search.maxResults"
+	        type="int"/>	        
+	      <preference id="yacybar_searchOrderBy"
+	        name="extensions.yacybar.search.orderBy"
+	        type="string"/>		        
+	      <preference id="yacybar_searchResource"
+	        name="extensions.yacybar.search.resource"
+	        type="string"/>		        
+	      <preference id="yacybar_searchMaxSearchTime"
+	        name="extensions.yacybar.search.maxSearchTime"
+	        type="int"/>		        
+	      <preference id="yacybar_searchUrlMaskFilter"
+	        name="extensions.yacybar.search.urlMaskFilter"
+	        type="string"/>		        	        	        
 	    </preferences>
 	    
 		<tabbox id="yacyBar_PrefsTablist" flex="1" hidden="false">
 			<tabs>
 				<tab label="Peer" selected="true"/>
 				<tab label="QuickCrawl"/>
-				<tab label="Search" disabled="true"/>
+				<tab label="Search"/>
 			</tabs>
 			<tabpanels flex="1">
+				<!-- Peer connection preferences -->
 				<tabpanel id="yacyBar_PrefsPeerTab" orient="vertical">
 				    <description>Settings needed to connect to your YaCy Peer</description>
 				    
@@ -74,6 +94,7 @@
 					<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>						
 			    </tabpanel>
 			    
+			    <!-- quick crawl preferences -->
 			    <tabpanel id="yacyBar_PrefsQuickCrawlTab" orient="vertical">
 					<description>Settings that should be used for crawling.</description>	
 					
@@ -118,8 +139,64 @@
 							  	    				    
 			    </tabpanel>
 			    
+			    <!-- search preferences -->
 			    <tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">
-					<description>Settings that should be used for searching.</description>				    
+					<description>Settings that should be used for searching.</description>	
+					
+					<grid>
+						<rows>				
+							<row>
+								<label value="Max. number of results"/>
+								<menulist preference="yacybar_searchMaxResults" id="search.MaxResults" editable="true">
+				 					<menupopup>
+					 					<menuitem label="10"/>
+					 					<menuitem label="50"/>				 					
+					 					<menuitem label="100"/>
+										<menuitem label="1000"/>
+				 					</menupopup>
+								</menulist>
+							</row>
+							<row>
+								<label value="Order by"/>
+								<menulist preference="yacybar_searchOrderBy" id="search.OrderBy" editable="false">
+				 					<menupopup>
+					 					<menuitem label="YBR-Date-Quality"/>
+					 					<menuitem label="YBR-Quality-Date"/>
+					 					<menuitem label="Date-YBR-Quality"/>
+										<menuitem label="Quality-YBR-Date"/>
+										<menuitem label="Date-Quality-YBR"/>
+										<menuitem label="Quality-Date-YBR"/>
+				 					</menupopup>
+								</menulist>
+							</row>
+							<row>
+								<label value="Resource"/>
+								<menulist preference="yacybar_searchResource" id="search.Resource" editable="false">
+				 					<menupopup>
+					 					<menuitem label="global"/>
+					 					<menuitem label="local"/>
+				 					</menupopup>
+								</menulist>
+							</row>	
+							<row>
+								<label value="Max. search time (seconds)"/>
+								<menulist preference="yacybar_searchMaxSearchTime" id="search.MaxSearchTime" editable="true">
+				 					<menupopup>
+					 					<menuitem label="1"/>
+					 					<menuitem label="3"/>
+					 					<menuitem label="6"/>
+					 					<menuitem label="10"/>
+					 					<menuitem label="30"/>
+					 					<menuitem label="60"/>				 										 					
+				 					</menupopup>
+								</menulist>
+							</row>	
+							<row>
+								<label value="URL mask"/>
+								<textbox preference="yacybar_searchUrlMaskFilter" id="search.UrlMaskFilter"/>
+							</row>																																															
+						</rows>
+					</grid>									    
 			    </tabpanel>
 			</tabpanels>
 		</tabbox>

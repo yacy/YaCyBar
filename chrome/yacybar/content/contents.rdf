@@ -22,6 +22,7 @@
 	<RDF:Seq about="chrome://browser/content/browser.xul">
 	  <RDF:li>chrome://yacybar/content/yacybarOverlay.xul</RDF:li>
 	  <RDF:li>chrome://yacybar/content/contentArea.xul</RDF:li>
+	  <RDF:li>chrome://yacybar/content/statusBar.xul</RDF:li>
 	</RDF:Seq>
 	
 	<RDF:Seq about="chrome://browser/content/preferences/preferences.xul">

@@ -1,0 +1,64 @@
+statusbarpanel#yacybar_statusBar{
+    margin: 0;
+	padding: 0; 
+    border: none !important; 
+}	
+	
+statusbarpanel#yacybar_statusBar_ppm {
+    padding: 0;
+    margin: 0;
+    border: none !important; 
+    -moz-appearance: none !important;  
+}
+
+statusbarpanel#yacybar_statusBar_url {
+    padding: 0;
+    margin: 0;
+    border: none !important; 
+    -moz-appearance: none !important;  
+}
+
+statusbarpanel#yacybar_statusBar_rwi {
+    padding: 0;
+    margin: 0;
+    border: none !important; 
+    -moz-appearance: none !important;  
+}
+
+statusbarpanel#yacybar_statusBar_peerType {
+    list-style-image: url("chrome://yacybar/skin/Virgin.gif");
+    padding: 0;
+    margin: 0;  
+    margin-left: 3px !important;
+    margin-right: 3px !important;    
+    border: none !important;
+    -moz-appearance: none !important;
+}
+
+statusbarpanel#yacybar_statusBar_menu {
+    list-style-image: url("chrome://yacybar/skin/yacy.png");
+    padding: 0 !important;
+    margin: 0 !important;
+    -moz-appearance: none !important;    
+}
+
+statusbarpanel#yacybar_statusBar_peerType[peerType="principal"] {
+    list-style-image: url("chrome://yacybar/skin/PrincipalDirect.gif");
+    margin-left: 3px !important;
+    margin-right: 3px !important;    
+}
+statusbarpanel#yacybar_statusBar_peerType[peerType="senior"] {
+    list-style-image: url("chrome://yacybar/skin/SeniorDirect.gif");
+    margin-left: 3px !important;
+    margin-right: 3px !important;    
+}
+statusbarpanel#yacybar_statusBar_peerType[peerType="junior"] {
+    list-style-image: url("chrome://yacybar/skin/JuniorDirect.gif");
+    margin-left: 3px !important;
+    margin-right: 3px !important;    
+}
+statusbarpanel#yacybar_statusBar_peerType[peerType="virgin"] {
+    list-style-image: url("chrome://yacybar/skin/Virgin.gif");
+    margin-left: 3px !important;
+    margin-right: 3px !important;    
+}

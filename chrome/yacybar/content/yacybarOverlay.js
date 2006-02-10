@@ -8,7 +8,6 @@ window.addEventListener("load", init, false);
 window.addEventListener("focus",focusChanged,true);
 
 function init(){
-	
 	/* ================================================================
 		Preferences initialization for first run of yacybar 
 	   ================================================================ */
@@ -47,6 +46,10 @@ function init(){
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
 	if (!Branch.prefHasUserValue("search.maxSearchTime")) Branch.setIntPref("search.maxSearchTime",6);
 	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
+	
+	// init peer monitoring settings
+	if (!Branch.prefHasUserValue("peerMonitoring.enabled")) Branch.setBoolPref("peerMonitoring.enabled",false);
+	if (!Branch.prefHasUserValue("peerMonitoring.refreshRate")) Branch.setIntPref("peerMonitoring.refreshRate",30000);
 	
 	/* ================================================================
 		Button initialization 

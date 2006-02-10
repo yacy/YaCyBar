@@ -1,0 +1,18 @@
+.url {
+	cursor: pointer;
+	color: #3A69A6;
+}
+
+.about-box {
+	background-color: white;
+	padding: 13px;
+	padding-top: 5px;
+}
+
+.about-extension-name {
+	font-weight: bold; font-size: x-large;
+}
+
+.about-extension-info {
+	font-weight: bold;
+}

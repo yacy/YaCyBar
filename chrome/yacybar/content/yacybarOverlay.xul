@@ -47,6 +47,11 @@
 			</toolbarbutton>
 			<toolbarbutton id="BookmarksButton" type="menu" label="BM" onclick="loadTags(event)">
 				<menupopup id="BookmarksMenu">
+					<menuitem label="Add Bookmark"
+							  tooltiptext="Add a Bookmark"
+							  selected="true"
+							  oncommand="showAddBookmark()" />					
+					<menuseparator />					
 				</menupopup>
 			</toolbarbutton>
 	    	<toolbarseparator/>

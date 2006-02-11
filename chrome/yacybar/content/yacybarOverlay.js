@@ -360,10 +360,10 @@ function loadTagsHandler(){
 	if (req.readyState == 4) {
         if (req.status == 200) {
 			bmMenu=document.getElementById("BookmarksMenu");
-			item=bmMenu.firstChild;
+			item=bmMenu.firstChild.nextSibling.nextSibling;
 			while(item!=null){
 				bmMenu.removeChild(item);
-				item=bmMenu.firstChild;
+				item=bmMenu.firstChild.nextSibling.nextSibling;
 			}
 			var response = req.responseXML;
 			tags=response.getElementsByTagName("tag");
@@ -425,5 +425,7 @@ function loadBookmarksHandler(){
 		}
 	}
 }
-
+function showAddBookmark(){
+	window.openDialog("chrome://yacybar/content/addBookmark.xul","yacybarAddBookmark","centerscreen, chrome, modal", window.content.document.location.href, window.content.document.title);
+}
 

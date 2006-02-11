@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://yacybar/skin/about.css" type="text/css"?>
+<dialog buttons="accept,cancel"
+        id="yacyBarAddBookmark"
+		onload="init()"
+        ondialogaccept="add()"
+        title="YaCyBar - AddBookmark"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		<script type="application/x-javascript" src="addBookmark.js"/>
+		<vbox>
+			<label for="url" value="URL"/>
+			<textbox id="url" flex="1" />
+			<label for="title" value="Title"/>
+			<textbox id="title" flex="1" />
+			<label for="description" value="Description"/>
+			<textbox id="description" flex="1" />
+			<label for="tags" value="Tags(separated by comma)"/>
+			<textbox id="tags" flex="1" />
+		</vbox>
+</dialog>

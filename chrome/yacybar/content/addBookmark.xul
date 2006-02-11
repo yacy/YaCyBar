@@ -4,7 +4,7 @@
 <dialog buttons="accept,cancel"
         id="yacyBarAddBookmark"
 		onload="init()"
-        ondialogaccept="add()"
+        ondialogaccept="addBookmark()"
         title="YaCyBar - AddBookmark"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<script type="application/x-javascript" src="addBookmark.js"/>
@@ -17,5 +17,12 @@
 			<textbox id="description" flex="1" />
 			<label for="tags" value="Tags(separated by comma)"/>
 			<textbox id="tags" flex="1" />
+			<label for="public" value="Public"/>
+			<menulist id="public">
+				<menupopup>
+					<menuitem value="yes" label="yes" selected="true" id="ispublic" />
+					<menuitem value="no" label="no" id="isprivate" />
+				</menupopup>
+			</menulist>
 		</vbox>
 </dialog>

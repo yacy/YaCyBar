@@ -22,16 +22,36 @@ function init(){
 	}
 }
 
-function add(){
+function addBookmark(){
 	var url=document.getElementById("url").value;
-	var title=document.getElementById("url").value;
-	description=document.getElementById("url").value;
-	tags=document.getElementById("url").value;
+	var title=document.getElementById("title").value;
+	var description=document.getElementById("description").value;
+	var tags=document.getElementById("tags").value;
+	var isPublic=document.getElementById("ispublic").getAttribute("selected");
+	var public="private"
+	if(isPublic){
+		public="public";
+	}
 	if(url==""){
 		alert("Please enter an URL");
 	}else if(title==""){
 		alert("Please enter a title");
 	}
-	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
+	
 	//TODO: This needs the not exisiting backend
+	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
+	rqurl=getBaseURL()+"/Bookmarks_p.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
+	+"&description="+encodeURIComponent(description)+"&tags="+encodeURIComponent(tags)+"&public="+public+"&add=true";
+	//dump(rqurl);
+	req.open('get', rqurl);
+	req.onreadystatechange=addBookmarkHandler;
+	req.send(null);
+}
+function addBookmarkHandler(){
+	//this does nothing, yet.
+	//waiting for the XML Backend
+	dump(req.readyState);
+	if(req.readyState==4){
+		dump("bookmark added?\n");
+	}
 }

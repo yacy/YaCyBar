@@ -334,7 +334,11 @@ function crawlReceipt() {
         }        
 	} 
 }
-function loadTags(){
+function loadTags(event){
+	//only in tagsMenu
+	if(event.target.id!="BookmarksButton"){
+		return;
+	}
 	if(window.XMLHttpRequest) {
 	   	try {
 			req = new XMLHttpRequest();
@@ -368,7 +372,7 @@ function loadTagsHandler(){
 				menupopup=document.createElement("menupopup");
 				menu.setAttribute("type", "menu");
 				menu.setAttribute("label", tags[i].getAttribute("tag"));
-				menu.setAttribute("onmouseover", "loadBookmarks(\""+tags[i].getAttribute("tag")+"\")");
+				menu.setAttribute("onmouseover", "loadBookmarks(\""+tags[i].getAttribute("tag")+"\", event)");
 				menupopup.setAttribute("id", "TagMenu-"+tags[i].getAttribute("tag"));
 				menu.appendChild(menupopup);
 				bmMenu.appendChild(menu);
@@ -376,7 +380,10 @@ function loadTagsHandler(){
 		}
 	}
 }
-function loadBookmarks(tag){
+function loadBookmarks(tag, event){
+	if(event.target.firstChild.id!="TagMenu-"+tag){
+		return;
+	}
 	if(window.XMLHttpRequest) {
 	   	try {
 			req = new XMLHttpRequest();

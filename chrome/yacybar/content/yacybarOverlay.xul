@@ -45,7 +45,7 @@
 							  oncommand="showAbout()" />
 				</menupopup>
 			</toolbarbutton>
-			<toolbarbutton id="BookmarkButton" type="menu" label="BM" onclick="loadTags()">
+			<toolbarbutton id="BookmarksButton" type="menu" label="BM" onclick="loadTags(event)">
 				<menupopup id="BookmarksMenu">
 				</menupopup>
 			</toolbarbutton>

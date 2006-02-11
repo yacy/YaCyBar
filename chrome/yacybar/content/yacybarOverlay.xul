@@ -45,6 +45,10 @@
 							  oncommand="showAbout()" />
 				</menupopup>
 			</toolbarbutton>
+			<toolbarbutton id="BookmarkButton" type="menu" label="BM" onclick="loadTags()">
+				<menupopup id="BookmarksMenu">
+				</menupopup>
+			</toolbarbutton>
 	    	<toolbarseparator/>
 	    	    	
 		    <textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(); }" />

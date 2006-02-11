@@ -334,6 +334,89 @@ function crawlReceipt() {
         }        
 	} 
 }
+function loadTags(){
+	if(window.XMLHttpRequest) {
+	   	try {
+			req = new XMLHttpRequest();
+	        if (req.overrideMimeType) {
+	            req.overrideMimeType('text/xml');
+	        }				
+	    } catch(e) {
+			req = false;
+	    }
+	}
+	if(req){
+		var userPwd = loadUserPwd();
+		req.onreadystatechange = loadTagsHandler;
+		req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get_p.xml", true, userPwd["user"], userPwd["pwd"]);
+		req.send(null);
+	}
+}
+function loadTagsHandler(){
+	if (req.readyState == 4) {
+        if (req.status == 200) {
+			bmMenu=document.getElementById("BookmarksMenu");
+			item=bmMenu.firstChild;
+			while(item!=null){
+				bmMenu.removeChild(item);
+				item=bmMenu.firstChild;
+			}
+			var response = req.responseXML;
+			tags=response.getElementsByTagName("tag");
+			for(i=0;i<tags.length;i++){
+				menu=document.createElement("menu");
+				menupopup=document.createElement("menupopup");
+				menu.setAttribute("type", "menu");
+				menu.setAttribute("label", tags[i].getAttribute("tag"));
+				menu.setAttribute("onmouseover", "loadBookmarks(\""+tags[i].getAttribute("tag")+"\")");
+				menupopup.setAttribute("id", "TagMenu-"+tags[i].getAttribute("tag"));
+				menu.appendChild(menupopup);
+				bmMenu.appendChild(menu);
+			}
+		}
+	}
+}
+function loadBookmarks(tag){
+	if(window.XMLHttpRequest) {
+	   	try {
+			req = new XMLHttpRequest();
+	        if (req.overrideMimeType) {
+	            req.overrideMimeType('text/xml');
+	        }				
+	    } catch(e) {
+			req = false;
+	    }
+	}
+	if(req){
+		var userPwd = loadUserPwd();
+		req.onreadystatechange = loadBookmarksHandler;
+		req.tag=tag
+		//TODO: Get this working with password. (all_p.xml)
+		req.open("GET", getBaseURL()+"/xml/bookmarks/posts/all.xml?tag="+tag, true, userPwd["user"], userPwd["pwd"]);
+		req.send(null);
+	}
+}
+function loadBookmarksHandler(){
+	if (req.readyState == 4) {
+        if (req.status == 200) {
+			tagMenu=document.getElementById("TagMenu-"+req.tag);
+			item=tagMenu.firstChild;
+			while(item!=null){
+				tagMenu.removeChild(item);
+				item=tagMenu.firstChild;
+			}
 
+			var response=req.responseXML;
+			posts=response.getElementsByTagName("post");
+			for(i=0;i<posts.length;i++){
+				item=document.createElement("menuitem");
+				item.setAttribute("label", posts[i].getAttribute("description"));
+				item.setAttribute("onclick", "loadURL(\""+posts[i].getAttribute("href")+"\")");
+				item.setAttribute("title", posts[i].getAttribute("extended"));
+				tagMenu.appendChild(item);
+			}
+		}
+	}
+}
 
 

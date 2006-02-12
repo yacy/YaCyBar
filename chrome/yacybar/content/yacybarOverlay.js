@@ -60,9 +60,15 @@ function init(){
 	setIndexControlBtn(Branch.getBoolPref("indexControl"));
 }
 
-function search(){
+function search(samewindow){
 	var searchwords=document.getElementById("search").value;
-	searchKeyword(searchwords);
+	var url=getSearchURL(searchwords);
+	if(samewindow){
+		window._content.document.location = url;
+		window.content.focus();
+	}else{
+		gBrowser.addTab(url);
+	}
 }
 
 function searchSelected() {
@@ -70,11 +76,13 @@ function searchSelected() {
 	if (selText != null && selText != "") {
 		var searchTextBox=document.getElementById("search");
 		searchTextBox.value = selText;
-		searchKeyword(selText);
+		var url=searchKeyword(selText);
+		window._content.document.location = url;
+		window.content.focus();
 	}
 }
 
-function searchKeyword(keyword) {
+function getSearchURL(keyword) {
 	// alert(searchwords);
 	
 	var maxResults = Branch.getIntPref("search.maxResults");
@@ -84,15 +92,14 @@ function searchKeyword(keyword) {
 	var urlMask = Branch.getCharPref("search.urlMaskFilter");
 	if (urlMask == "") urlMask = ".*";
 	
-	loadOneOrMoreURIs(getBaseURL() + 
-					  "/index.html" + 
-					  "?search=" + keyword + 
-					  "&count=" + maxResults + 
-					  "&order=" + orderBy + 
-					  "&resource=" + resource + 
-					  "&time=" + maxSearchTime + 
-					  "&urlmaskfilter=" + urlMask
-	);	
+	return getBaseURL() + 
+	"/index.html" + 
+	"?search=" + keyword + 
+	"&count=" + maxResults + 
+	"&order=" + orderBy + 
+	"&resource=" + resource + 
+	"&time=" + maxSearchTime + 
+	"&urlmaskfilter=" + urlMask;	
 }
 
 

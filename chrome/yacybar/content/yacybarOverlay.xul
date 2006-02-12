@@ -67,11 +67,12 @@
 			</toolbarbutton>
 	    	<toolbarseparator/>
 	    	    	
-		    <textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(); }" />
+			<textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(true); }" />
 		    <toolbarbutton id="SearchBtn" 
 		    			   label="Search" 
 		    			   tooltiptext="Search with YaCy"
-		    			   oncommand="search()"/>			    
+		    			   oncommand="search(false)"
+			/>
 		</toolbaritem>
 		
 		<toolbaritem id="YaCy_toolbar_item2" flex="0">	

@@ -22,21 +22,31 @@
 					<menuitem label="YaCy Search" accesskey="H"
 							  tooltiptext="Your Searchsite"
 							  selected="true"
-							  oncommand="loadYACY()" />					
+							  oncommand="loadYACY()"
+							  onclick="bgLoadYACY(event)"
+					/>
 					<menuseparator />					
 					<menuitem label="YaCy Homepage" accesskey="H"
 							  tooltiptext="Browse to the YaCy home page"
 							  selected="true"
-							  oncommand="loadURL('http://www.yacy.net/yacy')" />					
+							  oncommand="loadURL('http://www.yacy.net/yacy', event)"
+							  onclick="bgLoadURL('http://www.yacy.net/yacy', event)"
+					/>
 					<menuitem label="YaCy Forum" accesskey="F"
 							  tooltiptext="Browse to the YaCy-Forum Homepage"
-							  oncommand="loadURL('http://www.yacy-forum.de')" />					
+							  oncommand="loadURL('http://www.yacy-forum.de')"
+							  onclick="bgLoadURL('http://www.yacy-forum.de', event)"
+					/>
 					<menuitem label="YaCy Wiki" accesskey="W"
 							  tooltiptext="Browse to the YaCy-Wiki Homepage"
-							  oncommand="loadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite')" />												  
+							  oncommand="loadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite')"
+							  onclick="bgLoadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite', event)"
+					/>
 					<menuitem label="YaCy SVN Log" accesskey="S"
 							  tooltiptext="Browse to the YaCy-SVN Repository Log"
-							  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')" />								  
+							  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')"
+							  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"
+					/>
 					<menuseparator />	
 					<menuitem label="YaCyBar Preferences" accesskey="P"
 							  tooltiptext="YaCyBar Preferences"

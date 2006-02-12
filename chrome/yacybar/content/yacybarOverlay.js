@@ -97,7 +97,13 @@ function searchKeyword(keyword) {
 
 
 function loadYACY(){
-	gBrowser.addTab(getBaseURL()+"/");
+	window._content.document.location = getBaseURL()+"/";
+	window.content.focus();
+}	
+function bgLoadYACY(event){
+	if(event.button==1){
+		gBrowser.addTab(getBaseURL()+"/");
+	}
 }	
 function blacklistpage(){
 	var url=window.content.prompt("Blacklist URL:", window._content.location);
@@ -127,9 +133,14 @@ function showPrefs() {
 }	
 
 function loadURL(newURL) {
-	gBrowser.addTab(newURL);
-	//window._content.document.location = newURL;
-	//window.content.focus();
+	//gBrowser.addTab(newURL);
+	window._content.document.location = newURL;
+	window.content.focus();
+}
+function bgLoadUrl(newURL, event){
+	if(event.button==1){
+		gBrowser.addTab(newURL);
+	}
 }
 
 function setIndexControlBtn(checked) {

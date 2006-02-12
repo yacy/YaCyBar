@@ -7,6 +7,7 @@
 	<prefwindow id="BrowserPreferences">
 	
 	  <script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
+	  <script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>
 	 
 	  <prefpane id="YaCyBarPrefsPane"
 		  	    image="chrome://yacybar/skin/yacy_logo.gif"

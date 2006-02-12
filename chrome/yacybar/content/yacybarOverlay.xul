@@ -4,6 +4,7 @@
 		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
+	<script type="application/x-javascript" src="functions.js"/>
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
 	<commandset id="mainCommandSet">

@@ -1,6 +1,5 @@
 var gBrowser = document.getElementById("content");
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
 
 var req;
 var crawling = Array();
@@ -59,12 +58,6 @@ function init(){
 	
 	// initialize indexing btn
 	setIndexControlBtn(Branch.getBoolPref("indexControl"));
-}
-function getBaseURL() {
-	var host=Branch.getCharPref("peerAddress");
-	var port=Branch.getIntPref("peerPort");
-	var baseURL  = "http://" + host + ":" + port;	
-	return baseURL;
 }
 
 function search(){

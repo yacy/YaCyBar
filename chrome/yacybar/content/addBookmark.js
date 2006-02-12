@@ -1,12 +1,4 @@
-var req=new XMLHttpRequest();
-var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
-
-function getBaseURL() {
-	var host=Branch.getCharPref("peerAddress");
-	var port=Branch.getIntPref("peerPort");
-	var baseURL  = "http://" + host + ":" + port;	
-	return baseURL;
-}
+var req;
 
 function init(){
 	var url=window.arguments[0];
@@ -39,19 +31,13 @@ function addBookmark(){
 	}
 	
 	//TODO: This needs the not exisiting backend
+	//TODO: Do not Change it, till a stable Release with the Backend!
 	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
 	rqurl=getBaseURL()+"/Bookmarks_p.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
 	+"&description="+encodeURIComponent(description)+"&tags="+encodeURIComponent(tags)+"&public="+public+"&add=true";
-	//dump(rqurl);
-	req.open('get', rqurl);
-	req.onreadystatechange=addBookmarkHandler;
+	userPwd=loadUserPwd();
+	req=new XMLHttpRequest();
+	req.open('GET', rqurl, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);
-}
-function addBookmarkHandler(){
-	//this does nothing, yet.
-	//waiting for the XML Backend
-	dump(req.readyState);
-	if(req.readyState==4){
-		dump("bookmark added?\n");
-	}
+	dump(req.readyState+"\n");
 }

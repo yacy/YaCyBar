@@ -2,7 +2,7 @@
 <peers>
   <peer name="suma-lab">
 	 <hash value="pZMbHGxp0ZT1" />
-     <address value="http://www.suma-lab.de:8080" />
+     <address host="www.suma-lab.de" port="8080" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
@@ -11,7 +11,7 @@
   </peer>
   <peer name="YaCyDemo">
 	 <hash value="IiPv2GaWQfsC" />
-     <address value="http://yacy.dyndns.org:8000" />
+     <address host="yacy.dyndns.org" port="8000" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
@@ -20,7 +20,7 @@
   </peer>
   <peer name="HuppisYaCyBox">
 	 <hash value="La5ZLWG4e1PF" />
-     <address value="http://huppi.dyndns.org:8081" />
+     <address host="huppi.dyndns.org" port="8081" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
@@ -29,7 +29,7 @@
   </peer>
   <peer name="4o4">
 	 <hash value="p_0i8mcuV4bb" />
-     <address value="http://4o4.dyndns.org:8080" />
+     <address host="4o4.dyndns.org" port="8080" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
@@ -38,7 +38,7 @@
   </peer>
   <peer name="KarlchenOfHell">
 	 <hash value="yV3YiSEEQknD" />
-     <address value="http://kane.kicks-ass.org:8081" />
+     <address host="kane.kicks-ass.org" port="8081" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
@@ -47,7 +47,7 @@
   </peer>
   <peer name="DHT-Box">
 	 <hash value="SOk4bEU8kEoc" />
-     <address value="http://ramthun.homelinux.org:48002" />
+     <address host="ramthun.homelinux.org" port="48002" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="000000000000079999999970" />
@@ -56,7 +56,7 @@
   </peer>
   <peer name="hendi-1">
 	 <hash value="_blfaze7lNfk" />
-     <address value="http://azathoth.naggel.com:8080" />
+     <address host="http://azathoth.naggel.com" port="8080" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
@@ -65,7 +65,7 @@
   </peer>
   <peer name="hendi-2">
 	 <hash value="9ZCXZze7lNfk" />
-     <address value="http://yog-sothoth.naggel.com:8080" />
+     <address host="yog-sothoth.naggel.com" port="8080" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />

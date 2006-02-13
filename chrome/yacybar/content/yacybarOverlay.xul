@@ -25,6 +25,12 @@
 							  oncommand="loadYACY()"
 							  onclick="bgLoadYACY(event)"
 					/>
+					<menuitem label="Demo mode"
+							id="menuitem-demo"
+							tooltiptext="Demo mode"
+							type="checkbox"
+							oncommand="toggleDemo()"
+					/>
 					<menuseparator />					
 					<menuitem label="YaCy Homepage" accesskey="H"
 							  tooltiptext="Browse to the YaCy home page"

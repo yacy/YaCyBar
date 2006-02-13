@@ -1,10 +1,10 @@
 var gBrowser = document.getElementById("content");
-var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 
 var cons = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
 
 var req;
 var demoPeers = Array();
+var isDemo=false;
 
 window.addEventListener("load", init, false);
 window.addEventListener("focus",focusChanged,true);
@@ -449,3 +449,21 @@ function showAddBookmark(){
 	window.openDialog("chrome://yacybar/content/addBookmark.xul","yacybarAddBookmark","centerscreen, chrome, modal", window.content.document.location.href, window.content.document.title);
 }
 
+function toggleDemo(){
+	demomenu=document.getElementById("menuitem-demo");
+	if(demomenu.getAttribute("checked")){
+		req=new XMLHttpRequest();
+		req.open("GET", "chrome://yacybar/content/demopeers.xml", false);
+		req.send(null);
+		response=req.responseXML;
+		peers=response.getElementsByTagName("peer");
+		peer=peers[Math.floor(Math.random()*peers.length)];
+		isDemo=true;
+		demoHost=peer.getElementsByTagName("address")[0].getAttribute("host");
+		demoPort=peer.getElementsByTagName("address")[0].getAttribute("host");
+		alert("Using \""+peer.getAttribute("name")+"\" as your Demopeer.");
+		
+		/*Branch.setBoolPref("demomode",true);*/
+		
+	}
+}

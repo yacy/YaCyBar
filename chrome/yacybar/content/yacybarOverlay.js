@@ -4,7 +4,6 @@ var cons = Components.classes["@mozilla.org/consoleservice;1"].getService(Compon
 
 var req;
 var demoPeers = Array();
-var isDemo=false;
 
 window.addEventListener("load", init, false);
 window.addEventListener("focus",focusChanged,true);
@@ -34,6 +33,10 @@ function init(){
 	if (!Branch.prefHasUserValue("peerPort")) {
 		Branch.setIntPref("peerPort",8080);
 	}	
+	if (!Branch.prefHasUserValue("demoPeersURL")) {
+		Branch.setCharPref("demoPeersURL", "chrome://yacybar/content/demopeers.xml");
+	}
+	
 	
 	// init proxy control buttion
 	if (!Branch.prefHasUserValue("proxyControl")) {
@@ -460,8 +463,9 @@ function showAddBookmark(){
 function toggleDemo(){
 	demomenu=document.getElementById("menuitem-demo");
 	if(demomenu.getAttribute("checked")){
+		var demoPeersURL=Branch.getCharPref("demoPeersURL");
 		req=new XMLHttpRequest();
-		req.open("GET", "chrome://yacybar/content/demopeers.xml", false);
+		req.open("GET", demoPeersURL, false);
 		req.send(null);
 		response=req.responseXML;
 		peers=response.getElementsByTagName("peer");

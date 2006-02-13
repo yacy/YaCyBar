@@ -48,6 +48,8 @@
 							  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"
 					/>
 					<menuseparator />	
+					<menuitem label="CrawlJobs" 
+							  oncommand=" showCrawlJobs();" />						
 					<menuitem label="YaCyBar Preferences" accesskey="P"
 							  tooltiptext="YaCyBar Preferences"
 							  oncommand="openPreferences('YaCyBarPrefsPane');" />									

@@ -2,7 +2,6 @@
 <?xml-stylesheet href="chrome://yacybar/skin/contentArea.css" type="text/css"?>
 <overlay id="YaCyBarContentAreaOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<script type="application/x-javascript" src="yacybarOverlay.js"/>
 	<script type="application/x-javascript" src="contentArea.js"/>
 	<script type="application/x-javascript" src="prefs.js"/>
 	

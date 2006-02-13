@@ -1,0 +1,36 @@
+#crawlJobView {
+  margin: 10px 10px 5px 10px;
+}
+
+/* crawljob View Items */
+quickCrawlJob {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  -moz-padding-start: 13px;
+  -moz-padding-end: 10px;
+  min-height: 25px;
+  border-bottom: 1px dotted #C0C0C0;
+  background-color: #F8F8FF;
+}
+
+quickCrawlJob[selected="true"] {
+  border-bottom: 1px dotted #7F9DB9;
+}
+
+.crawlJobUrl {
+	color: #3A69A6;
+}
+
+.crawlJobTitle {
+	color: #4070a0;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.crawlJobStatus[statusCode="0"] {
+	color: green;
+}
+
+.crawlJobStatus {
+	color: red;
+}

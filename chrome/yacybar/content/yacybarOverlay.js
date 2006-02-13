@@ -1,12 +1,17 @@
 var gBrowser = document.getElementById("content");
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 
+var cons = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
+
 var req;
-var crawling = Array();
+var demoPeers = Array();
+
 window.addEventListener("load", init, false);
 window.addEventListener("focus",focusChanged,true);
 
 function init(){
+	cons.logStringMessage("Init yacybar");
+
 	/* ================================================================
 		Preferences initialization for first run of yacybar 
 	   ================================================================ */
@@ -58,6 +63,7 @@ function init(){
 	
 	// initialize indexing btn
 	setIndexControlBtn(Branch.getBoolPref("indexControl"));
+	
 }
 
 function search(samewindow){
@@ -133,6 +139,10 @@ function crawllink() {
 			
 function showAbout() {
 	window.openDialog("chrome://yacybar/content/about.xul","yacybarAbout","centerscreen, chrome, modal");
+}	
+
+function showCrawlJobs() {
+	window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs", "chrome,centerscreen,resizable");
 }	
 
 function showPrefs() {
@@ -332,14 +342,13 @@ function crawlReceipt() {
 			var response = req.responseXML;
 			
 			var newJob = Array();
-			newJob["date"] = (new Date()).toLocaleString();
+			newJob["date"] = new Date();
 			newJob["title"] = response.getElementsByTagName("title")[0].firstChild.data;
-			newJob["url"] = response.getElementsByTagName("url")[0].firstChild.data;
-			newJob["status"] = response.getElementsByTagName("status")[0].firstChild.data;
+			newJob["link"] = response.getElementsByTagName("url")[0].firstChild.data;
+			newJob["status"] = response.getElementsByTagName("status")[0].firstChild.data.trim();
 			newJob["statusCode"] = response.getElementsByTagName("status")[0].getAttribute("code");
-			crawling.push(newJob); 
 
-			window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs", "chrome,centerscreen,resizable",crawling);         
+			window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs", "chrome,centerscreen,resizable",newJob);         
         } else {
             alert("ERROR: There was a problem retrieving the XML data:\n" + req.status + "\n" + req.statusText);
         }        

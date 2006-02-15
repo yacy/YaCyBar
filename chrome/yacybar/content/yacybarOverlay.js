@@ -378,7 +378,7 @@ function loadTags(event){
 			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true);
 		}else{
 			var userPwd = loadUserPwd();
-			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get_p.xml", true, userPwd["user"], userPwd["pwd"]);
+			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
 	}
@@ -427,8 +427,8 @@ function loadBookmarks(tag, event){
 		if(isDemo){
 			req.open("GET", getBaseURL()+"/xml/bookmarks/posts/all.xml?tag="+tag, true);
 		}else{
-			//TODO: Get this working with password. (all_p.xml)
 			var userPwd = loadUserPwd();
+			//TODO: Get this working with password. 
 			req.open("GET", getBaseURL()+"/xml/bookmarks/posts/all.xml?tag="+tag, true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);

@@ -33,7 +33,7 @@ function addBookmark(){
 	//TODO: This needs the not exisiting backend
 	//TODO: Do not Change it, till a stable Release with the Backend!
 	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
-	rqurl=getBaseURL()+"/Bookmarks_p.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
+	rqurl=getBaseURL()+"/Bookmarks.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
 	+"&description="+encodeURIComponent(description)+"&tags="+encodeURIComponent(tags)+"&public="+public+"&add=true";
 	userPwd=loadUserPwd();
 	req=new XMLHttpRequest();

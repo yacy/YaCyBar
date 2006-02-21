@@ -40,11 +40,11 @@
 							/>
 							<menuseparator />
 							<menuitem label="Index Create"
-									oncommand="loadURL(getBaseURL()+'/IndexCreate_p.html.html', event)"
+									oncommand="loadURL(getBaseURL()+'/IndexCreate_p.html', event)"
 									onclick="bgLoadURL(getBaseURL()+'/IndexCreate_p.html', event)"
 							/>
 							<menuitem label="Index Control"
-									oncommand="loadURL(getBaseURL()+'/IndexControl_p.html.html', event)"
+									oncommand="loadURL(getBaseURL()+'/IndexControl_p.html', event)"
 									onclick="bgLoadURL(getBaseURL()+'/IndexControl_p.html', event)"
 							/>
 							<menuitem label="Index Monitor"

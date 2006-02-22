@@ -34,7 +34,7 @@ function init(){
 		Branch.setIntPref("peerPort",8080);
 	}	
 	if (!Branch.prefHasUserValue("demoPeersURL")) {
-		Branch.setCharPref("demoPeersURL", "chrome://yacybar/content/demopeers.xml");
+		Branch.setCharPref("demoPeersURL", "http://data.yacy-forum.de/demopeers.xml");
 	}
 	
 	

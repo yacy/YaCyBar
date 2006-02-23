@@ -131,7 +131,11 @@ function blacklistpage(){
 function crawlpage() {
     var url = window._content.location;
     var title = document.title;
-	showQuickCrawlDialog(url,title);
+	if(!isDemo){
+		showQuickCrawlDialog(url,title);
+	}else{
+		loadURL("http://www.yacy-websuche.de/democrawl.php?url="+escape(url)+"&title="+escape(title));
+	}
 }
 
 function crawllink() {
@@ -473,12 +477,18 @@ function toggleDemo(){
 		isDemo=true;
 		demoHost=peer.getElementsByTagName("address")[0].getAttribute("host");
 		demoPort=peer.getElementsByTagName("address")[0].getAttribute("port");
-		document.getElementById("menuitem-addbookmark").setAttribute("disabled", true);
 		alert("Using \""+peer.getAttribute("name")+"\" as your Demopeer.");
-		
 		/*Branch.setBoolPref("demomode",true);*/
+		
+		document.getElementById("menuitem-addbookmark").setAttribute("disabled", true);
+		document.getElementById("cmd_toggleProxy").setAttribute("disabled", true);
+		document.getElementById("cmd_toggleIndexing").setAttribute("disabled", true);
+		document.getElementById("BlacklistBtn").setAttribute("disabled", true);
 	}else{
 		document.getElementById("menuitem-addbookmark").setAttribute("disabled", false);
+		document.getElementById("cmd_toggleProxy").setAttribute("disabled", false);
+		document.getElementById("cmd_toggleIndexing").setAttribute("disabled", false);
+		document.getElementById("BlacklistBtn").setAttribute("disabled", false);
 		isDemo=false;
 	}
 

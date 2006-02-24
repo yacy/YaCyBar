@@ -18,11 +18,6 @@ function init(){
 		}
 		list.selectedIndex=Math.floor(Math.random()*peers.length);
 		selectDemopeer();
-		/*peer=peers[Math.floor(Math.random()*peers.length)];
-		isDemo=true;
-		demoHost=peer.getElementsByTagName("address")[0].getAttribute("host");
-		demoPort=peer.getElementsByTagName("address")[0].getAttribute("port");
-		alert("Using \""+peer.getAttribute("name")+"\" as your Demopeer.");*/
 }
 function selectDemopeer(){
 	list=document.getElementById("demopeerList");
@@ -32,7 +27,7 @@ function accept(){
 	if(index>=0){
 		Branch.setBoolPref("demomode",true);
 		Branch.setCharPref("demoAddress", peers[index].getElementsByTagName("address")[0].getAttribute("host"));
-		Branch.setCharPref("demoPort", peers[index].getElementsByTagName("address")[0].getAttribute("port"));
+		Branch.setIntPref("demoPort", parseInt(peers[index].getElementsByTagName("address")[0].getAttribute("port")));
 	}
 	
 	mainWindow.getElementById("menuitem-addbookmark").setAttribute("disabled", true);

@@ -2,19 +2,18 @@ var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService
 var passwordManager = Components.classes["@mozilla.org/passwordmanager;1"].createInstance();
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 
-var isDemo=false;
-var demoHost="";
-var demoPort=0;
-
 function getBaseURL() {
-	if(isDemo){
-		return "http://"+demoHost+":"+demoPort;
+	var host;
+	var port;
+	if(Branch.getBoolPref("demomode")){
+		host=Branch.getCharPref("demoAddress");
+		port=Branch.getIntPref("demoPort");
 	}else{
-		var host=Branch.getCharPref("peerAddress");
-		var port=Branch.getIntPref("peerPort");
+		host=Branch.getCharPref("peerAddress");
+		port=Branch.getIntPref("peerPort");
+	}
 		var baseURL  = "http://" + host + ":" + port;	
 		return baseURL;
-	}
 }
 
 function loadUserPwd() {

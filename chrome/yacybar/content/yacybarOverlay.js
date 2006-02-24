@@ -131,7 +131,7 @@ function blacklistpage(){
 function crawlpage() {
     var url = window._content.location;
     var title = document.title;
-	if(!isDemo){
+	if(!Branch.getBoolPref("demomode")){
 		showQuickCrawlDialog(url,title);
 	}else{
 		loadURL("http://www.yacy-websuche.de/democrawl.php?url="+escape(url)+"&title="+escape(title));
@@ -378,7 +378,7 @@ function loadTags(event){
 	}
 	if(req){
 		req.onreadystatechange = loadTagsHandler;
-		if(isDemo){
+		if(Branch.getBoolPref("demomode")){
 			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true);
 		}else{
 			var userPwd = loadUserPwd();
@@ -428,7 +428,7 @@ function loadBookmarks(tag, event){
 	if(req){
 		req.onreadystatechange = loadBookmarksHandler;
 		req.tag=tag
-		if(isDemo){
+		if(Branch.getBoolPref("demomode")){
 			req.open("GET", getBaseURL()+"/xml/bookmarks/posts/all.xml?tag="+tag, true);
 		}else{
 			var userPwd = loadUserPwd();
@@ -467,29 +467,12 @@ function showAddBookmark(){
 function toggleDemo(){
 	demomenu=document.getElementById("menuitem-demo");
 	if(demomenu.getAttribute("checked")){
-		var demoPeersURL=Branch.getCharPref("demoPeersURL");
-		req=new XMLHttpRequest();
-		req.open("GET", demoPeersURL, false);
-		req.send(null);
-		response=req.responseXML;
-		peers=response.getElementsByTagName("peer");
-		peer=peers[Math.floor(Math.random()*peers.length)];
-		isDemo=true;
-		demoHost=peer.getElementsByTagName("address")[0].getAttribute("host");
-		demoPort=peer.getElementsByTagName("address")[0].getAttribute("port");
-		alert("Using \""+peer.getAttribute("name")+"\" as your Demopeer.");
-		/*Branch.setBoolPref("demomode",true);*/
-		
-		document.getElementById("menuitem-addbookmark").setAttribute("disabled", true);
-		document.getElementById("cmd_toggleProxy").setAttribute("disabled", true);
-		document.getElementById("cmd_toggleIndexing").setAttribute("disabled", true);
-		document.getElementById("BlacklistBtn").setAttribute("disabled", true);
+		window.openDialog("chrome://yacybar/content/demopeers.xul", "demopeerDialog", "centerscreen, chrome, modal", document);
 	}else{
 		document.getElementById("menuitem-addbookmark").setAttribute("disabled", false);
 		document.getElementById("cmd_toggleProxy").setAttribute("disabled", false);
 		document.getElementById("cmd_toggleIndexing").setAttribute("disabled", false);
 		document.getElementById("BlacklistBtn").setAttribute("disabled", false);
-		isDemo=false;
+		Branch.setBoolPref("demomode", false);
 	}
-
 }

@@ -13,7 +13,7 @@
 	</commandset>
 
 	<toolbarpalette id="BrowserToolbarPalette">
-		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" command="cmd_toggleProxy" label="Use YaCY-Proxy" tooltiptext="Use the YaCyProxy" />
+		<toolbarbutton id="ProxyToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" command="cmd_toggleProxy" label="Use YaCy-Proxy" tooltiptext="Use the YaCy-Proxy" />
 		<toolbarbutton id="IndexingToolbarBtn" class="toolbarbutton-1 chromeclass-toolbar-additional" command="cmd_toggleIndexing" label="Control YaCY-Indexing" tooltiptext="Use the control yacy indexing" />
 
 		<toolbaritem id="YaCy_toolbar_item1" flex="1">

@@ -21,6 +21,9 @@ function init(){
 		saveQuickCrawlPrefs(crawlJobData);	
 	}
 	
+	//disable demomode
+	Branch.setBoolPref("demomode", false);
+	
 	// init index control settings
 	if (!Branch.prefHasUserValue("indexControl")) {
 		Branch.setBoolPref("indexControl",true);

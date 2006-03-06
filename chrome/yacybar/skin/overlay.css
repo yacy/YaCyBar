@@ -47,7 +47,7 @@
     list-style-image: url("chrome://yacybar/skin/proxy_on.gif");
 }
 
-treechildren::-moz-tree-cell-text(error){
+treechildren::-moz-tree-cell-text(error) {
      font-weight: bold;
      color: red;
 }

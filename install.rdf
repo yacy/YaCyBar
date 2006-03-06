@@ -5,7 +5,7 @@
  
  	<em:id>{3a40954b-6e2a-4236-b56f-1f782e2cedd0}</em:id>
  	<em:name>YaCyBar</em:name>
- 	<em:version>0.02</em:version>
+ 	<em:version>0.1</em:version>
  	<em:description>A YaCy Toolbar</em:description>
  	<em:creator>Alexander Schier</em:creator>
  	<em:contributor>Martin Thelian</em:contributor>
@@ -26,7 +26,7 @@
  	<em:targetApplication>
  		<Description>
  			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
- 			<em:minVersion>0.9</em:minVersion>
+ 			<em:minVersion>1.5</em:minVersion>
  			<em:maxVersion>1.5+</em:maxVersion>
  		</Description>
  	</em:targetApplication>

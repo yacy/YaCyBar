@@ -2,6 +2,7 @@ a {
 	color: blue;
 }
 div {
+	border: thin black solid;
 	margin: 1em;
 	padding: 0.5em;
 	background-color: white;

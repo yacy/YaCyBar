@@ -30,7 +30,7 @@
 							oncommand="toggleDemo()"
 					/>
 					<menuseparator />
-					<menu label="YaCy Interface">
+					<!--<menu label="YaCy Interface">
 						<menupopup>
 							<menuitem label="Bookmarks"
 									oncommand="loadURL(getBaseURL()+'/Bookmarks.html', event)"
@@ -71,7 +71,7 @@
 									onclick="bgLoadURL(getBaseURL()+'/EditProfile_p.html', event)"
 							/>
 						</menupopup>
-					</menu>
+					</menu>-->
 					<menu label="YaCy Links">
 						<menupopup>
 							<menuitem label="YaCy Homepage" accesskey="H"
@@ -108,6 +108,8 @@
 							<menuitem label="About YaCyBar" accesskey="A"
 									  tooltiptext="About the YaCyBar"
 									  oncommand="showAbout()" />
+							<menuitem label="Firststart Dialog" 
+									  oncommand="showFirststartDialog()" />
 						</menupopup>
 					</menu>
 				</menupopup>

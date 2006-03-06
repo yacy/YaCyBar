@@ -23,7 +23,7 @@ function init(){
 	
 	//disable demomode
 	if(!Branch.prefHasUserValue("demomode")){ /*we misuse this as firststart indicator*/
-		window.openDialog("chrome://yacybar/content/firststart.xul", "firststartDialog", "centerscreen, chrome", this);
+		showFirststartDialog();
 	}
 	Branch.setBoolPref("demomode", false);
 	
@@ -481,4 +481,7 @@ function toggleDemo(){
 		document.getElementById("BlacklistBtn").setAttribute("disabled", false);
 		Branch.setBoolPref("demomode", false);
 	}
+}
+function showFirststartDialog(){
+	window.openDialog("chrome://yacybar/content/firststart.xul", "firststartDialog", "centerscreen, chrome", this);
 }

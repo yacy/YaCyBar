@@ -2,7 +2,7 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://yacybar/skin/firststart.css" type="text/css"?>
 <window 
-        id="yacyBarAddBookmark"
+        id="yacyBarFirststart"
         title="YaCyBar - Firststart"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		xmlns:html="http://www.w3.org/1999/xhtml"
@@ -12,13 +12,13 @@
 		<html:div>
 		This is your first start with the YaCy-Toolbar. To use it, you need a YaCy-Peer.
 		<html:ul>
-			<html:li>If you have no YaCy-Peer yet, click at "Demomode" to use one of our Demopeers.</html:li>
-			<html:li>If you want to install a YaCy-Peer visit <html:a href="javascript: window.open('http://www.yacy.net/yacy/')">http://www.yacy.net/yacy</html:a></html:li>
+			<html:li>If you have no YaCy-Peer yet, click on "Demomode" to use one of our Demopeers.</html:li>
+			<html:li>If you want to install a YaCy-Peer visit <html:a href="javascript: downloadYacy()">http://www.yacy.net/yacy</html:a></html:li>
 			<html:li>
 			If you already have a Peer running:
 			<html:ul>
 				<html:li>If its running on localhost with Port 8080 you can start using the Bar without any further action.</html:li>
-				<html:li>If its running with other settings, you need to edit the preferences.</html:li>
+				<html:li>If its running with other settings, you need to edit the <html:a href="javascript: showPref()">preferences</html:a>.</html:li>
 			</html:ul>
 			</html:li>
 		</html:ul>

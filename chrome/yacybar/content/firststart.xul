@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://yacybar/skin/firststart.css" type="text/css"?>
+<window 
+        id="yacyBarAddBookmark"
+        title="YaCyBar - Firststart"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		xmlns:html="http://www.w3.org/1999/xhtml"
+		>
+		<script type="application/x-javascript" src="firststart.js"/>
+		<vbox>
+		<html:div>
+		This is your first start with the YaCy-Toolbar. To use it, you need a YaCy-Peer.
+		<html:ul>
+			<html:li>If you have no YaCy-Peer yet, click at "Demomode" to use one of our Demopeers.</html:li>
+			<html:li>If you want to install a YaCy-Peer visit <html:a href="javascript: window.open('http://www.yacy.net/yacy/')">http://www.yacy.net/yacy</html:a></html:li>
+			<html:li>
+			If you already have a Peer running:
+			<html:ul>
+				<html:li>If its running on localhost with Port 8080 you can start using the Bar without any further action.</html:li>
+				<html:li>If its running with other settings, you need to edit the preferences.</html:li>
+			</html:ul>
+			</html:li>
+		</html:ul>
+		</html:div>
+		<hbox>
+			<button label="Demomode" oncommand="toggleDemo()"/>
+			<button label="Download YaCy" oncommand="downloadYacy()"/>
+			<button label="I have a running Peer" oncommand="window.close()" />
+			<button label="Preferences" oncommand="showPref()" />
+		</hbox>
+		</vbox>
+</window>

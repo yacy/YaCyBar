@@ -22,6 +22,9 @@ function init(){
 	}
 	
 	//disable demomode
+	if(!Branch.prefHasUserValue("demomode")){ /*we misuse this as firststart indicator*/
+		window.openDialog("chrome://yacybar/content/firststart.xul", "firststartDialog", "centerscreen, chrome", this);
+	}
 	Branch.setBoolPref("demomode", false);
 	
 	// init index control settings

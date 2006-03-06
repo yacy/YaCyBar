@@ -2,6 +2,7 @@ var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService
 var passwordManager = Components.classes["@mozilla.org/passwordmanager;1"].createInstance();
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 
+
 function getBaseURL() {
 	var host;
 	var port;

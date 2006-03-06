@@ -105,7 +105,7 @@ function getSearchURL(keyword) {
 	if (urlMask == "") urlMask = ".*";
 	
 	return getBaseURL() + 
-	"/yacysearch.html" + 
+	"/index.html" + 
 	"?search=" + keyword + 
 	"&count=" + maxResults + 
 	"&order=" + orderBy + 

@@ -17,8 +17,8 @@
 			<html:li>
 			If you already have a Peer running:
 			<html:ul>
-				<html:li>If its running on localhost with Port 8080 you can start using the Bar without any further action.</html:li>
-				<html:li>If its running with other settings, you need to edit the <html:a href="javascript: showPref()">preferences</html:a>.</html:li>
+				<html:li>If it's running on localhost with port 8080 you can start using the YaCyBar without any further action.</html:li>
+				<html:li>If it's running with other settings, you need to edit the <html:a href="javascript: showPref()">preferences</html:a>.</html:li>
 			</html:ul>
 			</html:li>
 		</html:ul>

@@ -19,7 +19,7 @@
   		  
 	      <separator class="thin"/>
 	      
-		  <text value="Created By:" class="about-extension-info"/>
+		  <text value="Created by:" class="about-extension-info"/>
 		  <text value="Alexander Schier"/>
 		  <separator class="thin"/>
 		  

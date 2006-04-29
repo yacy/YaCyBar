@@ -16,11 +16,11 @@
 	                class="menuitem-iconic" />
 	            <menuitem id="crawlPage" label="Crawl current page" 
 	                oncommand="crawlpage();"
-	                tooltiptext="Crawl current Page"
+	                tooltiptext="Crawl current page"
 	                class="menuitem-iconic" />
 	            <menuitem id="searchSelected" label="Search this keyword" 
 	                oncommand="searchSelected();"
-	                tooltiptext="Search for selectd keyword"
+	                tooltiptext="Search for selected keyword"
 	                class="menuitem-iconic" />	                
                 <menuseparator />                
                 <menuitem id="about" label="About YaCyBar" accesskey="A"

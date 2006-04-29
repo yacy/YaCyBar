@@ -5,7 +5,7 @@
         id="yacyBarAddBookmark"
 		onload="init()"
         ondialogaccept="addBookmark()"
-        title="YaCyBar - AddBookmark"
+        title="YaCyBar - Add Bookmark"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		<script type="application/x-javascript" src="addBookmark.js"/>
 		<script type="application/x-javascript" src="functions.js"/>

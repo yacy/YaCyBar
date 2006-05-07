@@ -63,6 +63,10 @@ function init(){
 	// init peer monitoring settings
 	if (!Branch.prefHasUserValue("peerMonitoring.enabled")) Branch.setBoolPref("peerMonitoring.enabled",false);
 	if (!Branch.prefHasUserValue("peerMonitoring.refreshRate")) Branch.setIntPref("peerMonitoring.refreshRate",30000);
+	if (!Branch.prefHasUserValue("peerMonitoring.showPPM")) Branch.setBoolPref("peerMonitoring.showPPM",false);
+	if (!Branch.prefHasUserValue("peerMonitoring.showURL")) Branch.setBoolPref("peerMonitoring.showURL",false);	
+	if (!Branch.prefHasUserValue("peerMonitoring.showRWI")) Branch.setBoolPref("peerMonitoring.showRWI",false);
+	if (!Branch.prefHasUserValue("peerMonitoring.showPeerType")) Branch.setBoolPref("peerMonitoring.showPeerType",false);
 	
 	/* ================================================================
 		Button initialization 

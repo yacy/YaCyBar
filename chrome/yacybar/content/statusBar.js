@@ -4,6 +4,10 @@ window.addEventListener("load", init, false);
 function toggle(name) {
 	var panel = document.getElementById(name);
 	panel.hidden = !panel.hidden;
+	if (name == 'yacybar_statusBar_ppm') Branch.setBoolPref("peerMonitoring.showPPM",!panel.hidden) ;
+	else if (name == 'yacybar_statusBar_url') Branch.setBoolPref("peerMonitoring.showURL",!panel.hidden) ;
+	else if (name == 'yacybar_statusBar_rwi') Branch.setBoolPref("peerMonitoring.showRWI",!panel.hidden) ;
+	else if (name == 'yacybar_statusBar_peerType') Branch.setBoolPref("peerMonitoring.showPeerType",!panel.hidden) ;
 }
 
 
@@ -104,6 +108,23 @@ function init() {
 		document.getElementById('cmd_MonitoringControl').setAttribute("checked","true");
 	} else {
 		document.getElementById('cmd_MonitoringControl').removeAttribute("checked");
+	}
+	
+	if (Branch.getBoolPref("peerMonitoring.showPPM")) {
+		document.getElementById('yacybar_statusBar_ppm').hidden = false;
+		document.getElementById('cmd_showPPM').setAttribute("checked","true");
+	}
+	if (Branch.getBoolPref("peerMonitoring.showURL")) {
+		document.getElementById('yacybar_statusBar_url').hidden = false;
+		document.getElementById('cmd_showURL').setAttribute("checked","true");
+	}
+	if (Branch.getBoolPref("peerMonitoring.showRWI")) {
+		document.getElementById('yacybar_statusBar_rwi').hidden = false;
+		document.getElementById('cmd_showRWI').setAttribute("checked","true");
+	}
+	if (Branch.getBoolPref("peerMonitoring.showPeerType")) {
+		document.getElementById('yacybar_statusBar_peerType').hidden = false;
+		document.getElementById('cmd_showPeerType').setAttribute("checked","true");	
 	}
 	updateStatus();
 }

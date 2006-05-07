@@ -17,7 +17,7 @@ var observer = {
     		doIndexing = true;
     	}
     	if (!doIndexing) {
-    		oHttp.setRequestHeader("X-YACY-Index-Control", "NO-INDEX" , true);
+    		if (oHttp != null) oHttp.setRequestHeader("X-YACY-Index-Control", "NO-INDEX" , true);
     	}
     }
 };

@@ -87,8 +87,8 @@
 							/>
 							<menuitem label="YaCy Wiki" accesskey="W"
 									  tooltiptext="Browse to the YaCy-Wiki Homepage"
-									  oncommand="loadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite')"
-									  onclick="bgLoadURL('http://www.yacy-websuche.de/wiki/index.php/Hauptseite', event)"
+									  oncommand="loadURL('http://wiki.yacy-websuche.de/index.php/Hauptseite')"
+									  onclick="bgLoadURL('http://wiki.yacy-websuche.de/index.php/Hauptseite', event)"
 							/>
 							<menuitem label="YaCy SVN Log" accesskey="S"
 									  tooltiptext="Browse to the YaCy-SVN Repository Log"

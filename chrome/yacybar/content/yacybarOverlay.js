@@ -134,7 +134,7 @@ function bgLoadYACY(event){
 function blacklistpage(){
 	var url=window.content.prompt("Blacklist URL:", window._content.location);
 	if(url != null && url != ""){
-		gBrowser.addTab(getBaseURL() + "/Blacklist_p.html?addbutton=addbutton&filename=default.black&newItem="+url);
+		gBrowser.addTab(getBaseURL() + "/Blacklist_p.html?addBlacklistEntry=&currentBlacklist=default.black&newEntry="+url);
 	}
 }	
 

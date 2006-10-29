@@ -13,10 +13,11 @@ var observer = {
         // getting the URI
     	// var uri = oHttp.URI.asciiSpec;
     	var doIndexing = prefManager.getBoolPref("extensions.yacybar.indexControl");
+		var proxyOn = (prefManager.getIntPref("network.proxy.type")==2); //this checks for ANY proxy, not just yacy ...
     	if (doIndexing == null) {
     		doIndexing = true;
     	}
-    	if (!doIndexing) {
+    	if (!doIndexing && proxyOn) {
     		if (oHttp != null) oHttp.setRequestHeader("X-YACY-Index-Control", "NO-INDEX" , true);
     	}
     }

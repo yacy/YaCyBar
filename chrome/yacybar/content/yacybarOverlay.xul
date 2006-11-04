@@ -30,48 +30,6 @@
 							oncommand="toggleDemo()"
 					/>
 					<menuseparator />
-					<!--<menu label="YaCy Interface">
-						<menupopup>
-							<menuitem label="Bookmarks"
-									oncommand="loadURL(getBaseURL()+'/Bookmarks.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/Bookmarks.html', event)"
-							/>
-							<menuseparator />
-							<menuitem label="Index Create"
-									oncommand="loadURL(getBaseURL()+'/IndexCreate_p.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/IndexCreate_p.html', event)"
-							/>
-							<menuitem label="Index Control"
-									oncommand="loadURL(getBaseURL()+'/IndexControl_p.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/IndexControl_p.html', event)"
-							/>
-							<menuitem label="Index Monitor"
-									oncommand="loadURL(getBaseURL()+'/IndexMonitor.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/IndexMonitor.html', event)"
-							/>
-							<menuseparator />
-							<menuitem label="Home Page"
-									oncommand="loadURL(getBaseURL()+'/www/', event)"
-									onclick="bgLoadURL(getBaseURL()+'/www/', event)"
-							/>
-							<menuitem label="File share"
-									oncommand="loadURL(getBaseURL()+'/share/', event)"
-									onclick="bgLoadURL(getBaseURL()+'/share/', event)"
-							/>
-							<menuitem label="Wiki"
-									oncommand="loadURL(getBaseURL()+'/Wiki.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/Wiki.html', event)"
-							/>
-							<menuitem label="Messages"
-									oncommand="loadURL(getBaseURL()+'/Messages_p.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/Messages_p.html', event)"
-							/>
-							<menuitem label="Personal Profile"
-									oncommand="loadURL(getBaseURL()+'/EditProfile_p.html', event)"
-									onclick="bgLoadURL(getBaseURL()+'/EditProfile_p.html', event)"
-							/>
-						</menupopup>
-					</menu>-->
 					<menu label="YaCy Links">
 						<menupopup>
 							<menuitem label="YaCy Homepage" accesskey="H"
@@ -87,8 +45,12 @@
 							/>
 							<menuitem label="YaCy Wiki" accesskey="W"
 									  tooltiptext="Browse to the YaCy-Wiki Homepage"
-									  oncommand="loadURL('http://wiki.yacy-websuche.de/index.php/Hauptseite')"
-									  onclick="bgLoadURL('http://wiki.yacy-websuche.de/index.php/Hauptseite', event)"
+									  oncommand="loadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite')"
+									  onclick="bgLoadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite', event)"
+							/>
+							<menuitem label="YaCy FAQ" accesskey="F"
+									  oncommand="loadURL('http://yacy-faq.net')"
+									  onclick="bgLoadURL('http://yacy-faq.net', event)"
 							/>
 							<menuitem label="YaCy SVN Log" accesskey="S"
 									  tooltiptext="Browse to the YaCy-SVN Repository Log"

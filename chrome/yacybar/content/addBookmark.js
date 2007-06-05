@@ -1,6 +1,9 @@
 var req;
+var userPwd;
 
 function init(){
+	log("init bookmarks dialog");
+	userPwd=loadUserPwd();
 	var url=window.arguments[0];
 	var title=window.arguments[1];
 	document.getElementById("url").value=url;
@@ -12,6 +15,18 @@ function init(){
 	}else{
 		document.getElementById("title").focus();
 	}
+	log(getBaseURL()+"/xml/util/geturlinfo_p.xml?url="+url+"\n");
+	req = new XMLHttpRequest();
+	req.open('GET', getBaseURL()+"/xml/util/getpageinfo_p.xml?url="+url, false, userPwd["user"], userPwd["pwd"]);
+	req.send(null);
+	xml=req.responseXML;
+	tags=xml.getElementsByTagName("tag");
+	tags_field=document.getElementById("tags");
+	for(i=0;i<tags.length - 1;i++){
+		//log(tags[i].value); //DEBUG
+		tags_field.value=tags_field.value+tags[i].getAttribute("name")+",";
+	}
+	tags_field.value=tags_field.value+tags[tags.length -1].getAttribute("name");
 }
 
 function addBookmark(){
@@ -35,9 +50,8 @@ function addBookmark(){
 	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
 	rqurl=getBaseURL()+"/Bookmarks.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
 	+"&description="+encodeURIComponent(description)+"&tags="+encodeURIComponent(tags)+"&public="+public+"&add=true";
-	userPwd=loadUserPwd();
 	req=new XMLHttpRequest();
 	req.open('GET', rqurl, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);
-	dump(req.readyState+"\n");
+	//log(req.readyState+"\n");
 }

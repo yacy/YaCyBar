@@ -1,7 +1,11 @@
 var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
 var passwordManager = Components.classes["@mozilla.org/passwordmanager;1"].createInstance();
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+var cons = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
 
+function log(string){
+	cons.logStringMessage(string+"\n");
+}
 
 function getBaseURL() {
 	var host;

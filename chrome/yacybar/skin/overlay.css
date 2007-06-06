@@ -46,6 +46,9 @@
 #ProxyBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/proxy_on.gif");
 }
+menuitem.loading{
+	list-style-image: url("chrome://global/skin/icons/loading_16.gif");
+}
 
 treechildren::-moz-tree-cell-text(error) {
      font-weight: bold;

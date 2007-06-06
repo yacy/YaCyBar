@@ -83,7 +83,19 @@
 							tooltiptext="Add a Bookmark"
 							selected="true"
 							oncommand="showAddBookmark()" />					
-					<menuseparator />					
+					<menuseparator />
+					<menuitem label="loading ..."
+					class="menuicon-iconic loading"
+					tooltiptext="Tags are loading"
+					/>				
+				</menupopup>
+			</toolbarbutton>
+			<toolbarbutton id="SurftipsButton" type="menu" label="Surftips" onclick="loadSurftips(event)">
+				<menupopup id="SurftipsMenu">
+					<menuitem label="loading ..."
+					class="menuitem-iconic loading"
+					tooltiptext="Surftips are loading"
+					/>
 				</menupopup>
 			</toolbarbutton>
 	    	<toolbarseparator/>

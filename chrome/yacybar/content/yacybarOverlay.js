@@ -371,6 +371,25 @@ function crawlReceipt() {
         }        
 	} 
 }
+function loadSurftips(event){
+	if(event.target.id!="SurftipsButton"){return};
+	
+	if(window.XMLHttpRequest){
+		try{
+			req=new XMLHttpRequest();
+			if(req.overrideMimeType){
+				req.overrideMimeType('text/xml');
+			}
+		}catch(e){
+			req=false;
+		}
+		if(req!=false){
+			req.onreadystatechange=loadSurftipsHandler;
+			req.open("GET", getBaseURL()+"/Surftips.rss", true);
+			req.send(null);
+		}
+	}
+}
 function loadTags(event){
 	//only in tagsMenu
 	if(event.target.id!="BookmarksButton"){
@@ -395,6 +414,26 @@ function loadTags(event){
 			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
+	}
+}
+function loadSurftipsHandler(){
+	if(req.readyState==4 && req.status==200){
+		surftipsMenu=document.getElementById("SurftipsMenu");
+		item=surftipsMenu.firstChild;
+		while(item!=null){
+			surftipsMenu.removeChild(item);
+			item=surftipsMenu.firstChild;
+		}
+		var response=req.responseXML;
+		items=response.getElementsByTagName("item");
+		for(i=0;i<items.length;i++){
+			item=document.createElement("menuitem");
+			item.setAttribute("label", items[i].getElementsByTagName("title")[0].firstChild.nodeValue);
+			item.setAttribute("onclick", "loadURL(\""+items[i].getElementsByTagName("link")[0].firstChild.nodeValue+"\")");
+			item.setAttribute("title", items[i].getElementsByTagName("description")[0].firstChild.nodeValue);
+			surftipsMenu.appendChild(item);
+
+		}
 	}
 }
 function loadTagsHandler(){

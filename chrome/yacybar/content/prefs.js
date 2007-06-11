@@ -55,3 +55,6 @@ function changeProxySettings() {
 		prefManager.setCharPref("network.proxy.autoconfig_url","http://" + host + ":" + port + "/autoconfig.pac");
 	}	
 }
+function setStartPage(){
+	prefManager.setCharPref("browser.startup.homepage", getBaseURL());
+}

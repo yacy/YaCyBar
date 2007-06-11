@@ -195,7 +195,10 @@
 							<row>
 								<label value="URL mask"/>
 								<textbox preference="yacybar_searchUrlMaskFilter" id="search.UrlMaskFilter"/>
-							</row>																																															
+							</row>
+							<row>
+								<button label="use searchpage as startpage" onclick="setStartPage()" />
+							</row>
 						</rows>
 					</grid>									    
 			    </tabpanel>

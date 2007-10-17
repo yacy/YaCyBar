@@ -54,6 +54,17 @@ function makeRequest(url, parameters) {
    http_request.send(null);
 }
 
+function groupDigits(num) {
+	var ret = "";
+	while (num.length > 3) {
+		ret = "." + num.slice(num.length - 3) + ret;
+		num = num.substring(0, num.length - 3);
+	}
+	ret = num + ret;
+	
+	return ret;
+}
+
 function alertContents() {
    if (http_request.readyState == 4) {
       if (http_request.status == 200) {
@@ -73,12 +84,12 @@ function alertContents() {
 		 var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
 		 var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');		 
 
-         ppmPanel.label = "PPM: " + ppm;		 
-         urlPanel.label = "#URL: " + url;                                    
-         rwiPanel.label = "#RWI: " + rwi;
+         ppmPanel.label = "PPM: " + ppm;
+         urlPanel.label = "#URL: " + groupDigits(url);
+         rwiPanel.label = "#RWI: " + groupDigits(rwi);
          
          peerTypePanel.setAttribute("peerType", type);
-         peerTypePanel.tooltipText = "PeerType: " + type;         
+         peerTypePanel.tooltipText = "PeerType: " + type;
 
 
       } else {

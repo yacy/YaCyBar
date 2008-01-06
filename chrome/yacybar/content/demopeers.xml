@@ -36,40 +36,12 @@
 		<weekend value="666666669999999999999966" />
 		</available>
   </peer>
-  <peer name="KarlchenOfHell">
-	 <hash value="yV3YiSEEQknD" />
-     <address host="kane.kicks-ass.org" port="8081" />
+  <peer name="piranha_rootserver">
+    <hash value="ZxFS0sDXultV" />
+     <address host="88.198.20.109" port="8080" />
 	 <timezone utc="+1:00" />
 		<available>
 		<weekday value="221111119999999999999966" />
 		<weekend value="666666669999999999999966" />
 		</available>
-  </peer>
-  <peer name="DHT-Box">
-	 <hash value="SOk4bEU8kEoc" />
-     <address host="ramthun.homelinux.org" port="48002" />
-	 <timezone utc="+1:00" />
-		<available>
-		<weekday value="000000000000079999999970" />
-		<weekend value="000000000009999999999999" />
-		</available>
-  </peer>
-  <peer name="hendi-1">
-	 <hash value="_blfaze7lNfk" />
-     <address host="azathoth.naggel.com" port="8080" />
-	 <timezone utc="+1:00" />
-		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
-		</available>
-  </peer>
-  <peer name="hendi-2">
-	 <hash value="9ZCXZze7lNfk" />
-     <address host="yog-sothoth.naggel.com" port="8080" />
-	 <timezone utc="+1:00" />
-		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
-		</available>
-  </peer>
-</peers>
+  </peer></peers>

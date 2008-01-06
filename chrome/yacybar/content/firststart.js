@@ -5,7 +5,7 @@ function toggleDemo(){
 	window.close();
 }
 function downloadYacy(){
-	window.open('http://www.yacy.net/yacy/');
+	window.open('http://www.yacy.net/');
 	window.close();
 }
 function showPref(){

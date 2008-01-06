@@ -25,10 +25,11 @@
 		  
 		  <text value="Contributors:" class="about-extension-info"/>
 		  <text value="Martin Thelian"/>
+		  <text value="Oliver Wunder"/>
 		  <separator class="thin"/>
 
 		  <text value="Homepage" class="about-extension-info"/>
-	      <text value="http://www.yacy-websuche.de/" class="url" onclick="window.open('http://www.yacy-websuche.de/'); self.close();"/>
+	      <text value="http://www.yacy.net/" class="url" onclick="window.open('http://www.yacy.net/'); self.close();"/>
 		  <separator class="thin"/>
 		</vbox>
 		<spring flex="1"/>

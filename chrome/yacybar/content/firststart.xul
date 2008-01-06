@@ -13,7 +13,7 @@
 		This is your first start with the YaCy-Toolbar. To use it, you need a YaCy-Peer.
 		<html:ul>
 			<html:li>If you have no YaCy-Peer yet, click on "Demomode" to use one of our Demopeers.</html:li>
-			<html:li>If you want to install a YaCy-Peer visit <html:a href="javascript: downloadYacy()">http://www.yacy.net/yacy</html:a></html:li>
+			<html:li>If you want to install a YaCy-Peer visit <html:a href="javascript: downloadYacy()">http://www.yacy.net</html:a></html:li>
 			<html:li>
 			If you already have a Peer running:
 			<html:ul>

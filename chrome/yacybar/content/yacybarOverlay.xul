@@ -35,22 +35,18 @@
 							<menuitem label="YaCy Homepage" accesskey="H"
 									tooltiptext="Browse to the YaCy home page"
 									selected="true"
-									oncommand="loadURL('http://www.yacy.net/yacy', event)"
-									onclick="bgLoadURL('http://www.yacy.net/yacy', event)"
+									oncommand="loadURL('http://www.yacy.net/', event)"
+									onclick="bgLoadURL('http://www.yacy.net/', event)"
 							/>
 							<menuitem label="YaCy Forum" accesskey="F"
 									  tooltiptext="Browse to the YaCy-Forum Homepage"
-									  oncommand="loadURL('http://www.yacy-forum.de')"
-									  onclick="bgLoadURL('http://www.yacy-forum.de', event)"
+									  oncommand="loadURL('http://forum.yacy-websuche.de/')"
+									  onclick="bgLoadURL('http://forum.yacy-websuche.de/', event)"
 							/>
 							<menuitem label="YaCy Wiki" accesskey="W"
 									  tooltiptext="Browse to the YaCy-Wiki Homepage"
 									  oncommand="loadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite')"
 									  onclick="bgLoadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite', event)"
-							/>
-							<menuitem label="YaCy FAQ" accesskey="F"
-									  oncommand="loadURL('http://yacy-faq.net')"
-									  onclick="bgLoadURL('http://yacy-faq.net', event)"
 							/>
 							<menuitem label="YaCy SVN Log" accesskey="S"
 									  tooltiptext="Browse to the YaCy-SVN Repository Log"

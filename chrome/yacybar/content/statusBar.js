@@ -4,7 +4,8 @@ window.addEventListener("load", init, false);
 function toggle(name) {
 	var panel = document.getElementById(name);
 	panel.hidden = !panel.hidden;
-	if (name == 'yacybar_statusBar_ppm') Branch.setBoolPref("peerMonitoring.showPPM",!panel.hidden) ;
+	if (name == 'yacybar_statusBar_qph') Branch.setBoolPref("peerMonitoring.showQPH",!panel.hidden) ;
+	else if (name == 'yacybar_statusBar_ppm') Branch.setBoolPref("peerMonitoring.showPPM",!panel.hidden) ;
 	else if (name == 'yacybar_statusBar_url') Branch.setBoolPref("peerMonitoring.showURL",!panel.hidden) ;
 	else if (name == 'yacybar_statusBar_rwi') Branch.setBoolPref("peerMonitoring.showRWI",!panel.hidden) ;
 	else if (name == 'yacybar_statusBar_peerType') Branch.setBoolPref("peerMonitoring.showPeerType",!panel.hidden) ;
@@ -17,6 +18,7 @@ function setMonitoring() {
 	if (enabled=="true") {
 		updateStatus();
 	} else {
+		 document.getElementById('yacybar_statusBar_qph').label = "QPH: ?";
 		 document.getElementById('yacybar_statusBar_ppm').label = "PPM: ?";
 		 document.getElementById('yacybar_statusBar_url').label = "#URL: ?";
 		 document.getElementById('yacybar_statusBar_rwi').label = "#RWI: ?";
@@ -73,17 +75,20 @@ function alertContents() {
          var peers = xmlobject.getElementsByTagName('peers')[0];
          var your = peers.getElementsByTagName("your")[0];
          
+         var qph  = your.getElementsByTagName("qph")[0].firstChild.nodeValue;
          var ppm  = your.getElementsByTagName("ppm")[0].firstChild.nodeValue;
          var name = your.getElementsByTagName("name")[0].firstChild.nodeValue;
 		 var type = your.getElementsByTagName("type")[0].firstChild.nodeValue;
 		 var url = your.getElementsByTagName("links")[0].firstChild.nodeValue;
 		 var rwi = your.getElementsByTagName("words")[0].firstChild.nodeValue;
 
+		 var qphPanel = document.getElementById('yacybar_statusBar_qph');
 		 var ppmPanel = document.getElementById('yacybar_statusBar_ppm');
 		 var urlPanel = document.getElementById('yacybar_statusBar_url');
 		 var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
 		 var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');		 
 
+			qphPanel.label = "QPH: " + qph;
          ppmPanel.label = "PPM: " + ppm;
          urlPanel.label = "#URL: " + groupDigits(url);
          rwiPanel.label = "#RWI: " + groupDigits(rwi);
@@ -119,6 +124,11 @@ function init() {
 		document.getElementById('cmd_MonitoringControl').setAttribute("checked","true");
 	} else {
 		document.getElementById('cmd_MonitoringControl').removeAttribute("checked");
+	}
+	
+	if (Branch.getBoolPref("peerMonitoring.showQPH")) {
+		document.getElementById('yacybar_statusBar_qph').hidden = false;
+		document.getElementById('cmd_showQPH').setAttribute("checked","true");
 	}
 	
 	if (Branch.getBoolPref("peerMonitoring.showPPM")) {

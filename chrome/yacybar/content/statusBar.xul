@@ -5,12 +5,14 @@
    
    <statusbar id="status-bar">
       <statusbarpanel id="yacybar_statusBar">
+      	<statusbarpanel id="yacybar_statusBar_qph" label="QPH: -" hidden="true" />
 	      <statusbarpanel id="yacybar_statusBar_ppm" label="PPM: -" hidden="true" />
 	      <statusbarpanel id="yacybar_statusBar_url" label="#URL: -" hidden="true"/>
 	      <statusbarpanel id="yacybar_statusBar_rwi" label="#RWI: -" hidden="true"/>
     	  <statusbarpanel id="yacybar_statusBar_peerType" class="statusbarpanel-iconic" hidden="true"/>     
     	  <statusbarpanel id="yacybar_statusBar_menu" class="statusbarpanel-menu-iconic" type="menu" > 
 	  	  	  <menupopup>
+						 <menuitem id="cmd_showQPH" label="Show QPH" type="checkbox" oncommand="toggle('yacybar_statusBar_qph');"/>
 	                <menuitem id="cmd_showPPM" label="Show PPM" type="checkbox" oncommand="toggle('yacybar_statusBar_ppm');"/>
 	                <menuitem id="cmd_showURL" label="Show #URL" type="checkbox" oncommand="toggle('yacybar_statusBar_url');"/>
 	                <menuitem id="cmd_showRWI" label="Show #RWI" type="checkbox" oncommand="toggle('yacybar_statusBar_rwi');"/>

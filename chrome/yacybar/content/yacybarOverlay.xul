@@ -48,7 +48,12 @@
 									  oncommand="loadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite')"
 									  onclick="bgLoadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite', event)"
 							/>
-							<menuitem label="YaCy SVN Log" accesskey="S"
+							<menuitem label="YaCy Statistics" accesskey="S"
+									  tooltiptext="Browse to the YaCy-Statistics Homepage"
+									  oncommand="loadURL('http://www.yacystats.de/')"
+									  onclick="bgLoadURL('http://www.yacystats.de/', event)"
+							/>
+							<menuitem label="YaCy SVN Log" accesskey="L"
 									  tooltiptext="Browse to the YaCy-SVN Repository Log"
 									  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')"
 									  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"

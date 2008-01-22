@@ -1,3 +1,17 @@
+<!ENTITY about.dialog.title "Über YaCyBar">
+<!ENTITY about.text.created "Erstellt von:">
+<!ENTITY about.text.contributors "Beitragende:">
+<!ENTITY about.text.homepage "Homepage">
+
+<!ENTITY contentArea.menuitem.label.crawllink "Diesen Link crawlen">
+<!ENTITY contentArea.menuitem.tooltip.crawllink "Diesen Link crawlen">
+<!ENTITY contentArea.menuitem.label.crawlpage "Aktuelle Seite crawlen">
+<!ENTITY contentArea.menuitem.tooltip.crawlpage "Aktuelle Seite crawlen">
+<!ENTITY contentArea.menuitem.label.search "Suche dieses Wort">
+<!ENTITY contentArea.menuitem.tooltip.search "Suche nach dem markierten Wort">
+<!ENTITY contentArea.menuitem.label.about "Über YaCyBar">
+<!ENTITY contentArea.menuitem.tooltip.about "Über die YaCyBar">
+
 <!ENTITY addBM.dialog.title "YaCyBar - Lesezeichen hinzufügen">
 <!ENTITY addBM.label.url "URL">
 <!ENTITY addBM.label.title "Titel">
@@ -7,4 +21,29 @@
 <!ENTITY addBM.menuitem.yes "Ja">
 <!ENTITY addBM.menuitem.no "Nein">
 
-
+<!ENTITY yacybarOverlay.menuitem.label.yacysearch "YaCy Suche"> 
+<!ENTITY yacybarOverlay.menuitem.tooltip.yacysearch "Ihre Suchseite">
+<!ENTITY yacybarOverlay.menuitem.label.demo "Demo modus">
+<!ENTITY yacybarOverlay.menuitem.tooltip.demo "Demo modus">
+<!ENTITY yacybarOverlay.menu.label.links "YaCy Links">  
+<!ENTITY yacybarOverlay.menuitem.label.hp "YaCy Homepage">
+<!ENTITY yacybarOverlay.menuitem.tooltip.hp "Gehe zur YaCy Homepage">
+<!ENTITY yacybarOverlay.menuitem.label.forum "YaCy Forum">
+<!ENTITY yacybarOverlay.menuitem.tooltip.forum "Gehe zum YaCy Forum">
+<!ENTITY yacybarOverlay.menuitem.label.wiki "YaCy Wiki">
+<!ENTITY yacybarOverlay.menuitem.tooltip.wiki "Gehe zum YaCy Wiki">
+<!ENTITY yacybarOverlay.menuitem.label.stats "YaCy Statistiken">
+<!ENTITY yacybarOverlay.menuitem.tooltip.stats "Gehe zu den YaCy Statistiken">
+<!ENTITY yacybarOverlay.menuitem.label.svn "YaCy SVN Log">
+<!ENTITY yacybarOverlay.menuitem.tooltip.svn "Gehe zum YaCy SVN-Log">
+<!ENTITY yacybarOverlay.menu.label.dialogs "Dialoge">
+<!ENTITY yacybarOverlay.menuitem.label.crawjobs "CrawlJobs">
+<!ENTITY yacybarOverlay.menuitem.label.pref "YaCyBar Einstellungen">
+<!ENTITY yacybarOverlay.menuitem.tooltip.pref "YaCyBar Einstellungen">
+<!ENTITY yacybarOverlay.menuitem.label.about "Über YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.tooltip.about "Übe die YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.label.first "Firststart Dialog">
+<!ENTITY yacybarOverlay.menuitem.label.addBM "Lesezeichen hinzufügen">
+<!ENTITY yacybarOverlay.menuitem.tooltip.addBM "Ein Lesezeichen hinzufügen">
+<!ENTITY yacybarOverlay.menuitem.label.bmloading "lädt ...">
+<!ENTITY yacybarOverlay.menuitem.tooltip.bmloading "Tags werden geladen">

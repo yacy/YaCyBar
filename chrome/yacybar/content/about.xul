@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://yacybar/skin/about.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <dialog buttons="accept"
         id="YaCyBarAbout"
         ondialogaccept="return true"
-        title="YaCyBar - About"
+        title="&about.dialog.title;"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<groupbox align="center" orient="horizontal" class="about-box">
@@ -19,16 +20,16 @@
   		  
 	      <separator class="thin"/>
 	      
-		  <text value="Created by:" class="about-extension-info"/>
+		  <text value="&about.text.created;" class="about-extension-info"/>
 		  <text value="Alexander Schier"/>
 		  <separator class="thin"/>
 		  
-		  <text value="Contributors:" class="about-extension-info"/>
+		  <text value="&about.text.contributors;" class="about-extension-info"/>
 		  <text value="Martin Thelian"/>
 		  <text value="Oliver Wunder"/>
 		  <separator class="thin"/>
 
-		  <text value="Homepage" class="about-extension-info"/>
+		  <text value="&about.text.homepage;" class="about-extension-info"/>
 	      <text value="http://www.yacy.net/" class="url" onclick="window.open('http://www.yacy.net/'); self.close();"/>
 		  <separator class="thin"/>
 		</vbox>

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://yacybar/skin/contentArea.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <overlay id="YaCyBarContentAreaOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript" src="contentArea.js"/>
@@ -10,21 +11,21 @@
 	    <menuseparator />
 	    <menu id ="YaCyBar-context" label="YaCyBar" class="menu-iconic">
 	        <menupopup id="YaCyBar-context-items">
-	            <menuitem id="crawlLink" label="Crawl this link" 
+	            <menuitem id="crawlLink" label="&contentArea.menuitem.label.crawllink;" 
 	                oncommand="crawllink();"
-	                tooltiptext="Crawl this link"
+	                tooltiptext="&contentArea.menuitem.tooltip.crawllink;"
 	                class="menuitem-iconic" />
-	            <menuitem id="crawlPage" label="Crawl current page" 
+	            <menuitem id="crawlPage" label="&contentArea.menuitem.label.crawlpage;" 
 	                oncommand="crawlpage();"
-	                tooltiptext="Crawl current page"
+	                tooltiptext="&contentArea.menuitem.tooltip.crawlpage;"
 	                class="menuitem-iconic" />
-	            <menuitem id="searchSelected" label="Search this keyword" 
+	            <menuitem id="searchSelected" label="&contentArea.menuitem.label.search;" 
 	                oncommand="searchSelected();"
-	                tooltiptext="Search for selected keyword"
+	                tooltiptext="&contentArea.menuitem.tooltip.search;"
 	                class="menuitem-iconic" />	                
                 <menuseparator />                
-                <menuitem id="about" label="About YaCyBar" accesskey="A"
-						  tooltiptext="About the YaCyBar"
+                <menuitem id="about" label="&contentArea.menuitem.label.about;" accesskey="A"
+						  tooltiptext="&contentArea.menuitem.tooltip.about;"
 						  oncommand="showAbout()" 
 						  class="menuitem-iconic"/>
 	        </menupopup>

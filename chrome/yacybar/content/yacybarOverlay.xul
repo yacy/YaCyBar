@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://yacybar/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <overlay id="yacybarOverlay" 
 		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -17,61 +18,61 @@
 		<toolbaritem id="YaCy_toolbar_item1" flex="1">
 		    <toolbarbutton id="AboutMenu" type="menu">
 				<menupopup>
-					<menuitem label="YaCy Search" accesskey="H"
-							  tooltiptext="Your Searchsite"
+					<menuitem label="&yacybarOverlay.menuitem.label.yacysearch;" accesskey="H"
+							  tooltiptext="&yacybarOverlay.menuitem.tooltip.yacysearch;"
 							  selected="true"
 							  oncommand="loadYACY()"
 							  onclick="bgLoadYACY(event)"
 					/>
-					<menuitem label="Demo mode"
+					<menuitem label="&yacybarOverlay.menuitem.label.demo;"
 							id="menuitem-demo"
-							tooltiptext="Demo mode"
+							tooltiptext="&yacybarOverlay.menuitem.tooltip.demo;"
 							type="checkbox"
 							oncommand="toggleDemo()"
 					/>
 					<menuseparator />
-					<menu label="YaCy Links">
+					<menu label="&yacybarOverlay.menu.label.links;">
 						<menupopup>
-							<menuitem label="YaCy Homepage" accesskey="H"
-									tooltiptext="Browse to the YaCy home page"
+							<menuitem label="&yacybarOverlay.menuitem.label.hp;" accesskey="H"
+									tooltiptext="&yacybarOverlay.menuitem.tooltip.hp;"
 									selected="true"
 									oncommand="loadURL('http://www.yacy.net/', event)"
 									onclick="bgLoadURL('http://www.yacy.net/', event)"
 							/>
-							<menuitem label="YaCy Forum" accesskey="F"
-									  tooltiptext="Browse to the YaCy-Forum Homepage"
+							<menuitem label="&yacybarOverlay.menuitem.label.forum;" accesskey="F"
+									  tooltiptext="&yacybarOverlay.menuitem.tooltip.forum;"
 									  oncommand="loadURL('http://forum.yacy-websuche.de/')"
 									  onclick="bgLoadURL('http://forum.yacy-websuche.de/', event)"
 							/>
-							<menuitem label="YaCy Wiki" accesskey="W"
-									  tooltiptext="Browse to the YaCy-Wiki Homepage"
+							<menuitem label="&yacybarOverlay.menuitem.label.wiki;" accesskey="W"
+									  tooltiptext="&yacybarOverlay.menuitem.tooltip.wiki;"
 									  oncommand="loadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite')"
 									  onclick="bgLoadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite', event)"
 							/>
-							<menuitem label="YaCy Statistics" accesskey="S"
-									  tooltiptext="Browse to the YaCy-Statistics Homepage"
+							<menuitem label="&yacybarOverlay.menuitem.label.stats;" accesskey="S"
+									  tooltiptext="&yacybarOverlay.menuitem.tooltip.stats;"
 									  oncommand="loadURL('http://www.yacystats.de/')"
 									  onclick="bgLoadURL('http://www.yacystats.de/', event)"
 							/>
-							<menuitem label="YaCy SVN Log" accesskey="L"
-									  tooltiptext="Browse to the YaCy-SVN Repository Log"
+							<menuitem label="&yacybarOverlay.menuitem.label.svn;" accesskey="L"
+									  tooltiptext="&yacybarOverlay.menuitem.tooltip.svn;"
 									  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')"
 									  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"
 							/>
 						</menupopup>
 					</menu>
 					<menuseparator />	
-					<menu label="Dialogs">
+					<menu label="&yacybarOverlay.menu.label.dialogs;">
 						<menupopup>
-							<menuitem label="CrawlJobs" 
+							<menuitem label="&yacybarOverlay.menuitem.label.crawjobs;" 
 									  oncommand=" showCrawlJobs();" />
-							<menuitem label="YaCyBar Preferences" accesskey="P"
-									  tooltiptext="YaCyBar Preferences"
+							<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="P"
+									  tooltiptext="&yacybarOverlay.menuitem.tooltip.pref;"
 									  oncommand="openPreferences('YaCyBarPrefsPane');" />
-							<menuitem label="About YaCyBar" accesskey="A"
-									  tooltiptext="About the YaCyBar"
+							<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="A"
+									  tooltiptext="&yacybarOverlay.menuitem.tooltip.about;"
 									  oncommand="showAbout()" />
-							<menuitem label="Firststart Dialog" 
+							<menuitem label="&yacybarOverlay.menuitem.label.first;" 
 									  oncommand="showFirststartDialog()" />
 						</menupopup>
 					</menu>
@@ -79,15 +80,15 @@
 			</toolbarbutton>
 			<toolbarbutton id="BookmarksButton" type="menu" label="BM" onclick="loadTags(event)">
 				<menupopup id="BookmarksMenu">
-					<menuitem label="Add Bookmark"
+					<menuitem label="&yacybarOverlay.menuitem.label.addBM;"
 							id="menuitem-addbookmark"
-							tooltiptext="Add a Bookmark"
+							tooltiptext="&yacybarOverlay.menuitem.tooltip.addBM;"
 							selected="true"
 							oncommand="showAddBookmark()" />					
 					<menuseparator />
-					<menuitem label="loading ..."
+					<menuitem label="&yacybarOverlay.menuitem.label.bmloading;"
 					class="menuicon-iconic loading"
-					tooltiptext="Tags are loading"
+					tooltiptext="&yacybarOverlay.menuitem.tooltip.bmloading;"
 					/>				
 				</menupopup>
 			</toolbarbutton>

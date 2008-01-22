@@ -1,0 +1,10 @@
+<!ENTITY addBM.dialog.title "YaCyBar - Add Bookmark">
+<!ENTITY addBM.label.url "URL">
+<!ENTITY addBM.label.title "Title">
+<!ENTITY addBM.label.description "Description">
+<!ENTITY addBM.label.tags "Tags(separated by comma)">
+<!ENTITY addBM.label.public "Public">
+<!ENTITY addBM.menuitem.yes "yes">
+<!ENTITY addBM.menuitem.no "no">
+
+

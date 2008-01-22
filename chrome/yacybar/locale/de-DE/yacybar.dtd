@@ -1,0 +1,10 @@
+<!ENTITY addBM.dialog.title "YaCyBar - Lesezeichen hinzufügen">
+<!ENTITY addBM.label.url "URL">
+<!ENTITY addBM.label.title "Titel">
+<!ENTITY addBM.label.description "Beschreibung">
+<!ENTITY addBM.label.tags "Tags (durch Komma getrennt)">
+<!ENTITY addBM.label.public "Öffentlich">
+<!ENTITY addBM.menuitem.yes "Ja">
+<!ENTITY addBM.menuitem.no "Nein">
+
+

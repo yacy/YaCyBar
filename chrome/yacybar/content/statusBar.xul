@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://yacybar/skin/statusBar.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
    <script type="application/x-javascript" src="statusBar.js" />
    
@@ -12,16 +13,16 @@
     	  <statusbarpanel id="yacybar_statusBar_peerType" class="statusbarpanel-iconic" hidden="true"/>     
     	  <statusbarpanel id="yacybar_statusBar_menu" class="statusbarpanel-menu-iconic" type="menu" > 
 	  	  	  <menupopup>
-						 <menuitem id="cmd_showQPH" label="Show QPH" type="checkbox" oncommand="toggle('yacybar_statusBar_qph');"/>
-	                <menuitem id="cmd_showPPM" label="Show PPM" type="checkbox" oncommand="toggle('yacybar_statusBar_ppm');"/>
-	                <menuitem id="cmd_showURL" label="Show #URL" type="checkbox" oncommand="toggle('yacybar_statusBar_url');"/>
-	                <menuitem id="cmd_showRWI" label="Show #RWI" type="checkbox" oncommand="toggle('yacybar_statusBar_rwi');"/>
-	                <menuitem id="cmd_showPeerType" label="Show PeerType" type="checkbox" oncommand="toggle('yacybar_statusBar_peerType');"/>
+						 <menuitem id="cmd_showQPH" label="&statusBar.menuitem.label.qph;" type="checkbox" oncommand="toggle('yacybar_statusBar_qph');"/>
+	                <menuitem id="cmd_showPPM" label="&statusBar.menuitem.label.ppm;" type="checkbox" oncommand="toggle('yacybar_statusBar_ppm');"/>
+	                <menuitem id="cmd_showURL" label="&statusBar.menuitem.label.url;" type="checkbox" oncommand="toggle('yacybar_statusBar_url');"/>
+	                <menuitem id="cmd_showRWI" label="&statusBar.menuitem.label.rwi;" type="checkbox" oncommand="toggle('yacybar_statusBar_rwi');"/>
+	                <menuitem id="cmd_showPeerType" label="&statusBar.menuitem.label.peertype;" type="checkbox" oncommand="toggle('yacybar_statusBar_peerType');"/>
 	                <menuseparator /> 
-	                <menuitem id="cmd_MonitoringControl" label="Enable Monitoring" type="checkbox" oncommand="setMonitoring();"/>	                
+	                <menuitem id="cmd_MonitoringControl" label="&statusBar.menuitem.label.monitoring;" type="checkbox" oncommand="setMonitoring();"/>	                
 	                <menuseparator />                
-	                <menuitem id="about" label="About YaCyBar" accesskey="A"
-							  tooltiptext="About the YaCyBar"
+	                <menuitem id="about" label="&statusBar.menuitem.label.about;" accesskey="&statusBar.menuitem.accesskey.about;"
+							  tooltiptext="&statusBar.menuitem.tooltip.about;"
 							  oncommand="showAbout()" 
 							  class="menuitem-iconic"/>  	  	  
 	  	  	  </menupopup>

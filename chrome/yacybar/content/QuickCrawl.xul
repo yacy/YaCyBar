@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-
+<!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <dialog buttons="accept,cancel"
         id="YaCyBarQuickCrawlDialog"
         onload="initQuickCrawl()"
         ondialogaccept="return startQuickCrawl();"
         ondialogcancel="return cancelQuickCrawl();"
-        title="YaCyBar - QuickCrawl"
+        title="&quickcrawl.dialog.title;"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 		<script type="application/x-javascript" src="QuickCrawl.js"/>
@@ -15,11 +15,11 @@
 			<grid>
 				<rows>				
 					<row>
-				  		<label value="Title"/>	
+				  		<label value="&quickcrawl.groupbox.label.value.title;"/>	
 				  		<label id="crawlingTitle" value="" style="font-weight: bold;"/>							
 					</row>	
 					<row>
-						<label value="Starting Point" control="crawlingStart" accesskey="S" />
+						<label value="&quickcrawl.groupbox.label.value.startpoint;" control="crawlingStart" accesskey="&quickcrawl.groupbox.label.accesskey.startpoint;" />
 						<textbox id="crawlingStart" value="http://localhost.wg" onchange="crawlingStartChanged();" width="300"/>
 					</row>
 				</rows>
@@ -28,15 +28,15 @@
 
 		<hbox>
 			<groupbox align="center" orient="horizontal">
-			<caption label="Restrictions"/>
+			<caption label="&quickcrawl.groupbox.caption.label.res;"/>
 			<grid>
 				<rows>				
 					<row>
-						<label value="Crawling Filter" control="crawlingFilter" accesskey="F"/>
+						<label value="&quickcrawl.groupbox.label.value.filter;" control="crawlingFilter" accesskey="&quickcrawl.groupbox.label.accesskey.filter;"/>
 						<textbox id="crawlingFilter" value=".*"/>
 					</row>
 					<row>
-						<label value="Crawling Depth" control="crawlingDepth" accesskey="D"/>
+						<label value="&quickcrawl.groupbox.label.value.depth;" control="crawlingDepth" accesskey="&quickcrawl.groupbox.label.accesskey.depth;"/>
 						<menulist id="crawlingDepth" editable="true">
 		 					<menupopup>
 			 					<menuitem label="0"/>
@@ -51,14 +51,14 @@
 			</groupbox>
 	
 			<groupbox align="left" orient="vertical">
-				<caption label="Options"/>
-				<checkbox id="crawlingQ" label="Accept dynamic URLs" checked="true"/>
-				<checkbox id="storeHTCache" label="Store to Proxy Cache" checked="true"/>
-				<checkbox id="crawlOrder" label="Remote Indexing" checked="false"/>		
-				<checkbox id="xdstopw" label="Exclude static Stop-Words" checked="true"/>		
+				<caption label="&quickcrawl.groupbox.caption.options;"/>
+				<checkbox id="crawlingQ" label="&quickcrawl.groupbox.checkbox.dynamicurls;" checked="true"/>
+				<checkbox id="storeHTCache" label="&quickcrawl.groupbox.checkbox.cache;" checked="true"/>
+				<checkbox id="crawlOrder" label="&quickcrawl.groupbox.checkbox.remote;" checked="false"/>		
+				<checkbox id="xdstopw" label="&quickcrawl.groupbox.checkbox.stopwords;" checked="true"/>		
 			</groupbox>
 		</hbox>
 		
-		<checkbox id="showQuickCrawlDialog" label="Use this as the default and do not ask again" checked="false"/>
+		<checkbox id="showQuickCrawlDialog" label="&quickcrawl.checkbox.label.default;" checked="false"/>
 		
 </dialog>

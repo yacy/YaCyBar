@@ -11,7 +11,7 @@
  	<em:creator>Alexander Schier</em:creator>
  	<em:contributor>Martin Thelian</em:contributor>
  	<em:contributor>Oliver Wunder</em:contributor>
- 	
+ 	<em:translator>Oliver Wunder</em:translator>
  	<em:homepageURL>http://www.yacy.net/</em:homepageURL>
  	<em:iconURL>chrome://yacybar/skin/yacy_logo.gif</em:iconURL>
  	<!--<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>-->

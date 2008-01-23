@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-
+<!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <overlay id="YaCyBarPrefsOverlay"
        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -72,50 +72,50 @@
 	    
 		<tabbox id="yacyBar_PrefsTablist" flex="1" hidden="false">
 			<tabs>
-				<tab label="Peer" selected="true"/>
-				<tab label="QuickCrawl"/>
-				<tab label="Search"/>
+				<tab label="&prefs.tabbox.tab.label.peer;" selected="true"/>
+				<tab label="&prefs.tabbox.tab.label.quickcrawl;"/>
+				<tab label="&prefs.tabbox.tab.label.search;"/>
 			</tabs>
 			<tabpanels flex="1">
 				<!-- Peer connection preferences -->
 				<tabpanel id="yacyBar_PrefsPeerTab" orient="vertical">
-				    <description>Settings needed to connect to your YaCy Peer</description>
+				    <description>&prefs.tabpanel.description.peer;</description>
 				    
-			    	<label value="Peer Address" control="yacybar_peerAddressField" accesskey="A"/>
+			    	<label value="&prefs.tabpanel.label.value.peer;" control="yacybar_peerAddressField" accesskey="&prefs.tabpanel.label.accesskey.peer;"/>
 					<textbox preference="yacybar_peerAddress" id="yacybar_peerAddressField" onchange="changeProxySettings();"/>
 					
-					<label value="Peer Port" control="yacybar_peerPortField" accesskey="P"/>
+					<label value="&prefs.tabpanel.label.value.peerport;" control="yacybar_peerPortField" accesskey="&prefs.tabpanel.label.accesskey.peerport;"/>
 					<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" onchange="changeProxySettings();"/>
 					<separator class="thin"/>
 					
-					<label value="User Name" control="yacybar_peerUserField" accesskey="U"/>
+					<label value="&prefs.tabpanel.label.value.username;" control="yacybar_peerUserField" accesskey="&prefs.tabpanel.label.accesskey.username;"/>
 					<textbox id="yacybar_peerUserField" onchange="setUserPwd();"/>
 					
-					<label value="User Password" control="yacybar_peerPwdField" accesskey="W"/>
+					<label value="&prefs.tabpanel.label.value.password;" control="yacybar_peerPwdField" accesskey="&prefs.tabpanel.label.accesskey.password;"/>
 					<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>						
 			    </tabpanel>
 			    
 			    <!-- quick crawl preferences -->
 			    <tabpanel id="yacyBar_PrefsQuickCrawlTab" orient="vertical">
-					<description>Settings that should be used for crawling.</description>	
+					<description>&prefs.tabpanel.description.settings;</description>	
 					
 					<checkbox preference="yacybar_showQuickCrawlDialog" 
 							  id="yacybar_showQuickCrawlDialogField"
-							  label="Prompt for crawler settings" 
+							  label="&prefs.tabpanel.checkbox.label.settings;" 
 							  checked="true"/>	
 							  
 
 					<hbox>
 						<groupbox align="center" orient="horizontal">
-						<caption label="Restrictions"/>
+						<caption label="&prefs.tabpanel.hbox.caption.label.restrictions;"/>
 						<grid>
 							<rows>				
 								<row>
-									<label value="Crawling Filter" />
+									<label value="&prefs.tabpanel.hbox.label.filter;" />
 									<textbox preference="yacybar_quickCrawlFilter" id="crawlingFilter"/>
 								</row>		
 								<row>
-									<label value="Crawling Depth"/>
+									<label value="&prefs.tabpanel.hbox.label.depth;"/>
 									<menulist preference="yacybar_quickCrawlDepth" id="crawlingDepth" editable="true">
 					 					<menupopup>
 						 					<menuitem label="0"/>
@@ -130,11 +130,11 @@
 						</groupbox>
 						
 						<groupbox align="left" orient="vertical">
-							<caption label="Options"/>
-							<checkbox id="crawlingQ" preference="yacybar_quickCrawlCrawlingQ" label="Accept dynamic URLs"/>
-							<checkbox id="storeHTCache" preference="yacybar_quickCrawlStoreHTCache" label="Store to Proxy Cache"/>
-							<checkbox id="crawlOrder" preference="yacybar_quickCrawlCrawlOrder" label="Remote Indexing"/>		
-							<checkbox id="xdstopw" preference="yacybar_quickCrawlXdstopw" label="Exclude static Stop-Words"/>		
+							<caption label="&prefs.tabpanel.hbox.caption.label.options;"/>
+							<checkbox id="crawlingQ" preference="yacybar_quickCrawlCrawlingQ" label="&prefs.tabpanel.hbox.checkbox.label.dynamicurls;"/>
+							<checkbox id="storeHTCache" preference="yacybar_quickCrawlStoreHTCache" label="&prefs.tabpanel.hbox.checkbox.label.cache;"/>
+							<checkbox id="crawlOrder" preference="yacybar_quickCrawlCrawlOrder" label="&prefs.tabpanel.hbox.checkbox.label.remote;"/>		
+							<checkbox id="xdstopw" preference="yacybar_quickCrawlXdstopw" label="&prefs.tabpanel.hbox.checkbox.label.stop;"/>		
 						</groupbox>						
 					</hbox>						  
 							  	    				    
@@ -142,12 +142,12 @@
 			    
 			    <!-- search preferences -->
 			    <tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">
-					<description>Settings that should be used for searching.</description>	
+					<description>&prefs.tabpanel.description.searching;</description>	
 					
 					<grid>
 						<rows>				
 							<row>
-								<label value="Max. number of results"/>
+								<label value="&prefs.tabpanel.label.value.maxresults;"/>
 								<menulist preference="yacybar_searchMaxResults" id="search.MaxResults" editable="true">
 				 					<menupopup>
 					 					<menuitem label="10"/>
@@ -158,29 +158,29 @@
 								</menulist>
 							</row>
 							<row>
-								<label value="Order by"/>
+								<label value="&prefs.tabpanel.label.value.order;"/>
 								<menulist preference="yacybar_searchOrderBy" id="search.OrderBy" editable="false">
 				 					<menupopup>
-					 					<menuitem label="YBR-Date-Quality"/>
-					 					<menuitem label="YBR-Quality-Date"/>
-					 					<menuitem label="Date-YBR-Quality"/>
-										<menuitem label="Quality-YBR-Date"/>
-										<menuitem label="Date-Quality-YBR"/>
-										<menuitem label="Quality-Date-YBR"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.ybr-date-quality;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.ybr-quality-date;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.date-ybr-quality;"/>
+										<menuitem label="&prefs.tabpanel.menuitem.label.quality-ybr-date;"/>
+										<menuitem label="&prefs.tabpanel.menuitem.label.date-quality-ybr;"/>
+										<menuitem label="&prefs.tabpanel.menuitem.label.quality-date-ybr;"/>
 				 					</menupopup>
 								</menulist>
 							</row>
 							<row>
-								<label value="Resource"/>
+								<label value="&prefs.tabpanel.label.value.res;"/>
 								<menulist preference="yacybar_searchResource" id="search.Resource" editable="false">
 				 					<menupopup>
-					 					<menuitem label="global"/>
-					 					<menuitem label="local"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.global;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.local;"/>
 				 					</menupopup>
 								</menulist>
 							</row>	
 							<row>
-								<label value="Max. search time (seconds)"/>
+								<label value="&prefs.tabpanel.label.value.maxsearchtime;"/>
 								<menulist preference="yacybar_searchMaxSearchTime" id="search.MaxSearchTime" editable="true">
 				 					<menupopup>
 					 					<menuitem label="1"/>
@@ -193,11 +193,11 @@
 								</menulist>
 							</row>	
 							<row>
-								<label value="URL mask"/>
+								<label value="&prefs.tabpanel.label.value.urlmask;"/>
 								<textbox preference="yacybar_searchUrlMaskFilter" id="search.UrlMaskFilter"/>
 							</row>
 							<row>
-								<button label="use searchpage as startpage" onclick="setStartPage()" />
+								<button label="&prefs.tabpanel.button.label.startpage;" onclick="setStartPage()" />
 							</row>
 						</rows>
 					</grid>									    

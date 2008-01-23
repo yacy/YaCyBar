@@ -66,10 +66,10 @@
 						<menupopup>
 							<menuitem label="&yacybarOverlay.menuitem.label.crawjobs;" 
 									  oncommand=" showCrawlJobs();" />
-							<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="P"
+							<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="&yacybarOverlay.menuitem.accesskey.pref;"
 									  tooltiptext="&yacybarOverlay.menuitem.tooltip.pref;"
 									  oncommand="openPreferences('YaCyBarPrefsPane');" />
-							<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="A"
+							<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="&yacybarOverlay.menuitem.accesskey.about;"
 									  tooltiptext="&yacybarOverlay.menuitem.tooltip.about;"
 									  oncommand="showAbout()" />
 							<menuitem label="&yacybarOverlay.menuitem.label.first;" 
@@ -94,9 +94,9 @@
 			</toolbarbutton>
 			<toolbarbutton id="SurftipsButton" type="menu" label="Surftips" onclick="loadSurftips(event)">
 				<menupopup id="SurftipsMenu">
-					<menuitem label="loading ..."
+					<menuitem label="&yacybarOverlay.menuitem.label.stloading;"
 					class="menuitem-iconic loading"
-					tooltiptext="Surftips are loading"
+					tooltiptext="&yacybarOverlay.menuitem.tooltip.stloading;"
 					/>
 				</menupopup>
 			</toolbarbutton>
@@ -104,8 +104,8 @@
 	    	    	
 			<textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(true); }" />
 		    <toolbarbutton id="SearchBtn" 
-		    			   label="Search" 
-		    			   tooltiptext="Search with YaCy"
+		    			   label="&yacybarOverlay.toolbarbutton.label.search;" 
+		    			   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.search;"
 		    			   oncommand="search(false)"
 			/>
 		</toolbaritem>
@@ -113,12 +113,12 @@
 		<toolbaritem id="YaCy_toolbar_item2" flex="0">	
 			<toolbarseparator/>		    		    
 		    <toolbarbutton id="BlacklistBtn" 
-			   label="Blacklist Page" 
-			   tooltiptext="Blacklist current Page"
+			   label="&yacybarOverlay.toolbarbutton.label.blacklist;" 
+			   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.blacklist;"
 			   oncommand="blacklistpage()"/>				   
 		    <toolbarbutton id="CrawlBtn" 
-			   label="Crawl Page" 
-			   tooltiptext="Crawl current Page"
+			   label="&yacybarOverlay.toolbarbutton.label.crawl;" 
+			   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.crawl;"
 			   oncommand="crawlpage()"/>	
 		</toolbaritem>
 		

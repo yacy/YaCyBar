@@ -21,6 +21,86 @@
 <!ENTITY addBM.menuitem.yes "yes">
 <!ENTITY addBM.menuitem.no "no">
 
+<!ENTITY demopeers.dialog.title "YaCyBar - Demopeers">
+<!ENTITY demopeers.label.value "Select your Demopeer:">
+
+<!ENTITY firststart.window.title "YaCyBar - Firststart">
+<!ENTITY firststart.html.div "This is your first start with the YaCy-Toolbar. To use it, you need a YaCy-Peer.">
+<!ENTITY firststart.html.ul.li.demo "If you have no YaCy-Peer yet, click on Demomode to use one of our Demopeers.">
+<!ENTITY firststart.html.ul.li.install "If you want to install a YaCy-Peer visit">
+<!ENTITY firststart.html.ul.li.peer "If you already have a Peer running:">
+<!ENTITY firststart.html.ul.li.ul.li.port "If it's running on localhost with port 8080 you can start using the YaCyBar without any further action.">
+<!ENTITY firststart.html.ul.li.ul.li.settings "If it's running with other settings, you need to edit the">
+<!ENTITY firststart.html.ul.li.ul.li.a.settings "preferences">
+<!ENTITY firststart.html.hbox.label.demo "Demomode">
+<!ENTITY firststart.html.hbox.label.download "Download YaCy">
+<!ENTITY firststart.html.hbox.label.peer "I have a running Peer">
+<!ENTITY firststart.html.hbox.label.prefs "Preferences">
+
+<!ENTITY prefs.tabbox.tab.label.peer "Peer">
+<!ENTITY prefs.tabbox.tab.label.quickcrawl "QuickCrawl">
+<!ENTITY prefs.tabbox.tab.label.search "Search">
+<!ENTITY prefs.tabpanel.description.peer "Settings needed to connect to your YaCy Peer">
+<!ENTITY prefs.tabpanel.label.value.peer "Peer Address">
+<!ENTITY prefs.tabpanel.label.accesskey.peer "A">
+<!ENTITY prefs.tabpanel.label.value.peerport "Peer Port">
+<!ENTITY prefs.tabpanel.label.accesskey.peerport "P">
+<!ENTITY prefs.tabpanel.label.value.username "User Name">
+<!ENTITY prefs.tabpanel.label.accesskey.username "U">
+<!ENTITY prefs.tabpanel.label.value.password "User Password">
+<!ENTITY prefs.tabpanel.label.accesskey.password "W">
+<!ENTITY prefs.tabpanel.description.settings "Settings that should be used for crawling.">
+<!ENTITY prefs.tabpanel.checkbox.label.settings "Prompt for crawler settings">
+<!ENTITY prefs.tabpanel.hbox.caption.label.restrictions "Restrictions">
+<!ENTITY prefs.tabpanel.hbox.label.filter "Crawling Filter">
+<!ENTITY prefs.tabpanel.hbox.label.depth "Crawling Depth">
+<!ENTITY prefs.tabpanel.hbox.caption.label.options "Options">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.dynamicurls "Accept dynamic URLs">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.cache "Store to Proxy Cache">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.remote "Remote Indexing">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Exclude static Stop-Words">
+<!ENTITY prefs.tabpanel.description.searching "Settings that should be used for searching.">
+<!ENTITY prefs.tabpanel.label.value.maxresults "Max. number of results">
+<!ENTITY prefs.tabpanel.label.value.order "Order by">
+<!ENTITY prefs.tabpanel.menuitem.label.ybr-date-quality "YBR-Date-Quality">
+<!ENTITY prefs.tabpanel.menuitem.label.ybr-quality-date "YBR-Quality-Date">
+<!ENTITY prefs.tabpanel.menuitem.label.date-ybr-quality "Date-YBR-Quality">
+<!ENTITY prefs.tabpanel.menuitem.label.quality-ybr-date "Quality-YBR-Date">
+<!ENTITY prefs.tabpanel.menuitem.label.date-quality-ybr "Date-Quality-YBR">
+<!ENTITY prefs.tabpanel.menuitem.label.quality-date-ybr "Quality-Date-YBR">
+<!ENTITY prefs.tabpanel.label.value.res "Resource">
+<!ENTITY prefs.tabpanel.menuitem.label.global "global">
+<!ENTITY prefs.tabpanel.menuitem.label.local "local">
+<!ENTITY prefs.tabpanel.label.value.maxsearchtime "Max. search time (seconds)">
+<!ENTITY prefs.tabpanel.label.value.urlmask "URL mask">
+<!ENTITY prefs.tabpanel.button.label.startpage "use searchpage as startpage">
+
+<!ENTITY quickcrawl.dialog.title "YaCyBar - QuickCrawl">
+<!ENTITY quickcrawl.groupbox.label.value.title "Title">
+<!ENTITY quickcrawl.groupbox.label.value.startpoint "Starting Point">
+<!ENTITY quickcrawl.groupbox.label.accesskey.startpoint "S">
+<!ENTITY quickcrawl.groupbox.caption.label.res "Restrictions">
+<!ENTITY quickcrawl.groupbox.label.value.filter "Crawling Filter">
+<!ENTITY quickcrawl.groupbox.label.accesskey.filter "F">
+<!ENTITY quickcrawl.groupbox.label.value.depth "Crawling Depth">
+<!ENTITY quickcrawl.groupbox.label.accesskey.depth "D">
+<!ENTITY quickcrawl.groupbox.caption.options "Options">
+<!ENTITY quickcrawl.groupbox.checkbox.dynamicurls "Accept dynamic URLs">
+<!ENTITY quickcrawl.groupbox.checkbox.cache "Store to Proxy Cache">
+<!ENTITY quickcrawl.groupbox.checkbox.remote "Remote Indexing">
+<!ENTITY quickcrawl.groupbox.checkbox.stopwords "Exclude static Stop-Words">
+<!ENTITY quickcrawl.checkbox.label.default "Use this as the default and do not ask again">
+
+<!ENTITY statusBar.menuitem.label.qph "Show QPH">
+<!ENTITY statusBar.menuitem.label.ppm "Show PPM">
+<!ENTITY statusBar.menuitem.label.url "Show #URL">
+<!ENTITY statusBar.menuitem.label.rwi "Show #RWI">
+<!ENTITY statusBar.menuitem.label.peertype "Show PeerType">
+<!ENTITY statusBar.menuitem.label.monitoring "Enable Monitoring">
+<!ENTITY statusBar.menuitem.label.about "About YaCyBar">
+<!ENTITY statusBar.menuitem.accesskey.about "A">
+<!ENTITY statusBar.menuitem.tooltip.about "About the YaCyBar">
+
 <!ENTITY yacybarOverlay.menuitem.label.yacysearch "YaCy Search"> 
 <!ENTITY yacybarOverlay.menuitem.tooltip.yacysearch "Your Searchsite">
 <!ENTITY yacybarOverlay.menuitem.label.demo "Demo mode">
@@ -39,12 +119,21 @@
 <!ENTITY yacybarOverlay.menu.label.dialogs "Dialogs">
 <!ENTITY yacybarOverlay.menuitem.label.crawjobs "CrawlJobs">
 <!ENTITY yacybarOverlay.menuitem.label.pref "YaCyBar Preferences">
+<!ENTITY yacybarOverlay.menuitem.accesskey.pref "P">
 <!ENTITY yacybarOverlay.menuitem.tooltip.pref "YaCyBar Preferences">
 <!ENTITY yacybarOverlay.menuitem.label.about "About YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.accesskey.about "A">
 <!ENTITY yacybarOverlay.menuitem.tooltip.about "About the YaCyBar">
 <!ENTITY yacybarOverlay.menuitem.label.first "Firststart Dialog">
 <!ENTITY yacybarOverlay.menuitem.label.addBM "Add Bookmark">
 <!ENTITY yacybarOverlay.menuitem.tooltip.addBM "Add a Bookmark">
 <!ENTITY yacybarOverlay.menuitem.label.bmloading "loading ...">
 <!ENTITY yacybarOverlay.menuitem.tooltip.bmloading "Tags are loading">
-
+<!ENTITY yacybarOverlay.menuitem.label.stloading "loading ...">
+<!ENTITY yacybarOverlay.menuitem.tooltip.stloading "Surftips are loading">
+<!ENTITY yacybarOverlay.toolbarbutton.label.search "Search">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.search "Search with YaCy">
+<!ENTITY yacybarOverlay.toolbarbutton.label.blacklist "Blacklist Page">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.blacklist "Blacklist current Page">
+<!ENTITY yacybarOverlay.toolbarbutton.label.crawl "Crawl Page">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.crawl "Crawl current Page">

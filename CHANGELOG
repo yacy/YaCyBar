@@ -1,4 +1,10 @@
+v 0.2.3 - 23.01.2008
+=====================================================================
++ added entitys (daburna)
++ added english languagefile (daburna)
++ added german languagefile (daburna)
+
 v 0.2.2 - 15.01.2008
 =====================================================================
-X Fixed wrong demopeerlist
-+ added QPH at statusbar
+X Fixed wrong demopeerlist (daburna)
++ added QPH at statusbar (daburna)

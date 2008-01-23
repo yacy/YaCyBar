@@ -5,7 +5,7 @@
  
  	<em:id>{5e0a5f10-48fc-42f3-b2e0-f4609d8d6509}</em:id>
  	<em:name>YaCyBar</em:name>
- 	<em:version>0.2.2</em:version>
+ 	<em:version>0.2.3</em:version>
  	<em:type>2</em:type>
  	<em:description>A toolbar for the P2P Searchengine YaCy</em:description>
  	<em:creator>Alexander Schier</em:creator>

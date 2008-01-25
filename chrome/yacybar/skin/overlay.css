@@ -2,6 +2,9 @@
     list-style-image: url("chrome://yacybar/skin/yacy.gif");
 }
 
+#BookmarksButton {
+    list-style-image: url("chrome://yacybar/skin/bookmark.gif");
+} 
 
 #BlacklistBtn {
     list-style-image: url("chrome://yacybar/skin/blacklist.gif");

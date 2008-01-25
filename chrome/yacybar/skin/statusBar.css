@@ -4,6 +4,13 @@ statusbarpanel#yacybar_statusBar{
     border: none !important; 
 }	
 	
+statusbarpanel#yacybar_statusBar_qph {
+    padding: 0;
+    margin: 0;
+    border: none !important; 
+    -moz-appearance: none !important;  
+}
+
 statusbarpanel#yacybar_statusBar_ppm {
     padding: 0;
     margin: 0;

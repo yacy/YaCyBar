@@ -20,6 +20,7 @@
  	<em:file>
  		<Description about="urn:mozilla:extension:file:yacybar">
  			<em:package>content/</em:package>
+ 			<em:locale>locale/en-US/</em:locale>
  			<em:locale>locale/de-DE/</em:locale>
  			<em:skin>skin/</em:skin>
  		</Description>

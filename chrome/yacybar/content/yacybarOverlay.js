@@ -40,7 +40,8 @@ function init(){
 		Branch.setIntPref("peerPort",8080);
 	}	
 	if (!Branch.prefHasUserValue("demoPeersURL")) {
-		Branch.setCharPref("demoPeersURL", "http://data.yacy-forum.de/demopeers.xml");
+	Branch.setCharPref("demoPeersURL", "http://www.daburna.de/download/demopeers.xml"); 
+	// old URL outdated - new one just a placeholder TODO
 	}
 	
 	
@@ -168,7 +169,7 @@ function showPrefs() {
 }	
 
 function loadURL(newURL) {
-	//gBrowser.addTab(newURL);
+	// gBrowser.addTab(newURL);
 	window._content.document.location = newURL;
 	window.content.focus();
 }

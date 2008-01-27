@@ -8,9 +8,13 @@
 	<script type="application/x-javascript" src="functions.js"/>
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+    </stringbundleset>
+
 	<commandset id="mainCommandSet">
-		<command id="cmd_toggleProxy" oncommand="toggleProxy();" tooltiptext="Proxy is OFF"/>
-		<command id="cmd_toggleIndexing" oncommand="toggleIndexing();" tooltiptext="Indexing is OFF"/>
+		<command id="cmd_toggleProxy" oncommand="toggleProxy();" tooltiptext="&yacybarOverlay.command.tooltiptext.proxy;"/>
+		<command id="cmd_toggleIndexing" oncommand="toggleIndexing();" tooltiptext="&yacybarOverlay.command.tooltiptext.indexing;"/>
 	</commandset>
 
 	<toolbarpalette id="BrowserToolbarPalette">
@@ -78,7 +82,7 @@
 					</menu>
 				</menupopup>
 			</toolbarbutton>
-			<toolbarbutton id="BookmarksButton" type="menu" label="BM" onclick="loadTags(event)">
+			<toolbarbutton id="BookmarksButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.bm;" onclick="loadTags(event)">
 				<menupopup id="BookmarksMenu">
 					<menuitem label="&yacybarOverlay.menuitem.label.addBM;"
 							id="menuitem-addbookmark"
@@ -92,7 +96,7 @@
 					/>				
 				</menupopup>
 			</toolbarbutton>
-			<toolbarbutton id="SurftipsButton" type="menu" label="Surftips" onclick="loadSurftips(event)">
+			<toolbarbutton id="SurftipsButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.surftips;" onclick="loadSurftips(event)">
 				<menupopup id="SurftipsMenu">
 					<menuitem label="&yacybarOverlay.menuitem.label.stloading;"
 					class="menuitem-iconic loading"

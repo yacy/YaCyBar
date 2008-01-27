@@ -182,8 +182,9 @@ function bgLoadUrl(newURL, event){
 function setIndexControlBtn(checked) {
 	// setting the gui elements accordingly
 	var tooltipText;
-	if (checked) tooltipText = "Indexing is ON";
-	else tooltipText = "Indexing is OFF";
+	var stringBundle = document.getElementById("yacybar-string-bundle");
+	if (checked) tooltipText = stringBundle.getString("yacybar_indexingon");
+	else tooltipText = stringBundle.getString("yacybar_indexingoff");
 	document.getElementById('cmd_toggleIndexing').setAttribute('checked',checked);
 	document.getElementById('cmd_toggleIndexing').setAttribute("tooltiptext", tooltipText);
 }
@@ -205,8 +206,9 @@ function toggleIndexing() {
 function setProxyControlBtn(checked) {
 	// setting the gui elements accordingly
 	var tooltipText;
-	if (checked) tooltipText = "Proxy is ON";
-	else tooltipText = "Proxy is OFF";
+	var stringBundle = document.getElementById("yacybar-string-bundle");
+	if (checked) tooltipText = stringBundle.getString("yacybar_proxyon");
+	else tooltipText = stringBundle.getString("yacybar_proxyoff");
 	document.getElementById('cmd_toggleProxy').setAttribute('checked',checked);
 	document.getElementById('cmd_toggleProxy').setAttribute("tooltiptext", tooltipText);
 }

@@ -9,6 +9,9 @@
 		xmlns:html="http://www.w3.org/1999/xhtml"
 		>
 		<script type="application/x-javascript" src="firststart.js"/>
+      <stringbundleset id="stringbundleset">
+        <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+      </stringbundleset>
 		<vbox>
 		<html:div>
 		&firststart.html.div;

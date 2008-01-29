@@ -1,6 +1,7 @@
 function toggleDemo(){
 	win=window.arguments[0]
-	alert("On next start of firefox you need to reenable the Demomode. You can find it then in the YaCy-Menu.");
+	var stringBundle = document.getElementById("yacybar-string-bundle");
+	alert(stringBundle.getString("yacybar_nextstart"));
 	window.openDialog("chrome://yacybar/content/demopeers.xul", "demopeerDialog", "centerscreen, chrome, modal", win.document);
 	window.close();
 }

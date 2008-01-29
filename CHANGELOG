@@ -1,4 +1,5 @@
-
++ added property-files for translating .js files (daburna)
++ added UTF-8 for all xml files (daburna)
 + added missing css for QPH at statusbar (daburna)
 + added bookmark icon (daburna)
 

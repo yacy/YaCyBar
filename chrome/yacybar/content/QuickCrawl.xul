@@ -11,6 +11,10 @@
 
 		<script type="application/x-javascript" src="QuickCrawl.js"/>
 
+      <stringbundleset id="stringbundleset">
+    	  <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+      </stringbundleset>
+
 		<groupbox align="center" orient="horizontal">
 			<grid>
 				<rows>				

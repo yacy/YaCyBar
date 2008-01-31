@@ -10,6 +10,9 @@
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
         	<script type="application/x-javascript" src="functions.js"/>
 		<script type="application/x-javascript" src="addBookmark.js"/>
+      <stringbundleset id="stringbundleset">
+    	  <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+      </stringbundleset>
 		<vbox>
 			<label for="url" value="&addBM.label.url;"/>
 			<textbox id="url" flex="1" />
@@ -22,8 +25,8 @@
 			<label for="public" value="&addBM.label.public;"/>
 			<menulist id="public">
 				<menupopup>
-					<menuitem value="&addBM.menuitem.yes;" label="yes" selected="true" id="ispublic" />
-					<menuitem value="&addBM.menuitem.no;" label="no" id="isprivate" />
+					<menuitem value="&addBM.menuitem.yes;" label="&addBM.menuitem.yes;" selected="true" id="ispublic" />
+					<menuitem value="&addBM.menuitem.no;" label="&addBM.menuitem.no;" id="isprivate" />
 				</menupopup>
 			</menulist>
 		</vbox>

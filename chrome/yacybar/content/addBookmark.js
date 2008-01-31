@@ -36,14 +36,18 @@ function addBookmark(){
 	var tags=document.getElementById("tags").value;
 	var isPublic=document.getElementById("ispublic").getAttribute("selected");
 	var public="private"
+	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if(isPublic){
 		public="public";
 	}
-	if(url==""){
-		alert("Please enter an URL");
+	if(url=="" && title==""){
+		alert(stringBundle.getString("yacybar_enterboth"));
+	}else if(url==""){
+		alert(stringBundle.getString("yacybar_enterurl"));
 	}else if(title==""){
-		alert("Please enter a title");
+		alert(stringBundle.getString("yacybar_entertitle"));
 	}
+	
 	
 	//TODO: This needs the not exisiting backend
 	//TODO: Do not Change it, till a stable Release with the Backend!

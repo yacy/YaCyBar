@@ -46,6 +46,7 @@ function storeQuickCrawlSettings(crawlIt) {
 }
 
 function crawlingStartChanged() {
-	document.getElementById('crawlingTitle').value = "Unknown";
+	var stringBundle = document.getElementById("yacybar-string-bundle");
+	document.getElementById('crawlingTitle').value = stringBundle.getString("yacybar_unknown");
 }
 

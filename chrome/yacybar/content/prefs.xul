@@ -55,11 +55,7 @@
 	      <!-- searching preferences -->  
 	      <preference id="yacybar_searchMaxResults"
 	        name="extensions.yacybar.search.maxResults"
-	        type="int"/>	        
-	      <preference id="yacybar_searchOrderBy"
-	        name="extensions.yacybar.search.orderBy"
-	        type="string"/>		        
-	      <preference id="yacybar_searchResource"
+	        type="int"/>	        	      <preference id="yacybar_searchResource"
 	        name="extensions.yacybar.search.resource"
 	        type="string"/>		        
 	      <preference id="yacybar_searchMaxSearchTime"
@@ -145,7 +141,7 @@
 					<description>&prefs.tabpanel.description.searching;</description>	
 					
 					<grid>
-						<rows>				
+						<rows>		
 							<row>
 								<label value="&prefs.tabpanel.label.value.maxresults;"/>
 								<menulist preference="yacybar_searchMaxResults" id="search.MaxResults" editable="true">

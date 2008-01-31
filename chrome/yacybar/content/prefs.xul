@@ -158,19 +158,6 @@
 								</menulist>
 							</row>
 							<row>
-								<label value="&prefs.tabpanel.label.value.order;"/>
-								<menulist preference="yacybar_searchOrderBy" id="search.OrderBy" editable="false">
-				 					<menupopup>
-					 					<menuitem label="&prefs.tabpanel.menuitem.label.ybr-date-quality;"/>
-					 					<menuitem label="&prefs.tabpanel.menuitem.label.ybr-quality-date;"/>
-					 					<menuitem label="&prefs.tabpanel.menuitem.label.date-ybr-quality;"/>
-										<menuitem label="&prefs.tabpanel.menuitem.label.quality-ybr-date;"/>
-										<menuitem label="&prefs.tabpanel.menuitem.label.date-quality-ybr;"/>
-										<menuitem label="&prefs.tabpanel.menuitem.label.quality-date-ybr;"/>
-				 					</menupopup>
-								</menulist>
-							</row>
-							<row>
 								<label value="&prefs.tabpanel.label.value.res;"/>
 								<menulist preference="yacybar_searchResource" id="search.Resource" editable="false">
 				 					<menupopup>

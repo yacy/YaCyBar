@@ -10,6 +10,7 @@
 <!ENTITY contentArea.menuitem.label.search "Search this keyword">
 <!ENTITY contentArea.menuitem.tooltip.search "Search for selected keyword">
 <!ENTITY contentArea.menuitem.label.about "About YaCyBar">
+<!ENTITY contentArea.menuitem.accesskey.about "A">
 <!ENTITY contentArea.menuitem.tooltip.about "About the YaCyBar">
 
 <!ENTITY addBM.dialog.title "YaCyBar - Add Bookmark">
@@ -61,13 +62,6 @@
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Exclude static Stop-Words">
 <!ENTITY prefs.tabpanel.description.searching "Settings that should be used for searching.">
 <!ENTITY prefs.tabpanel.label.value.maxresults "Max. number of results">
-<!ENTITY prefs.tabpanel.label.value.order "Order by">
-<!ENTITY prefs.tabpanel.menuitem.label.ybr-date-quality "YBR-Date-Quality">
-<!ENTITY prefs.tabpanel.menuitem.label.ybr-quality-date "YBR-Quality-Date">
-<!ENTITY prefs.tabpanel.menuitem.label.date-ybr-quality "Date-YBR-Quality">
-<!ENTITY prefs.tabpanel.menuitem.label.quality-ybr-date "Quality-YBR-Date">
-<!ENTITY prefs.tabpanel.menuitem.label.date-quality-ybr "Date-Quality-YBR">
-<!ENTITY prefs.tabpanel.menuitem.label.quality-date-ybr "Quality-Date-YBR">
 <!ENTITY prefs.tabpanel.label.value.res "Resource">
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
 <!ENTITY prefs.tabpanel.menuitem.label.local "local">

@@ -17,6 +17,15 @@
  	<!--<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>-->
  	<em:aboutURL>chrome://yacybar/content/about.xul</em:aboutURL>
   
+   <!-- localized only works in firefox 3 -->
+	<em:localized>
+      <Description>
+        <em:locale>de-DE</em:locale>
+        <em:name>YaCy-Bar</em:name>
+        <em:description>Eine Toolbar für die P2P Suchmaschine YaCy</em:description>
+      </Description>
+   </em:localized>  
+  
  	<em:file>
  		<Description about="urn:mozilla:extension:file:yacybar">
  			<em:package>content/</em:package>

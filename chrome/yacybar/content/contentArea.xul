@@ -24,7 +24,7 @@
 	                tooltiptext="&contentArea.menuitem.tooltip.search;"
 	                class="menuitem-iconic" />	                
                 <menuseparator />                
-                <menuitem id="about" label="&contentArea.menuitem.label.about;" accesskey="A"
+                <menuitem id="about" label="&contentArea.menuitem.label.about;" accesskey="&contentArea.menuitem.accesskey.about;"
 						  tooltiptext="&contentArea.menuitem.tooltip.about;"
 						  oncommand="showAbout()" 
 						  class="menuitem-iconic"/>

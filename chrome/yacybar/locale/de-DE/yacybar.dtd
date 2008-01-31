@@ -10,6 +10,7 @@
 <!ENTITY contentArea.menuitem.label.search "Suche dieses Wort">
 <!ENTITY contentArea.menuitem.tooltip.search "Suche nach dem markierten Wort">
 <!ENTITY contentArea.menuitem.label.about "Über YaCyBar">
+<!ENTITY contentArea.menuitem.accesskey.about "Ü">
 <!ENTITY contentArea.menuitem.tooltip.about "Über die YaCyBar">
 
 <!ENTITY addBM.dialog.title "YaCyBar - Lesezeichen hinzufügen">
@@ -61,13 +62,6 @@
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Statische Stopp-Wörter ausschliessen">
 <!ENTITY prefs.tabpanel.description.searching "Einstellungen, die für die Suche benutzt werden sollen.">
 <!ENTITY prefs.tabpanel.label.value.maxresults "Max. Ergbnisanzahl">
-<!ENTITY prefs.tabpanel.label.value.order "Sortiert nach">
-<!ENTITY prefs.tabpanel.menuitem.label.ybr-date-quality "YBR-Datum-Qualität">
-<!ENTITY prefs.tabpanel.menuitem.label.ybr-quality-date "YBR-Qualität-Datum">
-<!ENTITY prefs.tabpanel.menuitem.label.date-ybr-quality "Datum-YBR-Qualität">
-<!ENTITY prefs.tabpanel.menuitem.label.quality-ybr-date "Qualität-YBR-Datum">
-<!ENTITY prefs.tabpanel.menuitem.label.date-quality-ybr "Datum-Qualität-YBR">
-<!ENTITY prefs.tabpanel.menuitem.label.quality-date-ybr "Qualität-Datum-YBR">
 <!ENTITY prefs.tabpanel.label.value.res "Quelle">
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
 <!ENTITY prefs.tabpanel.menuitem.label.local "lokal">

@@ -56,7 +56,6 @@ function init(){
 	
 	// init search settings
 	if (!Branch.prefHasUserValue("search.maxResults"))    Branch.setIntPref("search.maxResults",10);
-	if (!Branch.prefHasUserValue("search.orderBy"))       Branch.setCharPref("search.orderBy","YBR-Date-Quality");
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
 	if (!Branch.prefHasUserValue("search.maxSearchTime")) Branch.setIntPref("search.maxSearchTime",6);
 	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
@@ -107,7 +106,6 @@ function getSearchURL(keyword) {
 	// alert(searchwords);
 	
 	var maxResults = Branch.getIntPref("search.maxResults");
-	var orderBy = Branch.getCharPref("search.orderBy");
 	var resource = Branch.getCharPref("search.resource");
 	var maxSearchTime = Branch.getIntPref("search.maxSearchTime");
 	var urlMask = Branch.getCharPref("search.urlMaskFilter");
@@ -116,8 +114,7 @@ function getSearchURL(keyword) {
 	return getBaseURL() + 
 	"/yacysearch.html" + 
 	"?search=" + keyword + 
-	"&count=" + maxResults + 
-	"&order=" + orderBy + 
+	"&count=" + maxResults +  
 	"&resource=" + resource + 
 	"&time=" + maxSearchTime + 
 	"&urlmaskfilter=" + urlMask;	

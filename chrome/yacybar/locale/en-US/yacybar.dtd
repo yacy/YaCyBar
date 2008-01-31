@@ -85,6 +85,11 @@
 <!ENTITY quickcrawl.groupbox.checkbox.stopwords "Exclude static Stop-Words">
 <!ENTITY quickcrawl.checkbox.label.default "Use this as the default and do not ask again">
 
+<!ENTITY statusBar.statusbarpanel.tooltip.qph "Queries Per Hour">
+<!ENTITY statusBar.statusbarpanel.tooltip.ppm "Pages Per Minute">
+<!ENTITY statusBar.statusbarpanel.tooltip.url "Stored URLs">
+<!ENTITY statusBar.statusbarpanel.tooltip.rwi "Stored RWI">
+<!ENTITY statusBar.statusbarpanel.tooltip.menu "YaCyBar Statusbar Menu">
 <!ENTITY statusBar.menuitem.label.qph "Show QPH">
 <!ENTITY statusBar.menuitem.label.ppm "Show PPM">
 <!ENTITY statusBar.menuitem.label.url "Show #URL">

@@ -87,18 +87,18 @@ function alertContents() {
 		 var urlPanel = document.getElementById('yacybar_statusBar_url');
 		 var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
 		 var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');		 
-
+		 var stringBundle = document.getElementById("yacybar-string-bundle");
 			qphPanel.label = "QPH: " + qph;
          ppmPanel.label = "PPM: " + ppm;
          urlPanel.label = "#URL: " + groupDigits(url);
          rwiPanel.label = "#RWI: " + groupDigits(rwi);
          
          peerTypePanel.setAttribute("peerType", type);
-         peerTypePanel.tooltipText = "PeerType: " + type;
+         peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
 
 
       } else {
-         alert('There was a problem with the request.');
+         alert('stringBundle.getString("yacybar_request_problem")');
       }
    }
 }

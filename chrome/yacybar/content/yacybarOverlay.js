@@ -55,11 +55,12 @@ function init(){
 	}	
 	
 	// init search settings
+	if (!Branch.prefHasUserValue("search.content"))       Branch.setCharPref("search.content","text");
 	if (!Branch.prefHasUserValue("search.maxResults"))    Branch.setIntPref("search.maxResults",10);
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
 	if (!Branch.prefHasUserValue("search.maxSearchTime")) Branch.setIntPref("search.maxSearchTime",6);
 	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
-	
+
 	// init peer monitoring settings
 	if (!Branch.prefHasUserValue("peerMonitoring.enabled")) Branch.setBoolPref("peerMonitoring.enabled",false);
 	if (!Branch.prefHasUserValue("peerMonitoring.refreshRate")) Branch.setIntPref("peerMonitoring.refreshRate",30000);
@@ -105,15 +106,23 @@ function searchSelected() {
 function getSearchURL(keyword) {
 	// alert(searchwords);
 	
+	var content = Branch.getCharPref("search.content");
 	var maxResults = Branch.getIntPref("search.maxResults");
 	var resource = Branch.getCharPref("search.resource");
 	var maxSearchTime = Branch.getIntPref("search.maxSearchTime");
 	var urlMask = Branch.getCharPref("search.urlMaskFilter");
+	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if (urlMask == "") urlMask = ".*";
+   if (content == stringBundle.getString("yacybar_content_text")) content = "text";	
+   if (content == stringBundle.getString("yacybar_content_image")) content = "image";
+   if (content == stringBundle.getString("yacybar_content_audio")) content = "audio";
+   if (content == stringBundle.getString("yacybar_content_video")) content = "video";
+   if (content == stringBundle.getString("yacybar_content_app")) content = "app";		
 	
 	return getBaseURL() + 
 	"/yacysearch.html" + 
 	"?search=" + keyword + 
+	"&contentdom=" + content +
 	"&count=" + maxResults +  
 	"&resource=" + resource + 
 	"&time=" + maxSearchTime + 

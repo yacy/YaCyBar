@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://yacybar/skin/sidebarOverlay.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		width="600"
 		height="250"
 		persist="width height screenX screenY sizeMode"
-		title="QuickCrawl">
+		title="&sidebarOverlay.window.title;">
     
     <script src="sidebarOverlay.js" />    
     <script src="functions.js" /> 
@@ -45,7 +46,7 @@
 	</richlistbox>
   <hbox>
  	 <hbox id="commandBar" flex="1" align="right">
-     	<button id="cleanUpButton" label="CleanUp" onclick="cleanup();"/>
+     	<button id="cleanUpButton" label="&sidebarOverlay.button.label;" onclick="cleanup();"/>
      </hbox>
     
     <resizer id="windowResizer" dir="bottomright"/>

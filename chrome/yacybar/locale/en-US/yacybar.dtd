@@ -61,6 +61,12 @@
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.remote "Remote Indexing">
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Exclude static Stop-Words">
 <!ENTITY prefs.tabpanel.description.searching "Settings that should be used for searching.">
+<!ENTITY prefs.tabpanel.label.value.content "Content">
+<!ENTITY prefs.tabpanel.menuitem.label.text "text">
+<!ENTITY prefs.tabpanel.menuitem.label.image "image">
+<!ENTITY prefs.tabpanel.menuitem.label.audio "audio">
+<!ENTITY prefs.tabpanel.menuitem.label.video "video">
+<!ENTITY prefs.tabpanel.menuitem.label.app "application">
 <!ENTITY prefs.tabpanel.label.value.maxresults "Max. number of results">
 <!ENTITY prefs.tabpanel.label.value.res "Resource">
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
@@ -84,6 +90,9 @@
 <!ENTITY quickcrawl.groupbox.checkbox.remote "Remote Indexing">
 <!ENTITY quickcrawl.groupbox.checkbox.stopwords "Exclude static Stop-Words">
 <!ENTITY quickcrawl.checkbox.label.default "Use this as the default and do not ask again">
+
+<!ENTITY sidebarOverlay.window.title "QuickCrawl">
+<!ENTITY sidebarOverlay.button.label "CleanUp">
 
 <!ENTITY statusBar.statusbarpanel.tooltip.qph "Queries Per Hour">
 <!ENTITY statusBar.statusbarpanel.tooltip.ppm "Pages Per Minute">

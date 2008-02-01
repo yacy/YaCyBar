@@ -61,6 +61,12 @@
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.remote "Remote Indexierung">
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Statische Stopp-Wörter ausschliessen">
 <!ENTITY prefs.tabpanel.description.searching "Einstellungen, die für die Suche benutzt werden sollen.">
+<!ENTITY prefs.tabpanel.label.value.content "Inhalt">
+<!ENTITY prefs.tabpanel.menuitem.label.text "Text">
+<!ENTITY prefs.tabpanel.menuitem.label.image "Bilder">
+<!ENTITY prefs.tabpanel.menuitem.label.audio "Audio">
+<!ENTITY prefs.tabpanel.menuitem.label.video "Video">
+<!ENTITY prefs.tabpanel.menuitem.label.app "Anwendungen">
 <!ENTITY prefs.tabpanel.label.value.maxresults "Max. Ergbnisanzahl">
 <!ENTITY prefs.tabpanel.label.value.res "Quelle">
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
@@ -85,10 +91,13 @@
 <!ENTITY quickcrawl.groupbox.checkbox.stopwords "Statische Stopp-Wörter ausschliessen">
 <!ENTITY quickcrawl.checkbox.label.default "Angaben als Standard benutzen und nicht nochmal fragen">
 
+<!ENTITY sidebarOverlay.window.title "QuickCrawl">
+<!ENTITY sidebarOverlay.button.label "Aufräumen">
+
 <!ENTITY statusBar.statusbarpanel.tooltip.qph "Anfragen pro Stunde">
 <!ENTITY statusBar.statusbarpanel.tooltip.ppm "Seiten pro Minute">
-<!ENTITY statusBar.statusbarpanel.tooltip.url "Gespeichert URLs">
-<!ENTITY statusBar.statusbarpanel.tooltip.rwi "Gespeichert RWI">
+<!ENTITY statusBar.statusbarpanel.tooltip.url "Gespeicherte URLs">
+<!ENTITY statusBar.statusbarpanel.tooltip.rwi "Gespeicherte RWI">
 <!ENTITY statusBar.statusbarpanel.tooltip.menu "YaCyBar Statusbar Menü">
 <!ENTITY statusBar.menuitem.label.qph "QPH anzeigen">
 <!ENTITY statusBar.menuitem.label.ppm "PPM anzeigen">

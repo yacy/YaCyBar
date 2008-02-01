@@ -53,6 +53,9 @@
 	        type="bool"/>	
 	        
 	      <!-- searching preferences -->  
+  	      <preference id="yacybar_searchContent"
+	        name="extensions.yacybar.search.content"
+	        type="string"/>	
 	      <preference id="yacybar_searchMaxResults"
 	        name="extensions.yacybar.search.maxResults"
 	        type="int"/>	        	      <preference id="yacybar_searchResource"
@@ -139,9 +142,20 @@
 			    <!-- search preferences -->
 			    <tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">
 					<description>&prefs.tabpanel.description.searching;</description>	
-					
 					<grid>
 						<rows>		
+							<row>
+								<label value="&prefs.tabpanel.label.value.content;"/>
+								<menulist  id="search.content" preference="yacybar_searchContent" editable="false">
+				 					<menupopup>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.text;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.image;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.audio;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.video;"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.app;"/>
+				 					</menupopup>
+								</menulist>
+							</row>							
 							<row>
 								<label value="&prefs.tabpanel.label.value.maxresults;"/>
 								<menulist preference="yacybar_searchMaxResults" id="search.MaxResults" editable="true">
@@ -157,6 +171,7 @@
 								<label value="&prefs.tabpanel.label.value.res;"/>
 								<menulist preference="yacybar_searchResource" id="search.Resource" editable="false">
 				 					<menupopup>
+<!-- ids vergeben, da lokal falsche Angabe ist -->
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.global;"/>
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.local;"/>
 				 					</menupopup>

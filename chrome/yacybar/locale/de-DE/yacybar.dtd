@@ -17,6 +17,7 @@
 <!ENTITY addBM.label.url "URL">
 <!ENTITY addBM.label.title "Titel">
 <!ENTITY addBM.label.description "Beschreibung">
+<!ENTITY addBM.label.path "Pfad (/Ordner/Unterordner)">
 <!ENTITY addBM.label.tags "Tags (durch Komma getrennt)">
 <!ENTITY addBM.label.public "Öffentlich">
 <!ENTITY addBM.menuitem.yes "Ja">

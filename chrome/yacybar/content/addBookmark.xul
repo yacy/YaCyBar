@@ -20,6 +20,8 @@
 			<textbox id="title" flex="1" />
 			<label for="description" value="&addBM.label.description;"/>
 			<textbox id="description" flex="1" />
+			<label for="path" value="&addBM.label.path;"/>
+			<textbox id="path" flex="1" />
 			<label for="tags" value="&addBM.label.tags;"/>
 			<textbox id="tags" flex="1" />
 			<label for="public" value="&addBM.label.public;"/>

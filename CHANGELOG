@@ -1,9 +1,9 @@
++ added new iconset (daburna)
 + added folder for add bookmark (daburna)
 + added mediasearch (daburna)
 + added property-files for translating .js files (daburna)
 + added UTF-8 for all xml files (daburna)
 + added missing css for QPH at statusbar (daburna)
-+ added bookmark icon (daburna)
 - removed "order by"-function (daburna)
 
 v 0.2.3 - 23.01.2008

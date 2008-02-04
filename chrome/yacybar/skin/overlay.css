@@ -3,19 +3,23 @@
 }
 
 #BookmarksButton {
-    list-style-image: url("chrome://yacybar/skin/bookmark.gif");
+    list-style-image: url("chrome://yacybar/skin/bookmark.png");
+} 
+
+#SurftipsButton {
+    list-style-image: url("chrome://yacybar/skin/surftip.png");
 } 
 
 #BlacklistBtn {
-    list-style-image: url("chrome://yacybar/skin/blacklist.gif");
+    list-style-image: url("chrome://yacybar/skin/blacklist.png");
 }
 
 #SearchBtn {
-    list-style-image: url("chrome://yacybar/skin/search.gif");
+    list-style-image: url("chrome://yacybar/skin/search.png");
 }
 
 #CrawlBtn {
-    list-style-image: url("chrome://yacybar/skin/crawl.gif");
+    list-style-image: url("chrome://yacybar/skin/crawl.png");
 }
 
 #CrawlBtn > .toolbarbutton-menubutton-button {
@@ -23,31 +27,31 @@
 }
 
 #IndexingControlBtn {
-    list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
+    list-style-image: url("chrome://yacybar/skin/indexing_off.png");
 }
 #IndexingControlBtn[checked="true"] {
-    list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
+    list-style-image: url("chrome://yacybar/skin/indexing_on.png");
 }
 
 #IndexingToolbarBtn {
-    list-style-image: url("chrome://yacybar/skin/indexing_off.gif");
+    list-style-image: url("chrome://yacybar/skin/indexing_off.png");
 }
 #IndexingToolbarBtn[checked="true"] {
-    list-style-image: url("chrome://yacybar/skin/indexing_on.gif");
+    list-style-image: url("chrome://yacybar/skin/indexing_on.png");
 }
 
 #ProxyToolbarBtn {
-    list-style-image: url("chrome://yacybar/skin/proxy_off.gif");
+    list-style-image: url("chrome://yacybar/skin/proxy_off.png");
 }
 #ProxyToolbarBtn[checked="true"] {
-    list-style-image: url("chrome://yacybar/skin/proxy_on.gif");
+    list-style-image: url("chrome://yacybar/skin/proxy_on.png");
 }
 
 #ProxyBtn {
-    list-style-image: url("chrome://yacybar/skin/proxy_off.gif");
+    list-style-image: url("chrome://yacybar/skin/proxy_off.png");
 }
 #ProxyBtn[checked="true"] {
-    list-style-image: url("chrome://yacybar/skin/proxy_on.gif");
+    list-style-image: url("chrome://yacybar/skin/proxy_on.png");
 }
 menuitem.loading{
 	list-style-image: url("chrome://global/skin/icons/loading_16.gif");

@@ -98,7 +98,7 @@ function alertContents() {
 
 
       } else {
-         alert('stringBundle.getString("yacybar_request_problem")');
+         alert(stringBundle.getString("yacybar_request_problem"));
       }
    }
 }

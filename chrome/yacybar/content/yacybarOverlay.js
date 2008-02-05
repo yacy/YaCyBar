@@ -113,11 +113,16 @@ function getSearchURL(keyword) {
 	var urlMask = Branch.getCharPref("search.urlMaskFilter");
 	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if (urlMask == "") urlMask = ".*";
+// ugly code for getting the right mediatype for the mediasearch TODO	
    if (content == stringBundle.getString("yacybar_content_text")) content = "text";	
    if (content == stringBundle.getString("yacybar_content_image")) content = "image";
    if (content == stringBundle.getString("yacybar_content_audio")) content = "audio";
    if (content == stringBundle.getString("yacybar_content_video")) content = "video";
-   if (content == stringBundle.getString("yacybar_content_app")) content = "app";		
+   if (content == stringBundle.getString("yacybar_content_app")) content = "app";
+// ugly code for getting the right ressource TODO   
+   if (resource == stringBundle.getString("yacybar_resource_global")) resource = "global";				
+   if (resource == stringBundle.getString("yacybar_resource_local")) resource = "local";				
+
 	
 	return getBaseURL() + 
 	"/yacysearch.html" + 
@@ -336,6 +341,7 @@ function crawlURL(crawlJobData) {
 	
 		if(req) {
 			// loading username + pwd
+			var stringBundle = document.getElementById("yacybar-string-bundle");
 			var userPwd = loadUserPwd();
 			var httpURL = getBaseURL() + 
 						 '/QuickCrawlLink_p.xml' +
@@ -353,7 +359,7 @@ function crawlURL(crawlJobData) {
 			req.open("GET", httpURL, true, userPwd["user"], userPwd["pwd"]);
 			req.send(null);
 		} else {
-	        alert('Unable to create a XMLHTTP instance.');
+	        alert(stringBundle.getString("yacybar_xmlhttp"));
 		}
 	
 	
@@ -369,6 +375,7 @@ function crawlReceipt() {
 			var response = req.responseXML;
 			
 			var newJob = Array();
+			var stringBundle = document.getElementById("yacybar-string-bundle");			
 			newJob["date"] = new Date();
 			newJob["title"] = response.getElementsByTagName("title")[0].firstChild.data;
 			newJob["link"] = response.getElementsByTagName("url")[0].firstChild.data;
@@ -377,7 +384,7 @@ function crawlReceipt() {
 
 			window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs", "chrome,centerscreen,resizable",newJob);         
         } else {
-            alert("ERROR: There was a problem retrieving the XML data:\n" + req.status + "\n" + req.statusText);
+            alert(stringBundle.getString("yacybar_problem_xml") + req.status + "\n" + req.statusText);
         }        
 	} 
 }

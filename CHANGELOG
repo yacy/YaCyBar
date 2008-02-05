@@ -1,9 +1,13 @@
+v 0.2.4 - 05.02.2008
+=====================================================================
 + added new iconset (daburna)
 + added folder for add bookmark (daburna)
 + added mediasearch (daburna)
 + added property-files for translating .js files (daburna)
 + added UTF-8 for all xml files (daburna)
 + added missing css for QPH at statusbar (daburna)
+x fixed problem with resource (daburna)
+x fixed missing translations (daburna)
 - removed "order by"-function (daburna)
 
 v 0.2.3 - 23.01.2008
@@ -14,5 +18,5 @@ v 0.2.3 - 23.01.2008
 
 v 0.2.2 - 15.01.2008
 =====================================================================
-X Fixed wrong demopeerlist (daburna)
 + added QPH at statusbar (daburna)
+x fixed wrong demopeerlist (daburna)

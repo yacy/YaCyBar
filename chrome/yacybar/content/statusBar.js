@@ -42,13 +42,14 @@ function switchState(event) {
 */
 
 function makeRequest(url, parameters) {
+	var stringBundle = document.getElementById("yacybar-string-bundle");
    http_request = false;
    http_request = new XMLHttpRequest();
    if (http_request.overrideMimeType) {
       http_request.overrideMimeType('text/xml');
    }
    if (!http_request) {
-      alert('Cannot create XMLHTTP instance');
+      alert(stringBundle.getString("yacybar_xmlhttp"));
       return false;
    }
    http_request.onreadystatechange = alertContents;

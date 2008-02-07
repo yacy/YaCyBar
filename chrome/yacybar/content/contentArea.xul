@@ -9,19 +9,24 @@
 	<!-- Context menu additions -->
 	<popup id="contentAreaContextMenu">
 	    <menuseparator />
-	    <menu id ="YaCyBar-context" label="YaCyBar" class="menu-iconic">
+	    <menu id ="YaCyBar-context" label="&contentArea.menu.label.yacybar;" class="menu-iconic" accesskey="&contentArea.menu.accesskey.yacybar;">
 	        <menupopup id="YaCyBar-context-items">
-	            <menuitem id="crawlLink" label="&contentArea.menuitem.label.crawllink;" 
+	            <menuitem id="crawlLink" label="&contentArea.menuitem.label.crawllink;" accesskey="&contentArea.menuitem.accesskey.crawllink;"
 	                oncommand="crawllink();"
 	                tooltiptext="&contentArea.menuitem.tooltip.crawllink;"
 	                class="menuitem-iconic" />
-	            <menuitem id="crawlPage" label="&contentArea.menuitem.label.crawlpage;" 
+	            <menuitem id="crawlPage" label="&contentArea.menuitem.label.crawlpage;" accesskey="&contentArea.menuitem.accesskey.crawlpage;"
 	                oncommand="crawlpage();"
 	                tooltiptext="&contentArea.menuitem.tooltip.crawlpage;"
 	                class="menuitem-iconic" />
-	            <menuitem id="searchSelected" label="&contentArea.menuitem.label.search;" 
+	            <menuitem id="searchSelected" label="&contentArea.menuitem.label.search;" accesskey="&contentArea.menuitem.accesskey.search;"
 	                oncommand="searchSelected();"
 	                tooltiptext="&contentArea.menuitem.tooltip.search;"
+	                class="menuitem-iconic" />
+	            <menuitem id="menuitem-addbookmark" label="&contentArea.menuitem.label.addBM;" accesskey="&contentArea.menuitem.accesskey.addBM;"
+	                selected="true"
+						 oncommand="showAddBookmark()" 
+	                tooltiptext="&contentArea.menuitem.tooltip.addBM;"
 	                class="menuitem-iconic" />	                
                 <menuseparator />                
                 <menuitem id="about" label="&contentArea.menuitem.label.about;" accesskey="&contentArea.menuitem.accesskey.about;"

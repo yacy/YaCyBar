@@ -82,6 +82,7 @@ function alertContents() {
 		 var type = your.getElementsByTagName("type")[0].firstChild.nodeValue;
 		 var url = your.getElementsByTagName("links")[0].firstChild.nodeValue;
 		 var rwi = your.getElementsByTagName("words")[0].firstChild.nodeValue;
+		 var hash = your.getElementsByTagName("hash")[0].firstChild.nodeValue;
 
 		 var qphPanel = document.getElementById('yacybar_statusBar_qph');
 		 var ppmPanel = document.getElementById('yacybar_statusBar_ppm');
@@ -93,6 +94,7 @@ function alertContents() {
          ppmPanel.label = "PPM: " + ppm;
          urlPanel.label = "#URL: " + groupDigits(url);
          rwiPanel.label = "#RWI: " + groupDigits(rwi);
+			stats = hash;         
          
          peerTypePanel.setAttribute("peerType", type);
          peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
@@ -151,3 +153,13 @@ function init() {
 	updateStatus();
 }
 
+function loadURL(newURL) {
+	// gBrowser.addTab(newURL);
+	window._content.document.location = newURL;
+	window.content.focus();
+}
+
+function showStats(event) {
+		loadURL("http://www.yacystats.de/peer/"+stats); 
+}
+// TODO show only if loged in

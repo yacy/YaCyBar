@@ -21,8 +21,14 @@
 	                <menuitem id="cmd_showRWI" label="&statusBar.menuitem.label.rwi;" type="checkbox" oncommand="toggle('yacybar_statusBar_rwi');"/>
 	                <menuitem id="cmd_showPeerType" label="&statusBar.menuitem.label.peertype;" type="checkbox" oncommand="toggle('yacybar_statusBar_peerType');"/>
 	                <menuseparator /> 
-	                <menuitem id="cmd_MonitoringControl" label="&statusBar.menuitem.label.monitoring;" type="checkbox" oncommand="setMonitoring();"/>	                
-	                <menuseparator />                
+	                <menuitem id="cmd_MonitoringControl" label="&statusBar.menuitem.label.monitoring;" type="checkbox" oncommand="setMonitoring();" accesskey="&statusBar.menuitem.accesskey.monitoring;"/>	                
+	                <menuseparator /> 
+  	                <menuitem id="hash" label="&statusBar.menuitem.label.peerstats;" accesskey="&statusBar.menuitem.accesskey.peerstats;"
+							  tooltiptext="&statusBar.menuitem.tooltip.peerstats;"
+							  oncommand="showStats(event)"
+							  onclick="showStats(event)" 
+							  class="menuitem-iconic"/>  
+						 <menuseparator /> 	                 
 	                <menuitem id="about" label="&statusBar.menuitem.label.about;" accesskey="&statusBar.menuitem.accesskey.about;"
 							  tooltiptext="&statusBar.menuitem.tooltip.about;"
 							  oncommand="showAbout()" 

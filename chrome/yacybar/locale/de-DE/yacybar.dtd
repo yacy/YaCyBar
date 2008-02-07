@@ -3,12 +3,20 @@
 <!ENTITY about.text.contributors "Beitragende:">
 <!ENTITY about.text.homepage "Homepage">
 
+<!ENTITY contentArea.menu.label.yacybar "YaCy-Bar">
+<!ENTITY contentArea.menu.accesskey.yacybar "Y">
 <!ENTITY contentArea.menuitem.label.crawllink "Diesen Link crawlen">
+<!ENTITY contentArea.menuitem.accesskey.crawllink "L">
 <!ENTITY contentArea.menuitem.tooltip.crawllink "Diesen Link crawlen">
 <!ENTITY contentArea.menuitem.label.crawlpage "Aktuelle Seite crawlen">
+<!ENTITY contentArea.menuitem.accesskey.crawlpage "C">
 <!ENTITY contentArea.menuitem.tooltip.crawlpage "Aktuelle Seite crawlen">
 <!ENTITY contentArea.menuitem.label.search "Suche dieses Wort">
+<!ENTITY contentArea.menuitem.accesskey.search "S">
 <!ENTITY contentArea.menuitem.tooltip.search "Suche nach dem markierten Wort">
+<!ENTITY contentArea.menuitem.label.addBM "Seite zu Lesezeichen hinzufügen">
+<!ENTITY contentArea.menuitem.accesskey.addBM "Z">
+<!ENTITY contentArea.menuitem.tooltip.addBM "Aktuelle Seite zu Lesezeichen hinzufügen">
 <!ENTITY contentArea.menuitem.label.about "Über YaCyBar">
 <!ENTITY contentArea.menuitem.accesskey.about "Ü">
 <!ENTITY contentArea.menuitem.tooltip.about "Über die YaCyBar">
@@ -106,6 +114,10 @@
 <!ENTITY statusBar.menuitem.label.rwi "#RWI anzeigen">
 <!ENTITY statusBar.menuitem.label.peertype "Peer-Typ anzeigen">
 <!ENTITY statusBar.menuitem.label.monitoring "Kontrolle aktivieren">
+<!ENTITY statusBar.menuitem.accesskey.monitoring "K">
+<!ENTITY statusBar.menuitem.label.peerstats "Peer Statistik">
+<!ENTITY statusBar.menuitem.accesskey.peerstats "S">
+<!ENTITY statusBar.menuitem.tooltip.peerstats "Zeigt die Peer Statistik auf yacystats">
 <!ENTITY statusBar.menuitem.label.about "Über YaCy-Bar">
 <!ENTITY statusBar.menuitem.accesskey.about "Ü">
 <!ENTITY statusBar.menuitem.tooltip.about "Über die YaCy-Bar">

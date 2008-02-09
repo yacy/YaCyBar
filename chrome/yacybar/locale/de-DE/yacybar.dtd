@@ -17,6 +17,9 @@
 <!ENTITY contentArea.menuitem.label.addBM "Seite zu Lesezeichen hinzufügen">
 <!ENTITY contentArea.menuitem.accesskey.addBM "Z">
 <!ENTITY contentArea.menuitem.tooltip.addBM "Aktuelle Seite zu Lesezeichen hinzufügen">
+<!ENTITY contentArea.menuitem.label.blacklist "Seite zur Blacklist hinzufügen">
+<!ENTITY contentArea.menuitem.accesskey.blacklist "B">
+<!ENTITY contentArea.menuitem.tooltip.blacklist "Aktuelle Seite zur Blacklist hinzufügen">
 <!ENTITY contentArea.menuitem.label.about "Über YaCyBar">
 <!ENTITY contentArea.menuitem.accesskey.about "Ü">
 <!ENTITY contentArea.menuitem.tooltip.about "Über die YaCyBar">

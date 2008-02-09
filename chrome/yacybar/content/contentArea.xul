@@ -22,12 +22,15 @@
 	            <menuitem id="searchSelected" label="&contentArea.menuitem.label.search;" accesskey="&contentArea.menuitem.accesskey.search;"
 	                oncommand="searchSelected();"
 	                tooltiptext="&contentArea.menuitem.tooltip.search;"
-	                class="menuitem-iconic" />
+	                class="menuitem-iconic" />       
 	            <menuitem id="menuitem-addbookmark" label="&contentArea.menuitem.label.addBM;" accesskey="&contentArea.menuitem.accesskey.addBM;"
-	                selected="true"
-						 oncommand="showAddBookmark()" 
+	                oncommand="showAddBookmark()" 
 	                tooltiptext="&contentArea.menuitem.tooltip.addBM;"
-	                class="menuitem-iconic" />	                
+	                class="menuitem-iconic" />
+	            <menuitem id="menuitem-blacklistpage" label="&contentArea.menuitem.label.blacklist;" accesskey="&contentArea.menuitem.accesskey.blacklist;"
+	                oncommand="blacklistpage()" 
+	                tooltiptext="&contentArea.menuitem.tooltip.blacklist;"
+	                class="menuitem-iconic" />		                	                
                 <menuseparator />                
                 <menuitem id="about" label="&contentArea.menuitem.label.about;" accesskey="&contentArea.menuitem.accesskey.about;"
 						  tooltiptext="&contentArea.menuitem.tooltip.about;"

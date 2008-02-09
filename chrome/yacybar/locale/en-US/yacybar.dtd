@@ -17,6 +17,9 @@
 <!ENTITY contentArea.menuitem.label.addBM "Add Bookmark">
 <!ENTITY contentArea.menuitem.accesskey.addBM "B">
 <!ENTITY contentArea.menuitem.tooltip.addBM "Add current page to Bookmarks">
+<!ENTITY contentArea.menuitem.label.blacklist "Blacklist page">
+<!ENTITY contentArea.menuitem.accesskey.blacklist "P">
+<!ENTITY contentArea.menuitem.tooltip.blacklist "Add current page to Blacklist">
 <!ENTITY contentArea.menuitem.label.about "About YaCyBar">
 <!ENTITY contentArea.menuitem.accesskey.about "A">
 <!ENTITY contentArea.menuitem.tooltip.about "About the YaCyBar">

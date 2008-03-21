@@ -40,10 +40,12 @@ function init(){
 		Branch.setIntPref("peerPort",8080);
 	}	
 	if (!Branch.prefHasUserValue("demoPeersURL")) {
-	Branch.setCharPref("demoPeersURL", "http://www.daburna.de/download/demopeers.xml"); 
-	// old URL outdated - new one just a placeholder TODO
-	}
-	
+      Branch.setCharPref("demoPeersURL", "http://www.daburna.de/download/demopeers.xml");
+      // old URL outdated - new one just a placeholder TODO
+      } else if (Branch.getCharPref("demoPeersURL") == "http://data.yacy-forum.de/demopeers.xml") {
+      // if old URL still in config, replace it!
+      Branch.setCharPref("demoPeersURL", "http://www.daburna.de/download/demopeers.xml");
+	}	
 	
 	// init proxy control buttion
 	if (!Branch.prefHasUserValue("proxyControl")) {

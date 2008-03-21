@@ -7,7 +7,6 @@
  	<em:name>YaCyBar</em:name>
  	<em:version>0.2.4</em:version>
  	<em:type>2</em:type>
- 	<em:description>A toolbar for the P2P Searchengine YaCy</em:description>
  	<em:creator>Alexander Schier</em:creator>
  	<em:contributor>Martin Thelian</em:contributor>
  	<em:contributor>Oliver Wunder</em:contributor>
@@ -17,7 +16,13 @@
  	<!--<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>-->
  	<em:aboutURL>chrome://yacybar/content/about.xul</em:aboutURL>
   
-   <!-- localized only works in firefox 3 -->
+  	<em:localized>
+     <Description>
+       <em:locale>en-US</em:locale>
+       <em:name>YaCy-Bar</em:name>
+       <em:description>A toolbar for the P2P Searchengine YaCy</em:description>
+     </Description>
+   </em:localized> 
 	<em:localized>
       <Description>
         <em:locale>de-DE</em:locale>
@@ -41,8 +46,7 @@
  		<Description>
  			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
  			<em:minVersion>1.5</em:minVersion>
- 			<em:maxVersion>2.0.0.*</em:maxVersion>
- 			<!-- <em:maxVersion>3.*</em:maxVersion> -->
+ 			<em:maxVersion>3.0.*</em:maxVersion>
  		</Description>
  	</em:targetApplication>
  

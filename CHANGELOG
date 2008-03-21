@@ -1,5 +1,8 @@
 + added link to own peer stats at statusbar (daburna) 
-+ enhanced contentarea: add bookmark, blacklist and accesskeys (daburna) 
++ enhanced contentarea: add bookmark, blacklist and accesskeys (daburna)
++ made install.rdf ready for firefox 3 (daburna)
++ added localized description (daburna)
+x fixed problem with wrong demopeerlist saved in about:config (flori)
 
 v 0.2.4 - 05.02.2008
 =====================================================================

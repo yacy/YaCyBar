@@ -189,7 +189,7 @@ function loadURL(newURL) {
 	window._content.document.location = newURL;
 	window.content.focus();
 }
-function bgLoadUrl(newURL, event){
+function bgLoadURL(newURL, event){
 	if(event.button==1){
 		gBrowser.addTab(newURL);
 	}

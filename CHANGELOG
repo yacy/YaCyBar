@@ -3,6 +3,7 @@
 + made install.rdf ready for firefox 3 (daburna)
 + added localized description (daburna)
 x fixed problem with wrong demopeerlist saved in about:config (flori)
+x fixed "bgLoadURL not found" (flori)
 
 v 0.2.4 - 05.02.2008
 =====================================================================

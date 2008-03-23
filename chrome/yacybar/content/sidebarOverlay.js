@@ -44,7 +44,8 @@ CrawlingData.prototype = {
 
 	if (!file.exists()) {
 		// creating a new file
-		file.create(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 420);
+		// file without XML-structure confuses firefox, so don't ceate it
+		//file.create(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 420);
 
 		// initializing rdf structure
 		this.initFile(conv.newFileURI(file));
@@ -205,7 +206,7 @@ function init_handler() {
 	tree.database.AddDataSource(theCrawlingData.datasource);
 	tree.ref = 'urn:yacybar:quickCrawl:root';	
 	
-	if (window.arguments.length==1) {
+	if ("arguments" in window && window.arguments.length==1) {
 		theCrawlingData.addData(window.arguments[0]);
 	}
 }

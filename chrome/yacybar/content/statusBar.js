@@ -69,41 +69,50 @@ function groupDigits(num) {
 }
 
 function alertContents() {
-   if (http_request.readyState == 4) {
-      if (http_request.status == 200) {
+   	if (http_request.readyState == 4) {
+   	
+   	var stringBundle = document.getElementById("yacybar-string-bundle");
+   	var qphPanel = document.getElementById('yacybar_statusBar_qph');
+   	var ppmPanel = document.getElementById('yacybar_statusBar_ppm');
+   	var urlPanel = document.getElementById('yacybar_statusBar_url');
+   	var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
+   	var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');
 
-         var xmlobject = http_request.responseXML;
-         var peers = xmlobject.getElementsByTagName('peers')[0];
-         var your = peers.getElementsByTagName("your")[0];
-         
-         var qph  = your.getElementsByTagName("qph")[0].firstChild.nodeValue;
-         var ppm  = your.getElementsByTagName("ppm")[0].firstChild.nodeValue;
-         var name = your.getElementsByTagName("name")[0].firstChild.nodeValue;
-		 var type = your.getElementsByTagName("type")[0].firstChild.nodeValue;
-		 var url = your.getElementsByTagName("links")[0].firstChild.nodeValue;
-		 var rwi = your.getElementsByTagName("words")[0].firstChild.nodeValue;
-		 var hash = your.getElementsByTagName("hash")[0].firstChild.nodeValue;
+		try {
+			if ("status" in http_request && http_request.status == 200) {
+			
+				var xmlobject = http_request.responseXML;
+				var peers = xmlobject.getElementsByTagName('peers')[0];
+				var your = peers.getElementsByTagName("your")[0]; 
+				var qph = your.getElementsByTagName("qph")[0].firstChild.nodeValue;
+				var ppm  = your.getElementsByTagName("ppm")[0].firstChild.nodeValue;
+				var name = your.getElementsByTagName("name")[0].firstChild.nodeValue;
+				var type = your.getElementsByTagName("type")[0].firstChild.nodeValue;
+				var url = your.getElementsByTagName("links")[0].firstChild.nodeValue;
+				var rwi = your.getElementsByTagName("words")[0].firstChild.nodeValue;
+				var hash = your.getElementsByTagName("hash")[0].firstChild.nodeValue;
 
-		 var qphPanel = document.getElementById('yacybar_statusBar_qph');
-		 var ppmPanel = document.getElementById('yacybar_statusBar_ppm');
-		 var urlPanel = document.getElementById('yacybar_statusBar_url');
-		 var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
-		 var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');		 
-		 var stringBundle = document.getElementById("yacybar-string-bundle");
-			qphPanel.label = "QPH: " + qph;
-         ppmPanel.label = "PPM: " + ppm;
-         urlPanel.label = "#URL: " + groupDigits(url);
-         rwiPanel.label = "#RWI: " + groupDigits(rwi);
-			stats = hash;         
-         
-         peerTypePanel.setAttribute("peerType", type);
-         peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
-
-
-      } else {
-         alert(stringBundle.getString("yacybar_request_problem"));
-      }
-   }
+				qphPanel.label = "QPH: " + qph;
+				ppmPanel.label = "PPM: " + ppm;
+				urlPanel.label = "#URL: " + groupDigits(url);
+				rwiPanel.label = "#RWI: " + groupDigits(rwi);
+				stats = hash;
+				
+				peerTypePanel.setAttribute("peerType", type);
+				peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
+				
+				} else {
+							alert(stringBundle.getString("yacybar_request_problem"))
+				}
+		} catch (ex) {
+				qphPanel.label = "QPH: ?";
+				ppmPanel.label = "PPM: ?";
+				urlPanel.label = "#URL: ?";
+				rwiPanel.label = "#RWI: ?";
+				peerTypePanel.setAttribute("peerType", type);
+				peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + stringBundle.getString("yacybar_no_connection");
+		}
+	}     
 }
 
 function updateStatus() {

@@ -19,10 +19,10 @@ function init(){
 	req = new XMLHttpRequest();
 	req.open('GET', getBaseURL()+"/xml/util/getpageinfo_p.xml?url="+url, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);
-	xml=req.responseXML;
-	tags=xml.getElementsByTagName("tag");
-	tags_field=document.getElementById("tags");
-	for(i=0;i<tags.length - 1;i++){
+	var xml=req.responseXML;
+	var tags=xml.getElementsByTagName("tag");
+	var tags_field=document.getElementById("tags");
+	for(var i=0; i<tags.length - 1; i++){
 		//log(tags[i].value); //DEBUG
 		tags_field.value=tags_field.value+tags[i].getAttribute("name")+",";
 	}
@@ -36,10 +36,10 @@ function addBookmark(){
 	var path=document.getElementById("path").value;
 	var tags=document.getElementById("tags").value;
 	var isPublic=document.getElementById("ispublic").getAttribute("selected");
-	var public="private";
+	var public_str="private";
 	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if(isPublic){
-		public="public";
+		public_str="public";
 	}
 	if(url=="" && title==""){
 		alert(stringBundle.getString("yacybar_enterboth"));
@@ -54,7 +54,7 @@ function addBookmark(){
 	//TODO: Do not Change it, till a stable Release with the Backend!
 	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
 	rqurl=getBaseURL()+"/Bookmarks.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
-	+"&description="+encodeURIComponent(description)+"&path="+encodeURIComponent(path)+"&tags="+encodeURIComponent(tags)+"&public="+public+"&add=true";
+	+"&description="+encodeURIComponent(description)+"&path="+encodeURIComponent(path)+"&tags="+encodeURIComponent(tags)+"&public="+public_str+"&add=true";
 	req=new XMLHttpRequest();
 	req.open('GET', rqurl, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);

@@ -55,6 +55,7 @@ function makeRequest(url, parameters) {
    http_request.onreadystatechange = alertContents;
    http_request.open('GET', url + parameters, true);
    http_request.send(null);
+   return true;
 }
 
 function groupDigits(num) {

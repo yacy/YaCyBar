@@ -22,6 +22,9 @@
 	      <preference id="yacybar_peerPort"
 	        name="extensions.yacybar.peerPort"
 	        type="int"/>
+	      <preference id="yacybar_peerSSL"
+	        name="extensions.yacybar.peerSSL"
+	        type="bool"/>
 	      
 	      <!-- quick crawling preferences -->  
 	      <preference id="yacybar_showQuickCrawlDialog"
@@ -85,6 +88,9 @@
 					
 					<label value="&prefs.tabpanel.label.value.peerport;" control="yacybar_peerPortField" accesskey="&prefs.tabpanel.label.accesskey.peerport;"/>
 					<textbox preference="yacybar_peerPort" id="yacybar_peerPortField" onchange="changeProxySettings();"/>
+					<checkbox id="yacybar_peerSSLField" preference="yacybar_peerSSL"
+						label="&prefs.tabpanel.checkbox.label.peerSSL;"
+						onchange="changeProxySettings();"/>
 					<separator class="thin"/>
 					
 					<label value="&prefs.tabpanel.label.value.username;" control="yacybar_peerUserField" accesskey="&prefs.tabpanel.label.accesskey.username;"/>

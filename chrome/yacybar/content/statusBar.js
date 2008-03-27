@@ -125,8 +125,9 @@ function updateStatus() {
 	if (enabled) {
 		var host=Branch.getCharPref("peerAddress");
 		var port=Branch.getIntPref("peerPort");
+		var protocol=Branch.getBoolPref("peerSSL") ? "https://" : "http://";
 		
-		makeRequest('http://' + host + ':' + port + '/Network.xml', '');
+		makeRequest(protocol + host + ':' + port + '/Network.xml', '');
 	}
 	self.setTimeout('updateStatus()', refresh);	
 }

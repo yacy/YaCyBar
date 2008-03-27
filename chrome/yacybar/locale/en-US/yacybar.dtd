@@ -62,6 +62,7 @@
 <!ENTITY prefs.tabpanel.label.accesskey.username "U">
 <!ENTITY prefs.tabpanel.label.value.password "User Password">
 <!ENTITY prefs.tabpanel.label.accesskey.password "W">
+<!ENTITY prefs.tabpanel.checkbox.label.peerSSL "Use SSL-Encryption">
 <!ENTITY prefs.tabpanel.description.settings "Settings that should be used for crawling.">
 <!ENTITY prefs.tabpanel.checkbox.label.settings "Prompt for crawler settings">
 <!ENTITY prefs.tabpanel.hbox.caption.label.restrictions "Restrictions">

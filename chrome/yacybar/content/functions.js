@@ -10,14 +10,17 @@ function log(string){
 function getBaseURL() {
 	var host;
 	var port;
+	var protocol;
 	if(Branch.getBoolPref("demomode")){
 		host=Branch.getCharPref("demoAddress");
 		port=Branch.getIntPref("demoPort");
+		protocol="http://";
 	}else{
 		host=Branch.getCharPref("peerAddress");
 		port=Branch.getIntPref("peerPort");
+		protocol=Branch.getBoolPref("peerSSL") ? "https://" : "http://";
 	}
-		var baseURL  = "http://" + host + ":" + port;	
+		var baseURL  = protocol + host + ":" + port;	
 		return baseURL;
 }
 

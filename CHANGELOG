@@ -6,6 +6,7 @@ x fixed problem with wrong demopeerlist saved in about:config (flori)
 x fixed "bgLoadURL not found" (flori)
 x fixed problem with yacybar_crawljobs.rdf (flori)
 x fixed not connected statusbar (flori)
++ added https-support (flori)
 
 v 0.2.4 - 05.02.2008
 =====================================================================

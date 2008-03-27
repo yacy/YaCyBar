@@ -39,6 +39,9 @@ function init(){
 	if (!Branch.prefHasUserValue("peerPort")) {
 		Branch.setIntPref("peerPort",8080);
 	}	
+	if (!Branch.prefHasUserValue("peerSSL")) {
+		Branch.setBoolPref("peerSSL", false);
+	}
 	if (!Branch.prefHasUserValue("demoPeersURL")) {
       Branch.setCharPref("demoPeersURL", "http://www.daburna.de/download/demopeers.xml");
       // old URL outdated - new one just a placeholder TODO

@@ -58,6 +58,7 @@
 <!ENTITY prefs.tabpanel.label.accesskey.peer "A">
 <!ENTITY prefs.tabpanel.label.value.peerport "Peer Port">
 <!ENTITY prefs.tabpanel.label.accesskey.peerport "P">
+<!ENTITY prefs.tabpanel.checkbox.label.peerSSL "Verwende SSL-Verschlüsselung">
 <!ENTITY prefs.tabpanel.label.value.username "Benutzer Name">
 <!ENTITY prefs.tabpanel.label.accesskey.username "B">
 <!ENTITY prefs.tabpanel.label.value.password "Benutzer Passwort">

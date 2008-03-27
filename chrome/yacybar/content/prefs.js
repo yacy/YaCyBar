@@ -52,7 +52,8 @@ function changeProxySettings() {
 	if(Branch.getBoolPref("proxyControl")){
 		var host = document.getElementById('yacybar_peerAddressField').value;
 		var port = document.getElementById('yacybar_peerPortField').value;
-		prefManager.setCharPref("network.proxy.autoconfig_url","http://" + host + ":" + port + "/autoconfig.pac");
+		var protocol = document.getElementById('yacybar_peerSSLField').value ? "https://" : "http://";
+		prefManager.setCharPref("network.proxy.autoconfig_url", protocol + host + ":" + port + "/autoconfig.pac");
 	}	
 }
 function setStartPage(){

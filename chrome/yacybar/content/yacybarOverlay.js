@@ -436,7 +436,7 @@ function loadTags(event){
 			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true);
 		}else{
 			var userPwd = loadUserPwd();
-			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true, userPwd["user"], userPwd["pwd"]);
+			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml?login=true", true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
 	}

@@ -54,7 +54,7 @@ function addBookmark(){
 	//TODO: Do not Change it, till a stable Release with the Backend!
 	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
 	rqurl=getBaseURL()+"/Bookmarks.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
-	+"&description="+encodeURIComponent(description)+"&path="+encodeURIComponent(path)+"&tags="+encodeURIComponent(tags)+"&public="+public_str+"&add=true";
+	+"&description="+encodeURIComponent(description)+"&path="+encodeURIComponent(path)+"&tags="+encodeURIComponent(tags)+"&public="+public_str+"&add=true&login=true";
 	req=new XMLHttpRequest();
 	req.open('GET', rqurl, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);

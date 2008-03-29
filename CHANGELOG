@@ -7,6 +7,7 @@ x fixed "bgLoadURL not found" (flori)
 x fixed problem with yacybar_crawljobs.rdf (flori)
 x fixed not connected statusbar (flori)
 + added https-support (flori)
++ added passwordmanagment for firefox3 (flori)
 
 v 0.2.4 - 05.02.2008
 =====================================================================

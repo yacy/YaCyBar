@@ -1,5 +1,4 @@
 var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
-var passwordManager = Components.classes["@mozilla.org/passwordmanager;1"].createInstance();
 var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 var cons = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
 
@@ -25,23 +24,47 @@ function getBaseURL() {
 }
 
 function loadUserPwd() {
-	var passwordManager = Components.classes["@mozilla.org/passwordmanager;1"].createInstance(Components.interfaces.nsIPasswordManagerInternal);
-  	var host = {value:""};
-  	var user =  {value:""};
-  	var password = {value:""}; 
+	// Login Firefox3: http://developer.mozilla.org/en/docs/Using_nsILoginManager
+	if ("@mozilla.org/passwordmanager;1" in Components.classes) {
+		// Password Manager exists so this is not Firefox 3 (could be Firefox 2, Netscape, SeaMonkey, etc).
+		// Password Manager code
 
-	try {
-		passwordManager.findPasswordEntry("chrome://yacybar/", null, null, host, user, password);
-	} catch(e){ 
-		//alert(e);
-		return null;
+		var passwordManager = Components.classes["@mozilla.org/passwordmanager;1"]
+			.createInstance(Components.interfaces.nsIPasswordManagerInternal);
+		var host = {value:""};
+		var user =  {value:""};
+		var password = {value:""}; 
+
+		try {
+			passwordManager.findPasswordEntry("chrome://yacybar/", null, null, host, user, password);
+		} catch(e){ 
+			//alert(e);
+			return null;
+		}
+	
+		var returnVal = Array();
+		returnVal["user"] = user.value;
+		returnVal["pwd"] = password.value;
+		
+		return returnVal;
+	} else if ("@mozilla.org/login-manager;1" in Components.classes) {
+		// Login Manager exists so this is Firefox 3
+		// Login Manager code
+		var passwordManager = Components.classes["@mozilla.org/login-manager;1"]
+                                .getService(Components.interfaces.nsILoginManager);
+		var logins = passwordManager.findLogins({}, "chrome://yacybar/", null, "chrome://yacybar/");
+
+	
+		var returnVal = Array();
+		if(logins.length > 0) {
+			returnVal["user"] = logins[0].username;
+			returnVal["pwd"] = logins[0].password;
+		} else {
+			return null;
+		}
+		
+		return returnVal;
 	}
-	
-	var returnVal = Array();
-	returnVal["user"] = user.value;
-	returnVal["pwd"] = password.value;
-	
-	return returnVal;
 }
 
 String.prototype.trim =      function() {

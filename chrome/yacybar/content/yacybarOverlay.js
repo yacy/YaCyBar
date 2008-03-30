@@ -118,15 +118,6 @@ function getSearchURL(keyword) {
 	var urlMask = Branch.getCharPref("search.urlMaskFilter");
 	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if (urlMask == "") urlMask = ".*";
-// ugly code for getting the right mediatype for the mediasearch TODO	
-   if (content == stringBundle.getString("yacybar_content_text")) content = "text";	
-   if (content == stringBundle.getString("yacybar_content_image")) content = "image";
-   if (content == stringBundle.getString("yacybar_content_audio")) content = "audio";
-   if (content == stringBundle.getString("yacybar_content_video")) content = "video";
-   if (content == stringBundle.getString("yacybar_content_app")) content = "app";
-// ugly code for getting the right ressource TODO   
-   if (resource == stringBundle.getString("yacybar_resource_global")) resource = "global";				
-   if (resource == stringBundle.getString("yacybar_resource_local")) resource = "local";				
 
 	
 	return getBaseURL() + 

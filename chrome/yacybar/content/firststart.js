@@ -5,11 +5,13 @@ function toggleDemo(){
 	window.openDialog("chrome://yacybar/content/demopeers.xul", "demopeerDialog", "centerscreen, chrome, modal", win.document);
 	window.close();
 }
+
 function downloadYacy(){
 	window.open('http://www.yacy.net/');
 	window.close();
 }
-function showPref(){
-	window.arguments[0].openPreferences('YaCyBarPrefsPane');
+
+function showPrefs(){
+	window.arguments[0].openDialog("chrome://yacybar/content/prefs.xul","yacybarPrefs","centerscreen, chrome, modal");
 	window.close();
 }

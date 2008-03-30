@@ -22,7 +22,7 @@
 			&firststart.html.ul.li.peer;
 			<html:ul>
 				<html:li>&firststart.html.ul.li.ul.li.port;</html:li>
-				<html:li>&firststart.html.ul.li.ul.li.settings; <html:a href="javascript: showPref()">&firststart.html.ul.li.ul.li.a.settings;</html:a>.</html:li>
+				<html:li>&firststart.html.ul.li.ul.li.settings; <html:a href="javascript: showPrefs()">&firststart.html.ul.li.ul.li.a.settings;</html:a>.</html:li>
 			</html:ul>
 			</html:li>
 		</html:ul>

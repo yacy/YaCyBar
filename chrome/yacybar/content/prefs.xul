@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
-<overlay id="YaCyBarPrefsOverlay"
-       xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-
-	<prefwindow id="BrowserPreferences">
+<!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
+<prefwindow id="yacybarPreferences"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&prefs.dialog.title;">
 	
 	  <script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
 	  <script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>
@@ -211,4 +210,3 @@
 	  </prefpane>
 	
 	</prefwindow>
-</overlay> 

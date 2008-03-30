@@ -72,7 +72,7 @@
 									  oncommand=" showCrawlJobs();" />
 							<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="&yacybarOverlay.menuitem.accesskey.pref;"
 									  tooltiptext="&yacybarOverlay.menuitem.tooltip.pref;"
-									  oncommand="openPreferences('YaCyBarPrefsPane');" />
+									  oncommand="showPrefs();" />
 							<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="&yacybarOverlay.menuitem.accesskey.about;"
 									  tooltiptext="&yacybarOverlay.menuitem.tooltip.about;"
 									  oncommand="showAbout()" />

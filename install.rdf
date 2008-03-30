@@ -13,7 +13,7 @@
  	<em:translator>Oliver Wunder</em:translator>
  	<em:homepageURL>http://www.yacy.net/</em:homepageURL>
  	<em:iconURL>chrome://yacybar/skin/yacy_logo.gif</em:iconURL>
- 	<!--<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>-->
+ 	<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>
  	<em:aboutURL>chrome://yacybar/content/about.xul</em:aboutURL>
   
   	<em:localized>

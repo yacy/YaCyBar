@@ -24,9 +24,5 @@
 	  <RDF:li>chrome://yacybar/content/contentArea.xul</RDF:li>
 	  <RDF:li>chrome://yacybar/content/statusBar.xul</RDF:li>
 	</RDF:Seq>
-	
-	<RDF:Seq about="chrome://browser/content/preferences/preferences.xul">
-	  <RDF:li>chrome://yacybar/content/prefs.xul</RDF:li>
-	</RDF:Seq>
   
 </RDF:RDF>

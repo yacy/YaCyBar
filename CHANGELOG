@@ -9,6 +9,7 @@ x fixed not connected statusbar (flori)
 + added https-support (flori)
 + added passwordmanagment for firefox3 (flori)
 + added error handling for bookmarkmenu and surftipsmenu (flori)
++ moved preferences to single dialog accessable from addon-manager and yacybar (flori)
 
 v 0.2.4 - 05.02.2008
 =====================================================================

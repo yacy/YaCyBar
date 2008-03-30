@@ -50,6 +50,7 @@
 <!ENTITY firststart.html.hbox.label.peer "Ich habe einen laufenden Peer">
 <!ENTITY firststart.html.hbox.label.prefs "Einstellungen">
 
+<!ENTITY prefs.dialog.title "YaCyBar - Einstellungen">
 <!ENTITY prefs.tabbox.tab.label.peer "Peer">
 <!ENTITY prefs.tabbox.tab.label.quickcrawl "QuickCrawl">
 <!ENTITY prefs.tabbox.tab.label.search "Suche">

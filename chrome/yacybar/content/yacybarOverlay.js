@@ -442,46 +442,79 @@ function loadTags(event){
 	}
 }
 function loadSurftipsHandler(){
-	if(req.readyState==4 && req.status==200){
-		surftipsMenu=document.getElementById("SurftipsMenu");
-		item=surftipsMenu.firstChild;
-		while(item!=null){
-			surftipsMenu.removeChild(item);
+	if(req.readyState==4) {
+		try {
+			if(req.status==200){
+				surftipsMenu=document.getElementById("SurftipsMenu");
+				item=surftipsMenu.firstChild;
+				while(item!=null){
+					surftipsMenu.removeChild(item);
+					item=surftipsMenu.firstChild;
+				}
+				var response=req.responseXML;
+				items=response.getElementsByTagName("item");
+				for(i=0;i<items.length;i++){
+					item=document.createElement("menuitem");
+					item.setAttribute("label", items[i].getElementsByTagName("title")[0].firstChild.nodeValue);
+					item.setAttribute("onclick", "loadURL(\""+items[i].getElementsByTagName("link")[0].firstChild.nodeValue+"\")");
+					item.setAttribute("title", items[i].getElementsByTagName("description")[0].firstChild.nodeValue);
+					surftipsMenu.appendChild(item);
+		
+				}
+			} else {
+				throw "HttpError";
+			}
+		} catch (e) {
+			var stringBundle = document.getElementById("yacybar-string-bundle");
+			surftipsMenu=document.getElementById("SurftipsMenu");
 			item=surftipsMenu.firstChild;
-		}
-		var response=req.responseXML;
-		items=response.getElementsByTagName("item");
-		for(i=0;i<items.length;i++){
+			while(item!=null){
+				surftipsMenu.removeChild(item);
+				item=surftipsMenu.firstChild;
+			}
 			item=document.createElement("menuitem");
-			item.setAttribute("label", items[i].getElementsByTagName("title")[0].firstChild.nodeValue);
-			item.setAttribute("onclick", "loadURL(\""+items[i].getElementsByTagName("link")[0].firstChild.nodeValue+"\")");
-			item.setAttribute("title", items[i].getElementsByTagName("description")[0].firstChild.nodeValue);
+			item.setAttribute("label", stringBundle.getString("yacybar_request_error"));
 			surftipsMenu.appendChild(item);
-
 		}
 	}
 }
 function loadTagsHandler(){
 	if (req.readyState == 4) {
-        if (req.status == 200) {
+		try {
+			if (req.status == 200) {
+				bmMenu=document.getElementById("BookmarksMenu");
+				item=bmMenu.firstChild.nextSibling.nextSibling;
+				while(item!=null){
+					bmMenu.removeChild(item);
+					item=bmMenu.firstChild.nextSibling.nextSibling;
+				}
+				var response = req.responseXML;
+				tags=response.getElementsByTagName("tag");
+				for(i=0;i<tags.length;i++){
+					menu=document.createElement("menu");
+					menupopup=document.createElement("menupopup");
+					menu.setAttribute("type", "menu");
+					menu.setAttribute("label", tags[i].getAttribute("tag"));
+					menu.setAttribute("onmouseover", "loadBookmarks(\""+tags[i].getAttribute("tag")+"\", event)");
+					menupopup.setAttribute("id", "TagMenu-"+tags[i].getAttribute("tag"));
+					menu.appendChild(menupopup);
+					bmMenu.appendChild(menu);
+				}
+			} else {
+				throw "HttpError";
+			}
+		} catch (e) {
+			var stringBundle = document.getElementById("yacybar-string-bundle");
 			bmMenu=document.getElementById("BookmarksMenu");
 			item=bmMenu.firstChild.nextSibling.nextSibling;
 			while(item!=null){
 				bmMenu.removeChild(item);
 				item=bmMenu.firstChild.nextSibling.nextSibling;
 			}
-			var response = req.responseXML;
-			tags=response.getElementsByTagName("tag");
-			for(i=0;i<tags.length;i++){
-				menu=document.createElement("menu");
-				menupopup=document.createElement("menupopup");
-				menu.setAttribute("type", "menu");
-				menu.setAttribute("label", tags[i].getAttribute("tag"));
-				menu.setAttribute("onmouseover", "loadBookmarks(\""+tags[i].getAttribute("tag")+"\", event)");
-				menupopup.setAttribute("id", "TagMenu-"+tags[i].getAttribute("tag"));
-				menu.appendChild(menupopup);
-				bmMenu.appendChild(menu);
-			}
+			menu=document.createElement("menuitem");
+			menu.setAttribute("type", "menuitem");
+			menu.setAttribute("label", stringBundle.getString("yacybar_request_error"));
+			bmMenu.appendChild(menu);
 		}
 	}
 }

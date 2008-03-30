@@ -171,6 +171,8 @@ function loadURL(newURL) {
 }
 
 function showStats(event) {
+	if(stats) {
 		loadURL("http://www.yacystats.de/peer/"+stats); 
+	}
 }
 // TODO show only if loged in

@@ -65,6 +65,7 @@ function loadUserPwd() {
 		
 		return returnVal;
 	}
+	return null;
 }
 
 String.prototype.trim =      function() {

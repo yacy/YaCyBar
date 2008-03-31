@@ -122,12 +122,12 @@ function getSearchURL(keyword) {
 	
 	return getBaseURL() + 
 	"/yacysearch.html" + 
-	"?search=" + keyword + 
+	"?search=" + encodeURI(keyword) + 
 	"&contentdom=" + content +
 	"&count=" + maxResults +  
 	"&resource=" + resource + 
 	"&time=" + maxSearchTime + 
-	"&urlmaskfilter=" + urlMask;	
+	"&urlmaskfilter=" + encodeURI(urlMask);	
 }
 
 

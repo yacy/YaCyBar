@@ -13,7 +13,7 @@
 		  <hbox>  		  	
 		    <vbox>
 		  		<text value="YaCy-Bar" class="about-extension-name"/>
-		  		<text value="Version 0.2.4"/>
+		  		<text value="Version 0.2.5"/>
 		  	 </vbox>
 		  	 <image src="chrome://yacybar/skin/yacy_logo2.gif"/>
 		  </hbox>
@@ -27,6 +27,7 @@
 		  <text value="&about.text.contributors;" class="about-extension-info"/>
 		  <text value="Martin Thelian"/>
 		  <text value="Oliver Wunder"/>
+		  <text value="Florian Richter"/>
 		  <separator class="thin"/>
 
 		  <text value="&about.text.homepage;" class="about-extension-info"/>

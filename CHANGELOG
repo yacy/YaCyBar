@@ -1,3 +1,5 @@
+v 0.2.5 - 31.03.2008
+=====================================================================
 + added link to own peer stats at statusbar (daburna) 
 + enhanced contentarea: add bookmark, blacklist and accesskeys (daburna)
 + made install.rdf ready for firefox 3 (daburna)

@@ -22,7 +22,7 @@ function setMonitoring() {
 		 document.getElementById('yacybar_statusBar_ppm').label = "PPM: ?";
 		 document.getElementById('yacybar_statusBar_url').label = "#URL: ?";
 		 document.getElementById('yacybar_statusBar_rwi').label = "#RWI: ?";
-		 document.getElementById('yacybar_statusBar_peerType').label = "virgin";		 	
+		 document.getElementById('yacybar_statusBar_peerType').label = "virgin";
 	}
 }
 
@@ -43,19 +43,19 @@ function switchState(event) {
 
 function makeRequest(url, parameters) {
 	var stringBundle = document.getElementById("yacybar-string-bundle");
-   http_request = false;
-   http_request = new XMLHttpRequest();
-   if (http_request.overrideMimeType) {
-      http_request.overrideMimeType('text/xml');
-   }
-   if (!http_request) {
-      alert(stringBundle.getString("yacybar_xmlhttp"));
-      return false;
-   }
-   http_request.onreadystatechange = alertContents;
-   http_request.open('GET', url + parameters, true);
-   http_request.send(null);
-   return true;
+	http_request = false;
+	http_request = new XMLHttpRequest();
+	if (http_request.overrideMimeType) {
+		http_request.overrideMimeType('text/xml');
+	}
+	if (!http_request) {
+		alert(stringBundle.getString("yacybar_xmlhttp"));
+		return false;
+	}
+	http_request.onreadystatechange = alertContents;
+	http_request.open('GET', url + parameters, true);
+	http_request.send(null);
+	return true;
 }
 
 function groupDigits(num) {
@@ -70,14 +70,14 @@ function groupDigits(num) {
 }
 
 function alertContents() {
-   	if (http_request.readyState == 4) {
-   	
-   	var stringBundle = document.getElementById("yacybar-string-bundle");
-   	var qphPanel = document.getElementById('yacybar_statusBar_qph');
-   	var ppmPanel = document.getElementById('yacybar_statusBar_ppm');
-   	var urlPanel = document.getElementById('yacybar_statusBar_url');
-   	var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
-   	var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');
+	if (http_request.readyState == 4) {
+	
+		var stringBundle = document.getElementById("yacybar-string-bundle");
+		var qphPanel = document.getElementById('yacybar_statusBar_qph');
+		var ppmPanel = document.getElementById('yacybar_statusBar_ppm');
+		var urlPanel = document.getElementById('yacybar_statusBar_url');
+		var rwiPanel = document.getElementById('yacybar_statusBar_rwi');
+		var peerTypePanel = document.getElementById('yacybar_statusBar_peerType');
 
 		try {
 			if ("status" in http_request && http_request.status == 200) {
@@ -102,18 +102,18 @@ function alertContents() {
 				peerTypePanel.setAttribute("peerType", type);
 				peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
 				
-				} else {
-							alert(stringBundle.getString("yacybar_request_problem"))
-				}
+			} else {
+				alert(stringBundle.getString("yacybar_request_problem"))
+			}
 		} catch (ex) {
-				qphPanel.label = "QPH: ?";
-				ppmPanel.label = "PPM: ?";
-				urlPanel.label = "#URL: ?";
-				rwiPanel.label = "#RWI: ?";
-				peerTypePanel.setAttribute("peerType", type);
-				peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + stringBundle.getString("yacybar_no_connection");
+			qphPanel.label = "QPH: ?";
+			ppmPanel.label = "PPM: ?";
+			urlPanel.label = "#URL: ?";
+			rwiPanel.label = "#RWI: ?";
+			peerTypePanel.setAttribute("peerType", type);
+			peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + stringBundle.getString("yacybar_no_connection");
 		}
-	}     
+	}
 }
 
 function updateStatus() {
@@ -129,7 +129,7 @@ function updateStatus() {
 		
 		makeRequest(protocol + host + ':' + port + '/Network.xml', '');
 	}
-	self.setTimeout('updateStatus()', refresh);	
+	self.setTimeout('updateStatus()', refresh);
 }
 
 function init() {
@@ -159,7 +159,7 @@ function init() {
 	}
 	if (Branch.getBoolPref("peerMonitoring.showPeerType")) {
 		document.getElementById('yacybar_statusBar_peerType').hidden = false;
-		document.getElementById('cmd_showPeerType').setAttribute("checked","true");	
+		document.getElementById('cmd_showPeerType').setAttribute("checked","true");
 	}
 	updateStatus();
 }
@@ -172,7 +172,7 @@ function loadURL(newURL) {
 
 function showStats(event) {
 	if(stats) {
-		loadURL("http://www.yacystats.de/peer/"+stats); 
+		loadURL("http://www.yacystats.de/peer/"+stats);
 	}
 }
 // TODO show only if loged in

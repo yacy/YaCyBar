@@ -8,9 +8,9 @@
 	<script type="application/x-javascript" src="functions.js"/>
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
 
-    <stringbundleset id="stringbundleset">
-        <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
-    </stringbundleset>
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+	</stringbundleset>
 
 	<commandset id="mainCommandSet">
 		<command id="cmd_toggleProxy" oncommand="toggleProxy();" tooltiptext="&yacybarOverlay.command.tooltiptext.proxy;"/>
@@ -65,10 +65,10 @@
 							/>
 						</menupopup>
 					</menu>
-					<menuseparator />	
+					<menuseparator />
 					<menu label="&yacybarOverlay.menu.label.dialogs;">
 						<menupopup>
-							<menuitem label="&yacybarOverlay.menuitem.label.crawjobs;" 
+							<menuitem label="&yacybarOverlay.menuitem.label.crawjobs;"
 									  oncommand=" showCrawlJobs();" />
 							<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="&yacybarOverlay.menuitem.accesskey.pref;"
 									  tooltiptext="&yacybarOverlay.menuitem.tooltip.pref;"
@@ -76,7 +76,7 @@
 							<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="&yacybarOverlay.menuitem.accesskey.about;"
 									  tooltiptext="&yacybarOverlay.menuitem.tooltip.about;"
 									  oncommand="showAbout()" />
-							<menuitem label="&yacybarOverlay.menuitem.label.first;" 
+							<menuitem label="&yacybarOverlay.menuitem.label.first;"
 									  oncommand="showFirststartDialog()" />
 						</menupopup>
 					</menu>
@@ -88,12 +88,12 @@
 							id="menuitem-addbookmark"
 							tooltiptext="&yacybarOverlay.menuitem.tooltip.addBM;"
 							selected="true"
-							oncommand="showAddBookmark()" />					
+							oncommand="showAddBookmark()" />
 					<menuseparator />
 					<menuitem label="&yacybarOverlay.menuitem.label.bmloading;"
 					class="menuicon-iconic loading"
 					tooltiptext="&yacybarOverlay.menuitem.tooltip.bmloading;"
-					/>				
+					/>
 				</menupopup>
 			</toolbarbutton>
 			<toolbarbutton id="SurftipsButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.surftips;" onclick="loadSurftips(event)">
@@ -104,47 +104,47 @@
 					/>
 				</menupopup>
 			</toolbarbutton>
-	    	<toolbarseparator/>
-	    	    	
+		<toolbarseparator/>
+
 			<textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(true); }" />
-		    <toolbarbutton id="SearchBtn" 
-		    			   label="&yacybarOverlay.toolbarbutton.label.search;" 
-		    			   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.search;"
-		    			   oncommand="search(false)"
+			<toolbarbutton id="SearchBtn"
+					   label="&yacybarOverlay.toolbarbutton.label.search;"
+					   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.search;"
+					   oncommand="search(false)"
 			/>
 		</toolbaritem>
 		
-		<toolbaritem id="YaCy_toolbar_item2" flex="0">	
-			<toolbarseparator/>		    		    
-		    <toolbarbutton id="BlacklistBtn" 
-			   label="&yacybarOverlay.toolbarbutton.label.blacklist;" 
-			   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.blacklist;"
-			   oncommand="blacklistpage()"/>				   
-		    <toolbarbutton id="CrawlBtn" 
-			   label="&yacybarOverlay.toolbarbutton.label.crawl;" 
-			   tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.crawl;"
-			   oncommand="crawlpage()"/>	
+		<toolbaritem id="YaCy_toolbar_item2" flex="0">
+			<toolbarseparator/>
+			<toolbarbutton id="BlacklistBtn"
+					label="&yacybarOverlay.toolbarbutton.label.blacklist;"
+					tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.blacklist;"
+					oncommand="blacklistpage()"/>
+			<toolbarbutton id="CrawlBtn"
+					label="&yacybarOverlay.toolbarbutton.label.crawl;"
+					tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.crawl;"
+					oncommand="crawlpage()"/>
 		</toolbaritem>
 		
-		<toolbaritem id="YaCy_toolbar_item3" flex="0">			   		   				
-			<toolbarseparator/>	
-			<toolbarbutton id="ProxyBtn"					   
+		<toolbaritem id="YaCy_toolbar_item3" flex="0">
+			<toolbarseparator/>
+			<toolbarbutton id="ProxyBtn"
 						   command="cmd_toggleProxy"/>
-			<toolbarbutton id="IndexingControlBtn" 
+			<toolbarbutton id="IndexingControlBtn"
 						   command="cmd_toggleIndexing"/>
-   		</toolbaritem> 
+		</toolbaritem>
 	</toolbarpalette>
 	
 	<toolbox id="navigator-toolbox">
-    	<toolbar id="yacy_toolbar"
-    			 class="chromeclass-toolbar"
-				 context="toolbar-context-menu" 
+	<toolbar id="yacy_toolbar"
+			 class="chromeclass-toolbar"
+				 context="toolbar-context-menu"
 				 toolbarname="YaCy-Bar"    	
-		     	 hidden="false" 
-		     	 persist="collapsed,hidden"
-		     	 customizable="true"
-		     	 defaultset="YaCy_toolbar_item1,YaCy_toolbar_item2,YaCy_toolbar_item3"	
-		     	 inherits="collapsed,hidden"    	 
-		 />
+			hidden="false"
+			persist="collapsed,hidden"
+			customizable="true"
+			defaultset="YaCy_toolbar_item1,YaCy_toolbar_item2,YaCy_toolbar_item3"
+			inherits="collapsed,hidden"    	 
+		/>
 	</toolbox>
 </overlay>

@@ -33,7 +33,7 @@ function addUser(username, password) {
 				
 			try{
 				passwordManager.addUser("chrome://yacybar/", username, password);
-			} catch (e) { 
+			} catch (e) {
 				alert(e);
 			}
 		}
@@ -93,7 +93,7 @@ function changeProxySettings() {
 		var port = document.getElementById('yacybar_peerPortField').value;
 		var protocol = document.getElementById('yacybar_peerSSLField').value ? "https://" : "http://";
 		prefManager.setCharPref("network.proxy.autoconfig_url", protocol + host + ":" + port + "/autoconfig.pac");
-	}	
+	}
 }
 function setStartPage(){
 	prefManager.setCharPref("browser.startup.homepage", getBaseURL());

@@ -5,7 +5,7 @@ function initQuickCrawl() {
 	var crawlingTitle = crawlJobData["title"];
 	if (crawlingTitle.length > 55) {
 		document.getElementById('crawlingTitle').setAttribute("tooltiptext", crawlingTitle);
-		crawlingTitle = crawlingTitle.substring(0, 54) + " ...";		
+		crawlingTitle = crawlingTitle.substring(0, 54) + " ...";
 	}
 	document.getElementById('crawlingTitle').value= crawlingTitle;
 	document.getElementById('crawlingStart').value=crawlJobData["url"];
@@ -13,7 +13,7 @@ function initQuickCrawl() {
 	document.getElementById('crawlingFilter').value = crawlJobData["filter"];	
 	document.getElementById('crawlingDepth').value = crawlJobData["depth"];
 	document.getElementById('crawlingQ').checked = crawlJobData["crawlingQ"];
-	document.getElementById('storeHTCache').checked = crawlJobData["storeHTCache"];	
+	document.getElementById('storeHTCache').checked = crawlJobData["storeHTCache"];
 	document.getElementById('crawlOrder').checked = crawlJobData["crawlOrder"];	
 	document.getElementById('xdstopw').checked = crawlJobData["xdstopw"];
 	

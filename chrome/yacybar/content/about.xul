@@ -3,36 +3,38 @@
 <?xml-stylesheet href="chrome://yacybar/skin/about.css" type="text/css"?>
 <!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <dialog buttons="accept"
-        id="YaCyBarAbout"
-        ondialogaccept="return true"
-        title="&about.dialog.title;"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		id="YaCyBarAbout"
+		ondialogaccept="return true"
+		title="&about.dialog.title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<groupbox align="center" orient="horizontal" class="about-box">
-		<vbox>		  
-		  <hbox>  		  	
-		    <vbox>
-		  		<text value="YaCy-Bar" class="about-extension-name"/>
-		  		<text value="Version 0.2.5"/>
-		  	 </vbox>
-		  	 <image src="chrome://yacybar/skin/yacy_logo2.gif"/>
-		  </hbox>
-  		  
-	      <separator class="thin"/>
-	      
-		  <text value="&about.text.created;" class="about-extension-info"/>
-		  <text value="Alexander Schier"/>
-		  <separator class="thin"/>
-		  
-		  <text value="&about.text.contributors;" class="about-extension-info"/>
-		  <text value="Martin Thelian"/>
-		  <text value="Oliver Wunder"/>
-		  <text value="Florian Richter"/>
-		  <separator class="thin"/>
+		<vbox>
+			<hbox>
+				<vbox>
+					<text value="YaCy-Bar" class="about-extension-name"/>
+					<text value="Version 0.2.5"/>
+			 	</vbox>
+			 	<image src="chrome://yacybar/skin/yacy_logo2.gif"/>
+			</hbox>
 
-		  <text value="&about.text.homepage;" class="about-extension-info"/>
-	     <text value="http://www.yacy.net/" class="url" onclick="window.open('http://www.yacy.net/'); self.close();"/>
-		  <separator class="thin"/>
+			<separator class="thin"/>
+
+			<text value="&about.text.created;" class="about-extension-info"/>
+			<text value="Alexander Schier"/>
+			<separator class="thin"/>
+			
+			<text value="&about.text.contributors;" class="about-extension-info"/>
+			<text value="Martin Thelian"/>
+			<text value="Oliver Wunder"/>
+			<text value="Florian Richter"/>
+			<separator class="thin"/>
+
+			<text value="&about.text.homepage;" class="about-extension-info"/>
+			<text value="http://www.yacy.net/" class="url"
+					onclick="window.open('http://www.yacy.net/'); self.close();"/>
+			<separator class="thin"/>
+		
 		</vbox>
 		<spring flex="1"/>
 	</groupbox>

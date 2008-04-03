@@ -1,47 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <peers>
-  <peer name="suma-lab">
-	 <hash value="pZMbHGxp0ZT1" />
-     <address host="www.suma-lab.de" port="8080" />
-	 <timezone utc="+1:00" />
+	<peer name="suma-lab">
+		<hash value="pZMbHGxp0ZT1" />
+		<address host="www.suma-lab.de" port="8080" />
+		<timezone utc="+1:00" />
 		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
+			<weekday value="221111119999999999999966" />
+			<weekend value="666666669999999999999966" />
 		</available>
-  </peer>
-  <peer name="YaCyDemo">
-	 <hash value="IiPv2GaWQfsC" />
-     <address host="yacy.dyndns.org" port="8000" />
-	 <timezone utc="+1:00" />
+	</peer>
+	<peer name="YaCyDemo">
+		<hash value="IiPv2GaWQfsC" />
+		<address host="yacy.dyndns.org" port="8000" />
+		<timezone utc="+1:00" />
 		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
+			<weekday value="221111119999999999999966" />
+			<weekend value="666666669999999999999966" />
 		</available>
-  </peer>
-  <peer name="HuppisYaCyBox">
-	 <hash value="La5ZLWG4e1PF" />
-     <address host="huppi.dyndns.org" port="8081" />
-	 <timezone utc="+1:00" />
+	</peer>
+	<peer name="HuppisYaCyBox">
+		<hash value="La5ZLWG4e1PF" />
+		<address host="huppi.dyndns.org" port="8081" />
+		<timezone utc="+1:00" />
 		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
+			<weekday value="221111119999999999999966" />
+			<weekend value="666666669999999999999966" />
 		</available>
-  </peer>
-  <peer name="4o4">
-	 <hash value="p_0i8mcuV4bb" />
-     <address host="4o4.dyndns.org" port="8080" />
-	 <timezone utc="+1:00" />
+	</peer>
+	<peer name="4o4">
+		<hash value="p_0i8mcuV4bb" />
+		<address host="4o4.dyndns.org" port="8080" />
+		<timezone utc="+1:00" />
 		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
+			<weekday value="221111119999999999999966" />
+			<weekend value="666666669999999999999966" />
 		</available>
-  </peer>
-  <peer name="piranha_rootserver">
-    <hash value="ZxFS0sDXultV" />
-     <address host="88.198.20.109" port="8080" />
-	 <timezone utc="+1:00" />
+	</peer>
+	<peer name="piranha_rootserver">
+		<hash value="ZxFS0sDXultV" />
+		<address host="88.198.20.109" port="8080" />
+		<timezone utc="+1:00" />
 		<available>
-		<weekday value="221111119999999999999966" />
-		<weekend value="666666669999999999999966" />
+			<weekday value="221111119999999999999966" />
+			<weekend value="666666669999999999999966" />
 		</available>
-  </peer></peers>
+	</peer>
+</peers>

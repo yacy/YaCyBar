@@ -7,32 +7,32 @@
 		height="250"
 		persist="width height screenX screenY sizeMode"
 		title="&sidebarOverlay.window.title;">
-    
-    <script src="sidebarOverlay.js" />    
-    <script src="functions.js" /> 
-    
-    <richlistbox id="crawlJobView" 
-		  flex="1" 
-		  datasources="rdf:null" 
-		  ref="urn:yacybar:quickCrawl:root"
-		  oncommand="selectedItem(event)">
-	   	   <template>
+	
+	<script src="sidebarOverlay.js" />
+	<script src="functions.js" />
+
+	<richlistbox id="crawlJobView"
+			flex="1"
+			datasources="rdf:null"
+			ref="urn:yacybar:quickCrawl:root"
+			oncommand="selectedItem(event)">
+		<template>
 			<rule>
 				<conditions>
 					<content uri="?uri"/>
-						<triple subject="?uri" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#CrawlJobs" object="?CrawlJobs" />
-						<member container="?CrawlJobs" child="?CrawlJob" />
+					<triple subject="?uri" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#CrawlJobs" object="?CrawlJobs" />
+					<member container="?CrawlJobs" child="?CrawlJob" />
 				</conditions>
 
 				<bindings>
-							<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#date"       object="?date" />
-							<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#title"       object="?title" />
-							<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#link"       object="?link" />
-							<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#status"    object="?status" />
-							<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#statusCode"    object="?statusCode" />
+					<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#date"       object="?date" />
+					<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#title"       object="?title" />
+					<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#link"       object="?link" />
+					<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#status"    object="?status" />
+					<binding subject="?CrawlJob" predicate="http://www.yacy-websuche.de/yacybar-quickCrawl-rdf#statusCode"    object="?statusCode" />
 				</bindings>
 
-				<action>	   	   
+				<action>
 					<quickCrawlJob uri="?CrawlJob">
 						<vbox>
 							 <text value="?title" class="crawlJobTitle"/>
@@ -44,11 +44,11 @@
 			</rule>
 		</template>
 	</richlistbox>
-  <hbox>
- 	 <hbox id="commandBar" flex="1" align="right">
-     	<button id="cleanUpButton" label="&sidebarOverlay.button.label;" onclick="cleanup();"/>
-     </hbox>
-    
-    <resizer id="windowResizer" dir="bottomright"/>
-  </hbox>	
+	<hbox>
+		<hbox id="commandBar" flex="1" align="right">
+			<button id="cleanUpButton" label="&sidebarOverlay.button.label;" onclick="cleanup();"/>
+		</hbox>
+	
+		<resizer id="windowResizer" dir="bottomright"/>
+	</hbox>
 </window>

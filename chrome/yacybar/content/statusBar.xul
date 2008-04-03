@@ -2,40 +2,54 @@
 <?xml-stylesheet href="chrome://yacybar/skin/statusBar.css" type="text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-   <script type="application/x-javascript" src="statusBar.js" />
-   <stringbundleset id="stringbundleset">
-       <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
-   </stringbundleset>
-   <statusbar id="status-bar">
-      <statusbarpanel id="yacybar_statusBar">
-      	<statusbarpanel id="yacybar_statusBar_qph" label="QPH: -" tooltiptext="&statusBar.statusbarpanel.tooltip.qph;" hidden="true" />
-	      <statusbarpanel id="yacybar_statusBar_ppm" label="PPM: -" tooltiptext="&statusBar.statusbarpanel.tooltip.ppm;" hidden="true" />
-	      <statusbarpanel id="yacybar_statusBar_url" label="#URL: -" tooltiptext="&statusBar.statusbarpanel.tooltip.url;" hidden="true"/>
-	      <statusbarpanel id="yacybar_statusBar_rwi" label="#RWI: -" tooltiptext="&statusBar.statusbarpanel.tooltip.rwi;" hidden="true"/>
-    	   <statusbarpanel id="yacybar_statusBar_peerType" class="statusbarpanel-iconic" hidden="true"/>     
-    	   <statusbarpanel id="yacybar_statusBar_menu" class="statusbarpanel-menu-iconic" tooltiptext="&statusBar.statusbarpanel.tooltip.menu;" type="menu" > 
-	  	  	  <menupopup>
-						 <menuitem id="cmd_showQPH" label="&statusBar.menuitem.label.qph;" type="checkbox" oncommand="toggle('yacybar_statusBar_qph');"/>
-	                <menuitem id="cmd_showPPM" label="&statusBar.menuitem.label.ppm;" type="checkbox" oncommand="toggle('yacybar_statusBar_ppm');"/>
-	                <menuitem id="cmd_showURL" label="&statusBar.menuitem.label.url;" type="checkbox" oncommand="toggle('yacybar_statusBar_url');"/>
-	                <menuitem id="cmd_showRWI" label="&statusBar.menuitem.label.rwi;" type="checkbox" oncommand="toggle('yacybar_statusBar_rwi');"/>
-	                <menuitem id="cmd_showPeerType" label="&statusBar.menuitem.label.peertype;" type="checkbox" oncommand="toggle('yacybar_statusBar_peerType');"/>
-	                <menuseparator /> 
-	                <menuitem id="cmd_MonitoringControl" label="&statusBar.menuitem.label.monitoring;" type="checkbox" oncommand="setMonitoring();" accesskey="&statusBar.menuitem.accesskey.monitoring;"/>	                
-	                <menuseparator /> 
-  	                <menuitem id="hash" label="&statusBar.menuitem.label.peerstats;" accesskey="&statusBar.menuitem.accesskey.peerstats;"
-							  tooltiptext="&statusBar.menuitem.tooltip.peerstats;"
-							  oncommand="showStats(event)"
-							  onclick="showStats(event)" 
-							  class="menuitem-iconic"/>  
-						 <menuseparator /> 	                 
-	                <menuitem id="about" label="&statusBar.menuitem.label.about;" accesskey="&statusBar.menuitem.accesskey.about;"
-							  tooltiptext="&statusBar.menuitem.tooltip.about;"
-							  oncommand="showAbout()" 
-							  class="menuitem-iconic"/>  	  	  
-	  	  	  </menupopup>
-  	  	  </statusbarpanel>
-      </statusbarpanel>
-   </statusbar>
-
+	<script type="application/x-javascript" src="statusBar.js" />
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+	</stringbundleset>
+	<statusbar id="status-bar">
+		<statusbarpanel id="yacybar_statusBar">
+			<statusbarpanel id="yacybar_statusBar_qph" label="QPH: -"
+					tooltiptext="&statusBar.statusbarpanel.tooltip.qph;" hidden="true" />
+			<statusbarpanel id="yacybar_statusBar_ppm" label="PPM: -"
+					tooltiptext="&statusBar.statusbarpanel.tooltip.ppm;" hidden="true" />
+			<statusbarpanel id="yacybar_statusBar_url" label="#URL: -"
+					tooltiptext="&statusBar.statusbarpanel.tooltip.url;" hidden="true"/>
+			<statusbarpanel id="yacybar_statusBar_rwi" label="#RWI: -"
+					tooltiptext="&statusBar.statusbarpanel.tooltip.rwi;" hidden="true"/>
+			<statusbarpanel id="yacybar_statusBar_peerType" class="statusbarpanel-iconic"
+					hidden="true"/>
+			<statusbarpanel id="yacybar_statusBar_menu" class="statusbarpanel-menu-iconic"
+					tooltiptext="&statusBar.statusbarpanel.tooltip.menu;" type="menu">
+				<menupopup>
+					<menuitem id="cmd_showQPH" label="&statusBar.menuitem.label.qph;" type="checkbox"
+						  oncommand="toggle('yacybar_statusBar_qph');"/>
+					<menuitem id="cmd_showPPM" label="&statusBar.menuitem.label.ppm;" type="checkbox"
+						  oncommand="toggle('yacybar_statusBar_ppm');"/>
+					<menuitem id="cmd_showURL" label="&statusBar.menuitem.label.url;" type="checkbox"
+						  oncommand="toggle('yacybar_statusBar_url');"/>
+					<menuitem id="cmd_showRWI" label="&statusBar.menuitem.label.rwi;" type="checkbox"
+						  oncommand="toggle('yacybar_statusBar_rwi');"/>
+					<menuitem id="cmd_showPeerType" label="&statusBar.menuitem.label.peertype;"
+						  type="checkbox" oncommand="toggle('yacybar_statusBar_peerType');"/>
+					<menuseparator />
+					<menuitem id="cmd_MonitoringControl" label="&statusBar.menuitem.label.monitoring;"
+						  type="checkbox" oncommand="setMonitoring();"
+						  accesskey="&statusBar.menuitem.accesskey.monitoring;"/>
+					<menuseparator />
+					<menuitem id="hash" label="&statusBar.menuitem.label.peerstats;"
+						accesskey="&statusBar.menuitem.accesskey.peerstats;"
+						tooltiptext="&statusBar.menuitem.tooltip.peerstats;"
+						oncommand="showStats(event)"
+						onclick="showStats(event)"
+						class="menuitem-iconic"/>
+					<menuseparator />
+					<menuitem id="about" label="&statusBar.menuitem.label.about;"
+						accesskey="&statusBar.menuitem.accesskey.about;"
+						tooltiptext="&statusBar.menuitem.tooltip.about;"
+						oncommand="showAbout()"
+						class="menuitem-iconic"/>
+				</menupopup>
+			</statusbarpanel>
+		</statusbarpanel>
+	</statusbar>
 </overlay>

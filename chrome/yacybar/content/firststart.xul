@@ -2,30 +2,36 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://yacybar/skin/firststart.css" type="text/css"?>
 <!DOCTYPE window SYSTEM "chrome://yacybar/locale/yacybar.dtd">
-<window 
-        id="yacyBarFirststart"
-        title="&firststart.window.title;"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+<window
+		id="yacyBarFirststart"
+		title="&firststart.window.title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		xmlns:html="http://www.w3.org/1999/xhtml"
 		>
-		<script type="application/x-javascript" src="firststart.js"/>
-      <stringbundleset id="stringbundleset">
-        <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
-      </stringbundleset>
-		<vbox>
+	<script type="application/x-javascript" src="firststart.js"/>
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+	</stringbundleset>
+	<vbox>
 		<html:div>
-		&firststart.html.div;
-		<html:ul>
-			<html:li>&firststart.html.ul.li.demo;</html:li>
-			<html:li>&firststart.html.ul.li.install; <html:a href="javascript: downloadYacy()">http://www.yacy.net</html:a></html:li>
-			<html:li>
-			&firststart.html.ul.li.peer;
+			&firststart.html.div;
 			<html:ul>
-				<html:li>&firststart.html.ul.li.ul.li.port;</html:li>
-				<html:li>&firststart.html.ul.li.ul.li.settings; <html:a href="javascript: showPrefs()">&firststart.html.ul.li.ul.li.a.settings;</html:a>.</html:li>
+				<html:li>&firststart.html.ul.li.demo;</html:li>
+				<html:li>&firststart.html.ul.li.install;
+					<html:a href="javascript: downloadYacy()">http://www.yacy.net</html:a>
+				</html:li>
+				<html:li>
+					&firststart.html.ul.li.peer;
+					<html:ul>
+						<html:li>&firststart.html.ul.li.ul.li.port;</html:li>
+						<html:li>&firststart.html.ul.li.ul.li.settings;
+							<html:a href="javascript: showPrefs()">
+								&firststart.html.ul.li.ul.li.a.settings;
+							</html:a>
+						</html:li>
+					</html:ul>
+				</html:li>
 			</html:ul>
-			</html:li>
-		</html:ul>
 		</html:div>
 		<hbox>
 			<button label="&firststart.html.hbox.label.demo;" oncommand="toggleDemo()"/>
@@ -33,5 +39,5 @@
 			<button label="&firststart.html.hbox.label.peer;" oncommand="window.close()" />
 			<button label="&firststart.html.hbox.label.prefs;" oncommand="showPref()" />
 		</hbox>
-		</vbox>
+	</vbox>
 </window>

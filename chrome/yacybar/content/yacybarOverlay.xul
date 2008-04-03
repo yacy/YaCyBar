@@ -137,14 +137,14 @@
 	
 	<toolbox id="navigator-toolbox">
 	<toolbar id="yacy_toolbar"
-			 class="chromeclass-toolbar"
-				 context="toolbar-context-menu"
-				 toolbarname="YaCy-Bar"    	
+			class="chromeclass-toolbar"
+			context="toolbar-context-menu"
+			toolbarname="YaCy-Bar"
 			hidden="false"
 			persist="collapsed,hidden"
 			customizable="true"
 			defaultset="YaCy_toolbar_item1,YaCy_toolbar_item2,YaCy_toolbar_item3"
-			inherits="collapsed,hidden"    	 
+			inherits="collapsed,hidden"
 		/>
 	</toolbox>
 </overlay>

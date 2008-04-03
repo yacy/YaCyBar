@@ -2,75 +2,76 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <prefwindow id="yacybarPreferences"
-	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-	title="&prefs.dialog.title;">
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		title="&prefs.dialog.title;">
 	
-	  <script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
-	  <script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>
+	<script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
+	<script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>
 	 
-	  <prefpane id="YaCyBarPrefsPane"
+	<prefpane id="YaCyBarPrefsPane"
 		  	    image="chrome://yacybar/skin/yacy_logo.gif"
 		  	    label="YaCy-Bar"
 		  	    onpaneload="onLoad();">
 	
-	    <preferences>
-	      <!-- peer address and port preferences -->
-	      <preference id="yacybar_peerAddress"
-	        name="extensions.yacybar.peerAddress"
-	        type="string"/>
-	      <preference id="yacybar_peerPort"
-	        name="extensions.yacybar.peerPort"
-	        type="int"/>
-	      <preference id="yacybar_peerSSL"
-	        name="extensions.yacybar.peerSSL"
-	        type="bool"/>
-	      
-	      <!-- quick crawling preferences -->  
-	      <preference id="yacybar_showQuickCrawlDialog"
-	        name="extensions.yacybar.QuickCrawl.showQuickCrawlDialog"
-	        type="bool"/>	
-	        
-	      <preference id="yacybar_quickCrawlFilter"
-	        name="extensions.yacybar.QuickCrawl.last.filter"
-	        type="string"/>	
-	        
-	      <preference id="yacybar_quickCrawlDepth"
-	        name="extensions.yacybar.QuickCrawl.last.depth"
-	        type="int"/>		    
-	        
-	      <preference id="yacybar_quickCrawlCrawlingQ"
-	        name="extensions.yacybar.QuickCrawl.last.crawlingQ"
-	        type="bool"/>		        
-	       
-	      <preference id="yacybar_quickCrawlStoreHTCache"
-	        name="extensions.yacybar.QuickCrawl.last.storeHTCache"
-	        type="bool"/>		
-	        
-	      <preference id="yacybar_quickCrawlCrawlOrder"
-	        name="extensions.yacybar.QuickCrawl.last.crawlOrder"
-	        type="bool"/>		               
-	        
-	      <preference id="yacybar_quickCrawlXdstopw"
-	        name="extensions.yacybar.QuickCrawl.last.xdstopw"
-	        type="bool"/>	
-	        
-	      <!-- searching preferences -->  
-  	      <preference id="yacybar_searchContent"
-	        name="extensions.yacybar.search.content"
-	        type="string"/>	
-	      <preference id="yacybar_searchMaxResults"
-	        name="extensions.yacybar.search.maxResults"
-	        type="int"/>	        	      <preference id="yacybar_searchResource"
-	        name="extensions.yacybar.search.resource"
-	        type="string"/>		        
-	      <preference id="yacybar_searchMaxSearchTime"
-	        name="extensions.yacybar.search.maxSearchTime"
-	        type="int"/>		        
-	      <preference id="yacybar_searchUrlMaskFilter"
-	        name="extensions.yacybar.search.urlMaskFilter"
-	        type="string"/>		        	        	        
-	    </preferences>
-	    
+		<preferences>
+			<!-- peer address and port preferences -->
+			<preference id="yacybar_peerAddress"
+				name="extensions.yacybar.peerAddress"
+				type="string"/>
+			<preference id="yacybar_peerPort"
+				name="extensions.yacybar.peerPort"
+				type="int"/>
+			<preference id="yacybar_peerSSL"
+				name="extensions.yacybar.peerSSL"
+				type="bool"/>
+		
+			<!-- quick crawling preferences -->  
+			<preference id="yacybar_showQuickCrawlDialog"
+				name="extensions.yacybar.QuickCrawl.showQuickCrawlDialog"
+				type="bool"/>
+			
+			<preference id="yacybar_quickCrawlFilter"
+				name="extensions.yacybar.QuickCrawl.last.filter"
+				type="string"/>
+			
+			<preference id="yacybar_quickCrawlDepth"
+				name="extensions.yacybar.QuickCrawl.last.depth"
+				type="int"/>
+			
+			<preference id="yacybar_quickCrawlCrawlingQ"
+				name="extensions.yacybar.QuickCrawl.last.crawlingQ"
+				type="bool"/>
+			
+			<preference id="yacybar_quickCrawlStoreHTCache"
+				name="extensions.yacybar.QuickCrawl.last.storeHTCache"
+				type="bool"/>
+			
+			<preference id="yacybar_quickCrawlCrawlOrder"
+				name="extensions.yacybar.QuickCrawl.last.crawlOrder"
+				type="bool"/>
+			
+			<preference id="yacybar_quickCrawlXdstopw"
+				name="extensions.yacybar.QuickCrawl.last.xdstopw"
+				type="bool"/>
+			
+			<!-- searching preferences -->
+			<preference id="yacybar_searchContent"
+				name="extensions.yacybar.search.content"
+				type="string"/>
+			<preference id="yacybar_searchMaxResults"
+				name="extensions.yacybar.search.maxResults"
+				type="int"/>
+			<preference id="yacybar_searchResource"
+				name="extensions.yacybar.search.resource"
+				type="string"/>
+			<preference id="yacybar_searchMaxSearchTime"
+				name="extensions.yacybar.search.maxSearchTime"
+				type="int"/>
+			<preference id="yacybar_searchUrlMaskFilter"
+				name="extensions.yacybar.search.urlMaskFilter"
+				type="string"/>
+		</preferences>
+	
 		<tabbox id="yacyBar_PrefsTablist" flex="1" hidden="false">
 			<tabs>
 				<tab label="&prefs.tabbox.tab.label.peer;" selected="true"/>
@@ -80,9 +81,9 @@
 			<tabpanels flex="1">
 				<!-- Peer connection preferences -->
 				<tabpanel id="yacyBar_PrefsPeerTab" orient="vertical">
-				    <description>&prefs.tabpanel.description.peer;</description>
-				    
-			    	<label value="&prefs.tabpanel.label.value.peer;" control="yacybar_peerAddressField" accesskey="&prefs.tabpanel.label.accesskey.peer;"/>
+					<description>&prefs.tabpanel.description.peer;</description>
+				
+					<label value="&prefs.tabpanel.label.value.peer;" control="yacybar_peerAddressField" accesskey="&prefs.tabpanel.label.accesskey.peer;"/>
 					<textbox preference="yacybar_peerAddress" id="yacybar_peerAddressField" onchange="changeProxySettings();"/>
 					
 					<label value="&prefs.tabpanel.label.value.peerport;" control="yacybar_peerPortField" accesskey="&prefs.tabpanel.label.accesskey.peerport;"/>
@@ -96,59 +97,59 @@
 					<textbox id="yacybar_peerUserField" onchange="setUserPwd();"/>
 					
 					<label value="&prefs.tabpanel.label.value.password;" control="yacybar_peerPwdField" accesskey="&prefs.tabpanel.label.accesskey.password;"/>
-					<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>						
-			    </tabpanel>
-			    
-			    <!-- quick crawl preferences -->
-			    <tabpanel id="yacyBar_PrefsQuickCrawlTab" orient="vertical">
-					<description>&prefs.tabpanel.description.settings;</description>	
+					<textbox id="yacybar_peerPwdField" type="password" onchange="setUserPwd();"/>
+				</tabpanel>
+			
+				<!-- quick crawl preferences -->
+				<tabpanel id="yacyBar_PrefsQuickCrawlTab" orient="vertical">
+					<description>&prefs.tabpanel.description.settings;</description>
 					
-					<checkbox preference="yacybar_showQuickCrawlDialog" 
+					<checkbox preference="yacybar_showQuickCrawlDialog"
 							  id="yacybar_showQuickCrawlDialogField"
-							  label="&prefs.tabpanel.checkbox.label.settings;" 
-							  checked="true"/>	
-							  
+							  label="&prefs.tabpanel.checkbox.label.settings;"
+							  checked="true"/>
+						
 
 					<hbox>
 						<groupbox align="center" orient="horizontal">
 						<caption label="&prefs.tabpanel.hbox.caption.label.restrictions;"/>
 						<grid>
-							<rows>				
+							<rows>
 								<row>
 									<label value="&prefs.tabpanel.hbox.label.filter;" />
 									<textbox preference="yacybar_quickCrawlFilter" id="crawlingFilter"/>
-								</row>		
+								</row>
 								<row>
 									<label value="&prefs.tabpanel.hbox.label.depth;"/>
 									<menulist preference="yacybar_quickCrawlDepth" id="crawlingDepth" editable="true">
-					 					<menupopup>
-						 					<menuitem label="0"/>
-						 					<menuitem label="1"/>				 					
-						 					<menuitem label="2"/>
+										<menupopup>
+											<menuitem label="0"/>
+											<menuitem label="1"/>
+											<menuitem label="2"/>
 											<menuitem label="3"/>
-					 					</menupopup>
+										</menupopup>
 									</menulist>
-								</row>																			
+								</row>
 							</rows>
-						</grid>	
+						</grid>
 						</groupbox>
 						
 						<groupbox align="left" orient="vertical">
 							<caption label="&prefs.tabpanel.hbox.caption.label.options;"/>
 							<checkbox id="crawlingQ" preference="yacybar_quickCrawlCrawlingQ" label="&prefs.tabpanel.hbox.checkbox.label.dynamicurls;"/>
 							<checkbox id="storeHTCache" preference="yacybar_quickCrawlStoreHTCache" label="&prefs.tabpanel.hbox.checkbox.label.cache;"/>
-							<checkbox id="crawlOrder" preference="yacybar_quickCrawlCrawlOrder" label="&prefs.tabpanel.hbox.checkbox.label.remote;"/>		
-							<checkbox id="xdstopw" preference="yacybar_quickCrawlXdstopw" label="&prefs.tabpanel.hbox.checkbox.label.stop;"/>		
-						</groupbox>						
-					</hbox>						  
-							  	    				    
-			    </tabpanel>
-			    
-			    <!-- search preferences -->
-			    <tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">
-					<description>&prefs.tabpanel.description.searching;</description>	
+							<checkbox id="crawlOrder" preference="yacybar_quickCrawlCrawlOrder" label="&prefs.tabpanel.hbox.checkbox.label.remote;"/>
+							<checkbox id="xdstopw" preference="yacybar_quickCrawlXdstopw" label="&prefs.tabpanel.hbox.checkbox.label.stop;"/>
+						</groupbox>
+					</hbox>
+					
+				</tabpanel>
+			
+				<!-- search preferences -->
+				<tabpanel id="yacyBar_PrefsSearchTab" orient="vertical">
+					<description>&prefs.tabpanel.description.searching;</description>
 					<grid>
-						<rows>		
+						<rows>
 							<row>
 								<label value="&prefs.tabpanel.label.value.content;"/>
 								<menulist  id="search.content" preference="yacybar_searchContent">
@@ -160,41 +161,41 @@
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.app;" value="app"/>
 				 					</menupopup>
 								</menulist>
-							</row>							
+							</row>
 							<row>
 								<label value="&prefs.tabpanel.label.value.maxresults;"/>
 								<menulist preference="yacybar_searchMaxResults" id="search.MaxResults" editable="false">
-				 					<menupopup>
-					 					<menuitem label="10"/>
-					 					<menuitem label="50"/>				 					
-					 					<menuitem label="100"/>
+									<menupopup>
+										<menuitem label="10"/>
+										<menuitem label="50"/>	
+										<menuitem label="100"/>
 										<menuitem label="1000"/>
-				 					</menupopup>
+									</menupopup>
 								</menulist>
 							</row>
 							<row>
 								<label value="&prefs.tabpanel.label.value.res;"/>
 								<menulist preference="yacybar_searchResource" id="search.Resource">
-				 					<menupopup>
-<!-- ids vergeben, da lokal falsche Angabe ist -->
+									<menupopup>
+									<!-- ids vergeben, da lokal falsche Angabe ist -->
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.global;" value="global"/>
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.local;" value="local"/>
-				 					</menupopup>
+									</menupopup>
 								</menulist>
-							</row>	
+							</row>
 							<row>
 								<label value="&prefs.tabpanel.label.value.maxsearchtime;"/>
 								<menulist preference="yacybar_searchMaxSearchTime" id="search.MaxSearchTime" editable="true">
-				 					<menupopup>
-					 					<menuitem label="1"/>
-					 					<menuitem label="3"/>
-					 					<menuitem label="6"/>
-					 					<menuitem label="10"/>
-					 					<menuitem label="30"/>
-					 					<menuitem label="60"/>				 										 					
+									<menupopup>
+										<menuitem label="1"/>
+										<menuitem label="3"/>
+										<menuitem label="6"/>
+										<menuitem label="10"/>
+										<menuitem label="30"/>
+										<menuitem label="60"/>
 				 					</menupopup>
 								</menulist>
-							</row>	
+							</row>
 							<row>
 								<label value="&prefs.tabpanel.label.value.urlmask;"/>
 								<textbox preference="yacybar_searchUrlMaskFilter" id="search.UrlMaskFilter"/>
@@ -203,10 +204,10 @@
 								<button label="&prefs.tabpanel.button.label.startpage;" onclick="setStartPage()" />
 							</row>
 						</rows>
-					</grid>									    
-			    </tabpanel>
+					</grid>
+				</tabpanel>
 			</tabpanels>
 		</tabbox>
-	  </prefpane>
+	</prefpane>
 	
-	</prefwindow>
+</prefwindow>

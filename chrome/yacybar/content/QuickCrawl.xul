@@ -2,67 +2,65 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <dialog buttons="accept,cancel"
-        id="YaCyBarQuickCrawlDialog"
-        onload="initQuickCrawl()"
-        ondialogaccept="return startQuickCrawl();"
-        ondialogcancel="return cancelQuickCrawl();"
-        title="&quickcrawl.dialog.title;"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		id="YaCyBarQuickCrawlDialog"
+		onload="initQuickCrawl()"
+		ondialogaccept="return startQuickCrawl();"
+		ondialogcancel="return cancelQuickCrawl();"
+		title="&quickcrawl.dialog.title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-		<script type="application/x-javascript" src="QuickCrawl.js"/>
+	<script type="application/x-javascript" src="QuickCrawl.js"/>
 
-      <stringbundleset id="stringbundleset">
-    	  <stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
-      </stringbundleset>
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+	</stringbundleset>
 
+	<groupbox align="center" orient="horizontal">
+		<grid>
+			<rows>
+				<row>
+					<label value="&quickcrawl.groupbox.label.value.title;"/>
+					<label id="crawlingTitle" value="" style="font-weight: bold;"/>
+				</row>
+				<row>
+					<label value="&quickcrawl.groupbox.label.value.startpoint;" control="crawlingStart" accesskey="&quickcrawl.groupbox.label.accesskey.startpoint;" />
+					<textbox id="crawlingStart" value="http://localhost.wg" onchange="crawlingStartChanged();" width="300"/>
+				</row>
+			</rows>
+		</grid>
+	</groupbox>
+
+	<hbox>
 		<groupbox align="center" orient="horizontal">
-			<grid>
-				<rows>				
-					<row>
-				  		<label value="&quickcrawl.groupbox.label.value.title;"/>	
-				  		<label id="crawlingTitle" value="" style="font-weight: bold;"/>							
-					</row>	
-					<row>
-						<label value="&quickcrawl.groupbox.label.value.startpoint;" control="crawlingStart" accesskey="&quickcrawl.groupbox.label.accesskey.startpoint;" />
-						<textbox id="crawlingStart" value="http://localhost.wg" onchange="crawlingStartChanged();" width="300"/>
-					</row>
-				</rows>
-			</grid>
+		<caption label="&quickcrawl.groupbox.caption.label.res;"/>
+		<grid>
+			<rows>
+				<row>
+					<label value="&quickcrawl.groupbox.label.value.filter;" control="crawlingFilter" accesskey="&quickcrawl.groupbox.label.accesskey.filter;"/>
+					<textbox id="crawlingFilter" value=".*"/>
+				</row>
+				<row>
+					<label value="&quickcrawl.groupbox.label.value.depth;" control="crawlingDepth" accesskey="&quickcrawl.groupbox.label.accesskey.depth;"/>
+					<menulist id="crawlingDepth" editable="true">
+						<menupopup>
+							<menuitem label="0"/>
+		 					<menuitem label="1"/>
+		 					<menuitem label="2"/>
+							<menuitem label="3"/>
+						</menupopup>
+					</menulist>
+				</row>
+			</rows>
+		</grid>
 		</groupbox>
 
-		<hbox>
-			<groupbox align="center" orient="horizontal">
-			<caption label="&quickcrawl.groupbox.caption.label.res;"/>
-			<grid>
-				<rows>				
-					<row>
-						<label value="&quickcrawl.groupbox.label.value.filter;" control="crawlingFilter" accesskey="&quickcrawl.groupbox.label.accesskey.filter;"/>
-						<textbox id="crawlingFilter" value=".*"/>
-					</row>
-					<row>
-						<label value="&quickcrawl.groupbox.label.value.depth;" control="crawlingDepth" accesskey="&quickcrawl.groupbox.label.accesskey.depth;"/>
-						<menulist id="crawlingDepth" editable="true">
-		 					<menupopup>
-			 					<menuitem label="0"/>
-			 					<menuitem label="1"/>				 					
-			 					<menuitem label="2"/>
-								<menuitem label="3"/>
-		 					</menupopup>
-						</menulist>
-					</row>												
-				</rows>
-			</grid>	
-			</groupbox>
-	
-			<groupbox align="left" orient="vertical">
-				<caption label="&quickcrawl.groupbox.caption.options;"/>
-				<checkbox id="crawlingQ" label="&quickcrawl.groupbox.checkbox.dynamicurls;" checked="true"/>
-				<checkbox id="storeHTCache" label="&quickcrawl.groupbox.checkbox.cache;" checked="true"/>
-				<checkbox id="crawlOrder" label="&quickcrawl.groupbox.checkbox.remote;" checked="false"/>		
-				<checkbox id="xdstopw" label="&quickcrawl.groupbox.checkbox.stopwords;" checked="true"/>		
-			</groupbox>
-		</hbox>
-		
-		<checkbox id="showQuickCrawlDialog" label="&quickcrawl.checkbox.label.default;" checked="false"/>
-		
+		<groupbox align="left" orient="vertical">
+			<caption label="&quickcrawl.groupbox.caption.options;"/>
+			<checkbox id="crawlingQ" label="&quickcrawl.groupbox.checkbox.dynamicurls;" checked="true"/>
+			<checkbox id="storeHTCache" label="&quickcrawl.groupbox.checkbox.cache;" checked="true"/>
+			<checkbox id="crawlOrder" label="&quickcrawl.groupbox.checkbox.remote;" checked="false"/>
+			<checkbox id="xdstopw" label="&quickcrawl.groupbox.checkbox.stopwords;" checked="true"/>
+		</groupbox>
+	</hbox>
+	<checkbox id="showQuickCrawlDialog" label="&quickcrawl.checkbox.label.default;" checked="false"/>
 </dialog>

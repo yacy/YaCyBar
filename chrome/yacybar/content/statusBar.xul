@@ -3,6 +3,7 @@
 <!DOCTYPE overlay SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="application/x-javascript" src="statusBar.js" />
+	<script type="application/x-javascript" src="functions.js" />
 	<stringbundleset id="stringbundleset">
 		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
 	</stringbundleset>

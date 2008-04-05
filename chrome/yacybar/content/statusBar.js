@@ -42,6 +42,7 @@ function switchState(event) {
 */
 
 function makeRequest(url, parameters) {
+	log("yacybar: makeRequest called");
 	var stringBundle = document.getElementById("yacybar-string-bundle");
 	http_request = false;
 	http_request = new XMLHttpRequest();
@@ -70,6 +71,7 @@ function groupDigits(num) {
 }
 
 function alertContents() {
+	log("yacybar: statusbar requeststatus changed to "+http_request.readyState);
 	if (http_request.readyState == 4) {
 	
 		var stringBundle = document.getElementById("yacybar-string-bundle");
@@ -101,11 +103,14 @@ function alertContents() {
 				
 				peerTypePanel.setAttribute("peerType", type);
 				peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
+				log("yacybar: statusbar successfully updated!");
 				
 			} else {
 				alert(stringBundle.getString("yacybar_request_problem"))
 			}
 		} catch (ex) {
+			log("yacybar: exception: "+ex);
+
 			qphPanel.label = "QPH: ?";
 			ppmPanel.label = "PPM: ?";
 			urlPanel.label = "#URL: ?";
@@ -117,6 +122,7 @@ function alertContents() {
 }
 
 function updateStatus() {
+	log("yacybar: updateStatus called");
 
 	var enabled = Branch.getBoolPref("peerMonitoring.enabled");
 	var refresh = Branch.getIntPref("peerMonitoring.refreshRate");

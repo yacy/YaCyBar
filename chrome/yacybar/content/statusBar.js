@@ -93,7 +93,12 @@ function alertContents() {
 				var type = your.getElementsByTagName("type")[0].firstChild.nodeValue;
 				var url = your.getElementsByTagName("links")[0].firstChild.nodeValue;
 				var rwi = your.getElementsByTagName("words")[0].firstChild.nodeValue;
-				var hash = your.getElementsByTagName("hash")[0].firstChild.nodeValue;
+				try {
+					var hash = your.getElementsByTagName("hash")[0].firstChild.nodeValue;
+				} catch (ex) {
+					log("yacybar: exception: "+ex);
+					var hash = "";
+				}
 
 				qphPanel.label = "QPH: " + qph;
 				ppmPanel.label = "PPM: " + ppm;

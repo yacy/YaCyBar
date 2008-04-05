@@ -5,14 +5,14 @@ var mainWindow;
 function init() {
 	mainWindow = window.arguments[0];
 	var demoPeersURL = Branch.getCharPref("demoPeersURL");
-	req = new XMLHttpRequest();
+	var req = new XMLHttpRequest();
 	req.open("GET", demoPeersURL, false);
 	req.send(null);
-	response = req.responseXML;
+	var response = req.responseXML;
 	peers = response.getElementsByTagName("peer");
-	list = document.getElementById("demopeerList");
-	for(i=0; i<peers.length; i++) {
-		item = document.createElement("listitem");
+	var list = document.getElementById("demopeerList");
+	for(var i=0; i<peers.length; i++) {
+		var item = document.createElement("listitem");
 		item.setAttribute("label", peers[i].getAttribute("name"));
 		item.setAttribute("value", peers[i].getAttribute(i));
 		list.appendChild(item);
@@ -22,7 +22,7 @@ function init() {
 }
 
 function selectDemopeer() {
-	list = document.getElementById("demopeerList");
+	var list = document.getElementById("demopeerList");
 	index = list.selectedIndex;
 }
 

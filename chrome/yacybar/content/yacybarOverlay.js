@@ -583,7 +583,7 @@ function showAddBookmark() {
 }
 
 function toggleDemo() {
-	demomenu = document.getElementById("menuitem-demo");
+	var demomenu = document.getElementById("menuitem-demo");
 	if(demomenu.getAttribute("checked")) {
 		window.openDialog("chrome://yacybar/content/demopeers.xul", "demopeerDialog", "centerscreen, chrome, modal", document);
 	} else {

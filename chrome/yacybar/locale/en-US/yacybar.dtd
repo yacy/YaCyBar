@@ -109,6 +109,7 @@
 <!ENTITY sidebarOverlay.button.label "CleanUp">
 
 <!ENTITY blacklist.dialog.title "YaCyBar - Blacklist">
+<!ENTITY blacklist.blacklistName.label "Name of Blacklist">
 
 <!ENTITY statusBar.statusbarpanel.tooltip.qph "Queries Per Hour">
 <!ENTITY statusBar.statusbarpanel.tooltip.ppm "Pages Per Minute">

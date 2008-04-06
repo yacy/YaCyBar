@@ -110,6 +110,9 @@
 
 <!ENTITY blacklist.dialog.title "YaCyBar - Blacklist">
 <!ENTITY blacklist.blacklistName.label "Name der Blacklist">
+<!ENTITY blacklist.button.label.selectDomain "Domain auswählen">
+<!ENTITY blacklist.button.label.selectSubdomains "Alle Subdomains auswählen">
+<!ENTITY blacklist.button.label.reset "Zurücksetzen">
 
 <!ENTITY statusBar.statusbarpanel.tooltip.qph "Anfragen pro Stunde">
 <!ENTITY statusBar.statusbarpanel.tooltip.ppm "Seiten pro Minute">

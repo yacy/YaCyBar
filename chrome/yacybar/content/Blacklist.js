@@ -3,12 +3,9 @@ var request = null;
 
 function initBlacklist() {
 	document.documentElement.getButton("accept").disabled = true;
-	if(window.arguments[0]) {
-		var url = window.arguments[0];
-		url = url.replace(/\w+:\/\/(.*)/, '$1');
-		document.getElementById("blacklistURL")
-			.setAttribute("value", url);
-	}
+
+	resetURL();
+
 	var url = getBaseURL() + '/xml/blacklists_p.xml';
 
 	request = new XMLHttpRequest();
@@ -52,7 +49,7 @@ function loadBlacklistsHandler() {
 
 function okBlacklist() {
 	var gBrowser = document.getElementById("content");
-	var url_to_blacklist = document.getElementById("blacklistURL").getAttribute("value");
+	var url_to_blacklist = document.getElementById("blacklistURL").value;
 	var list = document.getElementById("blacklistName").label;
 
 	var request_url = getBaseURL() + "/Blacklist_p.html?addBlacklistEntry=&currentBlacklist="
@@ -66,8 +63,27 @@ function okBlacklist() {
 	return true;
 }
 
-function cancelBlacklist() {
-	return true;
+function selectDomain() {
+	var url_to_blacklist = document.getElementById("blacklistURL").value;
+
+	url_to_blacklist = url_to_blacklist.replace(/(\w+:\/\/)?(.*?\/).*/, '$2.*');
+
+	document.getElementById("blacklistURL").value = url_to_blacklist;
 }
 
+function selectSubdomains() {
+	var url_to_blacklist = document.getElementById("blacklistURL").value;
+
+	url_to_blacklist = url_to_blacklist.replace(/(\w+:\/\/)?([^\s\.\/]+\.)*([^\s\.\/]+\.\w+)\/.*/, '*.$3/.*');
+
+	document.getElementById("blacklistURL").value = url_to_blacklist;
+}
+
+function resetURL() {
+	var url_to_blacklist = window.arguments[0];
+
+	url_to_blacklist = url_to_blacklist.replace(/\w+:\/\/(.*)/, '$1');
+
+	document.getElementById("blacklistURL").value = url_to_blacklist;
+}
 

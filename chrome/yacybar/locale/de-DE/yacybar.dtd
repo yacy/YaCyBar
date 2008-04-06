@@ -108,6 +108,8 @@
 <!ENTITY sidebarOverlay.window.title "QuickCrawl">
 <!ENTITY sidebarOverlay.button.label "Aufräumen">
 
+<!ENTITY blacklist.dialog.title "YaCyBar - Blacklist">
+
 <!ENTITY statusBar.statusbarpanel.tooltip.qph "Anfragen pro Stunde">
 <!ENTITY statusBar.statusbarpanel.tooltip.ppm "Seiten pro Minute">
 <!ENTITY statusBar.statusbarpanel.tooltip.url "Gespeicherte URLs">

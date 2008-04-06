@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
+<dialog buttons="accept,cancel"
+		id="YaCyBarBlacklistDialog"
+		onload="initBlacklist()"
+		ondialogaccept="return okBlacklist();"
+		ondialogcancel="return cancelBlacklist();"
+		title="&blacklist.dialog.title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="Blacklist.js"/>
+	<script type="application/x-javascript" src="functions.js"/>
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>
+	</stringbundleset>
+
+	<vbox>
+
+		<label value="&blacklist.blacklistName.label;" control="blacklistName"/>
+
+		<hbox>
+			<menulist id="blacklistName" flex="1">
+				<menupopup>
+					<menuitem label="default.blacklist"/>
+					<menuitem label="1"/>
+					<menuitem label="2"/>
+					<menuitem label="3"/>
+				</menupopup>
+			</menulist>
+			<image id="throbber" src="chrome://global/skin/throbber/Throbber-small.gif"
+				width="16" height="16" />
+		</hbox>
+
+		<label value="URL" control="blacklistURL"/>
+		<textbox id="blacklistURL" size="70"/>
+	</vbox>
+</dialog>

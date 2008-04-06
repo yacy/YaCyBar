@@ -140,13 +140,15 @@ function bgLoadYACY(event) {
 	}
 }
 function blacklistpage() {
-	var url=window.content.prompt("Blacklist URL:", window._content.location);
+	var theDialog = window.openDialog("chrome://yacybar/content/Blacklist.xul",
+			"yacybarBlacklist", "centerscreen, chrome, modal", window._content.location.href);
+	//var url=window.content.prompt("Blacklist URL:", window._content.location);
 
-	if(url != null && url != "") {
-		gBrowser.addTab(getBaseURL() + "/Blacklist_p.html?addBlacklistEntry=&currentBlacklist=default.black&newEntry="+url);
+	//if(url != null && url != "") {
+	//	gBrowser.addTab(getBaseURL() + "/Blacklist_p.html?addBlacklistEntry=&currentBlacklist=default.black&newEntry="+url);
  
 		// TODO Change default.blacklist	
-	}
+	//}
 }	
 
 function crawlpage() {

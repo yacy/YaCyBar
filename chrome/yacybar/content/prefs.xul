@@ -3,7 +3,8 @@
 <!DOCTYPE dialog SYSTEM "chrome://yacybar/locale/yacybar.dtd">
 <prefwindow id="yacybarPreferences"
 		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-		title="&prefs.dialog.title;">
+		title="&prefs.dialog.title;"
+		buttons="accept,cancel">
 	
 	<script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
 	<script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>

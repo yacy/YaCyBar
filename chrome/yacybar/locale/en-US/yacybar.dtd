@@ -54,6 +54,7 @@
 <!ENTITY prefs.tabbox.tab.label.peer "Peer">
 <!ENTITY prefs.tabbox.tab.label.quickcrawl "QuickCrawl">
 <!ENTITY prefs.tabbox.tab.label.search "Search">
+<!ENTITY prefs.tabbox.tab.label.notification "Notification">
 <!ENTITY prefs.tabpanel.description.peer "Settings needed to connect to your YaCy Peer">
 <!ENTITY prefs.tabpanel.label.value.peer "Peer Address">
 <!ENTITY prefs.tabpanel.label.accesskey.peer "A">
@@ -88,6 +89,10 @@
 <!ENTITY prefs.tabpanel.label.value.maxsearchtime "Max. search time (seconds)">
 <!ENTITY prefs.tabpanel.label.value.urlmask "URL mask">
 <!ENTITY prefs.tabpanel.button.label.startpage "use searchpage as startpage">
+<!ENTITY prefs.tabpanel.description.notification "Settings for notification service">
+<!ENTITY prefs.tabpanel.checkbox.label.enableMessageNotification "Enable message notification">
+<!ENTITY prefs.tabpanel.checkbox.label.enableCrawlNotification "Enable crawler notification">
+<!ENTITY prefs.tabpanel.checkbox.label.enableYaCyNewsNotification "Enable news notification">
 
 <!ENTITY quickcrawl.dialog.title "YaCyBar - QuickCrawl">
 <!ENTITY quickcrawl.groupbox.label.value.title "Title">

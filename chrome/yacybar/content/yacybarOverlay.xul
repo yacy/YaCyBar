@@ -7,6 +7,7 @@
 	<script type="application/x-javascript" src="yacybarOverlay.js"/>
 	<script type="application/x-javascript" src="functions.js"/>
 	<script type="application/x-javascript" src="httpHeaderObserver.js"/>
+	<script type="application/x-javascript" src="notification.js"/>
 
 	<stringbundleset id="stringbundleset">
 		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>

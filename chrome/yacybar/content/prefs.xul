@@ -71,6 +71,17 @@
 			<preference id="yacybar_searchUrlMaskFilter"
 				name="extensions.yacybar.search.urlMaskFilter"
 				type="string"/>
+
+			<!-- quick crawling preferences -->  
+			<preference id="yacybar_enableMessageNotification"
+				name="extensions.yacybar.Notification.Message"
+				type="bool"/>
+			<preference id="yacybar_enableCrawlNotification"
+				name="extensions.yacybar.Notification.Crawl"
+				type="bool"/>
+			<preference id="yacybar_enableYaCyNewsNotification"
+				name="extensions.yacybar.Notification.YaCyNews"
+				type="bool"/>
 		</preferences>
 	
 		<tabbox id="yacyBar_PrefsTablist" flex="1" hidden="false">
@@ -78,6 +89,7 @@
 				<tab label="&prefs.tabbox.tab.label.peer;" selected="true"/>
 				<tab label="&prefs.tabbox.tab.label.quickcrawl;"/>
 				<tab label="&prefs.tabbox.tab.label.search;"/>
+				<tab label="&prefs.tabbox.tab.label.notification;"/>
 			</tabs>
 			<tabpanels flex="1">
 				<!-- Peer connection preferences -->
@@ -206,6 +218,25 @@
 							</row>
 						</rows>
 					</grid>
+				</tabpanel>
+			
+				<!-- notification preferences -->
+				<tabpanel id="yacyBar_PrefsNotificationTab" orient="vertical">
+					<description>&prefs.tabpanel.description.notification;</description>
+					<vbox>
+						<checkbox preference="yacybar_enableMessageNotification"
+								  id="yacybar_enableMessageNotificationField"
+								  label="&prefs.tabpanel.checkbox.label.enableMessageNotification;"
+								  checked="true"/>
+						<checkbox preference="yacybar_enableCrawlNotification"
+								  id="yacybar_enableCrawlNotificationField"
+								  label="&prefs.tabpanel.checkbox.label.enableCrawlNotification;"
+								  checked="true" disabled="true"/>
+						<checkbox preference="yacybar_enableYaCyNewsNotification"
+								  id="yacybar_enableYaCyNotificationField"
+								  label="&prefs.tabpanel.checkbox.label.enableYaCyNewsNotification;"
+								  checked="false" disabled="true"/>
+					</vbox>
 				</tabpanel>
 			</tabpanels>
 		</tabbox>

@@ -179,10 +179,10 @@
 								<label value="&prefs.tabpanel.label.value.maxresults;"/>
 								<menulist preference="yacybar_searchMaxResults" id="search.MaxResults" editable="false">
 									<menupopup>
-										<menuitem label="10"/>
-										<menuitem label="50"/>	
-										<menuitem label="100"/>
-										<menuitem label="1000"/>
+										<menuitem label="10" value="10"/>
+										<menuitem label="50" value="50"/>	
+										<menuitem label="100" value="100"/>
+										<menuitem label="1000" value="1000"/>
 									</menupopup>
 								</menulist>
 							</row>

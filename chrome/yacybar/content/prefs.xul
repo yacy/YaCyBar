@@ -231,7 +231,7 @@
 						<checkbox preference="yacybar_enableCrawlNotification"
 								  id="yacybar_enableCrawlNotificationField"
 								  label="&prefs.tabpanel.checkbox.label.enableCrawlNotification;"
-								  checked="true" disabled="true"/>
+								  checked="true"/>
 						<checkbox preference="yacybar_enableYaCyNewsNotification"
 								  id="yacybar_enableYaCyNotificationField"
 								  label="&prefs.tabpanel.checkbox.label.enableYaCyNewsNotification;"

@@ -1,5 +1,5 @@
 + added better blacklist dialog (flori)
-+ added notification system for yacy messages (flori)
++ added notification system for yacy messages and terminated crawls (flori)
 
 v 0.2.5 - 31.03.2008
 =====================================================================

@@ -12,9 +12,10 @@
     <target name="buildXpi">
 		<zip destfile="yacybar.xpi">
 			<zipfileset dir="chrome/" includes="**" prefix="chrome" />
-		    <zipfileset dir="." includes="install.rdf" />
+			<zipfileset dir="." includes="chrome.manifest" />
+			<zipfileset dir="." includes="install.rdf" />
 		</zip>
-    </target>	
+    </target>
 
 	<target name="all" depends="buildXpi">
 	</target>

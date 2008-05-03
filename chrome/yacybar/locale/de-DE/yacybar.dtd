@@ -55,6 +55,7 @@
 <!ENTITY prefs.tabbox.tab.label.quickcrawl "QuickCrawl">
 <!ENTITY prefs.tabbox.tab.label.search "Suche">
 <!ENTITY prefs.tabbox.tab.label.notification "Benachrichtigungen">
+<!ENTITY prefs.tabbox.tab.label.bookmarks "YaCy-Lesezeichen">
 <!ENTITY prefs.tabpanel.description.peer "Notwendige Einstellungen, um sich mit Ihrem YaCy Peer zu verbinden">
 <!ENTITY prefs.tabpanel.label.value.peer "Peer Addresse">
 <!ENTITY prefs.tabpanel.label.accesskey.peer "A">
@@ -93,6 +94,7 @@
 <!ENTITY prefs.tabpanel.checkbox.label.enableMessageNotification "Benachrichtigen bei Nachrichten von einem anderem Peer">
 <!ENTITY prefs.tabpanel.checkbox.label.enableCrawlNotification "Benachrichtigen bei abgeschlossenen Crawls">
 <!ENTITY prefs.tabpanel.checkbox.label.enableYaCyNewsNotification "Benachrichtigen bei YacyNews">
+<!ENTITY prefs.tabpanel.description.bookmarks "Einstellungen für die YaCy-Lesezeichen">
 
 <!ENTITY quickcrawl.dialog.title "YaCy-Bar - QuickCrawl">
 <!ENTITY quickcrawl.groupbox.label.value.title "Titel">

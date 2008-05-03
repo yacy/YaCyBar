@@ -20,6 +20,10 @@ function onLoad() {
 		document.getElementById('yacybar_peerUserField').value = userPwd["user"];
 		document.getElementById('yacybar_peerPwdField').value = userPwd["pwd"];
 	}
+	if ("@mozilla.org/passwordmanager;1" in Components.classes) {
+		// loginmanager doesn't exist -> Firefox older than version 3 -> disable bookmark pane
+		document.getElementById('createYaCyBookmarkFolder').disabled = true;
+	}
 }
 
 function addUser(username, password) {
@@ -95,6 +99,15 @@ function changeProxySettings() {
 		prefManager.setCharPref("network.proxy.autoconfig_url", protocol + host + ":" + port + "/autoconfig.pac");
 	}
 }
+
 function setStartPage(){
 	prefManager.setCharPref("browser.startup.homepage", getBaseURL());
+}
+
+function createYaCyBookmarkFolder() {
+	log("lets start");
+	var bmsvc = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"]
+                      .getService(Components.interfaces.nsINavBookmarksService);
+	var remoteContainer = bmsvc.createDynamicContainer(bmsvc.bookmarksMenuFolder,
+			"YacyBookmarks", "@yacy.net/YaCyBookmarkService;1", bmsvc.DEFAULT_INDEX);
 }

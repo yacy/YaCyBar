@@ -89,6 +89,7 @@
 				<tab label="&prefs.tabbox.tab.label.quickcrawl;"/>
 				<tab label="&prefs.tabbox.tab.label.search;"/>
 				<tab label="&prefs.tabbox.tab.label.notification;"/>
+				<tab label="&prefs.tabbox.tab.label.bookmarks;"/>
 			</tabs>
 			<tabpanels flex="1">
 				<!-- Peer connection preferences -->
@@ -235,6 +236,20 @@
 								  id="yacybar_enableYaCyNotificationField"
 								  label="&prefs.tabpanel.checkbox.label.enableYaCyNewsNotification;"
 								  checked="false" disabled="true"/>
+					</vbox>
+				</tabpanel>
+			
+				<!-- bookmark preferences -->
+				<tabpanel id="yacyBar_PrefsBookmarksTab" orient="vertical">
+					<description>&prefs.tabpanel.description.bookmarks;</description>
+					<vbox>
+						<seperator/>
+						<label value="EXPERIMENTAL: This option is just for demo and testing purpose."/>
+						<seperator/>
+						<label value="It's only available on firefox 3 or higher."/>
+						<seperator/>
+						<button id="createYaCyBookmarkFolder" label="Create YaCy-Folder in Bookmarkmenu"
+							onclick="createYaCyBookmarkFolder()" />
 					</vbox>
 				</tabpanel>
 			</tabpanels>

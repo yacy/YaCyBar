@@ -1,5 +1,7 @@
 + added better blacklist dialog (flori)
 + added notification system for yacy messages and terminated crawls (flori)
+x replace contents.rdf files with newer chrome.manifest (flori)
++ added YaCyBookmarkService (firefox 3 only) (flori)
 
 v 0.2.5 - 31.03.2008
 =====================================================================

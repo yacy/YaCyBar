@@ -18,31 +18,20 @@
  	<em:aboutURL>chrome://yacybar/content/about.xul</em:aboutURL>
   
   	<em:localized>
-     <Description>
-       <em:locale>en-US</em:locale>
-       <em:name>YaCy-Bar</em:name>
-       <em:description>A toolbar for the P2P Searchengine YaCy</em:description>
-     </Description>
-   </em:localized> 
+		<Description>
+			<em:locale>en-US</em:locale>
+			<em:name>YaCy-Bar</em:name>
+			<em:description>A toolbar for the P2P Searchengine YaCy</em:description>
+		</Description>
+	</em:localized> 
 	<em:localized>
-      <Description>
-        <em:locale>de-DE</em:locale>
-        <em:name>YaCy-Bar</em:name>
-        <em:description>Eine Toolbar für die P2P Suchmaschine YaCy</em:description>
-      </Description>
-   </em:localized>  
+		<Description>
+			<em:locale>de-DE</em:locale>
+			<em:name>YaCy-Bar</em:name>
+			<em:description>Eine Toolbar für die P2P Suchmaschine YaCy</em:description>
+		</Description>
+	</em:localized>  
   
- 	<em:file>
- 		<Description about="urn:mozilla:extension:file:yacybar">
- 			<em:package>content/</em:package>
- 			<em:locale>locale/en-US/</em:locale>
- 			<em:locale>locale/de-DE/</em:locale>
- 			<em:skin>skin/</em:skin>
- 		</Description>
- 	</em:file>
-
-
-
  	<em:targetApplication>
  		<Description>
  			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>

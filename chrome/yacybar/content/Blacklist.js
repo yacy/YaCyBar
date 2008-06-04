@@ -41,7 +41,8 @@ function loadBlacklistsHandler() {
 			document.getElementById("throbber").setAttribute("src", "chrome://global/skin/throbber/Throbber-small.png");
 			document.documentElement.getButton("accept").disabled = false;
 		} else {
-			alert("Could not determine available blacklists");
+			var stringBundle = document.getElementById("yacybar-string-bundle");
+			alert(stringBundle.getString("yacybar_noblacklist"));
 			window.close();
 		}
 	}

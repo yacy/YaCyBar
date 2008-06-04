@@ -23,11 +23,11 @@
 	                oncommand="searchSelected();"
 	                tooltiptext="&contentArea.menuitem.tooltip.search;"
 	                class="menuitem-iconic" />       
-	            <menuitem id="menuitem-addbookmark" label="&contentArea.menuitem.label.addBM;" accesskey="&contentArea.menuitem.accesskey.addBM;"
+	            <menuitem id="bookmarkPage" label="&contentArea.menuitem.label.addBM;" accesskey="&contentArea.menuitem.accesskey.addBM;"
 	                oncommand="showAddBookmark()" 
 	                tooltiptext="&contentArea.menuitem.tooltip.addBM;"
 	                class="menuitem-iconic" />
-	            <menuitem id="menuitem-blacklistpage" label="&contentArea.menuitem.label.blacklist;" accesskey="&contentArea.menuitem.accesskey.blacklist;"
+	            <menuitem id="blacklistPage" label="&contentArea.menuitem.label.blacklist;" accesskey="&contentArea.menuitem.accesskey.blacklist;"
 	                oncommand="blacklistpage()" 
 	                tooltiptext="&contentArea.menuitem.tooltip.blacklist;"
 	                class="menuitem-iconic" />		                	                

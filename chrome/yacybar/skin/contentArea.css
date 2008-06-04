@@ -1,13 +1,21 @@
 #crawlLink {
-    list-style-image: url("chrome://yacybar/skin/crawl.gif");
+    list-style-image: url("chrome://yacybar/skin/crawl.png");
 }
 
 #crawlPage {
-    list-style-image: url("chrome://yacybar/skin/crawl.gif");
+    list-style-image: url("chrome://yacybar/skin/crawl.png");
 }
 
 #searchSelected {
-    list-style-image: url("chrome://yacybar/skin/search.gif");
+    list-style-image: url("chrome://yacybar/skin/search.png");
+}
+
+#blacklistPage {
+    list-style-image: url("chrome://yacybar/skin/blacklist.png");
+}
+
+#bookmarkPage {
+    list-style-image: url("chrome://yacybar/skin/bookmark.png");
 }
 
 #about {

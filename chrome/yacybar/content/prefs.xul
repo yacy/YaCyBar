@@ -64,9 +64,6 @@
 			<preference id="yacybar_searchResource"
 				name="extensions.yacybar.search.resource"
 				type="string"/>
-			<preference id="yacybar_searchMaxSearchTime"
-				name="extensions.yacybar.search.maxSearchTime"
-				type="int"/>
 			<preference id="yacybar_searchUrlMaskFilter"
 				name="extensions.yacybar.search.urlMaskFilter"
 				type="string"/>
@@ -194,19 +191,6 @@
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.global;" value="global"/>
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.local;" value="local"/>
 									</menupopup>
-								</menulist>
-							</row>
-							<row>
-								<label value="&prefs.tabpanel.label.value.maxsearchtime;"/>
-								<menulist preference="yacybar_searchMaxSearchTime" id="search.MaxSearchTime" editable="true">
-									<menupopup>
-										<menuitem label="1"/>
-										<menuitem label="3"/>
-										<menuitem label="6"/>
-										<menuitem label="10"/>
-										<menuitem label="30"/>
-										<menuitem label="60"/>
-				 					</menupopup>
 								</menulist>
 							</row>
 							<row>

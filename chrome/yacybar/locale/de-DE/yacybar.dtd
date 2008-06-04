@@ -87,7 +87,6 @@
 <!ENTITY prefs.tabpanel.label.value.res "Quelle">
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
 <!ENTITY prefs.tabpanel.menuitem.label.local "lokal">
-<!ENTITY prefs.tabpanel.label.value.maxsearchtime "Max. Suchzeit (Sekunden)">
 <!ENTITY prefs.tabpanel.label.value.urlmask "URL Maske">
 <!ENTITY prefs.tabpanel.button.label.startpage "Suchseite als Startseite festlegen">
 <!ENTITY prefs.tabpanel.description.notification "Einstellungen für den Benachrichtigunsdienst">
@@ -176,7 +175,7 @@
 <!ENTITY yacybarOverlay.menuitem.tooltip.stloading "Surftipps werden geladen">
 <!ENTITY yacybarOverlay.toolbarbutton.label.search "Suche">
 <!ENTITY yacybarOverlay.toolbarbutton.tooltip.search "Suche mit YaCy">
-<!ENTITY yacybarOverlay.toolbarbutton.label.blacklist "Blacklist Seite">
+<!ENTITY yacybarOverlay.toolbarbutton.label.blacklist "Seite sperren">
 <!ENTITY yacybarOverlay.toolbarbutton.tooltip.blacklist "Aktuelle Seite auf Blacklist setzen">
 <!ENTITY yacybarOverlay.toolbarbutton.label.crawl "Seite crawlen">
 <!ENTITY yacybarOverlay.toolbarbutton.tooltip.crawl "Aktuelle Seite crawlen">

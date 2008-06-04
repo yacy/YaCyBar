@@ -87,7 +87,6 @@
 <!ENTITY prefs.tabpanel.label.value.res "Resource">
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
 <!ENTITY prefs.tabpanel.menuitem.label.local "local">
-<!ENTITY prefs.tabpanel.label.value.maxsearchtime "Max. search time (seconds)">
 <!ENTITY prefs.tabpanel.label.value.urlmask "URL mask">
 <!ENTITY prefs.tabpanel.button.label.startpage "use searchpage as startpage">
 <!ENTITY prefs.tabpanel.description.notification "Settings for notification service">

@@ -37,7 +37,7 @@
 			<button label="&firststart.html.hbox.label.demo;" oncommand="toggleDemo()"/>
 			<button label="&firststart.html.hbox.label.download;" oncommand="downloadYacy()"/>
 			<button label="&firststart.html.hbox.label.peer;" oncommand="window.close()" />
-			<button label="&firststart.html.hbox.label.prefs;" oncommand="showPref()" />
+			<button label="&firststart.html.hbox.label.prefs;" oncommand="showPrefs()" />
 		</hbox>
 	</vbox>
 </window>

@@ -24,7 +24,13 @@ var observer = {
 };
 
 // registering the header observer
-var observerService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-observerService.addObserver(observer, "http-on-modify-request",   false);
-//observerService.addObserver(this, "http-on-examine-response", false);
-//observerService.addObserver(this, "tamper-data-on-load",      false);
+window.onload = function startObserver {
+	var observerService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+	observerService.addObserver(observer, "http-on-modify-request",   false);
+	//observerService.addObserver(this, "http-on-examine-response", false);
+	//observerService.addObserver(this, "tamper-data-on-load",      false);
+}
+window.onunload = function stopObserver {
+	var observerService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+	observerService.removeObserver(observer);
+}

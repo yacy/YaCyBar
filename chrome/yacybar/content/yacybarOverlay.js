@@ -64,6 +64,7 @@ function init() {
 	if (!Branch.prefHasUserValue("search.maxResults"))    Branch.setIntPref("search.maxResults",10);
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
 	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
+	if (!Branch.prefHasUserValue("search.verify")) Branch.setCharPref("search.verify",true);
 
 	// init peer monitoring settings
 	if (!Branch.prefHasUserValue("peerMonitoring.enabled")) Branch.setBoolPref("peerMonitoring.enabled",false);
@@ -113,6 +114,7 @@ function getSearchURL(keyword) {
 	var maxResults = Branch.getIntPref("search.maxResults");
 	var resource = Branch.getCharPref("search.resource");
 	var urlMask = Branch.getCharPref("search.urlMaskFilter");
+	var verify = Branch.getBoolPref("search.verify")?"true":"false";
 	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if (urlMask == "") urlMask = ".*";
 
@@ -123,6 +125,7 @@ function getSearchURL(keyword) {
 		"&contentdom=" + content +
 		"&count=" + maxResults + 
 		"&resource=" + resource +
+		"&verify=" + verify +
 		"&urlmaskfilter=" + encodeURI(urlMask);
 }
 

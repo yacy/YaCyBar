@@ -88,6 +88,7 @@
 <!ENTITY prefs.tabpanel.menuitem.label.global "global">
 <!ENTITY prefs.tabpanel.menuitem.label.local "lokal">
 <!ENTITY prefs.tabpanel.label.value.urlmask "URL Maske">
+<!ENTITY prefs.tabpanel.checkbox.label.verify "Lade und überprüfe Snippets">
 <!ENTITY prefs.tabpanel.button.label.startpage "Suchseite als Startseite festlegen">
 <!ENTITY prefs.tabpanel.description.notification "Einstellungen für den Benachrichtigunsdienst">
 <!ENTITY prefs.tabpanel.checkbox.label.enableMessageNotification "Benachrichtigen bei Nachrichten von einem anderem Peer">

@@ -67,6 +67,9 @@
 			<preference id="yacybar_searchUrlMaskFilter"
 				name="extensions.yacybar.search.urlMaskFilter"
 				type="string"/>
+			<preference id="yacybar_searchVerify"
+				name="extensions.yacybar.search.verify"
+				type="bool"/>
 
 			<!-- quick crawling preferences -->  
 			<preference id="yacybar_enableMessageNotification"
@@ -196,6 +199,12 @@
 							<row>
 								<label value="&prefs.tabpanel.label.value.urlmask;"/>
 								<textbox preference="yacybar_searchUrlMaskFilter" id="search.UrlMaskFilter"/>
+							</row>
+							<row>
+								<checkbox preference="yacybar_searchVerify"
+										  id="yacybar_searchVerifyField"
+										  label="&prefs.tabpanel.checkbox.label.verify;"
+										  checked="true"/>
 							</row>
 							<row>
 								<button label="&prefs.tabpanel.button.label.startpage;" onclick="setStartPage()" />

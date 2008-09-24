@@ -60,6 +60,7 @@ function init() {
 	}
 	
 	// init search settings
+	if (!Branch.prefHasUserValue("search.kind"))          Branch.setCharPref("search.kind","standard");
 	if (!Branch.prefHasUserValue("search.content"))       Branch.setCharPref("search.content","text");
 	if (!Branch.prefHasUserValue("search.maxResults"))    Branch.setIntPref("search.maxResults",10);
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
@@ -110,6 +111,7 @@ function searchSelected() {
 function getSearchURL(keyword) {
 	// alert(searchwords);
 	
+	var kind = Branch.getCharPref("search.kind");
 	var content = Branch.getCharPref("search.content");
 	var maxResults = Branch.getIntPref("search.maxResults");
 	var resource = Branch.getCharPref("search.resource");
@@ -117,16 +119,21 @@ function getSearchURL(keyword) {
 	var verify = Branch.getBoolPref("search.verify")?"true":"false";
 	var stringBundle = document.getElementById("yacybar-string-bundle");
 	if (urlMask == "") urlMask = ".*";
-
 	
-	return getBaseURL() +
-		"/yacysearch.html" +
-		"?search=" + encodeURI(keyword) +
-		"&contentdom=" + content +
-		"&count=" + maxResults + 
-		"&resource=" + resource +
-		"&verify=" + verify +
-		"&urlmaskfilter=" + encodeURI(urlMask);
+	if(kind == "compare") {
+		return getBaseURL() +
+			"/compare_yacy.html" +
+			"?query=" + encodeURI(keyword);
+	} else {
+		return getBaseURL() +
+			"/yacysearch.html" +
+			"?search=" + encodeURI(keyword) +
+			"&contentdom=" + content +
+			"&count=" + maxResults + 
+			"&resource=" + resource +
+			"&verify=" + verify +
+			"&urlmaskfilter=" + encodeURI(urlMask);
+	}
 }
 
 

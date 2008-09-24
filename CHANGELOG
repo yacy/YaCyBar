@@ -3,6 +3,7 @@
 x replace contents.rdf files with newer chrome.manifest (flori)
 + added YaCyBookmarkService (firefox 3 only) (flori)
 + added verify-Option to search preferences (flori)
++ added Option to choose between standard and comparision search (flori)
 
 v 0.2.5 - 31.03.2008
 =====================================================================

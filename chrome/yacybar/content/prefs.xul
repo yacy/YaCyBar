@@ -55,6 +55,9 @@
 				type="bool"/>
 			
 			<!-- searching preferences -->
+			<preference id="yacybar_searchKind"
+				name="extensions.yacybar.search.kind"
+				type="string"/>
 			<preference id="yacybar_searchContent"
 				name="extensions.yacybar.search.content"
 				type="string"/>
@@ -164,6 +167,15 @@
 					<grid>
 						<rows>
 							<row>
+								<label value="&prefs.tabpanel.label.value.kind;"/>
+								<menulist  id="search.kind" preference="yacybar_searchKind">
+				 					<menupopup>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.standard;" value="standard"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.compare;" value="compare"/>
+				 					</menupopup>
+								</menulist>
+							</row>
+							<row>
 								<label value="&prefs.tabpanel.label.value.content;"/>
 								<menulist  id="search.content" preference="yacybar_searchContent">
 				 					<menupopup>
@@ -201,9 +213,10 @@
 								<textbox preference="yacybar_searchUrlMaskFilter" id="search.UrlMaskFilter"/>
 							</row>
 							<row>
+								<label value="&prefs.tabpanel.checkbox.label.verify;" control="yacy_searchVerifyField"/>
 								<checkbox preference="yacybar_searchVerify"
 										  id="yacybar_searchVerifyField"
-										  label="&prefs.tabpanel.checkbox.label.verify;"
+										  value=""
 										  checked="true"/>
 							</row>
 							<row>

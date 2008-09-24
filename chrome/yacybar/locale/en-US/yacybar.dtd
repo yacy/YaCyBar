@@ -77,6 +77,9 @@
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.remote "Remote Indexing">
 <!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Exclude static Stop-Words">
 <!ENTITY prefs.tabpanel.description.searching "Settings that should be used for searching.">
+<!ENTITY prefs.tabpanel.label.value.kind "Kind of search">
+<!ENTITY prefs.tabpanel.menuitem.label.standard "Standard">
+<!ENTITY prefs.tabpanel.menuitem.label.compare "compare search engines">
 <!ENTITY prefs.tabpanel.label.value.content "Content">
 <!ENTITY prefs.tabpanel.menuitem.label.text "text">
 <!ENTITY prefs.tabpanel.menuitem.label.image "image">

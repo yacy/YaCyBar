@@ -66,6 +66,12 @@ function init() {
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
 	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
 	if (!Branch.prefHasUserValue("search.verify"))        Branch.setBoolPref("search.verify", true);
+	try {
+		Branch.getBoolPref("search.verify", true);
+	} catch (e) {
+		Branch.deleteBranch("search.verify");
+		Branch.setBoolPref("search.verify", true);
+	}
 
 	// init peer monitoring settings
 	if (!Branch.prefHasUserValue("peerMonitoring.enabled")) Branch.setBoolPref("peerMonitoring.enabled",false);

@@ -65,7 +65,7 @@ function init() {
 	if (!Branch.prefHasUserValue("search.maxResults"))    Branch.setIntPref("search.maxResults",10);
 	if (!Branch.prefHasUserValue("search.resource"))      Branch.setCharPref("search.resource","global");
 	if (!Branch.prefHasUserValue("search.urlMaskFilter")) Branch.setCharPref("search.urlMaskFilter",".*");
-	if (!Branch.prefHasUserValue("search.verify")) Branch.setCharPref("search.verify",true);
+	if (!Branch.prefHasUserValue("search.verify"))        Branch.setBoolPref("search.verify", true);
 
 	// init peer monitoring settings
 	if (!Branch.prefHasUserValue("peerMonitoring.enabled")) Branch.setBoolPref("peerMonitoring.enabled",false);

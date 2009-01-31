@@ -371,7 +371,7 @@ function crawlURL(crawlJobData) {
 			var userPwd = loadUserPwd();
 			var httpURL = getBaseURL() +
 						 '/QuickCrawlLink_p.xml' +
-						 '?crawlingFilter=' + escape(crawlJobData["filter"]) +
+						 '?mustmatch=' + escape(crawlJobData["filter"]) +
  						 '&crawlingDepth=' + crawlingDepth + 
 						 '&crawlingQ=' + crawlingQ + 
 						 '&storeHTCache=' + storeHTCache +

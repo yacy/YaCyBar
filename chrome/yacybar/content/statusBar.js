@@ -108,7 +108,7 @@ function alertContents() {
 				peerTypePanel.tooltipText = stringBundle.getString("yacybar_peertype") + type;
 				
 			} else {
-				throw "Problem with request (yacy not running?)";
+				throw "HTTP request failed (is yacy running?)";
 			}
 		} catch (ex) {
 			log("yacybar: exception: "+ex);

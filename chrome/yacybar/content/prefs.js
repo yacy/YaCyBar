@@ -92,6 +92,7 @@ function removeUser(username) {
 function changeProxySettings() {
 	var Branch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.yacybar.");
 	
+	yacyVersion.detectVersion();
 	if(Branch.getBoolPref("proxyControl")){
 		var host = document.getElementById('yacybar_peerAddressField').value;
 		var port = document.getElementById('yacybar_peerPortField').value;

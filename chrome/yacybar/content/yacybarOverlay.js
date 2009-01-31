@@ -31,6 +31,9 @@ function init() {
 	if (!Branch.prefHasUserValue("indexControl")) {
 		Branch.setBoolPref("indexControl",true);
 	}
+
+	// detect Version
+	yacyVersion.detectVersion();
 	
 	// init proxy settings
 	if (!Branch.prefHasUserValue("peerAddress")) {
@@ -81,6 +84,10 @@ function init() {
 	if (!Branch.prefHasUserValue("peerMonitoring.showURL")) Branch.setBoolPref("peerMonitoring.showURL",false);
 	if (!Branch.prefHasUserValue("peerMonitoring.showRWI")) Branch.setBoolPref("peerMonitoring.showRWI",false);
 	if (!Branch.prefHasUserValue("peerMonitoring.showPeerType")) Branch.setBoolPref("peerMonitoring.showPeerType",false);
+
+	// init notification
+	if (!Branch.prefHasUserValue("Notification.Message")) Branch.setBoolPref("Notification.Message",false);
+	if (!Branch.prefHasUserValue("Notification.Crawl")) Branch.setBoolPref("Notification.Crawl",false);
 	
 	/* ================================================================
 		Button initialization
@@ -456,10 +463,13 @@ function loadTags(event) {
 	if(req) {
 		req.onreadystatechange = loadTagsHandler;
 		if(Branch.getBoolPref("demomode")) {
-			req.open("GET", getBaseURL()+"/api/bookmarks/tags/getTag.xml", true);
+			req.open("GET", getBaseURL() + yacyVersion.getAPIDir()
+					+ "/bookmarks/tags/getTag.xml", true);
 		} else {
 			var userPwd = loadUserPwd();
-			req.open("GET", getBaseURL()+"/api/bookmarks/tags/getTag.xml?login=true", true, userPwd["user"], userPwd["pwd"]);
+			req.open("GET", getBaseURL() + yacyVersion.getAPIDir()
+					+ "/bookmarks/tags/getTag.xml?login=true", true,
+					userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
 	}
@@ -564,11 +574,11 @@ function loadBookmarks(tag, event) {
 		req.onreadystatechange = loadBookmarksHandler;
 		req.tag = tag;
 		if(Branch.getBoolPref("demomode")) {
-			req.open("GET", getBaseURL()+"/xml/bookmarks/posts/all.xml?tag="+tag, true);
+			req.open("GET", getBaseURL()+yacyVersion.getAPIDir()+"/bookmarks/posts/all.xml?tag="+tag, true);
 		} else {
 			var userPwd = loadUserPwd();
 			//TODO: Get this working with password. 
-			req.open("GET", getBaseURL()+"/xml/bookmarks/posts/all.xml?tag="+tag, true, userPwd["user"], userPwd["pwd"]);
+			req.open("GET", getBaseURL()+yacyVersion.getAPIDir()+"/bookmarks/posts/all.xml?tag="+tag, true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
 	}

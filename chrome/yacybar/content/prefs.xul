@@ -7,6 +7,7 @@
 	
 	<script type="application/x-javascript" src="chrome://yacybar/content/prefs.js"/>
 	<script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>
+	<script type="application/x-javascript" src="chrome://yacybar/content/yacyVersion.js"/>
 	 
 	<prefpane id="YaCyBarPrefsPane"
 		  	    image="chrome://yacybar/skin/yacy_logo.gif"

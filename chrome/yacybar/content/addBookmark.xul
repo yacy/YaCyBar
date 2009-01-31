@@ -9,6 +9,7 @@
 		title="&addBM.dialog.title;"
 		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="application/x-javascript" src="functions.js"/>
+	<script type="application/x-javascript" src="yacyVersion.js"/>
 	<script type="application/x-javascript" src="addBookmark.js"/>
 	<stringbundleset id="stringbundleset">
 		<stringbundle id="yacybar-string-bundle" src="chrome://yacybar/locale/yacybar.properties"/>

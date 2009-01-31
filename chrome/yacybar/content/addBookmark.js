@@ -15,9 +15,9 @@ function init(){
 	}else{
 		document.getElementById("title").focus();
 	}
-	log(getBaseURL()+"/xml/util/geturlinfo_p.xml?url="+url+"\n");
+	log(getBaseURL() + yacyVersion.getAPIDir() + "/util/geturlinfo_p.xml?url="+url+"\n");
 	req = new XMLHttpRequest();
-	req.open('GET', getBaseURL()+"/xml/util/getpageinfo_p.xml?url="+url, false, userPwd["user"], userPwd["pwd"]);
+	req.open('GET', getBaseURL() + yacyVersion.getAPIDir() + "/util/getpageinfo_p.xml?url="+url, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);
 	var xml=req.responseXML;
 	var tags=xml.getElementsByTagName("tag");
@@ -50,13 +50,13 @@ function addBookmark(){
 	}
 	
 	
-	//TODO: This needs the not exisiting backend
-	//TODO: Do not Change it, till a stable Release with the Backend!
-	//req.open('get', getBaseURL()+"/xml/bookmarks/posts/add_p.xml?");
-	rqurl=getBaseURL()+"/Bookmarks.html?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(title)
-	+"&description="+encodeURIComponent(description)+"&path="+encodeURIComponent(path)+"&tags="+encodeURIComponent(tags)+"&public="+public_str+"&add=true&login=true";
+	rqurl = getBaseURL() + yacyVersion.getAPIDir() + "/bookmarks/posts/add_p.xml?url=" + encodeURIComponent(url)
+			+ "&title=" + encodeURIComponent(title)
+			+ "&description=" + encodeURIComponent(description)
+			+ "&path=" + encodeURIComponent(path)
+			+ "&tags=" + encodeURIComponent(tags)
+			+ "&public=" + public_str;
 	req=new XMLHttpRequest();
 	req.open('GET', rqurl, false, userPwd["user"], userPwd["pwd"]);
 	req.send(null);
-	//log(req.readyState+"\n");
 }

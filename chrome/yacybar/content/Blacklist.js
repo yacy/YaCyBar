@@ -6,7 +6,7 @@ function initBlacklist() {
 
 	resetURL();
 
-	var url = getBaseURL() + '/xml/blacklists_p.xml?attrOnly=1';
+	var url = getBaseURL() + yacyVersion.getAPIDir() + '/blacklists_p.xml?attrOnly=1';
 
 	request = new XMLHttpRequest();
 	var userPwd = loadUserPwd();

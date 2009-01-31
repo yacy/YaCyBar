@@ -452,10 +452,10 @@ function loadTags(event) {
 	if(req) {
 		req.onreadystatechange = loadTagsHandler;
 		if(Branch.getBoolPref("demomode")) {
-			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml", true);
+			req.open("GET", getBaseURL()+"/api/bookmarks/tags/getTag.xml", true);
 		} else {
 			var userPwd = loadUserPwd();
-			req.open("GET", getBaseURL()+"/xml/bookmarks/tags/get.xml?login=true", true, userPwd["user"], userPwd["pwd"]);
+			req.open("GET", getBaseURL()+"/api/bookmarks/tags/getTag.xml?login=true", true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
 	}

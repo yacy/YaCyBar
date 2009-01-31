@@ -130,6 +130,10 @@ function getSearchURL(keyword) {
 		return getBaseURL() +
 			"/compare_yacy.html" +
 			"?query=" + encodeURI(keyword);
+	} else if(kind == "richclient") {
+		return getBaseURL() +
+			"/yacy/ui/yacyuisearch.html" +
+			"?search=" + encodeURI(keyword);
 	} else {
 		return getBaseURL() +
 			"/yacysearch.html" +

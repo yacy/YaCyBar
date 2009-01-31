@@ -80,6 +80,7 @@
 <!ENTITY prefs.tabpanel.label.value.kind "Art der Suche">
 <!ENTITY prefs.tabpanel.menuitem.label.standard "Standard">
 <!ENTITY prefs.tabpanel.menuitem.label.compare "Suchmaschinenvergleich">
+<!ENTITY prefs.tabpanel.menuitem.label.richclient "Rich-Client">
 <!ENTITY prefs.tabpanel.label.value.content "Inhalt">
 <!ENTITY prefs.tabpanel.menuitem.label.text "Text">
 <!ENTITY prefs.tabpanel.menuitem.label.image "Bilder">

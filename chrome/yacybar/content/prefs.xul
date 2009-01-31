@@ -172,6 +172,7 @@
 				 					<menupopup>
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.standard;" value="standard"/>
 					 					<menuitem label="&prefs.tabpanel.menuitem.label.compare;" value="compare"/>
+					 					<menuitem label="&prefs.tabpanel.menuitem.label.richclient;" value="richclient"/>
 				 					</menupopup>
 								</menulist>
 							</row>

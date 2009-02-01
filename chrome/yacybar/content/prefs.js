@@ -109,6 +109,12 @@ function createYaCyBookmarkFolder() {
 	log("lets start");
 	var bmsvc = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"]
                       .getService(Components.interfaces.nsINavBookmarksService);
+    var ansvc = Components.classes["@mozilla.org/browser/annotation-service;1"]
+                      .getService(Components.interfaces.nsIAnnotationService);
+    
+                      
 	var remoteContainer = bmsvc.createDynamicContainer(bmsvc.bookmarksMenuFolder,
 			"YacyBookmarks", "@yacy.net/YaCyBookmarkService;1", bmsvc.DEFAULT_INDEX);
+	bmsvc.setFolderReadonly(remoteContainer, true);
+	ansvc.setItemAnnotation(remoteContainer, "yacy/folder_path", "source", 0, 0);
 }

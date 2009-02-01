@@ -55,13 +55,17 @@ YaCyBookmarkService.prototype = {
 				var cons = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
 				var bmsvc = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"]
                       .getService(Components.interfaces.nsINavBookmarksService);
+				var ansvc = Components.classes["@mozilla.org/browser/annotation-service;1"]
+                      .getService(Components.interfaces.nsIAnnotationService);
 				
-				var root = aContainer.title;
-				if (root == "YacyBookmarks") {
-					root = "source";
+				var root = "source";
+				try {
+  					root = ansvc.getItemAnnotation(aContainer.itemId, "yacy/folder_path");
+				} catch(e) {
+  					// annotation does not exist
 				}
-				
 				cons.logStringMessage("root: "+root);
+
 				var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance();
 				var url = yacyFunctions.getBaseURL() + "/api/bookmarks/get_folders.xml?bmtype=title&root="+root;
 				var userPwd = yacyFunctions.loadUserPwd();
@@ -78,7 +82,9 @@ YaCyBookmarkService.prototype = {
 					if (type == "file") {
 						aContainer.appendURINode(url, name, 0, 0, null);
 					} else if (type == "folder") {							
-						var newFolderID = bmsvc.createDynamicContainer(aContainer.itemid, id, "@yacy.net/YaCyBookmarkService;1", bmsvc.DEFAULT_INDEX);																		
+						var newFolderID = bmsvc.createDynamicContainer(aContainer.itemId, name, "@yacy.net/YaCyBookmarkService;1", bmsvc.DEFAULT_INDEX);																		
+						bmsvc.setFolderReadonly(newFolderID, true);
+						ansvc.setItemAnnotation(newFolderID, "yacy/folder_path", id, 0, 0);
 						aContainer.appendFolderNode(newFolderID);
 					}
 				}

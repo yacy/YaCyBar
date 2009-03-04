@@ -1,16 +1,16 @@
-#AboutMenu {
+#YaCy_toolbar_AboutMenu {
     list-style-image: url("chrome://yacybar/skin/yacy.gif");
 }
 
-#BookmarksButton {
+#YaCy_toolbar_BookmarksButton {
     list-style-image: url("chrome://yacybar/skin/bookmark.png");
 } 
 
-#SurftipsButton {
+#YaCy_toolbar_SurftipsButton {
     list-style-image: url("chrome://yacybar/skin/surftip.png");
 } 
 
-#BlacklistBtn {
+#YaCy_toolbar_BlacklistBtn {
     list-style-image: url("chrome://yacybar/skin/blacklist.png");
 }
 
@@ -18,39 +18,39 @@
     list-style-image: url("chrome://yacybar/skin/search.png");
 }
 
-#CrawlBtn {
+#YaCy_toolbar_CrawlBtn {
     list-style-image: url("chrome://yacybar/skin/crawl.png");
 }
 
-#CrawlBtn > .toolbarbutton-menubutton-button {
+#YaCy_toolbar_CrawlBtn > .toolbarbutton-menubutton-button {
 	-moz-box-orient: horizontal;
 }
 
-#IndexingControlBtn {
+#YaCy_toolbar_IndexingControlBtn {
     list-style-image: url("chrome://yacybar/skin/indexing_off.png");
 }
-#IndexingControlBtn[checked="true"] {
+#YaCy_toolbar_IndexingControlBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/indexing_on.png");
 }
 
-#IndexingToolbarBtn {
+#YaCy_toolbar_IndexingToolbarBtn {
     list-style-image: url("chrome://yacybar/skin/indexing_off.png");
 }
-#IndexingToolbarBtn[checked="true"] {
+#YaCy_toolbar_IndexingToolbarBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/indexing_on.png");
 }
 
-#ProxyToolbarBtn {
+#YaCy_toolbar_ProxyToolbarBtn {
     list-style-image: url("chrome://yacybar/skin/proxy_off.png");
 }
-#ProxyToolbarBtn[checked="true"] {
+#YaCy_toolbar_ProxyToolbarBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/proxy_on.png");
 }
 
-#ProxyBtn {
+#YaCy_toolbar_ProxyBtn {
     list-style-image: url("chrome://yacybar/skin/proxy_off.png");
 }
-#ProxyBtn[checked="true"] {
+#YaCy_toolbar_ProxyBtn[checked="true"] {
     list-style-image: url("chrome://yacybar/skin/proxy_on.png");
 }
 menuitem.loading{

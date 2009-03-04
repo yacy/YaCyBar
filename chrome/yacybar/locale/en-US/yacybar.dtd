@@ -144,6 +144,7 @@
 <!ENTITY statusBar.menuitem.accesskey.about "A">
 <!ENTITY statusBar.menuitem.tooltip.about "About the YaCyBar">
 
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.yacy "YaCy Menu">
 <!ENTITY yacybarOverlay.command.tooltiptext.proxy "Proxy is OFF">
 <!ENTITY yacybarOverlay.command.tooltiptext.indexing "Indexing is OFF">
 <!ENTITY yacybarOverlay.menuitem.label.yacysearch "YaCy Search"> 
@@ -171,11 +172,13 @@
 <!ENTITY yacybarOverlay.menuitem.tooltip.about "About the YaCyBar">
 <!ENTITY yacybarOverlay.menuitem.label.first "Firststart Dialog">
 <!ENTITY yacybarOverlay.toolbarbutton.label.bm "BM">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.bm "Bookmarks">
 <!ENTITY yacybarOverlay.menuitem.label.addBM "Add Bookmark">
 <!ENTITY yacybarOverlay.menuitem.tooltip.addBM "Add a Bookmark">
 <!ENTITY yacybarOverlay.menuitem.label.bmloading "loading ...">
 <!ENTITY yacybarOverlay.menuitem.tooltip.bmloading "Tags are loading">
 <!ENTITY yacybarOverlay.toolbarbutton.label.surftips "Surftips">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.surftips "Surftips">
 <!ENTITY yacybarOverlay.menuitem.label.stloading "loading ...">
 <!ENTITY yacybarOverlay.menuitem.tooltip.stloading "Surftips are loading">
 <!ENTITY yacybarOverlay.toolbarbutton.label.search "Search">

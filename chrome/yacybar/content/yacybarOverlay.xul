@@ -21,93 +21,94 @@
 
 	<toolbarpalette id="BrowserToolbarPalette">
 
-		<toolbaritem id="YaCy_toolbar_item1" flex="1">
-		    <toolbarbutton id="AboutMenu" type="menu">
-				<menupopup>
-					<menuitem label="&yacybarOverlay.menuitem.label.yacysearch;" accesskey="H"
-							  tooltiptext="&yacybarOverlay.menuitem.tooltip.yacysearch;"
-							  selected="true"
-							  oncommand="loadYACY()"
-							  onclick="bgLoadYACY(event)"
-					/>
-					<menuitem label="&yacybarOverlay.menuitem.label.demo;"
-							id="menuitem-demo"
-							tooltiptext="&yacybarOverlay.menuitem.tooltip.demo;"
-							type="checkbox"
-							oncommand="toggleDemo()"
-					/>
-					<menuseparator />
-					<menu label="&yacybarOverlay.menu.label.links;">
-						<menupopup>
-							<menuitem label="&yacybarOverlay.menuitem.label.hp;" accesskey="H"
-									tooltiptext="&yacybarOverlay.menuitem.tooltip.hp;"
-									selected="true"
-									oncommand="loadURL('http://www.yacy.net/', event)"
-									onclick="bgLoadURL('http://www.yacy.net/', event)"
-							/>
-							<menuitem label="&yacybarOverlay.menuitem.label.forum;" accesskey="F"
-									  tooltiptext="&yacybarOverlay.menuitem.tooltip.forum;"
-									  oncommand="loadURL('http://forum.yacy-websuche.de/')"
-									  onclick="bgLoadURL('http://forum.yacy-websuche.de/', event)"
-							/>
-							<menuitem label="&yacybarOverlay.menuitem.label.wiki;" accesskey="W"
-									  tooltiptext="&yacybarOverlay.menuitem.tooltip.wiki;"
-									  oncommand="loadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite')"
-									  onclick="bgLoadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite', event)"
-							/>
-							<menuitem label="&yacybarOverlay.menuitem.label.stats;" accesskey="S"
-									  tooltiptext="&yacybarOverlay.menuitem.tooltip.stats;"
-									  oncommand="loadURL('http://www.yacystats.de/')"
-									  onclick="bgLoadURL('http://www.yacystats.de/', event)"
-							/>
-							<menuitem label="&yacybarOverlay.menuitem.label.svn;" accesskey="L"
-									  tooltiptext="&yacybarOverlay.menuitem.tooltip.svn;"
-									  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')"
-									  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"
-							/>
-						</menupopup>
-					</menu>
-					<menuseparator />
-					<menu label="&yacybarOverlay.menu.label.dialogs;">
-						<menupopup>
-							<menuitem label="&yacybarOverlay.menuitem.label.crawjobs;"
-									  oncommand=" showCrawlJobs();" />
-							<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="&yacybarOverlay.menuitem.accesskey.pref;"
-									  tooltiptext="&yacybarOverlay.menuitem.tooltip.pref;"
-									  oncommand="showPrefs();" />
-							<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="&yacybarOverlay.menuitem.accesskey.about;"
-									  tooltiptext="&yacybarOverlay.menuitem.tooltip.about;"
-									  oncommand="showAbout()" />
-							<menuitem label="&yacybarOverlay.menuitem.label.first;"
-									  oncommand="showFirststartDialog()" />
-						</menupopup>
-					</menu>
-				</menupopup>
-			</toolbarbutton>
-			<toolbarbutton id="BookmarksButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.bm;" onclick="loadTags(event)">
-				<menupopup id="BookmarksMenu">
-					<menuitem label="&yacybarOverlay.menuitem.label.addBM;"
-							id="menuitem-addbookmark"
-							tooltiptext="&yacybarOverlay.menuitem.tooltip.addBM;"
-							selected="true"
-							oncommand="showAddBookmark()" />
-					<menuseparator />
-					<menuitem label="&yacybarOverlay.menuitem.label.bmloading;"
-					class="menuicon-iconic loading"
-					tooltiptext="&yacybarOverlay.menuitem.tooltip.bmloading;"
-					/>
-				</menupopup>
-			</toolbarbutton>
-			<toolbarbutton id="SurftipsButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.surftips;" onclick="loadSurftips(event)">
-				<menupopup id="SurftipsMenu">
-					<menuitem label="&yacybarOverlay.menuitem.label.stloading;"
-					class="menuitem-iconic loading"
-					tooltiptext="&yacybarOverlay.menuitem.tooltip.stloading;"
-					/>
-				</menupopup>
-			</toolbarbutton>
-		<toolbarseparator/>
+		<toolbarbutton id="YaCy_toolbar_AboutMenu" type="menu" tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.yacy;">
+			<menupopup>
+				<menuitem label="&yacybarOverlay.menuitem.label.yacysearch;" accesskey="H"
+						  tooltiptext="&yacybarOverlay.menuitem.tooltip.yacysearch;"
+						  selected="true"
+						  oncommand="loadYACY()"
+						  onclick="bgLoadYACY(event)"
+				/>
+				<menuitem label="&yacybarOverlay.menuitem.label.demo;"
+						id="menuitem-demo"
+						tooltiptext="&yacybarOverlay.menuitem.tooltip.demo;"
+						type="checkbox"
+						oncommand="toggleDemo()"
+				/>
+				<menuseparator />
+				<menu label="&yacybarOverlay.menu.label.links;">
+					<menupopup>
+						<menuitem label="&yacybarOverlay.menuitem.label.hp;" accesskey="H"
+								tooltiptext="&yacybarOverlay.menuitem.tooltip.hp;"
+								selected="true"
+								oncommand="loadURL('http://www.yacy.net/', event)"
+								onclick="bgLoadURL('http://www.yacy.net/', event)"
+						/>
+						<menuitem label="&yacybarOverlay.menuitem.label.forum;" accesskey="F"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.forum;"
+								  oncommand="loadURL('http://forum.yacy-websuche.de/')"
+								  onclick="bgLoadURL('http://forum.yacy-websuche.de/', event)"
+						/>
+						<menuitem label="&yacybarOverlay.menuitem.label.wiki;" accesskey="W"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.wiki;"
+								  oncommand="loadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite')"
+								  onclick="bgLoadURL('http://yacy-websuche.de/wiki/index.php/Hauptseite', event)"
+						/>
+						<menuitem label="&yacybarOverlay.menuitem.label.stats;" accesskey="S"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.stats;"
+								  oncommand="loadURL('http://www.yacystats.de/')"
+								  onclick="bgLoadURL('http://www.yacystats.de/', event)"
+						/>
+						<menuitem label="&yacybarOverlay.menuitem.label.svn;" accesskey="L"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.svn;"
+								  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')"
+								  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"
+						/>
+					</menupopup>
+				</menu>
+				<menuseparator />
+				<menu label="&yacybarOverlay.menu.label.dialogs;">
+					<menupopup>
+						<menuitem label="&yacybarOverlay.menuitem.label.crawjobs;"
+								  oncommand=" showCrawlJobs();" />
+						<menuitem label="&yacybarOverlay.menuitem.label.pref;" accesskey="&yacybarOverlay.menuitem.accesskey.pref;"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.pref;"
+								  oncommand="showPrefs();" />
+						<menuitem label="&yacybarOverlay.menuitem.label.about;" accesskey="&yacybarOverlay.menuitem.accesskey.about;"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.about;"
+								  oncommand="showAbout()" />
+						<menuitem label="&yacybarOverlay.menuitem.label.first;"
+								  oncommand="showFirststartDialog()" />
+					</menupopup>
+				</menu>
+			</menupopup>
+		</toolbarbutton>
+		<toolbarbutton id="YaCy_toolbar_BookmarksButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.bm;"
+				tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.bm;" onclick="loadTags(event)">
+			<menupopup id="BookmarksMenu">
+				<menuitem label="&yacybarOverlay.menuitem.label.addBM;"
+						id="menuitem-addbookmark"
+						tooltiptext="&yacybarOverlay.menuitem.tooltip.addBM;"
+						selected="true"
+						oncommand="showAddBookmark()" />
+				<menuseparator />
+				<menuitem label="&yacybarOverlay.menuitem.label.bmloading;"
+				class="menuicon-iconic loading"
+				tooltiptext="&yacybarOverlay.menuitem.tooltip.bmloading;"
+				/>
+			</menupopup>
+		</toolbarbutton>
+		<toolbarbutton id="YaCy_toolbar_SurftipsButton" type="menu" label="&yacybarOverlay.toolbarbutton.label.surftips;"
+				tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.surftips;" onclick="loadSurftips(event)">
+			<menupopup id="SurftipsMenu">
+				<menuitem label="&yacybarOverlay.menuitem.label.stloading;"
+				class="menuitem-iconic loading"
+				tooltiptext="&yacybarOverlay.menuitem.tooltip.stloading;"
+				/>
+			</menupopup>
+		</toolbarbutton>
 
+		<toolbaritem id="YaCy_toolbar_item_SearchField" flex="1">
 			<textbox id="search" flex="1" onkeypress="if(event.which == 13) { search(true); }" />
 			<toolbarbutton id="SearchBtn"
 					   label="&yacybarOverlay.toolbarbutton.label.search;"
@@ -116,25 +117,19 @@
 			/>
 		</toolbaritem>
 		
-		<toolbaritem id="YaCy_toolbar_item2" flex="0">
-			<toolbarseparator/>
-			<toolbarbutton id="BlacklistBtn"
-					label="&yacybarOverlay.toolbarbutton.label.blacklist;"
-					tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.blacklist;"
-					oncommand="blacklistpage()"/>
-			<toolbarbutton id="CrawlBtn"
-					label="&yacybarOverlay.toolbarbutton.label.crawl;"
-					tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.crawl;"
-					oncommand="crawlpage()"/>
-		</toolbaritem>
+		<toolbarbutton id="YaCy_toolbar_BlacklistBtn"
+				label="&yacybarOverlay.toolbarbutton.label.blacklist;"
+				tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.blacklist;"
+				oncommand="blacklistpage()"/>
+		<toolbarbutton id="YaCy_toolbar_CrawlBtn"
+				label="&yacybarOverlay.toolbarbutton.label.crawl;"
+				tooltiptext="&yacybarOverlay.toolbarbutton.tooltip.crawl;"
+				oncommand="crawlpage()"/>
 		
-		<toolbaritem id="YaCy_toolbar_item3" flex="0">
-			<toolbarseparator/>
-			<toolbarbutton id="ProxyBtn"
-						   command="cmd_toggleProxy"/>
-			<toolbarbutton id="IndexingControlBtn"
-						   command="cmd_toggleIndexing"/>
-		</toolbaritem>
+		<toolbarbutton id="YaCy_toolbar_ProxyBtn"
+				   command="cmd_toggleProxy"/>
+		<toolbarbutton id="YaCy_toolbar_IndexingControlBtn"
+				   command="cmd_toggleIndexing"/>
 	</toolbarpalette>
 	
 	<toolbox id="navigator-toolbox">
@@ -145,7 +140,7 @@
 			hidden="false"
 			persist="collapsed,hidden"
 			customizable="true"
-			defaultset="YaCy_toolbar_item1,YaCy_toolbar_item2,YaCy_toolbar_item3"
+			defaultset="YaCy_toolbar_AboutMenu,YaCy_toolbar_BookmarksButton,YaCy_toolbar_SurftipsButton,separator,YaCy_toolbar_item_SearchField,separator,YaCy_toolbar_BlacklistBtn,YaCy_toolbar_CrawlBtn,separator,YaCy_toolbar_ProxyBtn,YaCy_toolbar_IndexingControlBtn"
 			inherits="collapsed,hidden"
 		/>
 	</toolbox>

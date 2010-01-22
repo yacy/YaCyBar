@@ -33,7 +33,7 @@ var yacyVersion = {
 	 */
 	detectVersion : function() {
 		//cons.logStringMessage("detect ");
-		var url = getBaseURL() + '/xml/version.xml';
+		var url = getBaseURL() + '/api/version.xml';
 
 		this.request = new XMLHttpRequest();
 		if (this.request.overrideMimeType) {

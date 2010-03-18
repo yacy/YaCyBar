@@ -425,9 +425,9 @@ function crawlReceipt() {
 }
 
 function loadSurftips(event) {
-	if(event.target.id != "SurftipsButton")
+	if(event.target.id != "YaCy_toolbar_SurftipsButton") {
 		return;
-	
+	}
 	if(window.XMLHttpRequest) {
 		try {
 			req = new XMLHttpRequest();
@@ -447,7 +447,7 @@ function loadSurftips(event) {
 
 function loadTags(event) {
 	//only in tagsMenu
-	if(event.target.id != "BookmarksButton") {
+	if(event.target.id != "YaCy_toolbar_BookmarksButton") {
 		return;
 	}
 	if(window.XMLHttpRequest) {

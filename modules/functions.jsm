@@ -72,7 +72,4 @@ var yacyFunctions = {
 	},
 
 }
-//String.prototype.trim =      function() {
-//	return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""));
-//}
 

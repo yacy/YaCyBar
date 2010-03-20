@@ -68,7 +68,7 @@ function loadUserPwd() {
 	return null;
 }
 
-String.prototype.trim =      function() {
-  return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""));
+function trim(str) {
+  return (str.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""));
 }
 

@@ -414,7 +414,7 @@ function crawlReceipt() {
 			newJob["date"] = new Date();
 			newJob["title"] = response.getElementsByTagName("title")[0].firstChild.data;
 			newJob["link"] = response.getElementsByTagName("url")[0].firstChild.data;
-			newJob["status"] = response.getElementsByTagName("status")[0].firstChild.data.trim();
+			newJob["status"] = trim(response.getElementsByTagName("status")[0].firstChild.data);
 			newJob["statusCode"] = response.getElementsByTagName("status")[0].getAttribute("code");
 
 			window.openDialog("chrome://yacybar/content/sidebarOverlay.xul","yacybarCrawlJobs", "chrome,centerscreen,resizable",newJob);

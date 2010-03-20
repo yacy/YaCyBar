@@ -16,6 +16,7 @@
 			<zipfileset dir="components/" includes="**" prefix="components" />
 			<zipfileset dir="." includes="chrome.manifest" />
 			<zipfileset dir="." includes="install.rdf" />
+			<zipfileset dir="." includes="gpl.txt" />
 		</zip>
     </target>
 

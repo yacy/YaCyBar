@@ -1,3 +1,7 @@
+
+v 0.2.6 - 20.03.2010
+=====================================================================
++ minor fixes by orbiter and update to firefox 3.6
 + added better blacklist dialog (flori)
 + added notification system for yacy messages and terminated crawls (flori)
 x replace contents.rdf files with newer chrome.manifest (flori)

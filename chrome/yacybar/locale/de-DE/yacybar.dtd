@@ -57,7 +57,7 @@
 <!ENTITY prefs.tabbox.tab.label.notification "Benachrichtigungen">
 <!ENTITY prefs.tabbox.tab.label.bookmarks "YaCy-Lesezeichen">
 <!ENTITY prefs.tabpanel.description.peer "Notwendige Einstellungen, um sich mit Ihrem YaCy Peer zu verbinden">
-<!ENTITY prefs.tabpanel.label.value.peer "Peer Addresse">
+<!ENTITY prefs.tabpanel.label.value.peer "Peer Adresse">
 <!ENTITY prefs.tabpanel.label.accesskey.peer "A">
 <!ENTITY prefs.tabpanel.label.value.peerport "Peer Port">
 <!ENTITY prefs.tabpanel.label.accesskey.peerport "P">

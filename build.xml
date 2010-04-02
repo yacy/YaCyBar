@@ -13,6 +13,7 @@
 		<zip destfile="yacybar.xpi">
 			<zipfileset dir="chrome/" includes="**" prefix="chrome" />
 			<zipfileset dir="modules/" includes="**" prefix="modules" />
+			<zipfileset dir="defaults/preferences/" includes="**" prefix="defaults/preferences"/>
 			<zipfileset dir="components/" includes="**" prefix="components" />
 			<zipfileset dir="." includes="chrome.manifest" />
 			<zipfileset dir="." includes="install.rdf" />

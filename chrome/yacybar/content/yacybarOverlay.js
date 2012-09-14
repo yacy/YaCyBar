@@ -464,11 +464,11 @@ function loadTags(event) {
 		req.onreadystatechange = loadTagsHandler;
 		if(Branch.getBoolPref("demomode")) {
 			req.open("GET", getBaseURL() + yacyVersion.getAPIDir()
-					+ "/bookmarks/tags/getTag.xml", true);
+					+ "/ymarks/get_tags.xml?sort=alpha", true);
 		} else {
 			var userPwd = loadUserPwd();
 			req.open("GET", getBaseURL() + yacyVersion.getAPIDir()
-					+ "/bookmarks/tags/getTag.xml?login=true", true,
+					+ "/ymarks/get_tags.xml?sort=alpha", true,
 					userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
@@ -574,11 +574,11 @@ function loadBookmarks(tag, event) {
 		req.onreadystatechange = loadBookmarksHandler;
 		req.tag = tag;
 		if(Branch.getBoolPref("demomode")) {
-			req.open("GET", getBaseURL()+yacyVersion.getAPIDir()+"/bookmarks/posts/all.xml?tag="+tag, true);
+			req.open("GET", getBaseURL()+yacyVersion.getAPIDir()+"/ymarks/get_ymark.xml?qtype=_tags&query="+tag, true);
 		} else {
 			var userPwd = loadUserPwd();
 			//TODO: Get this working with password. 
-			req.open("GET", getBaseURL()+yacyVersion.getAPIDir()+"/bookmarks/posts/all.xml?tag="+tag, true, userPwd["user"], userPwd["pwd"]);
+			req.open("GET", getBaseURL()+yacyVersion.getAPIDir()+"/ymarks/get_ymark.xml?qtype=_tags&query="+tag, true, userPwd["user"], userPwd["pwd"]);
 		}
 		req.send(null);
 	}
@@ -598,9 +598,9 @@ function loadBookmarksHandler() {
 			posts = response.getElementsByTagName("post");
 			for(i=0; i<posts.length; i++) {
 				item = document.createElement("menuitem");
-				item.setAttribute("label", posts[i].getAttribute("description"));
+				item.setAttribute("label", posts[i].getAttribute("title"));
 				item.setAttribute("onclick", "loadURL(\""+posts[i].getAttribute("href")+"\")");
-				item.setAttribute("title", posts[i].getAttribute("extended"));
+				item.setAttribute("title", posts[i].getAttribute("title"));
 				tagMenu.appendChild(item);
 			}
 		}

@@ -50,10 +50,10 @@ function addBookmark(){
 	}
 	
 	
-	rqurl = getBaseURL() + yacyVersion.getAPIDir() + "/bookmarks/posts/add_p.xml?url=" + encodeURIComponent(url)
+	rqurl = getBaseURL() + yacyVersion.getAPIDir() + "/ymarks/add_ymark.xml?url=" + encodeURIComponent(url)
 			+ "&title=" + encodeURIComponent(title)
-			+ "&description=" + encodeURIComponent(description)
-			+ "&path=" + encodeURIComponent(path)
+			+ "&desc=" + encodeURIComponent(description)
+			+ "&folders=" + encodeURIComponent(path)
 			+ "&tags=" + encodeURIComponent(tags)
 			+ "&public=" + public_str;
 	req=new XMLHttpRequest();

@@ -67,7 +67,7 @@ YaCyBookmarkService.prototype = {
 				cons.logStringMessage("root: "+root);
 
 				var req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance();
-				var url = yacyFunctions.getBaseURL() + "/api/bookmarks/get_folders.xml?bmtype=title&root="+root;
+				var url = yacyFunctions.getBaseURL() + "/api/bookmarks/get_treeview.xml?bmtype=title&root="+root;
 				var userPwd = yacyFunctions.loadUserPwd();
 				req.open('GET', url, false, userPwd["user"], userPwd["pwd"]);
 				req.send(null);

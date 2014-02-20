@@ -160,8 +160,8 @@
 <!ENTITY yacybarOverlay.menuitem.tooltip.wiki "Gehe zum YaCy Wiki">
 <!ENTITY yacybarOverlay.menuitem.label.stats "YaCy Statistiken">
 <!ENTITY yacybarOverlay.menuitem.tooltip.stats "Gehe zu den YaCy Statistiken">
-<!ENTITY yacybarOverlay.menuitem.label.svn "YaCy SVN Log">
-<!ENTITY yacybarOverlay.menuitem.tooltip.svn "Gehe zum YaCy SVN-Log">
+<!ENTITY yacybarOverlay.menuitem.label.svn "YaCy Git Log">
+<!ENTITY yacybarOverlay.menuitem.tooltip.svn "Gehe zum YaCy Git Commit Log">
 <!ENTITY yacybarOverlay.menu.label.dialogs "Dialoge">
 <!ENTITY yacybarOverlay.menuitem.label.crawjobs "CrawlJobs">
 <!ENTITY yacybarOverlay.menuitem.label.pref "YaCyBar Einstellungen">

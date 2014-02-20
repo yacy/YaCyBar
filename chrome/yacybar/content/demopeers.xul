@@ -9,8 +9,8 @@
 		ondialogaccept="accept()"
 		ondialogcancel="cancel()"
 		>
-	<script type="application/x-javascript" src="functions.js"/>
-	<script type="application/x-javascript" src="demopeers.js"/>
+	<script type="application/x-javascript" src="chrome://yacybar/content/functions.js"/>
+	<script type="application/x-javascript" src="chrome://yacybar/content/demopeers.js"/>
 	<groupbox>
 		<vbox>
 			<label for="demopeerList" value="&demopeers.label.value;" />

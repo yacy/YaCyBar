@@ -59,10 +59,10 @@
 								  oncommand="loadURL('http://www.yacystats.de/')"
 								  onclick="bgLoadURL('http://www.yacystats.de/', event)"
 						/>
-						<menuitem label="&yacybarOverlay.menuitem.label.svn;" accesskey="L"
-								  tooltiptext="&yacybarOverlay.menuitem.tooltip.svn;"
-								  oncommand="loadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1')"
-								  onclick="bgLoadURL('http://svn.berlios.de/wsvn/yacy/?op=log&amp;rev=0&amp;sc=0&amp;isdir=1', event)"
+						<menuitem label="&yacybarOverlay.menuitem.label.git;" accesskey="L"
+								  tooltiptext="&yacybarOverlay.menuitem.tooltip.git;"
+								  oncommand="loadURL('https://gitorious.org/yacy/rc1/commits/master')"
+								  onclick="bgLoadURL('https://gitorious.org/yacy/rc1/commits/master', event)"
 						/>
 					</menupopup>
 				</menu>

@@ -3,6 +3,7 @@ skin		yacybar		classic/1.0	chrome/yacybar/skin/
 
 locale		yacybar		en-US	chrome/yacybar/locale/en-US/
 locale		yacybar		de-DE	chrome/yacybar/locale/de-DE/
+locale		yacybar		fr-FR	chrome/yacybar/locale/fr-FR/
 
 overlay		chrome://browser/content/browser.xul			chrome://yacybar/content/yacybarOverlay.xul
 overlay		chrome://browser/content/browser.xul			chrome://yacybar/content/contentArea.xul

@@ -12,26 +12,34 @@
  	<em:contributor>Oliver Wunder</em:contributor>
  	<em:contributor>Florian Richter</em:contributor>
  	<em:translator>Oliver Wunder</em:translator>
+ 	<em:translator>Christian Costa</em:translator>
  	<em:homepageURL>http://www.yacy.net/</em:homepageURL>
  	<em:iconURL>chrome://yacybar/skin/yacy_logo.gif</em:iconURL>
  	<em:optionsURL>chrome://yacybar/content/prefs.xul</em:optionsURL>
  	<em:aboutURL>chrome://yacybar/content/about.xul</em:aboutURL>
   
-  	<em:localized>
+	<em:localized>
 		<Description>
 			<em:locale>en-US</em:locale>
 			<em:name>YaCy-Bar</em:name>
 			<em:description>A toolbar for the P2P Searchengine YaCy</em:description>
 		</Description>
-	</em:localized> 
+	</em:localized>
 	<em:localized>
 		<Description>
 			<em:locale>de-DE</em:locale>
 			<em:name>YaCy-Bar</em:name>
 			<em:description>Eine Toolbar für die P2P Suchmaschine YaCy</em:description>
 		</Description>
-	</em:localized>  
-  
+	</em:localized>
+	<em:localized>
+		<Description>
+			<em:locale>fr-FR</em:locale>
+			<em:name>YaCy-Bar</em:name>
+			<em:description>Une barre d'outils pour le moteur de recherche P2P YaCy</em:description>
+		</Description>
+	</em:localized>
+
  	<em:targetApplication>
  		<Description>
  			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>

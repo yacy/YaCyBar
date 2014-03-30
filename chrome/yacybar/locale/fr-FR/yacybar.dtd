@@ -1,0 +1,189 @@
+<!ENTITY about.dialog.title "YaCyBar - A propos">
+<!ENTITY about.text.created "Créé par:">
+<!ENTITY about.text.contributors "Contributeurs:">
+<!ENTITY about.text.homepage "Page d'accueil">
+
+<!ENTITY contentArea.menu.label.yacybar "YaCyBar">
+<!ENTITY contentArea.menu.accesskey.yacybar "Y">
+<!ENTITY contentArea.menuitem.label.crawllink "Explorer ce lien">
+<!ENTITY contentArea.menuitem.accesskey.crawllink "L">
+<!ENTITY contentArea.menuitem.tooltip.crawllink "Explorer ce lien">
+<!ENTITY contentArea.menuitem.label.crawlpage "Explorer la page courante">
+<!ENTITY contentArea.menuitem.accesskey.crawlpage "P">
+<!ENTITY contentArea.menuitem.tooltip.crawlpage "Explorer la page courante">
+<!ENTITY contentArea.menuitem.label.search "Rechercher ce mot-clé">
+<!ENTITY contentArea.menuitem.accesskey.search "S">
+<!ENTITY contentArea.menuitem.tooltip.search "Rechercher le mot-clé sélectionné">
+<!ENTITY contentArea.menuitem.label.addBM "Ajouter au signets">
+<!ENTITY contentArea.menuitem.accesskey.addBM "B">
+<!ENTITY contentArea.menuitem.tooltip.addBM "Ajouter la page courante aux signets">
+<!ENTITY contentArea.menuitem.label.blacklist "Ajouter la page à la liste noire">
+<!ENTITY contentArea.menuitem.accesskey.blacklist "P">
+<!ENTITY contentArea.menuitem.tooltip.blacklist "Ajouter la page courante à la liste noire">
+<!ENTITY contentArea.menuitem.label.about "A propos de YaCyBar">
+<!ENTITY contentArea.menuitem.accesskey.about "A">
+<!ENTITY contentArea.menuitem.tooltip.about "A propos de YaCyBar">
+
+<!ENTITY addBM.dialog.title "YaCyBar - Ajouter aux signets">
+<!ENTITY addBM.label.url "URL">
+<!ENTITY addBM.label.title "Titre">
+<!ENTITY addBM.label.description "Description">
+<!ENTITY addBM.label.path "Chemin (/répertoire/sous-répertoire)">
+<!ENTITY addBM.label.tags "Etiquettes (separé par des virgules)">
+<!ENTITY addBM.label.public "Publique">
+<!ENTITY addBM.menuitem.yes "oui">
+<!ENTITY addBM.menuitem.no "non">
+
+<!ENTITY demopeers.dialog.title "YaCyBar - pairs de demo">
+<!ENTITY demopeers.label.value "Sélectionner votre pair de demo:">
+
+<!ENTITY firststart.window.title "YaCyBar - Premier démarrage">
+<!ENTITY firststart.html.div "Ceci est votre premier démarrage de la barre d'outils YaCy. Pour l'utiliser, vous avez besoin d'un pair YaCy.">
+<!ENTITY firststart.html.ul.li.demo "Si vous n'avez encore de pair YaCy, cliquer sur Mode Demo pour utiliser un de nos pairs de demo">
+<!ENTITY firststart.html.ul.li.install "Si vous voulez installer un pair YaCy, visitez">
+<!ENTITY firststart.html.ul.li.peer "Si vous avez déjà un pair qui s'éxécute :">
+<!ENTITY firststart.html.ul.li.ul.li.port "S'il s'éxécute sur localhost avec le port 8080, vous pouvez démarrer la barre YaCy sans action supplémentaire">
+<!ENTITY firststart.html.ul.li.ul.li.settings "S'il d'exécute avec d'autres paramètres de configuration, vous devez éditer les ">
+<!ENTITY firststart.html.ul.li.ul.li.a.settings "préférences">
+<!ENTITY firststart.html.hbox.label.demo "Mode Demo">
+<!ENTITY firststart.html.hbox.label.download "Télécharger YaCy">
+<!ENTITY firststart.html.hbox.label.peer "J'ai un pair qui s'éxécute">
+<!ENTITY firststart.html.hbox.label.prefs "Préférences">
+
+<!ENTITY prefs.dialog.title "Préférences de YaCyBar">
+<!ENTITY prefs.tabbox.tab.label.peer "Pair">
+<!ENTITY prefs.tabbox.tab.label.quickcrawl "Exploration rapide">
+<!ENTITY prefs.tabbox.tab.label.search "Recherche">
+<!ENTITY prefs.tabbox.tab.label.notification "Notification">
+<!ENTITY prefs.tabbox.tab.label.bookmarks "Signets de YaCy">
+<!ENTITY prefs.tabpanel.description.peer "Les paramètres de configuration doivent pointer sur votre pair YaCy">
+<!ENTITY prefs.tabpanel.label.value.peer "Adresse du pair">
+<!ENTITY prefs.tabpanel.label.accesskey.peer "A">
+<!ENTITY prefs.tabpanel.label.value.peerport "Port du pair">
+<!ENTITY prefs.tabpanel.label.accesskey.peerport "P">
+<!ENTITY prefs.tabpanel.label.value.username "Nom d'utilisateur">
+<!ENTITY prefs.tabpanel.label.accesskey.username "U">
+<!ENTITY prefs.tabpanel.label.value.password "Mot de passe">
+<!ENTITY prefs.tabpanel.label.accesskey.password "M">
+<!ENTITY prefs.tabpanel.checkbox.label.peerSSL "Utiliser l'encryption SSL">
+<!ENTITY prefs.tabpanel.description.settings "Paramètres utilisées pour l'exploration">
+<!ENTITY prefs.tabpanel.checkbox.label.settings "Prompt pour les paramètres de l'explorateur">
+<!ENTITY prefs.tabpanel.hbox.caption.label.restrictions "Restrictions">
+<!ENTITY prefs.tabpanel.hbox.label.filter "Filtre d'exploration">
+<!ENTITY prefs.tabpanel.hbox.label.depth "Profondeur d'exploration">
+<!ENTITY prefs.tabpanel.hbox.caption.label.options "Options">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.dynamicurls "Accepter les URLs dynamiques">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.cache "Stoquer dans le cache du Proxy">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.remote "Indexation distante">
+<!ENTITY prefs.tabpanel.hbox.checkbox.label.stop "Exclure les Stop-Words statiques">
+<!ENTITY prefs.tabpanel.description.searching "Paramètres utilisés pour la recherche">
+<!ENTITY prefs.tabpanel.label.value.kind "Type de recherche">
+<!ENTITY prefs.tabpanel.menuitem.label.standard "Standard">
+<!ENTITY prefs.tabpanel.menuitem.label.compare "comparer les moteurs de recherches">
+<!ENTITY prefs.tabpanel.menuitem.label.richclient "rich-client">
+<!ENTITY prefs.tabpanel.label.value.content "Contenu">
+<!ENTITY prefs.tabpanel.menuitem.label.text "texte">
+<!ENTITY prefs.tabpanel.menuitem.label.image "image">
+<!ENTITY prefs.tabpanel.menuitem.label.audio "audio">
+<!ENTITY prefs.tabpanel.menuitem.label.video "video">
+<!ENTITY prefs.tabpanel.menuitem.label.app "application">
+<!ENTITY prefs.tabpanel.label.value.maxresults "Nombre maximum de résutats par page">
+<!ENTITY prefs.tabpanel.label.value.res "Ressource">
+<!ENTITY prefs.tabpanel.menuitem.label.global "globale">
+<!ENTITY prefs.tabpanel.menuitem.label.local "locale">
+<!ENTITY prefs.tabpanel.label.value.urlmask "Masque d'URL">
+<!ENTITY prefs.tabpanel.checkbox.label.verify "Charger et vérifier les snippets">
+<!ENTITY prefs.tabpanel.button.label.startpage "Utiliser la page de recherche comme page d'accueil">
+<!ENTITY prefs.tabpanel.description.notification "Paramètres de notification des services">
+<!ENTITY prefs.tabpanel.checkbox.label.enableMessageNotification "Activer les notifications de message">
+<!ENTITY prefs.tabpanel.checkbox.label.enableCrawlNotification "Activer les notification de l'explorateur">
+<!ENTITY prefs.tabpanel.checkbox.label.enableYaCyNewsNotification "Activer les notifications de nouvelle">
+<!ENTITY prefs.tabpanel.description.bookmarks "Paramètres des signets de YaCy">
+
+<!ENTITY quickcrawl.dialog.title "YaCyBar - Exploration rapide">
+<!ENTITY quickcrawl.groupbox.label.value.title "Titre">
+<!ENTITY quickcrawl.groupbox.label.value.startpoint "Point de départ">
+<!ENTITY quickcrawl.groupbox.label.accesskey.startpoint "S">
+<!ENTITY quickcrawl.groupbox.caption.label.res "Restrictions">
+<!ENTITY quickcrawl.groupbox.label.value.filter "Filtre d'exploration">
+<!ENTITY quickcrawl.groupbox.label.accesskey.filter "F">
+<!ENTITY quickcrawl.groupbox.label.value.depth "Profondeur d'exploration">
+<!ENTITY quickcrawl.groupbox.label.accesskey.depth "D">
+<!ENTITY quickcrawl.groupbox.caption.options "Options">
+<!ENTITY quickcrawl.groupbox.checkbox.dynamicurls "Accepter les URLs dynamiques">
+<!ENTITY quickcrawl.groupbox.checkbox.cache "Stoquer dans le cache du Proxy">
+<!ENTITY quickcrawl.groupbox.checkbox.remote "Indexation distante">
+<!ENTITY quickcrawl.groupbox.checkbox.stopwords "Exclure les Stop-Words statiques">
+<!ENTITY quickcrawl.checkbox.label.default "Utiliser par défaut et ne plus demander à l'avenir">
+
+<!ENTITY sidebarOverlay.window.title "Exploration rapide">
+<!ENTITY sidebarOverlay.button.label "Vider">
+
+<!ENTITY blacklist.dialog.title "Liste noire de YaCyBar">
+<!ENTITY blacklist.blacklistName.label "Nom de la liste noire">
+<!ENTITY blacklist.button.label.selectDomain "Selectionner domaine">
+<!ENTITY blacklist.button.label.selectSubdomains "Selectionner sous-domaine">
+<!ENTITY blacklist.button.label.reset "Remise à zéro">
+
+<!ENTITY statusBar.statusbarpanel.tooltip.qph "Requêtes Par Heure">
+<!ENTITY statusBar.statusbarpanel.tooltip.ppm "Pages Par Minute">
+<!ENTITY statusBar.statusbarpanel.tooltip.url "URLs stoquées">
+<!ENTITY statusBar.statusbarpanel.tooltip.rwi "RWI stoqués">
+<!ENTITY statusBar.statusbarpanel.tooltip.menu "Menu de la barre de statut YaCyBar">
+<!ENTITY statusBar.menuitem.label.qph "Afficher QPH">
+<!ENTITY statusBar.menuitem.label.ppm "Afficher PPM">
+<!ENTITY statusBar.menuitem.label.url "Afficher #URL">
+<!ENTITY statusBar.menuitem.label.rwi "Afficher #RWI">
+<!ENTITY statusBar.menuitem.label.peertype "Afficher type du pair">
+<!ENTITY statusBar.menuitem.label.monitoring "Activer monitoring">
+<!ENTITY statusBar.menuitem.accesskey.monitoring "E">
+<!ENTITY statusBar.menuitem.label.peerstats "Statistiques du pair">
+<!ENTITY statusBar.menuitem.accesskey.peerstats "S">
+<!ENTITY statusBar.menuitem.tooltip.peerstats "Affiche les statistiques de votre pair dans yacystats">
+<!ENTITY statusBar.menuitem.label.about "A propos de YaCyBar">
+<!ENTITY statusBar.menuitem.accesskey.about "A">
+<!ENTITY statusBar.menuitem.tooltip.about "A propos de YaCyBar">
+
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.yacy "Menu YaCy">
+<!ENTITY yacybarOverlay.command.tooltiptext.proxy "Le Proxy est désactivé">
+<!ENTITY yacybarOverlay.command.tooltiptext.indexing "L'indexation est désactivé">
+<!ENTITY yacybarOverlay.menuitem.label.yacysearch "Recherche YaCy">
+<!ENTITY yacybarOverlay.menuitem.tooltip.yacysearch "Faire une recherche avec YaCY">
+<!ENTITY yacybarOverlay.menuitem.label.demo "Mode demo">
+<!ENTITY yacybarOverlay.menuitem.tooltip.demo "Mode demo">
+<!ENTITY yacybarOverlay.menu.label.links "Liens YaCy">
+<!ENTITY yacybarOverlay.menuitem.label.hp "Page d'accueil de YaCy">
+<!ENTITY yacybarOverlay.menuitem.tooltip.hp "Aller à la page d'accueil de YaCy">
+<!ENTITY yacybarOverlay.menuitem.label.forum "Forum de YaCy">
+<!ENTITY yacybarOverlay.menuitem.tooltip.forum "Aller à la page de forum de YaCY">
+<!ENTITY yacybarOverlay.menuitem.label.wiki "Wiki de YaCy">
+<!ENTITY yacybarOverlay.menuitem.tooltip.wiki "Aller à la page du Wiki de YaCy">
+<!ENTITY yacybarOverlay.menuitem.label.stats "Statistiques de YaCy">
+<!ENTITY yacybarOverlay.menuitem.tooltip.stats "Aller à page de statistiques de YaCy">
+<!ENTITY yacybarOverlay.menuitem.label.git "Historique Git de YaCy">
+<!ENTITY yacybarOverlay.menuitem.tooltip.git "Aller à la page des historiques Git de YaCy">
+<!ENTITY yacybarOverlay.menu.label.dialogs "Fenêtres de dialogue">
+<!ENTITY yacybarOverlay.menuitem.label.crawjobs "Tâches d'exploration">
+<!ENTITY yacybarOverlay.menuitem.label.pref "Préférences YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.accesskey.pref "P">
+<!ENTITY yacybarOverlay.menuitem.tooltip.pref "Préférences YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.label.about "A propos de YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.accesskey.about "A">
+<!ENTITY yacybarOverlay.menuitem.tooltip.about "A propos de YaCyBar">
+<!ENTITY yacybarOverlay.menuitem.label.first "Fenêtre de dialogue de premier démarrage">
+<!ENTITY yacybarOverlay.toolbarbutton.label.bm "Signets">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.bm "Signets">
+<!ENTITY yacybarOverlay.menuitem.label.addBM "Ajouter aux signets">
+<!ENTITY yacybarOverlay.menuitem.tooltip.addBM "Ajouter un signet">
+<!ENTITY yacybarOverlay.menuitem.label.bmloading "chargement ...">
+<!ENTITY yacybarOverlay.menuitem.tooltip.bmloading "Les Etiquêtes sont en chargements">
+<!ENTITY yacybarOverlay.toolbarbutton.label.surftips "Surftips">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.surftips "Surftips">
+<!ENTITY yacybarOverlay.menuitem.label.stloading "Chargement ...">
+<!ENTITY yacybarOverlay.menuitem.tooltip.stloading "Surftips are loading">
+<!ENTITY yacybarOverlay.toolbarbutton.label.search "Rechercher">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.search "Rechercher avec YaCy">
+<!ENTITY yacybarOverlay.toolbarbutton.label.blacklist "Page de la liste noire">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.blacklist "Ajouter la page courante à la liste noire">
+<!ENTITY yacybarOverlay.toolbarbutton.label.crawl "Explorer la Page">
+<!ENTITY yacybarOverlay.toolbarbutton.tooltip.crawl "Explorer la page courante">

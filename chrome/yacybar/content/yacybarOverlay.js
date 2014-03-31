@@ -106,7 +106,7 @@ function search(samewindow) {
 		window._content.document.location = url;
 		window.content.focus();
 	} else {
-		gBrowser.addTab(url);
+		gBrowser.selectedTab = gBrowser.addTab(url);
 	}
 }
 

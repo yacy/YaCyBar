@@ -21,7 +21,7 @@ function init() {
 		saveQuickCrawlPrefs(crawlJobData);
 	}
 	
-	//disable demomode
+	// disable demomode
 	if(!Branch.prefHasUserValue("demomode")) { /*we misuse this as firststart indicator*/
 		showFirststartDialog();
 	}
@@ -32,9 +32,6 @@ function init() {
 		Branch.setBoolPref("indexControl",true);
 	}
 
-	// detect Version
-	yacyVersion.detectVersion();
-	
 	// init proxy settings
 	if (!Branch.prefHasUserValue("peerAddress")) {
 		Branch.setCharPref("peerAddress","localhost");
@@ -97,6 +94,12 @@ function init() {
 	
 	// initialize indexing btn
 	setIndexControlBtn(Branch.getBoolPref("indexControl"));
+
+	/* ================================================================
+		Other initialization
+	   ================================================================ */
+	// detect Version (done at the end as we may fail and prevent preference keys to be created properly)
+	yacyVersion.detectVersion();
 }
 
 function search(samewindow) {

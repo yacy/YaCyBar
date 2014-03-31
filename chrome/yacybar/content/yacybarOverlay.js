@@ -364,10 +364,10 @@ function crawlURL(crawlJobData) {
 	else
 		xdstopw = "off";
 	
-	if(url != null && url != ""){
+	if (url != null && url != "") {
 		req = false;
 		// branch for native XMLHttpRequest object
-		if(window.XMLHttpRequest) {
+		if (window.XMLHttpRequest) {
 			try {
 				req = new XMLHttpRequest();
 
@@ -379,7 +379,7 @@ function crawlURL(crawlJobData) {
 			}
 		}
 
-		if(req) {
+		if (req) {
 			// loading username + pwd
 			var stringBundle = document.getElementById("yacybar-string-bundle");
 			var userPwd = loadUserPwd();
@@ -396,7 +396,13 @@ function crawlURL(crawlJobData) {
 						 '&url='+ escape(url)
 		
 			req.onreadystatechange = crawlReceipt;
-			req.open("GET", httpURL, true, userPwd["user"], userPwd["pwd"]);
+			if (userPwd) {
+				req.open("GET", httpURL, true, userPwd["user"], userPwd["pwd"]);
+			} else {
+				// connect without authentification when no user/password key available in the password manager
+				// if YaCy requires one, it will ask for it
+				req.open("GET", httpURL, true);
+			}
 			req.send(null);
 		} else {
 			alert(stringBundle.getString("yacybar_xmlhttp"));

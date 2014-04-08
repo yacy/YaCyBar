@@ -136,7 +136,7 @@
 	<toolbar id="yacy_toolbar"
 			class="chromeclass-toolbar"
 			context="toolbar-context-menu"
-			toolbarname="YaCy-Bar"
+			toolbarname="YaCyBar"
 			hidden="false"
 			persist="collapsed,hidden"
 			customizable="true"

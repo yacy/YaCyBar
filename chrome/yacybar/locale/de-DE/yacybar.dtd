@@ -3,7 +3,7 @@
 <!ENTITY about.text.contributors "Beitragende:">
 <!ENTITY about.text.homepage "Homepage">
 
-<!ENTITY contentArea.menu.label.yacybar "YaCy-Bar">
+<!ENTITY contentArea.menu.label.yacybar "YaCyBar">
 <!ENTITY contentArea.menu.accesskey.yacybar "Y">
 <!ENTITY contentArea.menuitem.label.crawllink "Diesen Link crawlen">
 <!ENTITY contentArea.menuitem.accesskey.crawllink "L">
@@ -34,15 +34,15 @@
 <!ENTITY addBM.menuitem.yes "Ja">
 <!ENTITY addBM.menuitem.no "Nein">
 
-<!ENTITY demopeers.dialog.title "YaCy-Bar - Demopeers">
+<!ENTITY demopeers.dialog.title "YaCyBar - Demopeers">
 <!ENTITY demopeers.label.value "Wählen Sie einen Demopeer:">
 
-<!ENTITY firststart.window.title "YaCy-Bar - Erster Start">
-<!ENTITY firststart.html.div "Dies ist Ihr erster Start mit der YaCy-Bar. Um sie zu benutzen, benötigen Sie einen YaCy Peer.">
+<!ENTITY firststart.window.title "YaCyBar - Erster Start">
+<!ENTITY firststart.html.div "Dies ist Ihr erster Start mit der YaCyBar. Um sie zu benutzen, benötigen Sie einen YaCy Peer.">
 <!ENTITY firststart.html.ul.li.demo "Wenn Sie keinen YaCy Peer haben, klicken Sie auf Demomodus, um einen der Demopeers zu benutzen.">
 <!ENTITY firststart.html.ul.li.install "Wenn Sie einen YaCy Peer installieren wollen, besuchen Sie">
 <!ENTITY firststart.html.ul.li.peer "Wenn Sie bereits einen laufenden Peer haben:">
-<!ENTITY firststart.html.ul.li.ul.li.port "Wenn er auf dem localhost mit dem Port 8090 läuft, können Sie die YaCy-Bar ohne weitere Mühen benutzen.">
+<!ENTITY firststart.html.ul.li.ul.li.port "Wenn er auf dem localhost mit dem Port 8090 läuft, können Sie die YaCyBar ohne weitere Mühen benutzen.">
 <!ENTITY firststart.html.ul.li.ul.li.settings "Wenn er mit eigenen Einstellungen läuft, müssen Sie die">
 <!ENTITY firststart.html.ul.li.ul.li.a.settings "Einstellungen bearbeiten">
 <!ENTITY firststart.html.hbox.label.demo "Demomodus">
@@ -100,7 +100,7 @@
 <!ENTITY prefs.tabpanel.checkbox.label.enableYaCyNewsNotification "Benachrichtigen bei YacyNews">
 <!ENTITY prefs.tabpanel.description.bookmarks "Einstellungen für die YaCy-Lesezeichen">
 
-<!ENTITY quickcrawl.dialog.title "YaCy-Bar - QuickCrawl">
+<!ENTITY quickcrawl.dialog.title "YaCyBar - QuickCrawl">
 <!ENTITY quickcrawl.groupbox.label.value.title "Titel">
 <!ENTITY quickcrawl.groupbox.label.value.startpoint "Startpunkt">
 <!ENTITY quickcrawl.groupbox.label.accesskey.startpoint "S">
@@ -140,9 +140,9 @@
 <!ENTITY statusBar.menuitem.label.peerstats "Peer Statistik">
 <!ENTITY statusBar.menuitem.accesskey.peerstats "S">
 <!ENTITY statusBar.menuitem.tooltip.peerstats "Zeigt die Peer Statistik auf yacystats">
-<!ENTITY statusBar.menuitem.label.about "Über YaCy-Bar">
+<!ENTITY statusBar.menuitem.label.about "Über YaCyBar">
 <!ENTITY statusBar.menuitem.accesskey.about "Ü">
-<!ENTITY statusBar.menuitem.tooltip.about "Über die YaCy-Bar">
+<!ENTITY statusBar.menuitem.tooltip.about "Über die YaCyBar">
 
 <!ENTITY yacybarOverlay.toolbarbutton.tooltip.yacy "YaCy Menu">
 <!ENTITY yacybarOverlay.command.tooltiptext.proxy "Proxy ist AUS">
@@ -167,9 +167,9 @@
 <!ENTITY yacybarOverlay.menuitem.label.pref "YaCyBar Einstellungen">
 <!ENTITY yacybarOverlay.menuitem.accesskey.pref "E">
 <!ENTITY yacybarOverlay.menuitem.tooltip.pref "YaCyBar Einstellungen">
-<!ENTITY yacybarOverlay.menuitem.label.about "Über YaCy-Bar">
+<!ENTITY yacybarOverlay.menuitem.label.about "Über YaCyBar">
 <!ENTITY yacybarOverlay.menuitem.accesskey.about "Ü">
-<!ENTITY yacybarOverlay.menuitem.tooltip.about "Über die YaCy-Bar">
+<!ENTITY yacybarOverlay.menuitem.tooltip.about "Über die YaCyBar">
 <!ENTITY yacybarOverlay.menuitem.label.first "Firststart Dialog">
 <!ENTITY yacybarOverlay.toolbarbutton.label.bm "BM">
 <!ENTITY yacybarOverlay.toolbarbutton.tooltip.bm "Lesezeichen">

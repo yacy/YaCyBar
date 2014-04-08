@@ -10,9 +10,9 @@
 	<script type="application/x-javascript" src="chrome://yacybar/content/yacyVersion.js"/>
 	 
 	<prefpane id="YaCyBarPrefsPane"
-		  	    image="chrome://yacybar/skin/yacy_logo.gif"
-		  	    label="YaCy-Bar"
-		  	    onpaneload="onLoad();">
+		image="chrome://yacybar/skin/yacy_logo.gif"
+		label="YaCyBar"
+		onpaneload="onLoad();">
 	
 		<preferences>
 			<!-- peer address and port preferences -->

@@ -12,7 +12,7 @@
 		<vbox>
 			<hbox>
 				<vbox>
-					<text value="YaCy-Bar" class="about-extension-name"/>
+					<text value="YaCyBar" class="about-extension-name"/>
 					<text value="Version 0.2.6.4"/>
 			 	</vbox>
 			 	<image src="chrome://yacybar/skin/yacy_logo2.gif"/>

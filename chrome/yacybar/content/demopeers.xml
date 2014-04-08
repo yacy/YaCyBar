@@ -29,7 +29,7 @@
 	</peer>
 	<peer name="4o4">
 		<hash value="p_0i8mcuV4bb" />
-		<address host="4o4.dyndns.org" port="8080" />
+		<address host="4o4.dyndns.org" port="8090" />
 		<timezone utc="+1:00" />
 		<available>
 			<weekday value="221111119999999999999966" />

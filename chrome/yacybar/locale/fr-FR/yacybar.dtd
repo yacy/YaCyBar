@@ -42,7 +42,7 @@
 <!ENTITY firststart.html.ul.li.demo "Si vous n'avez encore de pair YaCy, cliquer sur Mode Demo pour utiliser un de nos pairs de demo">
 <!ENTITY firststart.html.ul.li.install "Si vous voulez installer un pair YaCy, visitez">
 <!ENTITY firststart.html.ul.li.peer "Si vous avez déjà un pair qui s'éxécute :">
-<!ENTITY firststart.html.ul.li.ul.li.port "S'il s'éxécute sur localhost avec le port 8080, vous pouvez démarrer la barre YaCy sans action supplémentaire">
+<!ENTITY firststart.html.ul.li.ul.li.port "S'il s'éxécute sur localhost avec le port 8090, vous pouvez démarrer la barre YaCy sans action supplémentaire">
 <!ENTITY firststart.html.ul.li.ul.li.settings "S'il d'exécute avec d'autres paramètres de configuration, vous devez éditer les ">
 <!ENTITY firststart.html.ul.li.ul.li.a.settings "préférences">
 <!ENTITY firststart.html.hbox.label.demo "Mode Demo">

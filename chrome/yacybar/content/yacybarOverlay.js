@@ -37,7 +37,7 @@ function init() {
 		Branch.setCharPref("peerAddress","localhost");
 	}
 	if (!Branch.prefHasUserValue("peerPort")) {
-		Branch.setIntPref("peerPort",8080);
+		Branch.setIntPref("peerPort",8090);
 	}	
 	if (!Branch.prefHasUserValue("peerSSL")) {
 		Branch.setBoolPref("peerSSL", false);

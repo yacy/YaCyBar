@@ -42,7 +42,7 @@
 <!ENTITY firststart.html.ul.li.demo "Wenn Sie keinen YaCy Peer haben, klicken Sie auf Demomodus, um einen der Demopeers zu benutzen.">
 <!ENTITY firststart.html.ul.li.install "Wenn Sie einen YaCy Peer installieren wollen, besuchen Sie">
 <!ENTITY firststart.html.ul.li.peer "Wenn Sie bereits einen laufenden Peer haben:">
-<!ENTITY firststart.html.ul.li.ul.li.port "Wenn er auf dem localhost mit dem Port 8080 läuft, können Sie die YaCy-Bar ohne weitere Mühen benutzen.">
+<!ENTITY firststart.html.ul.li.ul.li.port "Wenn er auf dem localhost mit dem Port 8090 läuft, können Sie die YaCy-Bar ohne weitere Mühen benutzen.">
 <!ENTITY firststart.html.ul.li.ul.li.settings "Wenn er mit eigenen Einstellungen läuft, müssen Sie die">
 <!ENTITY firststart.html.ul.li.ul.li.a.settings "Einstellungen bearbeiten">
 <!ENTITY firststart.html.hbox.label.demo "Demomodus">

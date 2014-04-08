@@ -98,7 +98,7 @@
 <!ENTITY prefs.tabpanel.checkbox.label.enableMessageNotification "Enable message notification">
 <!ENTITY prefs.tabpanel.checkbox.label.enableCrawlNotification "Enable crawler notification">
 <!ENTITY prefs.tabpanel.checkbox.label.enableYaCyNewsNotification "Enable news notification">
-<!ENTITY prefs.tabpanel.description.bookmarks "Settings for yacy bookmarks">
+<!ENTITY prefs.tabpanel.description.bookmarks "Settings for YaCy bookmarks">
 
 <!ENTITY quickcrawl.dialog.title "YaCyBar - QuickCrawl">
 <!ENTITY quickcrawl.groupbox.label.value.title "Title">
